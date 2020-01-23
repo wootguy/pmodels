@@ -10,17 +10,18 @@ var model_results; // subset of model_names
 var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
+var data_repo_count = 16;
 
 function fetchJSONFile(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
+	var httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = function() {
+		if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
 			var data = JSON.parse(httpRequest.responseText);
 			callback(data);
-        }
-    };
-    httpRequest.open('GET', path);
-    httpRequest.send(); 
+		}
+	};
+	httpRequest.open('GET', path);
+	httpRequest.send(); 
 }
 
 function stopDownloads() {
@@ -29,16 +30,17 @@ function stopDownloads() {
 		return; // don't want to cancel this accidentally
 	}
 	
-    if (window.stop !== undefined) {
-        window.stop();
-    }
-    else if (document.execCommand !== undefined) {
-        document.execCommand("Stop", false);
-    }   
+	if (window.stop !== undefined) {
+		window.stop();
+	}
+	else if (document.execCommand !== undefined) {
+		document.execCommand("Stop", false);
+	}   
 }
 
 function hlms_load_model(model_name, t_model, seq_groups) {
-	var model_path = "models/player/" + model_name + "/";
+	var repo_url = get_repo_url(model_name);
+	var model_path = repo_url + "models/player/" + model_name + "/";
 	
 	if (can_load_new_model) {
 		Module.ccall('load_new_model', null, ['string', 'string', 'string', 'number'], [model_path, model_name, t_model, seq_groups], {async: true});
@@ -55,18 +57,19 @@ function hlms_load_model(model_name, t_model, seq_groups) {
 	}
 }
 
-function view_model(model_name) {	
+function view_model(model_name) {
 	var model_path = "models/player/" + model_name + "/";
 	var popup = document.getElementById("model-popup");
 	var popup_bg = document.getElementById("model-popup-bg");
 	var img = popup.getElementsByTagName("img")[0];
 	var canvas = popup.getElementsByTagName("canvas")[0];
+	var repo_url = get_repo_url(model_name);
 	popup.style.display = "block";
 	popup_bg.style.display = "block";
 	canvas.style.visibility = "hidden";
 	img.style.display = "block";
 	img.setAttribute("src", "");
-	img.setAttribute("src", model_path + model_name + "_small.png");
+	img.setAttribute("src", repo_url + model_path + model_name + "_small.png");
 	
 	popup.getElementsByClassName("details-header")[0].textContent = model_name;
 	popup.getElementsByClassName("polycount")[0].textContent = "???";
@@ -82,7 +85,7 @@ function view_model(model_name) {
 		};
 	}
 	
-	fetchJSONFile(model_path + model_name + ".json", function(data) {
+	fetchJSONFile(repo_url + model_path + model_name + ".json", function(data) {
 		let num = parseInt(data["tri_count"]);
 		popup.getElementsByClassName("polycount")[0].textContent = num.toLocaleString(undefined);
 		
@@ -242,9 +245,10 @@ function update_model_grid() {
 		var cell = cell_template.cloneNode(true);
 		var img = cell.getElementsByTagName("img")[0];
 		var name = cell.getElementsByClassName("name")[0];
+		var repo_url = get_repo_url(model_name);
 		cell.setAttribute("class", "model-cell");
 		cell.removeAttribute("id");
-		img.setAttribute("src", "models/player/" + model_name + "/" + model_name + "_small.png");
+		img.setAttribute("src", repo_url + "models/player/" + model_name + "/" + model_name + "_small.png");
 		img.addEventListener("click", function() {view_model(model_name);} );
 		name.innerHTML = model_name;
 		name.setAttribute("title", model_name);
@@ -254,6 +258,24 @@ function update_model_grid() {
 		total_cells += 1;
 		return total_cells < results_per_page;
 	});
+}
+
+function get_repo_url(model_name) {
+	var repoId = hash_code(model_name) % data_repo_count;
+	
+	return "https://wootguy.github.io/scmodels_data_" + repoId + "/";
+}
+
+function hash_code(str) {
+	var hash = 0;
+
+	for (var i = 0; i < str.length; i++) {
+		var char = str.charCodeAt(i);
+		hash = ((hash<<5)-hash)+char;
+		hash = hash % 15485863; // Convert to 32bit integer
+
+	}
+	return hash;
 }
 
 document.addEventListener("DOMContentLoaded",function() {

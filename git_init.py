@@ -53,11 +53,8 @@ for i in range(0, num_buckets):
 for i in range(0, num_buckets):
 	buckets.append([])
 
-count = 0
-
 # Add files to each repo, balanced by hash key
 print("Adding files to repos")
-max_files = 64
 for idx, dir in enumerate(all_dirs):
 	b = hash_string(dir) % num_buckets
 	git_path = os.path.join(git_asset_root, 'repo%s' % b)
@@ -68,11 +65,6 @@ for idx, dir in enumerate(all_dirs):
 	subprocess.run(args)
 	
 	buckets[b].append(dir)
-	
-	max_files -= 1
-	if max_files <= 0:
-		print("Exiting early...")
-		break
 
 # commit in all repos
 for i in range(0, num_buckets):
