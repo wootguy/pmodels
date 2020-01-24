@@ -263,7 +263,24 @@ function update_model_grid() {
 		img.addEventListener("click", function() {view_model(model_name);} );
 		name.innerHTML = model_name;
 		name.setAttribute("title", model_name);
-		//name.addEventListener("click", function(event) { console.log("SELECT ALL! ", event.target); event.target.select(); } );
+		name.addEventListener("click", function(event) { 
+			
+			var oldText = event.target.textContent;
+			if (oldText == "Copied!") {
+				return; // don't copy the user message
+			}
+			
+			event.target.textContent = "model " + oldText;
+			
+			window.getSelection().selectAllChildren(event.target);
+			document.execCommand("copy");
+			
+			event.target.textContent = "Copied!";
+			
+			setTimeout(function() {
+				event.target.textContent = oldText;
+			}, 800);
+		} );
 		grid.appendChild(cell);
 		
 		total_cells += 1;
@@ -329,7 +346,12 @@ document.addEventListener("DOMContentLoaded",function() {
 	fetchJSONFile("models.json", function(data) {
 		model_data = data;
 		model_names = Object.keys(model_data);
-		model_names.sort();
+		model_names.sort(function(x, y) {
+			if (x.toLowerCase() < y.toLowerCase()) {
+				return -1;
+			}
+			return 1;
+		});
 		model_results = model_names;
 		
 		apply_filters();
