@@ -323,8 +323,6 @@ function handle_resize(event) {
 	img.style.width = "" + renderWidth + "px";
 	img.style.height = "" + renderHeight + "px";
 	details.style.width = "calc(100% - " + renderWidth + "px)";
-	
-    console.log("HELLO RESIZE ");
 };
 
 document.addEventListener("DOMContentLoaded",function() {
