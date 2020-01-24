@@ -66,9 +66,11 @@ for idx, dir in enumerate(all_dirs):
 	
 	buckets[b].append(dir)
 
-# commit in all repos
+# add common files and commit in all repos
 for i in range(0, num_buckets):
 	git_path = os.path.join(git_asset_root, 'repo%s' % i)
+	args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'add', '.nojekyll']
+	subprocess.run(args)
 	args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', 'initial commit']
 	subprocess.run(args)
 

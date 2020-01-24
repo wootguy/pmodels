@@ -78,7 +78,7 @@ function view_model(model_name) {
 	popup.getElementsByClassName("loader-text")[0].textContent = "Loading (0%)";
 	
 	img.onload = function() {
-		img.setAttribute("src", model_path + model_name + "_large.png");
+		img.setAttribute("src", repo_url + model_path + model_name + "_large.png");
 		
 		img.onload = function() {
 			img.onload = undefined;
@@ -272,7 +272,7 @@ function hash_code(str) {
 	for (var i = 0; i < str.length; i++) {
 		var char = str.charCodeAt(i);
 		hash = ((hash<<5)-hash)+char;
-		hash = hash % 15485863; // Convert to 32bit integer
+		hash = hash % 15485863; // prevent hash ever increasing beyond 31 bits
 
 	}
 	return hash;
