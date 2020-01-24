@@ -1232,11 +1232,11 @@ function updateGlobalBufferAndViews(buf) {
 
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 6227168,
+    STACK_BASE = 6227088,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 984288,
-    DYNAMIC_BASE = 6227168,
-    DYNAMICTOP_PTR = 984096;
+    STACK_MAX = 984208,
+    DYNAMIC_BASE = 6227088,
+    DYNAMICTOP_PTR = 984016;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1772,7 +1772,7 @@ function _emscripten_asm_const_iii(code, sig_ptr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 983264;
+// STATICTOP = STATIC_BASE + 983184;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -5162,11 +5162,11 @@ function _emscripten_asm_const_iii(code, sig_ptr, argbuf) {
     }
 
   
-  var ___tm_current=984144;
+  var ___tm_current=984064;
   
   
   
-  var ___tm_timezone=(stringToUTF8("GMT", 984192, 4), 984192);
+  var ___tm_timezone=(stringToUTF8("GMT", 984112, 4), 984112);
   
   function _tzset() {
       // TODO: Use (malleable) environment variables instead of system settings.
@@ -5230,7 +5230,7 @@ function _emscripten_asm_const_iii(code, sig_ptr, argbuf) {
     }
   
   
-  var ___tm_formatted=984208;
+  var ___tm_formatted=984128;
   
   function _mktime(tmPtr) {
       _tzset();
@@ -5307,7 +5307,7 @@ function _emscripten_asm_const_iii(code, sig_ptr, argbuf) {
 
 
   function _emscripten_get_sbrk_ptr() {
-      return 984096;
+      return 984016;
     }
 
   function _emscripten_memcpy_big(dest, src, num) {
@@ -12074,6 +12074,10 @@ function _emscripten_asm_const_iii(code, sig_ptr, argbuf) {
       return 1; // GL_TRUE
     }
 
+  function _glfwSetWindowSize(width, height) {
+      GLFW.setWindowSize(GLFW.active.id, width, height);
+    }
+
   function _gluPerspective(fov, aspect, near, far) {
       GLImmediate.matricesModified = true;
       GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
@@ -12415,7 +12419,7 @@ function intArrayToString(array) {
 // ASM_LIBRARY EXTERN PRIMITIVES: Int8Array,Int32Array
 
 var asmGlobalArg = {};
-var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_allocate_exception": ___cxa_allocate_exception, "__cxa_atexit": ___cxa_atexit, "__cxa_pure_virtual": ___cxa_pure_virtual, "__cxa_throw": ___cxa_throw, "__cxa_uncaught_exceptions": ___cxa_uncaught_exceptions, "__lock": ___lock, "__setErrNo": ___setErrNo, "__syscall140": ___syscall140, "__syscall145": ___syscall145, "__syscall221": ___syscall221, "__syscall5": ___syscall5, "__syscall54": ___syscall54, "__syscall6": ___syscall6, "__unlock": ___unlock, "_computeUnpackAlignedImageSize": __computeUnpackAlignedImageSize, "_glGenObject": __glGenObject, "abort": _abort, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "asctime_r": _asctime_r, "atexit": _atexit, "clock_gettime": _clock_gettime, "ctime": _ctime, "ctime_r": _ctime_r, "demangle": demangle, "demangleAll": demangleAll, "emscriptenWebGLGet": emscriptenWebGLGet, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_get_heap_size": _emscripten_get_heap_size, "emscripten_get_now": _emscripten_get_now, "emscripten_get_now_is_monotonic": _emscripten_get_now_is_monotonic, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_glColor4f": _emscripten_glColor4f, "emscripten_glVertex3f": _emscripten_glVertex3f, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_set_main_loop": _emscripten_set_main_loop, "emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "emscripten_wget": _emscripten_wget, "fd_write": _fd_write, "glActiveTexture": _glActiveTexture, "glAlphaFunc": _glAlphaFunc, "glAttachShader": _glAttachShader, "glBegin": _glBegin, "glBindAttribLocation": _glBindAttribLocation, "glBindBuffer": _glBindBuffer, "glBindTexture": _glBindTexture, "glBlendFunc": _glBlendFunc, "glClear": _glClear, "glClearColor": _glClearColor, "glColor3f": _glColor3f, "glColor4f": _glColor4f, "glColorPointer": _glColorPointer, "glCompileShader": _glCompileShader, "glCreateShader": _glCreateShader, "glCullFace": _glCullFace, "glDeleteProgram": _glDeleteProgram, "glDeleteTextures": _glDeleteTextures, "glDepthFunc": _glDepthFunc, "glDepthMask": _glDepthMask, "glDetachShader": _glDetachShader, "glDisable": _glDisable, "glDisableVertexAttribArray": _glDisableVertexAttribArray, "glDrawArrays": _glDrawArrays, "glEnable": _glEnable, "glEnableClientState": _glEnableClientState, "glEnableVertexAttribArray": _glEnableVertexAttribArray, "glEnd": _glEnd, "glGenTextures": _glGenTextures, "glGetBooleanv": _glGetBooleanv, "glGetFloatv": _glGetFloatv, "glGetIntegerv": _glGetIntegerv, "glGetString": _glGetString, "glHint": _glHint, "glIsEnabled": _glIsEnabled, "glLinkProgram": _glLinkProgram, "glLoadIdentity": _glLoadIdentity, "glLoadMatrixf": _glLoadMatrixf, "glMatrixMode": _glMatrixMode, "glPolygonMode": _glPolygonMode, "glPopMatrix": _glPopMatrix, "glPushMatrix": _glPushMatrix, "glRotatef": _glRotatef, "glScalef": _glScalef, "glShaderSource": _glShaderSource, "glTexCoordPointer": _glTexCoordPointer, "glTexImage2D": _glTexImage2D, "glTexParameteri": _glTexParameteri, "glTranslatef": _glTranslatef, "glUseProgram": _glUseProgram, "glVertex3f": _glVertex3f, "glVertex3fv": _glVertex3fv, "glVertexAttribPointer": _glVertexAttribPointer, "glVertexPointer": _glVertexPointer, "glViewport": _glViewport, "glfwInit": _glfwInit, "glfwOpenWindow": _glfwOpenWindow, "gluPerspective": _gluPerspective, "jsStackTrace": jsStackTrace, "localtime_r": _localtime_r, "memcpy": _memcpy, "memory": wasmMemory, "memset": _memset, "mktime": _mktime, "runAndAbortIfError": runAndAbortIfError, "setTempRet0": _setTempRet0, "stackTrace": stackTrace, "stringToNewUTF8": stringToNewUTF8, "table": wasmTable, "tzset": _tzset };
+var asmLibraryArg = { "__assert_fail": ___assert_fail, "__cxa_allocate_exception": ___cxa_allocate_exception, "__cxa_atexit": ___cxa_atexit, "__cxa_pure_virtual": ___cxa_pure_virtual, "__cxa_throw": ___cxa_throw, "__cxa_uncaught_exceptions": ___cxa_uncaught_exceptions, "__lock": ___lock, "__setErrNo": ___setErrNo, "__syscall140": ___syscall140, "__syscall145": ___syscall145, "__syscall221": ___syscall221, "__syscall5": ___syscall5, "__syscall54": ___syscall54, "__syscall6": ___syscall6, "__unlock": ___unlock, "_computeUnpackAlignedImageSize": __computeUnpackAlignedImageSize, "_glGenObject": __glGenObject, "abort": _abort, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "asctime_r": _asctime_r, "atexit": _atexit, "clock_gettime": _clock_gettime, "ctime": _ctime, "ctime_r": _ctime_r, "demangle": demangle, "demangleAll": demangleAll, "emscriptenWebGLGet": emscriptenWebGLGet, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "emscripten_asm_const_iii": _emscripten_asm_const_iii, "emscripten_get_heap_size": _emscripten_get_heap_size, "emscripten_get_now": _emscripten_get_now, "emscripten_get_now_is_monotonic": _emscripten_get_now_is_monotonic, "emscripten_get_sbrk_ptr": _emscripten_get_sbrk_ptr, "emscripten_glColor4f": _emscripten_glColor4f, "emscripten_glVertex3f": _emscripten_glVertex3f, "emscripten_memcpy_big": _emscripten_memcpy_big, "emscripten_resize_heap": _emscripten_resize_heap, "emscripten_set_main_loop": _emscripten_set_main_loop, "emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "emscripten_wget": _emscripten_wget, "fd_write": _fd_write, "glActiveTexture": _glActiveTexture, "glAlphaFunc": _glAlphaFunc, "glAttachShader": _glAttachShader, "glBegin": _glBegin, "glBindAttribLocation": _glBindAttribLocation, "glBindBuffer": _glBindBuffer, "glBindTexture": _glBindTexture, "glBlendFunc": _glBlendFunc, "glClear": _glClear, "glClearColor": _glClearColor, "glColor3f": _glColor3f, "glColor4f": _glColor4f, "glColorPointer": _glColorPointer, "glCompileShader": _glCompileShader, "glCreateShader": _glCreateShader, "glCullFace": _glCullFace, "glDeleteProgram": _glDeleteProgram, "glDeleteTextures": _glDeleteTextures, "glDepthFunc": _glDepthFunc, "glDepthMask": _glDepthMask, "glDetachShader": _glDetachShader, "glDisable": _glDisable, "glDisableVertexAttribArray": _glDisableVertexAttribArray, "glDrawArrays": _glDrawArrays, "glEnable": _glEnable, "glEnableClientState": _glEnableClientState, "glEnableVertexAttribArray": _glEnableVertexAttribArray, "glEnd": _glEnd, "glGenTextures": _glGenTextures, "glGetBooleanv": _glGetBooleanv, "glGetFloatv": _glGetFloatv, "glGetIntegerv": _glGetIntegerv, "glGetString": _glGetString, "glHint": _glHint, "glIsEnabled": _glIsEnabled, "glLinkProgram": _glLinkProgram, "glLoadIdentity": _glLoadIdentity, "glLoadMatrixf": _glLoadMatrixf, "glMatrixMode": _glMatrixMode, "glPolygonMode": _glPolygonMode, "glPopMatrix": _glPopMatrix, "glPushMatrix": _glPushMatrix, "glRotatef": _glRotatef, "glScalef": _glScalef, "glShaderSource": _glShaderSource, "glTexCoordPointer": _glTexCoordPointer, "glTexImage2D": _glTexImage2D, "glTexParameteri": _glTexParameteri, "glTranslatef": _glTranslatef, "glUseProgram": _glUseProgram, "glVertex3f": _glVertex3f, "glVertex3fv": _glVertex3fv, "glVertexAttribPointer": _glVertexAttribPointer, "glVertexPointer": _glVertexPointer, "glViewport": _glViewport, "glfwInit": _glfwInit, "glfwOpenWindow": _glfwOpenWindow, "glfwSetWindowSize": _glfwSetWindowSize, "gluPerspective": _gluPerspective, "jsStackTrace": jsStackTrace, "localtime_r": _localtime_r, "memcpy": _memcpy, "memory": wasmMemory, "memset": _memset, "mktime": _mktime, "runAndAbortIfError": runAndAbortIfError, "setTempRet0": _setTempRet0, "stackTrace": stackTrace, "stringToNewUTF8": stringToNewUTF8, "table": wasmTable, "tzset": _tzset };
 Asyncify.instrumentWasmImports(asmLibraryArg);
 var asm = createWasm();
 var real____wasm_call_ctors = asm["__wasm_call_ctors"];
@@ -12451,6 +12455,13 @@ asm["unload_model"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return real__unload_model.apply(null, arguments);
+};
+
+var real__update_viewport = asm["update_viewport"];
+asm["update_viewport"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__update_viewport.apply(null, arguments);
 };
 
 var real__main = asm["main"];
@@ -12685,6 +12696,12 @@ var _unload_model = Module["_unload_model"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["unload_model"].apply(null, arguments)
+};
+
+var _update_viewport = Module["_update_viewport"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["update_viewport"].apply(null, arguments)
 };
 
 var _main = Module["_main"] = function() {

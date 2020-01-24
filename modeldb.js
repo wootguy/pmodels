@@ -11,6 +11,9 @@ var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
 var data_repo_count = 16;
+var renderWidth = 500;
+var renderHeight = 800;
+var antialias = 2;
 
 function fetchJSONFile(path, callback) {
 	var httpRequest = new XMLHttpRequest();
@@ -50,6 +53,7 @@ function hlms_load_model(model_name, t_model, seq_groups) {
 		console.log("Can't load a new model yet. Waiting for previous model to load.");
 		model_load_queue = model_name;
 		
+		var popup = document.getElementById("model-popup");
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
 		popup.getElementsByClassName("loader-text")[0].textContent = "Failed to load. Try refreshing.";
 		
@@ -76,6 +80,11 @@ function view_model(model_name) {
 	popup.getElementsByClassName("loader")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].textContent = "Loading (0%)";
+
+	canvas.style.width = "" + renderWidth + "px";
+	canvas.style.height = "" + renderHeight + "px";
+	img.style.width = "" + renderWidth + "px";
+	img.style.height = "" + renderHeight + "px";
 	
 	img.onload = function() {
 		img.setAttribute("src", repo_url + model_path + model_name + "_large.png");
@@ -153,6 +162,8 @@ function hlms_ready() {
 	window.addEventListener("keydown", function() {
 		GLFW.onKeyChanged(event.keyCode, 1); // GLFW_PRESS or GLFW_REPEAT
 	}, true);
+	
+	Module.ccall('update_viewport', null, ['number', 'number'], [renderWidth*antialias, renderHeight*antialias], {async: true});
 }
 
 function load_page() {
@@ -278,6 +289,44 @@ function hash_code(str) {
 	return hash;
 }
 
+window.onresize = handle_resize;
+
+function handle_resize(event) {	
+	var gridWidth = document.getElementById("model-grid").offsetWidth;
+	var pagingHeight = document.getElementsByClassName("page-num-container")[0].offsetHeight;
+	
+	var iconsPerRow = Math.floor( gridWidth / 145 );
+	var iconsPerCol = Math.floor( (window.innerHeight - pagingHeight) / 239 );
+	
+	if (iconsPerCol < 1)
+		iconsPerCol = 1;
+	if (iconsPerRow < 1)
+		iconsPerRow = 1;
+	
+	results_per_page = iconsPerRow*iconsPerCol;
+	
+	load_page();
+	
+	renderHeight = Math.floor( Math.max(100, window.innerHeight - 100) );
+	renderWidth = Math.floor( renderHeight * (500.0 / 800.0) );
+	
+	var popup = document.getElementById("model-popup");
+	var img = popup.getElementsByTagName("img")[0];
+	var canvas = popup.getElementsByTagName("canvas")[0];
+	var details = popup.getElementsByClassName("details")[0];
+	
+	if (hlms_is_ready)
+		Module.ccall('update_viewport', null, ['number', 'number'], [renderWidth*antialias, renderHeight*antialias], {async: true});
+	
+	canvas.style.width = "" + renderWidth + "px";
+	canvas.style.height = "" + renderHeight + "px";
+	img.style.width = "" + renderWidth + "px";
+	img.style.height = "" + renderHeight + "px";
+	details.style.width = "calc(100% - " + renderWidth + "px)";
+	
+    console.log("HELLO RESIZE ");
+};
+
 document.addEventListener("DOMContentLoaded",function() {
 	fetchJSONFile("models.json", function(data) {
 		model_data = data;
@@ -286,7 +335,10 @@ document.addEventListener("DOMContentLoaded",function() {
 		model_results = model_names;
 		
 		apply_filters();
+		
+		handle_resize();
 	});
+	
 	
 	document.getElementById("model-popup-bg").addEventListener("click", close_model_viewer);
 	document.getElementsByClassName("page-next-container")[0].addEventListener("click", next_page);
