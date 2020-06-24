@@ -10,7 +10,8 @@ var model_results; // subset of model_names
 var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
-var data_repo_count = 16;
+var data_repo_domain = "https://wootguy.github.io/";
+var data_repo_count = 32;
 var renderWidth = 500;
 var renderHeight = 800;
 var antialias = 2;
@@ -263,7 +264,7 @@ function update_model_grid() {
 		img.addEventListener("click", function() {view_model(model_name);} );
 		name.innerHTML = model_name;
 		name.setAttribute("title", model_name);
-		name.addEventListener("click", function(event) { 
+		name.addEventListener("mousedown", function(event) { 
 			
 			var oldText = event.target.textContent;
 			if (oldText == "Copied!") {
@@ -291,7 +292,7 @@ function update_model_grid() {
 function get_repo_url(model_name) {
 	var repoId = hash_code(model_name) % data_repo_count;
 	
-	return "https://wootguy.github.io/scmodels_data_" + repoId + "/";
+	return data_repo_domain + "scmodels_data_" + repoId + "/";
 }
 
 function hash_code(str) {

@@ -464,12 +464,12 @@ def validate_model_isolated():
 #update_models(skip_existing=True, errors_only=False)
 
 # For adding new models
-#update_models(skip_existing=True, skip_on_error=True, errors_only=False)
+update_models(skip_existing=True, skip_on_error=True, errors_only=False)
 
 # For regenerating info and thumbnails
 #update_models(skip_existing=False, skip_on_error=True, errors_only=False)
 
-validate_model_isolated()
+#validate_model_isolated()
 
 #check_for_broken_models()
 #get_lowest_polycount()
