@@ -10,7 +10,7 @@ var model_results; // subset of model_names
 var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
-var data_repo_domain = "https://wootguy.github.io/";
+var data_repo_domain = "https://wootdata.github.io/";
 var data_repo_count = 32;
 var renderWidth = 500;
 var renderHeight = 800;
