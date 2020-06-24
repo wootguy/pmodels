@@ -115,5 +115,44 @@ def create_repos():
 		
 		print("Repo creation finished: %s" % repo_name)
 		print("")
+
+def update():
+	if False:
+		# Add files to each repo, balanced by hash key
+		print("Adding files to repos")
+		for idx, dir in enumerate(all_dirs):
+			b = hash_string(dir) % num_buckets
+			git_path = os.path.join(git_asset_root, 'repo%s' % b)
+			
+			print("%s -> %s" % (dir, git_path))
+			
+			args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'add', os.path.join(models_path, dir), '-f']
+			subprocess.run(args)
+	
+	# commit and push
+	for i in range(0, num_buckets):
+		repo_name = 'scmodels_data_%s' % i
+		print("\nUpdating %s" % repo_name)
+		git_path = os.path.join(git_asset_root, 'repo%s' % i)
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', 'add new models']
+		subprocess.run(args)
 		
-create_repos()
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'push']
+		subprocess.run(args)
+	
+
+args = sys.argv[1:]
+	
+if len(args) == 1 and args[0].lower() == 'help' or len(args) == 0:
+	print("\nUsage:")
+	print("python3 git_init.py [command]\n")
+	
+	print("Available commands:")
+	print("create - creates or re-creates all data repos (takes like 8 hours)")
+	print("update - adds new models")
+
+if len(args) > 0:
+	if args[0].lower() == 'create':
+		create_repos()
+	if args[0].lower() == 'update':
+		update()
