@@ -16,6 +16,17 @@
 			}
 			h1 {
 				text-align: center;
+				margin-bottom: 5px;
+			}
+			.about-link {
+				display: block;
+				text-align: center;
+				margin: 0 auto;
+			}
+			.last-update-time {
+				display: block;
+				text-align: center;
+				margin: 0 auto;
 			}
 			.model-cell {
 				float: left;
@@ -161,7 +172,7 @@
 				width: 100%;
 			}
 			#name-filter {
-				margin-right: 20px;
+				/*margin-right: 20px;*/
 			}
 			
 			.loader {
@@ -250,15 +261,13 @@
 	
 	<body>
 		<h1>Sven Co-op Model Database</h1>
-		
+		<a class="about-link" href="about.html">About</a>
 		<hr>
 		
 		<div class="filter-search">
-			<span class="search-text">Filter name:<input id="name-filter" type="text"/></span>
-			<span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span>
+			<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
+			<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
 		</div>
-		
-		<hr>
 		
 		<div class="page-num-container">
 			<span class="page-far page-first-container"><span class="page-bar"></span><span class="page-first"></span></span>
@@ -295,6 +304,11 @@
 				<div>Polygons: <span class="polycount">???</span></div>
 			</div>
 		</div>
+		
+		<div style="clear:both"></div>
+		<hr>
+		<small class="last-update-time" title="Last time I downloaded stuff from GameBanana and uploaded here">Last updated: October 14, 2020</small>
+		<br>
 		
 		<script type='text/javascript'>
 			var Module = {

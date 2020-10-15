@@ -117,7 +117,7 @@ def create_repos():
 		print("")
 
 def update():
-	if False:
+	if True:
 		# Add files to each repo, balanced by hash key
 		print("Adding files to repos")
 		for idx, dir in enumerate(all_dirs):
