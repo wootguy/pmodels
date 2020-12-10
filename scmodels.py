@@ -461,13 +461,74 @@ def validate_model_isolated():
 	
 	return success
 
+
+def create_list_file():
+	global hlms_path
+	global models_path
+	global start_dir
+	
+	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+	all_dirs.sort()
+	total_dirs = len(all_dirs)
+	
+	list_file = open("models.txt","w") 
+	default_model = "player-10up"
+	min_replace_polys = 143
+	
+	for idx, dir in enumerate(all_dirs):
+		model_name = dir
+		json_path = model_name + ".json"
+	
+		os.chdir(start_dir)
+		os.chdir(os.path.join(models_path, dir))
+		
+		if (idx % 100 == 0):
+			print("Progress: %d / %d" % (idx, len(all_dirs)))
+	
+		if os.path.exists(json_path):
+			with open(json_path) as f:
+				json_dat = f.read()
+				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+				tri_count = int(dat['tri_count'])
+				replace_model = default_model
+				if '2d_' + model_name in all_dirs:
+					replace_model = '2d_' + model_name
+				if tri_count < min_replace_polys:
+					replace_model = model_name
+				
+				list_file.write("%s / %d / %s\n"  % (model_name.lower(), tri_count, replace_model.lower()))
+					
+	list_file.close()
+
+
+args = sys.argv[1:]
+
+if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
+	print("\nUsage:")
+	print("sudo python3 scmodels.py [command]\n")
+	
+	print("Available commands:")
+	print("update - add new models to the git repos")
+	print("regen - regenerates info/thumbnails for all models (will take hours)")
+	print("list - creates a txt file which lists every model and its poly count")
+	
+	sys.exit()
+
+if len(args) > 0:
+	if args[0].lower() == 'update':
+		# For adding new models
+		update_models(skip_existing=True, skip_on_error=True, errors_only=False)
+	elif args[0].lower() == 'regen':
+		# For regenerating info and thumbnails
+		update_models(skip_existing=False, skip_on_error=True, errors_only=False)
+	elif args[0].lower() == 'list':
+		create_list_file()
+	else:
+		print("Unrecognized command. Run without options to see help")
+
 #update_models(skip_existing=True, errors_only=False)
 
-# For adding new models
-update_models(skip_existing=True, skip_on_error=True, errors_only=False)
 
-# For regenerating info and thumbnails
-#update_models(skip_existing=False, skip_on_error=True, errors_only=False)
 
 #validate_model_isolated()
 
