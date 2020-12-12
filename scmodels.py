@@ -490,12 +490,13 @@ def create_list_file():
 	global start_dir
 	
 	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs.sort()
+	all_dirs = sorted(all_dirs, key=str.casefold)
 	total_dirs = len(all_dirs)
 	
-	list_file = open("models.txt","w") 
-	default_model = "player-10up"
-	min_replace_polys = 143
+	lower_dirs = [dir.lower() for dir in all_dirs]
+	
+	list_file = open("models.txt","w")
+	min_replace_polys = 143 # set this to the default LD poly count ("player-10up")
 	
 	for idx, dir in enumerate(all_dirs):
 		model_name = dir
@@ -512,13 +513,13 @@ def create_list_file():
 				json_dat = f.read()
 				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 				tri_count = int(dat['tri_count'])
-				replace_model = default_model
-				if '2d_' + model_name in all_dirs:
+				replace_model = '' # blank = use default LD model
+				if '2d_' + model_name.lower() in lower_dirs:
 					replace_model = '2d_' + model_name
 				if tri_count < min_replace_polys:
 					replace_model = model_name
 				
-				list_file.write("%s / %d / %s\n"  % (model_name.lower(), tri_count, replace_model.lower()))
+				list_file.write("%s / %d / %s / %s\n"  % (model_name.lower(), tri_count, '', replace_model.lower()))
 					
 	list_file.close()
 
