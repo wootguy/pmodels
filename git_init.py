@@ -126,10 +126,13 @@ def update():
 		with open("updated.txt", "r") as update_list:
 			all_dirs = update_list.readlines()
 			print("using updated.txt instead of checking all folders")
+			
+		updated_buckets = []
 		
 		for idx, dir in enumerate(all_dirs):
 			dir = dir.strip()
 			b = hash_string(dir) % num_buckets
+			updated_buckets.append(b)
 			git_path = os.path.join(git_asset_root, 'repo%s' % b)
 			
 			print("%s -> %s" % (dir, git_path))
@@ -139,6 +142,9 @@ def update():
 	
 	# commit and push
 	for i in range(0, num_buckets):
+		if i not in updated_buckets:
+			continue
+			
 		repo_name = 'scmodels_data_%s' % i
 		print("\nUpdating %s" % repo_name)
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
