@@ -241,10 +241,12 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 	all_dirs.sort()
 	total_dirs = len(all_dirs)
 	
+	list_file = open("updated.txt","w") 
+	failed_models = []
+	
 	for idx, dir in enumerate(all_dirs):
 		if dir not in master_json:
 			model_name = dir
-			print("")
 			print("IDX: %s / %s: %s" % (idx, total_dirs-1, model_name))
 			
 			#garg.mdl build/asdf 1000x1600 0 1 1
@@ -286,9 +288,12 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 			thumbnails_generated = os.path.isfile(tiny_thumb) and os.path.isfile(small_thumb) and os.path.isfile(large_thumb)
 			info_generated = os.path.isfile(info_json)
 			
+			anything_updated = False
+			
 			try:
 				if (not info_generated or not skip_existing):
 					print("Generating info json...")
+					anything_updated = True
 					
 					data = {}
 					output = ''
@@ -361,10 +366,12 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 					with open(info_json, 'w') as outfile:
 						json.dump(data, outfile)
 				else:
-					print("Info json already generated")
+					pass #print("Info json already generated")
 				
 				if (not thumbnails_generated or not skip_existing):
 					print("Rendering hi-rez image...")
+					anything_updated = True
+					
 					with open(os.devnull, 'w') as devnull:
 						args = [hlms_path, mdl_path, model_name, "1000x1600", sequence, frames, loops]
 						null_stdout=None if debug_render else devnull
@@ -385,11 +392,17 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 						
 						os.remove(render_path)
 				else:
-					print("Thumbnails already generated")
+					pass #print("Thumbnails already generated")
 			except Exception as e:
 				print(e)
+				failed_models.append(model_name)
+				anything_updated = False
 				if not skip_on_error:
 					sys.exit()
+					
+			if anything_updated:
+				list_file.write("%s\n" % model_name)
+				print("")
 		
 			os.chdir(start_dir)
 			
@@ -397,6 +410,15 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 			
 	with open(master_json_name, 'w') as outfile:
 		json.dump(master_json, outfile)
+		
+	list_file.close()
+	
+	print("\nFinished!")
+	
+	if len(failed_models):
+		print("\nFailed to update these models:")
+		for fail in failed_models:
+			print(fail)
 
 
 def validate_model_isolated():

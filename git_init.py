@@ -117,10 +117,18 @@ def create_repos():
 		print("")
 
 def update():
+	global all_dirs
+	
 	if True:
 		# Add files to each repo, balanced by hash key
 		print("Adding files to repos")
+		
+		with open("updated.txt", "r") as update_list:
+			all_dirs = update_list.readlines()
+			print("using updated.txt instead of checking all folders")
+		
 		for idx, dir in enumerate(all_dirs):
+			dir = dir.strip()
 			b = hash_string(dir) % num_buckets
 			git_path = os.path.join(git_asset_root, 'repo%s' % b)
 			
@@ -139,6 +147,8 @@ def update():
 		
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'push']
 		subprocess.run(args)
+		
+	os.remove("updated.txt")
 	
 
 args = sys.argv[1:]
