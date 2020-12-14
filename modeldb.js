@@ -68,6 +68,7 @@ function view_model(model_name) {
 	var popup_bg = document.getElementById("model-popup-bg");
 	var img = popup.getElementsByTagName("img")[0];
 	var canvas = popup.getElementsByTagName("canvas")[0];
+	var details = popup.getElementsByClassName("details")[0];
 	var repo_url = get_repo_url(model_name);
 	popup.style.display = "block";
 	popup_bg.style.display = "block";
@@ -86,6 +87,7 @@ function view_model(model_name) {
 	canvas.style.height = "" + renderHeight + "px";
 	img.style.width = "" + renderWidth + "px";
 	img.style.height = "" + renderHeight + "px";
+	details.style.height = "" + renderHeight + "px";
 	
 	img.onload = function() {
 		img.setAttribute("src", repo_url + model_path + model_name + "_large.png");
@@ -341,6 +343,7 @@ function handle_resize(event) {
 	img.style.width = "" + renderWidth + "px";
 	img.style.height = "" + renderHeight + "px";
 	details.style.width = "calc(100% - " + renderWidth + "px)";
+	details.style.height = "" + renderHeight + "px";
 };
 
 document.addEventListener("DOMContentLoaded",function() {
