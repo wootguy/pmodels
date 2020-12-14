@@ -116,7 +116,7 @@ def create_repos():
 		print("Repo creation finished: %s" % repo_name)
 		print("")
 
-def update():
+def update(commit_message):
 	global all_dirs
 	
 	if True:
@@ -148,7 +148,7 @@ def update():
 		repo_name = 'scmodels_data_%s' % i
 		print("\nUpdating %s" % repo_name)
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
-		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', 'add new models']
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', commit_message]
 		subprocess.run(args)
 		
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'push']
@@ -165,10 +165,13 @@ if len(args) == 1 and args[0].lower() == 'help' or len(args) == 0:
 	
 	print("Available commands:")
 	print("create - creates or re-creates all data repos (takes like 8 hours)")
-	print("update - adds new models")
+	print("update 'commit message' - adds new models. Default commit message is 'add new models'")
 
 if len(args) > 0:
 	if args[0].lower() == 'create':
 		create_repos()
 	if args[0].lower() == 'update':
-		update()
+		commit_message = "add new models"
+		if len(args) > 1:
+			commit_message = args[1]
+		update(commit_message)
