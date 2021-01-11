@@ -571,7 +571,7 @@ def find_duplicate_models():
 		if len(model_hashes[hash]) > 1:
 			print("%s" % model_hashes[hash])
 			
-	prefix = "spp_"
+	prefix = "gs_"
 	
 	print("\nDuplicates with %s prefix:" % prefix)
 	
