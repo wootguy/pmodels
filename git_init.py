@@ -204,7 +204,7 @@ if len(args) > 0:
 		if len(args) > 1:
 			commit_message = args[1]
 		update(commit_message)
-	if args[0].lower() == 'update_all':
+	if args[0].lower() == 'update_rem':
 		commit_message = "add new models"
 		if len(args) > 1:
 			commit_message = args[1]

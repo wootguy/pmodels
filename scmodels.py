@@ -571,29 +571,29 @@ def find_duplicate_models():
 		if len(model_hashes[hash]) > 1:
 			print("%s" % model_hashes[hash])
 			
-	print("\nDuplicates with same names:")
+	prefix = "lt_"
+	
+	print("\nDuplicates with %s prefix:" % prefix)
 	
 	to_delete = []
 	
 	for hash in model_hashes:
 		if len(model_hashes[hash]) > 1:
-			same_names = True
-			first_name = model_hashes[hash][0].lower()
-			for name in model_hashes[hash]:
-				if name.lower() != first_name:
-					same_names = False
-					break
-			if not same_names:
-				continue
-			
-			print("%s" % model_hashes[hash])
-			to_delete += model_hashes[hash][1:]
+			total_rem = 0
+			for model in model_hashes[hash]:
+				if model.lower().startswith(prefix):
+					to_delete.append(model)
+					total_rem += 1
+					
+			if total_rem == len(model_hashes[hash]):
+				print("WOW HOW THAT HAPPEN")
+				sys.exit()
 			
 	print("\nMarked for deletion:")
 	for dir in to_delete:
 		print(dir)
 	
-	input("Press enter to delete the above models")
+	input("Press enter to delete the above %s models" % len(to_delete))
 	
 	os.chdir(start_dir)
 	for dir in to_delete:
