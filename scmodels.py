@@ -571,7 +571,7 @@ def find_duplicate_models():
 		if len(model_hashes[hash]) > 1:
 			print("%s" % model_hashes[hash])
 			
-	prefix = "wnt_"
+	prefix = "spp_"
 	
 	print("\nDuplicates with %s prefix:" % prefix)
 	
@@ -586,8 +586,8 @@ def find_duplicate_models():
 					total_rem += 1
 					
 			if total_rem == len(model_hashes[hash]):
-				print("WOW HOW THAT HAPPEN")
-				sys.exit()
+				print("WOW HOW THAT HAPPEN %s" % model_hashes[hash])
+				input("Press enter if this is ok")
 			
 	print("\nMarked for deletion:")
 	for dir in to_delete:
