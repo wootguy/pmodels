@@ -155,6 +155,33 @@ def update(commit_message):
 		subprocess.run(args)
 		
 	os.remove("updated.txt")
+
+
+def update_simple(commit_message):
+	global all_dirs
+	
+	if True:
+		# Add files to each repo, balanced by hash key
+		print("Adding all changes to repos")
+		
+		for b in range(num_buckets):
+			git_path = os.path.join(git_asset_root, 'repo%s' % b)
+			
+			print("add all changes for %s" % (git_path))
+			
+			args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'add', '-u']
+			subprocess.run(args)
+	
+	# commit and push
+	for i in range(0, num_buckets):			
+		repo_name = 'scmodels_data_%s' % i
+		print("\nUpdating %s" % repo_name)
+		git_path = os.path.join(git_asset_root, 'repo%s' % i)
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', commit_message]
+		subprocess.run(args)
+		
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'push']
+		subprocess.run(args)
 	
 
 args = sys.argv[1:]
@@ -166,6 +193,8 @@ if len(args) == 1 and args[0].lower() == 'help' or len(args) == 0:
 	print("Available commands:")
 	print("create - creates or re-creates all data repos (takes like 8 hours)")
 	print("update 'commit message' - adds new models. Default commit message is 'add new models'")
+	print("update_rem 'commit message' - like update, but does 'git add -u' instead of adding new individual models.")
+	print("                              This adds removed and updated files to the commit, ignoring untracked files.")
 
 if len(args) > 0:
 	if args[0].lower() == 'create':
@@ -175,3 +204,8 @@ if len(args) > 0:
 		if len(args) > 1:
 			commit_message = args[1]
 		update(commit_message)
+	if args[0].lower() == 'update_all':
+		commit_message = "add new models"
+		if len(args) > 1:
+			commit_message = args[1]
+		update_simple(commit_message)

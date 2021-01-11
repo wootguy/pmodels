@@ -1,4 +1,4 @@
-import sys, os, shutil, collections, json, subprocess, stat
+import sys, os, shutil, collections, json, subprocess, stat, hashlib
 from glob import glob
 from io import StringIO
 
@@ -228,7 +228,7 @@ def check_for_broken_models():
 		else:
 			print("Missing model: %s" % model_name)
 	
-def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
+def update_models(skip_existing=True, skip_on_error=False, errors_only=True, info_only=False):
 	global master_json
 	global magick_path
 	global pngcrush_path
@@ -238,7 +238,7 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 	global start_dir
 	
 	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs.sort()
+	all_dirs = sorted(all_dirs, key=str.casefold)
 	total_dirs = len(all_dirs)
 	
 	list_file = open("updated.txt","w") 
@@ -306,6 +306,7 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 							
 					output = StringIO(output.decode('utf-8'))
 					
+					t_model_file = None
 					begin_parse = False
 					for line in output:
 						line = line.replace('\n', '')
@@ -324,7 +325,7 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 						value = keyvalue[1]
 						if key in ['sequences', 'event']:
 							value = value.split("|")
-							
+						
 						if key == 't_model':
 							if value == '1' or value == 1:
 								found_t_model = False
@@ -332,7 +333,7 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 								t_model_name = model_name + "t.mdl"
 								for file in all_files:
 									if file.lower() == t_model_name.lower():
-										data['t_model'] = file
+										data['t_model'] = t_model_file = file
 										found_t_model = True
 										break
 								if not found_t_model:
@@ -363,12 +364,14 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True):
 							data[key] = value
 						#print("Save key %s" % key)
 						
+					data['hash'] = hash_md5(mdl_path, t_model_file)
+						
 					with open(info_json, 'w') as outfile:
 						json.dump(data, outfile)
 				else:
 					pass #print("Info json already generated")
 				
-				if (not thumbnails_generated or not skip_existing):
+				if ((not thumbnails_generated or not skip_existing) and not info_only):
 					print("Rendering hi-rez image...")
 					anything_updated = True
 					
@@ -523,7 +526,79 @@ def create_list_file():
 					
 	list_file.close()
 
+def hash_md5(model_file, t_model_file):
+	hash_md5 = hashlib.md5()
+	with open(model_file, "rb") as f:
+		for chunk in iter(lambda: f.read(4096), b""):
+			hash_md5.update(chunk)
+	if t_model_file:
+		with open(t_model_file, "rb") as f:
+			for chunk in iter(lambda: f.read(4096), b""):
+				hash_md5.update(chunk)
+	return hash_md5.hexdigest()
 
+def find_duplicate_models():
+	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+	all_dirs = sorted(all_dirs, key=str.casefold)
+	total_dirs = len(all_dirs)
+
+	model_hashes = {}
+
+	for idx, dir in enumerate(all_dirs):
+		model_name = dir
+		json_path = model_name + ".json"
+	
+		os.chdir(start_dir)
+		os.chdir(os.path.join(models_path, dir))
+		
+		if (idx % 100 == 0):
+			print("Progress: %d / %d" % (idx, len(all_dirs)))
+	
+		if os.path.exists(json_path):
+			with open(json_path) as f:
+				json_dat = f.read()
+				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)					
+				hash = dat['hash']
+				
+				if hash not in model_hashes:
+					model_hashes[hash] = [model_name]
+				else:
+					model_hashes[hash].append(model_name)
+	
+	print("\nAll duplicates:")
+	
+	for hash in model_hashes:
+		if len(model_hashes[hash]) > 1:
+			print("%s" % model_hashes[hash])
+			
+	print("\nDuplicates with same names:")
+	
+	to_delete = []
+	
+	for hash in model_hashes:
+		if len(model_hashes[hash]) > 1:
+			same_names = True
+			first_name = model_hashes[hash][0].lower()
+			for name in model_hashes[hash]:
+				if name.lower() != first_name:
+					same_names = False
+					break
+			if not same_names:
+				continue
+			
+			print("%s" % model_hashes[hash])
+			to_delete += model_hashes[hash][1:]
+			
+	print("\nMarked for deletion:")
+	for dir in to_delete:
+		print(dir)
+	
+	input("Press enter to delete the above models")
+	
+	os.chdir(start_dir)
+	for dir in to_delete:
+		shutil.rmtree(os.path.join(models_path, dir))
+	
 args = sys.argv[1:]
 
 if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
@@ -532,20 +607,25 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	
 	print("Available commands:")
 	print("update - add new models to the git repos")
-	print("regen - regenerates info/thumbnails for all models (will take hours)")
+	print("regen - regenerates info jsons for every model")
+	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
 	print("list - creates a txt file which lists every model and its poly count")
+	print("dup - find duplicate files (people sometimes rename models)")
 	
 	sys.exit()
 
 if len(args) > 0:
 	if args[0].lower() == 'update':
 		# For adding new models
-		update_models(skip_existing=True, skip_on_error=True, errors_only=False)
+		update_models(skip_existing=True, skip_on_error=True, errors_only=False, info_only=False)
 	elif args[0].lower() == 'regen':
-		# For regenerating info and thumbnails
-		update_models(skip_existing=False, skip_on_error=True, errors_only=False)
+		update_models(skip_existing=False, skip_on_error=True, errors_only=False, info_only=True)
+	elif args[0].lower() == 'regen_full':
+		update_models(skip_existing=False, skip_on_error=True, errors_only=False, info_only=False)
 	elif args[0].lower() == 'list':
 		create_list_file()
+	elif args[0].lower() == 'dup':
+		find_duplicate_models()
 	else:
 		print("Unrecognized command. Run without options to see help")
 
