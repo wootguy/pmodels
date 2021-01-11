@@ -570,13 +570,27 @@ def find_duplicate_models():
 	for hash in model_hashes:
 		if len(model_hashes[hash]) > 1:
 			print("%s" % model_hashes[hash])
-			
-	prefix = "gs_"
 	
-	print("\nDuplicates with %s prefix:" % prefix)
 	
 	to_delete = []
 	
+	for hash in model_hashes:
+		if len(model_hashes[hash]) > 1:
+			print("")
+			for idx, model in enumerate(model_hashes[hash]):
+				print("%d) %s" % (idx, model))
+			keepIdx = int(input("Which model to keep (pick a number)?"))
+
+			for idx, model in enumerate(model_hashes[hash]):
+				if idx == keepIdx:
+					print("NO DELETE %s" % model)
+					continue
+				to_delete.append(model)
+				print("YES DELETE %s" % model)
+	
+	'''
+	print("\nDuplicates with %s prefix:" % prefix)
+	prefix = "bio_"
 	for hash in model_hashes:
 		if len(model_hashes[hash]) > 1:
 			total_rem = 0
@@ -588,7 +602,25 @@ def find_duplicate_models():
 			if total_rem == len(model_hashes[hash]):
 				print("WOW HOW THAT HAPPEN %s" % model_hashes[hash])
 				input("Press enter if this is ok")
-			
+	'''
+	
+	'''
+	print("\nDuplicates with the same names:")
+	for hash in model_hashes:
+		if len(model_hashes[hash]) > 1:
+			same_names = True
+			first_name = model_hashes[hash][0].lower()
+			for name in model_hashes[hash]:
+				if name.lower() != first_name:
+					same_names = False
+					break
+			if not same_names:
+				continue
+
+			print("%s" % model_hashes[hash])
+			to_delete += model_hashes[hash][1:]
+	'''
+	
 	print("\nMarked for deletion:")
 	for dir in to_delete:
 		print(dir)
