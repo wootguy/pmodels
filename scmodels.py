@@ -679,6 +679,7 @@ def install_new_models():
 	model_hashes = load_all_model_hashes(models_path)
 	install_hashes = load_all_model_hashes(install_path)
 	
+	dups = []
 	any_dups = False
 	for hash in install_hashes:
 		if len(install_hashes[hash]) > 1:
@@ -689,7 +690,13 @@ def install_new_models():
 			any_dups = True
 		if hash in model_hashes:
 			print("ERROR: %s is a duplicate of %s" % (install_hashes[hash], model_hashes[hash]))
+			dups += install_hashes[hash]
 			any_dups = True
+	
+	if len(dups) > 0 and input("\nDelete the duplicate models in the install folder? (y/n)") == 'y':
+		for dup in dups:
+			path = os.path.join(install_path, dup)
+			shutil.rmtree(path)
 	
 	new_dirs = get_sorted_dirs(install_path)
 	old_dirs = [dir.lower() for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
@@ -699,7 +706,7 @@ def install_new_models():
 			print("ERROR: %s already exists" % dir.lower())
 	
 	if any_dups:
-		print("No models were added")
+		print("No models were added due to duplicates.")
 		return
 	
 	print("\n-- Generating thumbnails")
