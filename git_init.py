@@ -195,6 +195,8 @@ if len(args) == 1 and args[0].lower() == 'help' or len(args) == 0:
 	print("update 'commit message' - adds new models. Default commit message is 'add new models'")
 	print("update_rem 'commit message' - like update, but does 'git add -u' instead of adding new individual models.")
 	print("                              This adds removed and updated files to the commit, ignoring untracked files.")
+	
+	print("\nIMPORTANT: DO NOT RUN THIS AS ROOT")
 
 if len(args) > 0:
 	if args[0].lower() == 'create':

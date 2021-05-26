@@ -8,6 +8,7 @@ master_json_name = 'models.json'
 start_dir = os.getcwd()
 
 models_path = 'models/player/'
+install_path = 'install/'
 hlms_path = os.path.join(start_dir, 'hlms')
 posterizer_path = '/home/pi/mediancut-posterizer/posterize'
 pngcrush_path = 'pngcrush'
@@ -16,7 +17,7 @@ debug_render = False
 
 
 # assumes chdir'd to the model directory beforehand
-def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_path):
+def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_path, work_path):
 	global start_dir
 	global models_path
 
@@ -37,7 +38,7 @@ def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_p
 	if (icase_model and icase_model != model_dir) or \
 		(icase_preview and icase_preview != model_dir) or \
 		(icase_model and icase_preview and icase_model != icase_preview):
-		print("Found case-sensitive differences:\n")
+		print("\nFound case-sensitive differences:\n")
 		print("DIR (1): " + model_dir)
 		print("MDL (2): " + icase_model)
 		print("BMP (3): " + icase_preview)
@@ -54,21 +55,24 @@ def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_p
 			else:
 				continue
 			
-			rename_model(model_dir, correct_name)
+			rename_model(model_dir, correct_name, work_path)
 			
 			return correct_name
 	return model_dir
 
+def get_sorted_dirs(path):
+	all_dirs = [dir for dir in os.listdir(path) if os.path.isdir(os.path.join(path,dir))]
+	return sorted(all_dirs, key=str.casefold)
 
-def rename_model(old_dir_name, new_name):
+def rename_model(old_dir_name, new_name, work_path):
 	global master_json
 	global master_json_name
 	global start_dir
 	
 	os.chdir(start_dir)
 	
-	old_dir = os.path.join(models_path, old_dir_name)
-	new_dir = os.path.join(models_path, new_name)
+	old_dir = os.path.join(work_path, old_dir_name)
+	new_dir = os.path.join(work_path, new_name)
 	if not os.path.isdir(old_dir):
 		print("Can't rename '%s' because that dir doesn't exist" % old_dir)
 		return False
@@ -124,14 +128,14 @@ def rename_model(old_dir_name, new_name):
 
 	return True
 
-def handle_renamed_model(model_dir):
+def handle_renamed_model(model_dir, work_path):
 	all_files = [file for file in os.listdir('.') if os.path.isfile(file)]
 	model_files = []
 	for file in all_files:
 		if '.mdl' in file.lower():
 			model_files.append(file)
 	while len(model_files) >= 1:
-		print("The model(s) in this folder do not match the folder name:\n")
+		print("\nThe model file(s) in this folder do not match the folder name:\n")
 		print("0) " + model_dir)
 		for idx, file in enumerate(model_files):
 			print("%s) %s" % (idx+1, file))
@@ -140,15 +144,15 @@ def handle_renamed_model(model_dir):
 		x = input("\nWhich model should be used? ")
 		if x == 'd':
 			os.chdir(start_dir)
-			shutil.rmtree(os.path.join(models_path, model_dir))
+			shutil.rmtree(os.path.join(work_path, model_dir))
 			return ''
 		elif x == '0':
-			if (not rename_model(model_dir, model_dir)):
+			if (not rename_model(model_dir, model_dir, work_path)):
 				continue
 			return model_dir
 		elif x == 'r':
 			x = input("What should the model name be? ")
-			if (not rename_model(model_dir, x)):
+			if (not rename_model(model_dir, x, work_path)):
 				continue
 			return x
 		elif x.isnumeric():
@@ -156,7 +160,7 @@ def handle_renamed_model(model_dir):
 			if x < 0 or x >= len(model_files):
 				continue
 			correct_name = os.path.splitext(model_files[idx-1])[0]
-			if (not rename_model(model_dir, correct_name)):
+			if (not rename_model(model_dir, correct_name, work_path)):
 				continue
 			return correct_name
 		else:
@@ -167,20 +171,18 @@ def handle_renamed_model(model_dir):
 			x = input("\nNo models exist in this folder! Delete it? (y/n) ")
 			if x == 'y':
 				os.chdir(start_dir)
-				shutil.rmtree(os.path.join(models_path, model_dir))
+				shutil.rmtree(os.path.join(work_path, model_dir))
 				break
 			if x == 'n':
 				break
 	return model_dir
 		
-	
 def get_lowest_polycount():
 	global hlms_path
 	global models_path
 	global start_dir
 	
-	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs.sort()
+	all_dirs = get_sorted_dirs(models_path)
 	total_dirs = len(all_dirs)
 	
 	lowest_count = 99999
@@ -206,8 +208,7 @@ def check_for_broken_models():
 	global models_path
 	global start_dir
 	
-	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs.sort()
+	all_dirs = get_sorted_dirs(models_path)
 	total_dirs = len(all_dirs)
 	
 	for idx, dir in enumerate(all_dirs):
@@ -227,194 +228,194 @@ def check_for_broken_models():
 				print("Bad model: %s" % model_name)
 		else:
 			print("Missing model: %s" % model_name)
+
+def generate_info_json(mdl_path, output_path):
+	data = {}
+	output = ''
+	try:
+		args = [hlms_path, './' + mdl_path]
+		output = subprocess.check_output(args)
+	except Exception as e:
+		output = e
+		print(e)
+			
+	output = StringIO(output.decode('utf-8'))
 	
-def update_models(skip_existing=True, skip_on_error=False, errors_only=True, info_only=False):
+	t_model_file = None
+	begin_parse = False
+	for line in output:
+		line = line.replace('\n', '')
+		if line == '!BEGIN_MODEL_INFO!':
+			begin_parse = True
+			continue
+		if line == '!END_MODEL_INFO!':
+			break
+		if not begin_parse:
+			continue
+		keyvalue = line.split("=")
+		if len(keyvalue) != 2:
+			print("Invalid keyvalue: %s" % line)
+			continue
+		key = keyvalue[0]
+		value = keyvalue[1]
+		if key in ['sequences', 'event']:
+			value = value.split("|")
+		
+		if key == 't_model':
+			if value == '1' or value == 1:
+				found_t_model = False
+				all_files = [file for file in os.listdir('.') if os.path.isfile(file)]
+				t_model_name = model_name + "t.mdl"
+				for file in all_files:
+					if file.lower() == t_model_name.lower():
+						data['t_model'] = t_model_file = file
+						found_t_model = True
+						break
+				if not found_t_model:
+					print("Missing T Model: %s" % t_model_name)
+					raise Exception('Missing T Model')
+		
+		elif key == 'seq_groups':
+			if value != '1':
+				for i in range(0, int(value)):
+					suffix = "%s" % (i+1)
+					if i < 10:
+						suffix = "0" + suffix
+					path = model_name + suffix + ".mdl"
+					if not os.path.exists(path):
+						print("Missing animation model: %s" % path) # not always fatal, but could be
+			data['seq_groups'] = int(value)
+			
+		elif key == 'event':
+			value = {
+				'seq': value[0],
+				'frame': value[1],
+				'file': value[2]
+			}
+			if 'events' not in data:
+				data['events'] = []
+			data['events'].append(value)
+		else:
+			data[key] = value
+		#print("Save key %s" % key)
+		
+	data['hash'] = hash_md5(mdl_path, t_model_file)
+		
+	with open(output_path, 'w') as outfile:
+		json.dump(data, outfile)
+
+def update_models(work_path, skip_existing=True, skip_on_error=False, errors_only=True, info_only=False, update_master_json=False):
 	global master_json
 	global magick_path
 	global pngcrush_path
 	global posterizer_path
 	global hlms_path
-	global models_path
 	global start_dir
 	
-	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs = sorted(all_dirs, key=str.casefold)
+	all_dirs = get_sorted_dirs(work_path)
 	total_dirs = len(all_dirs)
 	
-	list_file = open("updated.txt","w") 
+	#list_file = open("updated.txt","w") 
 	failed_models = []
 	
 	for idx, dir in enumerate(all_dirs):
-		if dir not in master_json:
-			model_name = dir
-			print("IDX: %s / %s: %s" % (idx, total_dirs-1, model_name))
-			
-			#garg.mdl build/asdf 1000x1600 0 1 1
-			
-			os.chdir(start_dir)
-			os.chdir(os.path.join(models_path, dir))
-			
-			mdl_path = model_name + ".mdl"
-			bmp_path = model_name + ".bmp"
-			
-			if not os.path.isfile(mdl_path) or not os.path.isfile(bmp_path):
-				if not skip_on_error:
-					model_name = dir = fix_case_sensitivity_problems(dir, mdl_path, bmp_path)
-					mdl_path = model_name + ".mdl"
-					bmp_path = model_name + ".bmp"
-			
-			if not os.path.isfile(mdl_path):
-				model_name = dir = handle_renamed_model(dir)
+		model_name = dir
+		print("IDX: %s / %s: %s                  " % (idx, total_dirs-1, model_name), end='\r')
+		
+		#garg.mdl build/asdf 1000x1600 0 1 1
+		
+		os.chdir(start_dir)
+		os.chdir(os.path.join(work_path, dir))
+		
+		mdl_path = model_name + ".mdl"
+		bmp_path = model_name + ".bmp"
+		
+		if not os.path.isfile(mdl_path) or not os.path.isfile(bmp_path):
+			if not skip_on_error:
+				model_name = dir = fix_case_sensitivity_problems(dir, mdl_path, bmp_path, work_path)
 				mdl_path = model_name + ".mdl"
 				bmp_path = model_name + ".bmp"
-				if not os.path.isfile(mdl_path):
-					continue
-			
-			if errors_only:
-				continue
-			
+		
+		if not os.path.isfile(mdl_path):
+			model_name = dir = handle_renamed_model(dir, work_path)
 			mdl_path = model_name + ".mdl"
 			bmp_path = model_name + ".bmp"
-			render_path = model_name + "000.png"
-			sequence = "0"
-			frames = "1"
-			loops = "1"
-			
-			info_json = model_name + ".json"
-			tiny_thumb = model_name + "_tiny.png"
-			small_thumb = model_name + "_small.png"
-			large_thumb = model_name + "_large.png"
-			
-			thumbnails_generated = os.path.isfile(tiny_thumb) and os.path.isfile(small_thumb) and os.path.isfile(large_thumb)
-			info_generated = os.path.isfile(info_json)
-			
-			anything_updated = False
-			
-			try:
-				if (not info_generated or not skip_existing):
-					print("Generating info json...")
-					anything_updated = True
-					
-					data = {}
-					output = ''
-					try:
-						args = [hlms_path, './' + mdl_path]
-						output = subprocess.check_output(args)
-					except Exception as e:
-						output = e
-						print(e)
-							
-					output = StringIO(output.decode('utf-8'))
-					
-					t_model_file = None
-					begin_parse = False
-					for line in output:
-						line = line.replace('\n', '')
-						if line == '!BEGIN_MODEL_INFO!':
-							begin_parse = True
-							continue
-						if line == '!END_MODEL_INFO!':
-							break
-						if not begin_parse:
-							continue
-						keyvalue = line.split("=")
-						if len(keyvalue) != 2:
-							print("Invalid keyvalue: %s" % line)
-							continue
-						key = keyvalue[0]
-						value = keyvalue[1]
-						if key in ['sequences', 'event']:
-							value = value.split("|")
-						
-						if key == 't_model':
-							if value == '1' or value == 1:
-								found_t_model = False
-								all_files = [file for file in os.listdir('.') if os.path.isfile(file)]
-								t_model_name = model_name + "t.mdl"
-								for file in all_files:
-									if file.lower() == t_model_name.lower():
-										data['t_model'] = t_model_file = file
-										found_t_model = True
-										break
-								if not found_t_model:
-									print("Missing T Model: %s" % t_model_name)
-									raise Exception('Missing T Model')
-						
-						elif key == 'seq_groups':
-							if value != '1':
-								for i in range(0, int(value)):
-									suffix = "%s" % (i+1)
-									if i < 10:
-										suffix = "0" + suffix
-									path = model_name + suffix + ".mdl"
-									if not os.path.exists(path):
-										print("Missing animation model: %s" % path) # not always fatal, but could be
-							data['seq_groups'] = int(value)
-							
-						elif key == 'event':
-							value = {
-								'seq': value[0],
-								'frame': value[1],
-								'file': value[2]
-							}
-							if 'events' not in data:
-								data['events'] = []
-							data['events'].append(value)
-						else:
-							data[key] = value
-						#print("Save key %s" % key)
-						
-					data['hash'] = hash_md5(mdl_path, t_model_file)
-						
-					with open(info_json, 'w') as outfile:
-						json.dump(data, outfile)
-				else:
-					pass #print("Info json already generated")
-				
-				if ((not thumbnails_generated or not skip_existing) and not info_only):
-					print("Rendering hi-rez image...")
-					anything_updated = True
-					
-					with open(os.devnull, 'w') as devnull:
-						args = [hlms_path, mdl_path, model_name, "1000x1600", sequence, frames, loops]
-						null_stdout=None if debug_render else devnull
-						subprocess.check_call(args, stdout=null_stdout)
-
-						def create_thumbnail(name, size, posterize_colors):
-							print("Creating %s thumbnail..." % name)
-							temp_path = "./%s_%s_temp.png" % (model_name, name)
-							final_path = "./%s_%s.png" % (model_name, name)
-							subprocess.check_call([magick_path, "./" + render_path, "-resize", size, temp_path], stdout=null_stdout)
-							subprocess.check_call([posterizer_path, posterize_colors, temp_path, final_path], stdout=null_stdout)
-							subprocess.check_call([pngcrush_path, "-ow", "-q", final_path], stdout=null_stdout)
-							os.remove(temp_path)
-
-						create_thumbnail("large", "500x800", "255")
-						create_thumbnail("small", "125x200", "16")
-						create_thumbnail("tiny", "20x32", "8")
-						
-						os.remove(render_path)
-				else:
-					pass #print("Thumbnails already generated")
-			except Exception as e:
-				print(e)
-				failed_models.append(model_name)
-				anything_updated = False
-				if not skip_on_error:
-					sys.exit()
-					
-			if anything_updated:
-				list_file.write("%s\n" % model_name)
-				print("")
+			if not os.path.isfile(mdl_path):
+				continue
 		
-			os.chdir(start_dir)
+		if errors_only:
+			continue
+		
+		mdl_path = model_name + ".mdl"
+		bmp_path = model_name + ".bmp"
+		render_path = model_name + "000.png"
+		sequence = "0"
+		frames = "1"
+		loops = "1"
+		
+		info_json_path = model_name + ".json"
+		tiny_thumb = model_name + "_tiny.png"
+		small_thumb = model_name + "_small.png"
+		large_thumb = model_name + "_large.png"
+		
+		thumbnails_generated = os.path.isfile(tiny_thumb) and os.path.isfile(small_thumb) and os.path.isfile(large_thumb)
+		
+		anything_updated = False
+		
+		try:
+			if (not os.path.isfile(info_json_path) or not skip_existing):
+				print("\nGenerating info json...")
+				anything_updated = True
+				generate_info_json(mdl_path, info_json_path)
+			else:
+				pass #print("Info json already generated")
 			
+			if ((not thumbnails_generated or not skip_existing) and not info_only):
+				print("\nRendering hi-rez image...")
+				anything_updated = True
+				
+				with open(os.devnull, 'w') as devnull:
+					args = [hlms_path, mdl_path, model_name, "1000x1600", sequence, frames, loops]
+					null_stdout=None if debug_render else devnull
+					subprocess.check_call(args, stdout=null_stdout)
+
+					def create_thumbnail(name, size, posterize_colors):
+						print("Creating %s thumbnail..." % name)
+						temp_path = "./%s_%s_temp.png" % (model_name, name)
+						final_path = "./%s_%s.png" % (model_name, name)
+						subprocess.check_call([magick_path, "./" + render_path, "-resize", size, temp_path], stdout=null_stdout)
+						subprocess.check_call([posterizer_path, posterize_colors, temp_path, final_path], stdout=null_stdout)
+						subprocess.check_call([pngcrush_path, "-ow", "-q", final_path], stdout=null_stdout)
+						os.remove(temp_path)
+
+					create_thumbnail("large", "500x800", "255")
+					create_thumbnail("small", "125x200", "16")
+					create_thumbnail("tiny", "20x32", "8")
+					
+					os.remove(render_path)
+			else:
+				pass #print("Thumbnails already generated")
+		except Exception as e:
+			print(e)
+			failed_models.append(model_name)
+			anything_updated = False
+			if not skip_on_error:
+				sys.exit()
+				
+		#if anything_updated:
+		#	list_file.write("%s\n" % model_name)
+		#	print("")
+	
+		os.chdir(start_dir)
+		
+		if update_master_json:
 			master_json[model_name] = {}
 			
-	with open(master_json_name, 'w') as outfile:
-		json.dump(master_json, outfile)
+	if update_master_json:
+		with open(master_json_name, 'w') as outfile:
+			json.dump(master_json, outfile)
 		
-	list_file.close()
+	#list_file.close()
 	
 	print("\nFinished!")
 	
@@ -423,6 +424,25 @@ def update_models(skip_existing=True, skip_on_error=False, errors_only=True, inf
 		for fail in failed_models:
 			print(fail)
 
+def write_updated_models_list():
+	global models_path
+	global master_json_name
+	
+	oldJson = {}
+	if os.path.exists(master_json_name):
+		with open(master_json_name) as f:
+			json_dat = f.read()
+			oldJson = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+	
+	all_dirs = get_sorted_dirs(models_path)
+	
+	list_file = open("updated.txt","w") 
+	
+	for idx, dir in enumerate(all_dirs):				
+		if dir not in oldJson:
+			list_file.write("%s\n" % dir)
+		
+	list_file.close()
 
 def validate_model_isolated():
 
@@ -430,7 +450,7 @@ def validate_model_isolated():
 	fileSizeQuota = '--fsize=8192' # max written/modified file size in KB
 	processMax = '--processes=1'
 	maxTime = '--time=60'
-	modelName = 'garg.mdl'
+	modelName = 'white.mdl'
 
 	print("Cleaning up")
 	try:
@@ -468,7 +488,7 @@ def validate_model_isolated():
 	output = ''
 	try:
 		
-		args = ['isolate', fileSizeQuota, processMax, maxTime, '--box-id=%d' % boxId, '--run', '--', './hlms', modelName, 'asdf', '1600x1000', '0', '1', '1']
+		args = ['isolate', fileSizeQuota, processMax, maxTime, '--box-id=%d' % boxId, '--run', '--', './hlms', modelName, 'asdf', '16x16', '0', '1', '1']
 		print(' '.join(args))
 		output = subprocess.check_output(args)
 	except Exception as e:
@@ -486,14 +506,12 @@ def validate_model_isolated():
 	
 	return success
 
-
 def create_list_file():
 	global hlms_path
 	global models_path
 	global start_dir
 	
-	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs = sorted(all_dirs, key=str.casefold)
+	all_dirs = get_sorted_dirs(models_path)
 	total_dirs = len(all_dirs)
 	
 	lower_dirs = [dir.lower() for dir in all_dirs]
@@ -537,11 +555,14 @@ def hash_md5(model_file, t_model_file):
 				hash_md5.update(chunk)
 	return hash_md5.hexdigest()
 
-def find_duplicate_models():
-	all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
-	all_dirs = sorted(all_dirs, key=str.casefold)
+def load_all_model_hashes(path):
+	global start_dir
+	
+	print("Loading model hashes in path: %s" % path)
+	
+	all_dirs = get_sorted_dirs(path)
 	total_dirs = len(all_dirs)
-
+	
 	model_hashes = {}
 
 	for idx, dir in enumerate(all_dirs):
@@ -549,10 +570,10 @@ def find_duplicate_models():
 		json_path = model_name + ".json"
 	
 		os.chdir(start_dir)
-		os.chdir(os.path.join(models_path, dir))
+		os.chdir(os.path.join(path, dir))
 		
 		if (idx % 100 == 0):
-			print("Progress: %d / %d" % (idx, len(all_dirs)))
+			print("Progress: %d / %d" % (idx, len(all_dirs)), end="\r")
 	
 		if os.path.exists(json_path):
 			with open(json_path) as f:
@@ -564,13 +585,23 @@ def find_duplicate_models():
 					model_hashes[hash] = [model_name]
 				else:
 					model_hashes[hash].append(model_name)
+		else:
+			print("\nMissing info JSON for %s" % model_name)
+			
+	print("Progress: %d / %d" % (len(all_dirs), len(all_dirs)))
+	os.chdir(start_dir)
 	
+	return model_hashes
+
+def find_duplicate_models():
+	global models_path
+	
+	model_hashes = load_all_model_hashes(models_path)
 	print("\nAll duplicates:")
 	
 	for hash in model_hashes:
 		if len(model_hashes[hash]) > 1:
 			print("%s" % model_hashes[hash])
-	
 	
 	to_delete = []
 	
@@ -583,10 +614,8 @@ def find_duplicate_models():
 
 			for idx, model in enumerate(model_hashes[hash]):
 				if idx == keepIdx:
-					print("NO DELETE %s" % model)
 					continue
 				to_delete.append(model)
-				print("YES DELETE %s" % model)
 	
 	'''
 	print("\nDuplicates with %s prefix:" % prefix)
@@ -621,6 +650,10 @@ def find_duplicate_models():
 			to_delete += model_hashes[hash][1:]
 	'''
 	
+	if (len(to_delete) == 0):
+		print("\nNo duplicates to remove")
+		return False
+	
 	print("\nMarked for deletion:")
 	for dir in to_delete:
 		print(dir)
@@ -630,7 +663,61 @@ def find_duplicate_models():
 	os.chdir(start_dir)
 	for dir in to_delete:
 		shutil.rmtree(os.path.join(models_path, dir))
+		
+	return True
+
+def install_new_models():
+	global models_path
+	global install_path
 	
+	# First generate info jsons, if needed
+	print("-- Generating info JSONs for new models")
+	update_models(install_path, True, False, False, True, False)
+	
+	print("\n-- Checking for duplicates")
+	
+	model_hashes = load_all_model_hashes(models_path)
+	install_hashes = load_all_model_hashes(install_path)
+	
+	any_dups = False
+	for hash in install_hashes:
+		if len(install_hashes[hash]) > 1:
+			msg = ''
+			for model in install_hashes[hash]:
+				msg += ' ' + model
+			print("ERROR: Duplicate models in install folder:" + msg)
+			any_dups = True
+		if hash in model_hashes:
+			print("ERROR: %s is a duplicate of %s" % (install_hashes[hash], model_hashes[hash]))
+			any_dups = True
+	
+	new_dirs = get_sorted_dirs(install_path)
+	old_dirs = [dir.lower() for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+	
+	for dir in new_dirs:
+		if dir.lower() in old_dirs:
+			print("ERROR: %s already exists" % dir.lower())
+	
+	if any_dups:
+		print("No models were added")
+		return
+	
+	print("\n-- Generating thumbnails")
+	update_models(install_path, True, False, False, False, False)
+	
+	print("\n-- Adding %s new models" % len(new_dirs))
+
+	for dir in new_dirs:
+		src = os.path.join(install_path, dir)
+		dst = os.path.join(models_path, dir)
+		shutil.move(src, dst)
+	
+	print("\n-- Updating model list and master json")
+	write_updated_models_list()
+	update_models(models_path, True, True, False, False, True)
+		
+	print("Finished.")
+
 args = sys.argv[1:]
 
 if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
@@ -638,34 +725,36 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("sudo python3 scmodels.py [command]\n")
 	
 	print("Available commands:")
-	print("update - add new models to the git repos")
+	print("update - generate thumbnails and info jsons for any models.")
 	print("regen - regenerates info jsons for every model")
 	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
+	print("add - add new models from the install folder")
 	
 	sys.exit()
 
 if len(args) > 0:
-	if args[0].lower() == 'update':
+	if args[0].lower() == 'add':
 		# For adding new models
-		update_models(skip_existing=True, skip_on_error=True, errors_only=False, info_only=False)
+		install_new_models()
+	elif args[0].lower() == 'update':
+		# For adding new models
+		update_models(models_path, skip_existing=True, skip_on_error=True, errors_only=False, info_only=False, update_master_json=True)
 	elif args[0].lower() == 'regen':
-		update_models(skip_existing=False, skip_on_error=True, errors_only=False, info_only=True)
+		update_models(models_path,skip_existing=False, skip_on_error=True, errors_only=False, info_only=True, update_master_json=True)
 	elif args[0].lower() == 'regen_full':
-		update_models(skip_existing=False, skip_on_error=True, errors_only=False, info_only=False)
+		update_models(models_path,skip_existing=False, skip_on_error=True, errors_only=False, info_only=False, update_master_json=True)
 	elif args[0].lower() == 'list':
 		create_list_file()
 	elif args[0].lower() == 'dup':
 		find_duplicate_models()
+	elif args[0].lower() == 'validate':
+		validate_model_isolated()
 	else:
 		print("Unrecognized command. Run without options to see help")
 
 #update_models(skip_existing=True, errors_only=False)
-
-
-
-#validate_model_isolated()
 
 #check_for_broken_models()
 #get_lowest_polycount()

@@ -1,0 +1,4 @@
+Recently released models that I renamed because an older model had the same name:
+elvis -> pd_elvis
+simon -> 7ds_simon
+cof_simon -> cof_simon_v2
