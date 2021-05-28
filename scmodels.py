@@ -1,9 +1,15 @@
-import sys, os, shutil, collections, json, subprocess, stat, hashlib
+import sys, os, shutil, collections, json, subprocess, stat, hashlib, traceback
 from glob import glob
 from io import StringIO
 
+# TODO:
+# - BMP files weren't renamed when adding version suffixes. Find all that are missing and rename if bmp exists
+# - some models I added _v2 to are actually a completely different model
+
 master_json = {}
 master_json_name = 'models.json'
+
+alias_json_name = 'alias.json'
 
 start_dir = os.getcwd()
 
@@ -89,15 +95,22 @@ def rename_model(old_dir_name, new_name, work_path):
 	
 	all_files = [file for file in os.listdir('.') if os.path.isfile(file)]
 	mdl_files = []
+	tmdl_files = []
 	bmp_files = []
 	for file in all_files:
 		if ".mdl" in file.lower():
 			mdl_files.append(file)
+		#if ".mdl" in file.lower() and (file == old_dir_name + "t.mdl" or file == old_dir_name + "T.mdl"):
+		#	tmdl_files.append(file)
 		if ".bmp" in file.lower():
 			bmp_files.append(file)
 
 	if len(mdl_files) > 1:
 		print("Multiple mdl files to rename. Don't know what to do")
+		sys.exit()
+		return False
+	if len(tmdl_files) > 1:
+		print("Multiple T mdl files to rename. Don't know what to do")
 		sys.exit()
 		return False
 	if len(bmp_files) > 1:
@@ -125,6 +138,17 @@ def rename_model(old_dir_name, new_name, work_path):
 				print("Renamed %s -> %s" % (model_name, new_model_name))
 	else:
 		print("No model files to rename")
+		
+	if len(tmdl_files) > 0:
+		for file in tmdl_files:
+			model_name = tmdl_files[0]
+			new_model_name = new_name + "t.mdl"
+
+			if model_name != new_model_name:
+				os.rename(model_name, new_model_name)
+				print("Renamed %s -> %s" % (model_name, new_model_name))
+	else:
+		print("No T model files to rename")		
 
 	return True
 
@@ -229,7 +253,7 @@ def check_for_broken_models():
 		else:
 			print("Missing model: %s" % model_name)
 
-def generate_info_json(mdl_path, output_path):
+def generate_info_json(model_name, mdl_path, output_path):
 	data = {}
 	output = ''
 	try:
@@ -366,7 +390,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 			if (not os.path.isfile(info_json_path) or not skip_existing):
 				print("\nGenerating info json...")
 				anything_updated = True
-				generate_info_json(mdl_path, info_json_path)
+				generate_info_json(model_name, mdl_path, info_json_path)
 			else:
 				pass #print("Info json already generated")
 			
@@ -397,6 +421,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 				pass #print("Thumbnails already generated")
 		except Exception as e:
 			print(e)
+			traceback.print_exc()
 			failed_models.append(model_name)
 			anything_updated = False
 			if not skip_on_error:
@@ -593,10 +618,8 @@ def load_all_model_hashes(path):
 	
 	return model_hashes
 
-def find_duplicate_models():
-	global models_path
-	
-	model_hashes = load_all_model_hashes(models_path)
+def find_duplicate_models(work_path):	
+	model_hashes = load_all_model_hashes(work_path)
 	print("\nAll duplicates:")
 	
 	for hash in model_hashes:
@@ -662,25 +685,30 @@ def find_duplicate_models():
 	
 	os.chdir(start_dir)
 	for dir in to_delete:
-		shutil.rmtree(os.path.join(models_path, dir))
+		shutil.rmtree(os.path.join(work_path, dir))
 		
 	return True
 
 def install_new_models():
 	global models_path
 	global install_path
+	global alias_json_name
+	
+	alt_names = {}
+	if os.path.exists(alias_json_name):
+		with open(alias_json_name) as f:
+			json_dat = f.read()
+			alt_names = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 	
 	# First generate info jsons, if needed
 	print("-- Generating info JSONs for new models")
-	update_models(install_path, True, False, False, True, False)
+	update_models(install_path, True, True, False, True, False)
 	
 	print("\n-- Checking for duplicates")
 	
-	model_hashes = load_all_model_hashes(models_path)
+	any_dups = False
 	install_hashes = load_all_model_hashes(install_path)
 	
-	dups = []
-	any_dups = False
 	for hash in install_hashes:
 		if len(install_hashes[hash]) > 1:
 			msg = ''
@@ -688,10 +716,28 @@ def install_new_models():
 				msg += ' ' + model
 			print("ERROR: Duplicate models in install folder:" + msg)
 			any_dups = True
+	
+	model_hashes = load_all_model_hashes(models_path)
+	dups = []
+	
+	for hash in install_hashes:
 		if hash in model_hashes:
 			print("ERROR: %s is a duplicate of %s" % (install_hashes[hash], model_hashes[hash]))
 			dups += install_hashes[hash]
 			any_dups = True
+			
+			primary_name = model_hashes[hash][0].lower()
+			for alt in install_hashes[hash]:
+				alt = alt.lower()
+				if alt == primary_name:
+					continue
+				if primary_name not in alt_names:
+					alt_names[primary_name] = []
+				if alt not in alt_names[primary_name]:
+					alt_names[primary_name].append(alt)
+	
+	with open(alias_json_name, 'w') as outfile:
+		json.dump(alt_names, outfile)
 	
 	if len(dups) > 0 and input("\nDelete the duplicate models in the install folder? (y/n)") == 'y':
 		for dup in dups:
@@ -699,11 +745,16 @@ def install_new_models():
 			shutil.rmtree(path)
 	
 	new_dirs = get_sorted_dirs(install_path)
-	old_dirs = [dir.lower() for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+	old_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+	old_dirs_lower = [dir.lower() for dir in old_dirs]
 	
 	for dir in new_dirs:
-		if dir.lower() in old_dirs:
-			print("ERROR: %s already exists" % dir.lower())
+		lowernew = dir.lower()
+		for idx, old in enumerate(old_dirs):
+			if lowernew == old.lower():
+				print("ERROR: %s already exists" % old)
+				rename_model(old, old + "_v2", models_path)
+			
 	
 	if any_dups:
 		print("No models were added due to duplicates.")
@@ -755,7 +806,9 @@ if len(args) > 0:
 	elif args[0].lower() == 'list':
 		create_list_file()
 	elif args[0].lower() == 'dup':
-		find_duplicate_models()
+		find_duplicate_models(models_path)
+	elif args[0].lower() == 'dup_install':
+		find_duplicate_models(install_path)
 	elif args[0].lower() == 'validate':
 		validate_model_isolated()
 	else:

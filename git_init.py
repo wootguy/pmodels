@@ -123,9 +123,12 @@ def update(commit_message):
 		# Add files to each repo, balanced by hash key
 		print("Adding files to repos")
 		
-		with open("updated.txt", "r") as update_list:
-			all_dirs = update_list.readlines()
-			print("using updated.txt instead of checking all folders")
+		if os.path.exists('updated.txt'):
+			with open("updated.txt", "r") as update_list:
+				all_dirs = update_list.readlines()
+				print("using updated.txt instead of checking all folders")
+		else:
+			print("Updating all folders because updated.txt does not exist (slow!)")
 			
 		updated_buckets = []
 		
@@ -153,8 +156,9 @@ def update(commit_message):
 		
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'push']
 		subprocess.run(args)
-		
-	os.remove("updated.txt")
+	
+	if os.path.exists('updated.txt'):
+		os.remove("updated.txt")
 
 
 def update_simple(commit_message):

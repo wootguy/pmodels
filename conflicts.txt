@@ -5,3 +5,10 @@ cof_simon -> cof_simon_v2
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
+
+added _v2 to some recent models that already existed in the a 2017 version of the 
+TWLZ player model pack. Sometimes _v3 and _v4 were added to match chronological
+dates of the models, meaning the original name isn't used anymore because I only
+know for sure that the _v2 version is correctly named (e.g. rouge -> rouge_v3 instead
+of swapping rouge_v2 and rouge). Some of these are very obviously not a _v2, but a
+completely different model.
