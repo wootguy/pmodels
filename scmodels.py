@@ -825,12 +825,14 @@ if len(args) > 0:
 	elif args[0].lower() == 'rename':
 		rename_model(args[1], args[2], models_path)
 		os.chdir(start_dir)
+		update_models(models_path, skip_existing=True, skip_on_error=True, errors_only=False, info_only=True, update_master_json=True)
 		list_file = open("updated.txt","w") 
 		list_file.write("%s\n" % args[1])
 		list_file.write("%s\n" % args[2])
 		list_file.close()
-		print("Now run:")
+		print("\nNow run:")
 		print("python3 git_init.py update")
+		print("then push changes to main repo")
 	else:
 		print("Unrecognized command. Run without options to see help")
 
