@@ -1,4 +1,4 @@
-import sys, os, shutil, collections, json, subprocess, stat, hashlib, traceback
+import sys, os, shutil, collections, json, subprocess, stat, hashlib, traceback, time
 from glob import glob
 from io import StringIO
 
@@ -69,6 +69,10 @@ def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_p
 def get_sorted_dirs(path):
 	all_dirs = [dir for dir in os.listdir(path) if os.path.isdir(os.path.join(path,dir))]
 	return sorted(all_dirs, key=str.casefold)
+
+def get_model_modified_date(mdl_name, work_path):
+	mdl_path = os.path.join(work_path, mdl_name, mdl_name + ".mdl")
+	return time.ctime(os.path.getmtime(mdl_path))
 
 def rename_model(old_dir_name, new_name, work_path):
 	global master_json
@@ -145,8 +149,8 @@ def rename_model(old_dir_name, new_name, work_path):
 	rename_file(tmdl_files, new_name, 't.mdl')
 	rename_file(json_files, new_name, '.json')
 	
-	if len(png_files) > 0:
-		old_file_name = png_files[0]
+	for png_file in png_files:
+		old_file_name = png_file
 		
 		new_file_name = ''
 		if '_large' in old_file_name:
@@ -682,6 +686,19 @@ def find_duplicate_models(work_path):
 			print("%s" % model_hashes[hash])
 			to_delete += model_hashes[hash][1:]
 	'''
+	
+	all_dirs = get_sorted_dirs(work_path)
+	all_dirs_lower = [dir.lower() for dir in all_dirs]
+	unique_dirs_lower = sorted(list(set(all_dirs_lower)))
+	
+	for ldir in unique_dirs_lower:
+		matches = []
+		for idx, dir2 in enumerate(all_dirs_lower):
+			if dir2 == ldir:
+				matches.append(all_dirs[idx])
+		if len(matches) > 1:
+			msg = ', '.join(["%s (%s)" % (dir, get_model_modified_date(dir, work_path)) for dir in matches])
+			print("Conflicting model names: %s" % msg)
 	
 	if (len(to_delete) == 0):
 		print("\nNo duplicates to remove")
