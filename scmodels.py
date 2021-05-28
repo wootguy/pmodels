@@ -86,7 +86,6 @@ def rename_model(old_dir_name, new_name, work_path):
 	if (old_dir_name != new_name and os.path.exists(new_dir)):
 		print("Can't rename folder to %s. That already exists." % new_dir)
 		return False
-		
 	
 	if old_dir != new_dir:
 		os.rename(old_dir, new_dir)
@@ -97,6 +96,8 @@ def rename_model(old_dir_name, new_name, work_path):
 	mdl_files = []
 	tmdl_files = []
 	bmp_files = []
+	png_files = []
+	json_files = []
 	for file in all_files:
 		if ".mdl" in file.lower():
 			mdl_files.append(file)
@@ -104,6 +105,10 @@ def rename_model(old_dir_name, new_name, work_path):
 		#	tmdl_files.append(file)
 		if ".bmp" in file.lower():
 			bmp_files.append(file)
+		if '_large.png' in file.lower() or '_small.png' in file.lower() or '_tiny.png' in file.lower():
+			png_files.append(file)
+		if ".json" in file.lower():
+			json_files.append(file)
 
 	if len(mdl_files) > 1:
 		print("Multiple mdl files to rename. Don't know what to do")
@@ -117,38 +122,43 @@ def rename_model(old_dir_name, new_name, work_path):
 		print("Multiple bmp files to rename. Don't know what to do")
 		sys.exit()
 		return False
-
-	if len(bmp_files) > 0:
-		bmp_name = bmp_files[0]
-		new_bmp_name = new_name + ".bmp"
+	if len(json_files) > 1:
+		print("Multiple json files to rename. Don't know what to do")
+		sys.exit()
+		return False
+	if len(png_files) > 3:
+		print("Too many PNG files found. Don't know what to do")
+		sys.exit()
+		return False
 		
-		if bmp_name != new_bmp_name:
-			os.rename(bmp_name, new_bmp_name)
-			print("Renamed %s -> %s" % (bmp_name, new_bmp_name))
-	else:
-		print("No preview images to rename")
-
-	if len(mdl_files) > 0:
-		for file in mdl_files:
-			model_name = mdl_files[0]
-			new_model_name = new_name + ".mdl"
-
-			if model_name != new_model_name:
-				os.rename(model_name, new_model_name)
-				print("Renamed %s -> %s" % (model_name, new_model_name))
-	else:
-		print("No model files to rename")
+	def rename_file(file_list, new_name, ext):
+		if len(file_list) > 0:
+			old_file_name = file_list[0]
+			new_file_name = new_name + ext
+			
+			if old_file_name != new_file_name:
+				os.rename(old_file_name, new_file_name)
+				print("Renamed %s -> %s" % (old_file_name, new_file_name))
+			
+	rename_file(bmp_files, new_name, '.bmp')
+	rename_file(mdl_files, new_name, '.mdl')
+	rename_file(tmdl_files, new_name, 't.mdl')
+	rename_file(json_files, new_name, '.json')
+	
+	if len(png_files) > 0:
+		old_file_name = png_files[0]
 		
-	if len(tmdl_files) > 0:
-		for file in tmdl_files:
-			model_name = tmdl_files[0]
-			new_model_name = new_name + "t.mdl"
-
-			if model_name != new_model_name:
-				os.rename(model_name, new_model_name)
-				print("Renamed %s -> %s" % (model_name, new_model_name))
-	else:
-		print("No T model files to rename")		
+		new_file_name = ''
+		if '_large' in old_file_name:
+			new_file_name = new_name + "_large.png"
+		elif '_small' in old_file_name:
+			new_file_name = new_name + "_small.png"
+		elif '_tiny' in old_file_name:
+			new_file_name = new_name + "_tiny.png"
+		
+		if old_file_name != new_file_name:
+			os.rename(old_file_name, new_file_name)
+			print("Renamed %s -> %s" % (old_file_name, new_file_name))
 
 	return True
 
@@ -786,6 +796,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("update - generate thumbnails and info jsons for any models.")
 	print("regen - regenerates info jsons for every model")
 	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
+	print("rename <a> <b> - rename model <a> to <b>")
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
@@ -811,6 +822,15 @@ if len(args) > 0:
 		find_duplicate_models(install_path)
 	elif args[0].lower() == 'validate':
 		validate_model_isolated()
+	elif args[0].lower() == 'rename':
+		rename_model(args[1], args[2], models_path)
+		os.chdir(start_dir)
+		list_file = open("updated.txt","w") 
+		list_file.write("%s\n" % args[1])
+		list_file.write("%s\n" % args[2])
+		list_file.close()
+		print("Now run:")
+		print("python3 git_init.py update")
 	else:
 		print("Unrecognized command. Run without options to see help")
 
