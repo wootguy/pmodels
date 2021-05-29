@@ -823,6 +823,11 @@ if len(args) > 0:
 					dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 				if len(dat['bodies'][0]['models']) > 2:
 					print("LD MODE: %s %s" % (len(dat['bodies'][0]['models']), dir))
+					files = [file for file in os.listdir(os.path.join(models_path, dir))]
+					for file in files:
+						if '_tiny.png' in file or '_small.png' in file or '_large.png' in file:
+							src = os.path.join(models_path, dir, file)
+							os.remove(src)
 						
 	else:
 		print("Unrecognized command. Run without options to see help")

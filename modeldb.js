@@ -195,6 +195,7 @@ function hlms_model_load_complete(successful) {
 			canvas.style.visibility = "visible";
 			img.style.display = "none";
 			img.setAttribute("src", "");
+			Module.ccall('set_wireframe', null, ["number"], [document.getElementById("wireframe").checked ? 1 : 0], {async: true});
 		}
 		
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
@@ -466,8 +467,11 @@ document.addEventListener("DOMContentLoaded",function() {
 		handle_3d_toggle();
 	}
 	document.getElementById("cl_himodels").onchange = function() {
-		let body = this.checked ? 1 : 0;
+		let body = this.checked ? 255 : 0;
 		Module.ccall('set_body', null, ["number"], [body], {async: true});
 		update_poly_count();
+	}
+	document.getElementById("wireframe").onchange = function() {
+		Module.ccall('set_wireframe', null, ["number"], [this.checked ? 1 : 0], {async: true});
 	}
 });

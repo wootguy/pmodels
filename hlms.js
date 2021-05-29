@@ -10605,6 +10605,23 @@ var ASM_CONSTS = {
     }
 
 
+  function _glDisableClientState(cap) {
+      var attrib = GLEmulation.getAttributeFromCapability(cap);
+      if (attrib === null) {
+        err('WARNING: unhandled clientstate: ' + cap);
+        return;
+      }
+      if (GLImmediate.enabledClientAttributes[attrib]) {
+        GLImmediate.enabledClientAttributes[attrib] = false;
+        GLImmediate.totalEnabledClientAttributes--;
+        GLImmediate.currentRenderer = null; // Will need to change current renderer, since the set of active vertex pointers changed.
+        // In GL_FFP_ONLY mode, attributes are bound to the same index in each FFP emulation shader, so we can immediately apply the change here.
+        GL.disableVertexAttribArray(attrib);
+        if (GLEmulation.currentVao) delete GLEmulation.currentVao.enabledClientStates[cap];
+        GLImmediate.modifiedClientAttributes = true;
+      }
+    }
+
   function _glDrawArrays(mode, first, count) {
       if (GLImmediate.totalEnabledClientAttributes == 0 && mode <= 6) {
         GLctx.drawArrays(mode, first, count);
@@ -11962,6 +11979,7 @@ var asmLibraryArg = {
   "glDepthFunc": _glDepthFunc,
   "glDepthMask": _glDepthMask,
   "glDisable": _glDisable,
+  "glDisableClientState": _glDisableClientState,
   "glDrawArrays": _glDrawArrays,
   "glEnable": _glEnable,
   "glEnableClientState": _glEnableClientState,
@@ -12012,6 +12030,9 @@ var _set_body = Module["_set_body"] = createExportWrapper("set_body");
 
 /** @type {function(...*):?} */
 var _pause = Module["_pause"] = createExportWrapper("pause");
+
+/** @type {function(...*):?} */
+var _set_wireframe = Module["_set_wireframe"] = createExportWrapper("set_wireframe");
 
 /** @type {function(...*):?} */
 var _reset_zoom = Module["_reset_zoom"] = createExportWrapper("reset_zoom");
