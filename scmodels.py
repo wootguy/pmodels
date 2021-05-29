@@ -17,6 +17,7 @@ start_dir = os.getcwd()
 models_path = 'models/player/'
 install_path = 'install/'
 hlms_path = os.path.join(start_dir, 'hlms')
+modelguy_path = os.path.join(start_dir, 'modelguy')
 posterizer_path = '/home/pi/mediancut-posterizer/posterize'
 pngcrush_path = 'pngcrush'
 magick_path = 'convert'
@@ -271,77 +272,16 @@ def check_for_broken_models():
 def generate_info_json(model_name, mdl_path, output_path):
 	data = {}
 	output = ''
+	
+	if os.path.exists(output_path):
+		os.remove(output_path)
+	
 	try:
-		args = [hlms_path, './' + mdl_path]
+		args = [modelguy_path, 'info', mdl_path, output_path]
 		output = subprocess.check_output(args)
 	except Exception as e:
 		output = e
 		print(e)
-			
-	output = StringIO(output.decode('utf-8'))
-	
-	t_model_file = None
-	begin_parse = False
-	for line in output:
-		line = line.replace('\n', '')
-		if line == '!BEGIN_MODEL_INFO!':
-			begin_parse = True
-			continue
-		if line == '!END_MODEL_INFO!':
-			break
-		if not begin_parse:
-			continue
-		keyvalue = line.split("=")
-		if len(keyvalue) != 2:
-			print("Invalid keyvalue: %s" % line)
-			continue
-		key = keyvalue[0]
-		value = keyvalue[1]
-		if key in ['sequences', 'event']:
-			value = value.split("|")
-		
-		if key == 't_model':
-			if value == '1' or value == 1:
-				found_t_model = False
-				all_files = [file for file in os.listdir('.') if os.path.isfile(file)]
-				t_model_name = model_name + "t.mdl"
-				for file in all_files:
-					if file.lower() == t_model_name.lower():
-						data['t_model'] = t_model_file = file
-						found_t_model = True
-						break
-				if not found_t_model:
-					print("Missing T Model: %s" % t_model_name)
-					raise Exception('Missing T Model')
-		
-		elif key == 'seq_groups':
-			if value != '1':
-				for i in range(0, int(value)):
-					suffix = "%s" % (i+1)
-					if i < 10:
-						suffix = "0" + suffix
-					path = model_name + suffix + ".mdl"
-					if not os.path.exists(path):
-						print("Missing animation model: %s" % path) # not always fatal, but could be
-			data['seq_groups'] = int(value)
-			
-		elif key == 'event':
-			value = {
-				'seq': value[0],
-				'frame': value[1],
-				'file': value[2]
-			}
-			if 'events' not in data:
-				data['events'] = []
-			data['events'].append(value)
-		else:
-			data[key] = value
-		#print("Save key %s" % key)
-		
-	data['hash'] = hash_md5(mdl_path, t_model_file)
-		
-	with open(output_path, 'w') as outfile:
-		json.dump(data, outfile)
 
 def update_models(work_path, skip_existing=True, skip_on_error=False, errors_only=True, info_only=False, update_master_json=False):
 	global master_json
@@ -619,7 +559,7 @@ def load_all_model_hashes(path):
 			with open(json_path) as f:
 				json_dat = f.read()
 				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)					
-				hash = dat['hash']
+				hash = dat['md5']
 				
 				if hash not in model_hashes:
 					model_hashes[hash] = [model_name]

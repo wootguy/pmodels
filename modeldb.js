@@ -98,7 +98,12 @@ function view_model(model_name) {
 	}
 	
 	fetchJSONFile(repo_url + model_path + model_name + ".json", function(data) {
-		let num = parseInt(data["tri_count"]);
+		let models = data["bodies"][0]["models"];
+		let num = parseInt(models[0]["polys"]);
+		if (models.length > 1) {
+			num = parseInt(models[1]["polys"]); // cl_himodels 1 (default client setting)
+		}
+		
 		popup.getElementsByClassName("polycount")[0].textContent = num.toLocaleString(undefined);
 		
 		hlms_load_model(model_name, data["t_model"] || "", data["seq_groups"]);
@@ -307,6 +312,14 @@ function hash_code(str) {
 
 	}
 	return hash;
+}
+
+function set_animation(idx) {
+	Module.ccall('set_animation', null, ['number'], [idx], {async: true});
+}
+
+function reset_zoom(idx) {
+	Module.ccall('reset_zoom', null, [], [], {async: true});
 }
 
 window.onresize = handle_resize;
