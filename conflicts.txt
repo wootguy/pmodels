@@ -7,6 +7,13 @@ Touhou_Momiji -> kz_touhou_momiji
 Venom -> VenomReal_v2
 warrior_skeleton -> warrior_skeleton_2
 Zombie2 -> th_zombie2
+pyro -> pyro_hecu
+cryokeen -> cryokeen_hd
+demon -> demon2
+grunt -> grunt2
+hgrunt_hd -> hgrunt_hd_v2
+hgrunt -> hgrunt_hd
+vamp -> vamp2
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
