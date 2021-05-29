@@ -3,8 +3,9 @@ from glob import glob
 from io import StringIO
 
 # TODO:
-# - BMP files weren't renamed when adding version suffixes. Find all that are missing and rename if bmp exists
 # - some models I added _v2 to are actually a completely different model
+# - delete all thumbs.db and .ztmp
+# - lowercase before adding new models
 
 master_json = {}
 master_json_name = 'models.json'
@@ -721,6 +722,11 @@ def install_new_models():
 	global install_path
 	global alias_json_name
 	
+	new_dirs = get_sorted_dirs(install_path)
+	if len(new_dirs) == 0:
+		print("No models found in %s" % install_path)
+		sys.exit()
+	
 	alt_names = {}
 	if os.path.exists(alias_json_name):
 		with open(alias_json_name) as f:
@@ -771,7 +777,6 @@ def install_new_models():
 			path = os.path.join(install_path, dup)
 			shutil.rmtree(path)
 	
-	new_dirs = get_sorted_dirs(install_path)
 	old_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
 	old_dirs_lower = [dir.lower() for dir in old_dirs]
 	
@@ -787,11 +792,29 @@ def install_new_models():
 		print("No models were added due to duplicates.")
 		return
 	
+	print("\n-- Lowercasing files")
+	for dir in new_dirs:
+		all_files = [file for file in os.listdir(os.path.join(install_path, dir))]
+		mdl_files = []
+		for file in all_files:
+			if file != file.lower():
+				src = os.path.join(install_path, dir, file)
+				dst = os.path.join(install_path, dir, file.lower())
+				if os.path.exists(dst):
+					print("Lowercase file already exists: %s" % dst)
+					sys.exit()
+				else:
+					print("Rename: %s -> %s" % (file, file.lower()))
+				os.rename(src, dst)
+		if dir != dir.lower():
+			print("Rename: %s -> %s" % (dir, dir.lower()))
+			os.rename(os.path.join(install_path, dir), os.path.join(install_path, dir.lower()))
+	new_dirs = [dir.lower() for dir in new_dirs]
+	
 	print("\n-- Generating thumbnails")
 	update_models(install_path, True, False, False, False, False)
 	
 	print("\n-- Adding %s new models" % len(new_dirs))
-
 	for dir in new_dirs:
 		src = os.path.join(install_path, dir)
 		dst = os.path.join(models_path, dir)
