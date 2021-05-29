@@ -813,6 +813,17 @@ if len(args) > 0:
 		print("\nNow run:")
 		print("python3 git_init.py update")
 		print("then push changes to main repo")
+	elif args[0].lower() == 'fixup':
+		all_dirs = get_sorted_dirs(models_path)
+		for dir in all_dirs:
+			json_path = os.path.join(models_path, dir, dir + ".json")
+			if os.path.exists(json_path):
+				with open(json_path) as f:
+					json_dat = f.read()
+					dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+				if len(dat['bodies'][0]['models']) > 2:
+					print("LD MODE: %s %s" % (len(dat['bodies'][0]['models']), dir))
+						
 	else:
 		print("Unrecognized command. Run without options to see help")
 

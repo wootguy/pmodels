@@ -181,6 +181,14 @@
 				/*margin-right: 20px;*/
 			}
 			
+			.model-controls {
+				position: absolute;
+				bottom: 10px;
+			}
+			input[type="checkbox"][disabled] + label {
+				color: #ccc;
+			}
+			
 			.loader {
 			  color: #ffffff;
 			  font-size: 4px;
@@ -315,6 +323,17 @@
 			<div class="details">
 				<h2 class="details-header">Header text</h2>
 				<div>Polygons: <span class="polycount">???</span></div>
+				<div class="model-controls">
+					<input type="checkbox" id="3d_on" checked>
+					<label for="3d_on" title="Enable the 3D model renderer">Render 3D</label>
+					<br>
+					<div class="hd_setting">
+						<input type="checkbox" id="cl_himodels" checked>
+						<label for="cl_himodels" title="Render the HD submodel">cl_himodels 1</label>
+					</div>
+					<br>
+					<span>Sequence: </span> <select class="animations"></select>					
+				</div>
 			</div>
 		</div>
 		

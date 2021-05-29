@@ -12008,6 +12008,12 @@ var _load_new_model = Module["_load_new_model"] = createExportWrapper("load_new_
 var _set_animation = Module["_set_animation"] = createExportWrapper("set_animation");
 
 /** @type {function(...*):?} */
+var _set_body = Module["_set_body"] = createExportWrapper("set_body");
+
+/** @type {function(...*):?} */
+var _pause = Module["_pause"] = createExportWrapper("pause");
+
+/** @type {function(...*):?} */
 var _reset_zoom = Module["_reset_zoom"] = createExportWrapper("reset_zoom");
 
 /** @type {function(...*):?} */

@@ -1,5 +1,6 @@
 
 var model_data = {};
+var g_view_model_data = {};
 var model_names;
 var can_load_new_model = false;
 var model_load_queue;
@@ -15,6 +16,9 @@ var data_repo_count = 32;
 var renderWidth = 500;
 var renderHeight = 800;
 var antialias = 2;
+var g_3d_enabled = true;
+var g_model_was_loaded = false;
+var g_view_model_name = "";
 
 function fetchJSONFile(path, callback) {
 	var httpRequest = new XMLHttpRequest();
@@ -62,6 +66,32 @@ function hlms_load_model(model_name, t_model, seq_groups) {
 	}
 }
 
+function update_poly_count() {
+	var popup = document.getElementById("model-popup");
+	
+	var totalPolys = 0;
+	var hasLdModel = false;
+	for (var i = 0; i < g_view_model_data["bodies"].length; i++) {
+		let models = g_view_model_data["bodies"][i]["models"];
+		let polys = parseInt(models[0]["polys"]);
+		
+		if (models.length > 1) {
+			hasLdModel = true;
+			if (document.getElementById("cl_himodels").checked) {
+				polys = parseInt(models[1]["polys"]); // cl_himodels 1 (default client setting)
+			}
+		}
+		
+		totalPolys += polys;
+	}
+	
+	if (hasLdModel) {
+		popup.getElementsByClassName("hd_setting")[0].style.display = "block";
+	}
+	
+	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
+}
+
 function view_model(model_name) {
 	var model_path = "models/player/" + model_name + "/";
 	var popup = document.getElementById("model-popup");
@@ -76,12 +106,18 @@ function view_model(model_name) {
 	img.style.display = "block";
 	img.setAttribute("src", "");
 	img.setAttribute("src", repo_url + model_path + model_name + "_small.png");
+	img.setAttribute("src_large", repo_url + model_path + model_name + "_large.png");
+	g_view_model_name = model_name;
+	document.getElementById("cl_himodels").checked = true;
 	
 	popup.getElementsByClassName("details-header")[0].textContent = model_name;
 	popup.getElementsByClassName("polycount")[0].textContent = "???";
 	popup.getElementsByClassName("loader")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].textContent = "Loading (0%)";
+	
+	let select = popup.getElementsByClassName("animations")[0];
+	select.textContent = "";
 
 	canvas.style.width = "" + renderWidth + "px";
 	canvas.style.height = "" + renderHeight + "px";
@@ -97,16 +133,30 @@ function view_model(model_name) {
 		};
 	}
 	
+	popup.getElementsByClassName("hd_setting")[0].style.display = "none";
+	
+	g_model_was_loaded = false;
 	fetchJSONFile(repo_url + model_path + model_name + ".json", function(data) {
-		let models = data["bodies"][0]["models"];
-		let num = parseInt(models[0]["polys"]);
-		if (models.length > 1) {
-			num = parseInt(models[1]["polys"]); // cl_himodels 1 (default client setting)
+		console.log(data);
+		g_view_model_data = data;
+		
+		update_poly_count();
+		
+		if (document.getElementById("3d_on").checked) {
+			let t_model = data["t_model"] ? model_name + "t.mdl" : "";
+			hlms_load_model(model_name, t_model, data["seq_groups"]);
+			g_model_was_loaded = true;
+		} else {
+			popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
+			popup.getElementsByClassName("loader-text")[0].style.visibility = "hidden";
+			g_model_was_loaded = false;
 		}
 		
-		popup.getElementsByClassName("polycount")[0].textContent = num.toLocaleString(undefined);
-		
-		hlms_load_model(model_name, data["t_model"] || "", data["seq_groups"]);
+		for (var x = 0; x < data["sequences"].length; x++ ) {
+			let seq = document.createElement("option");
+			seq.textContent = "" + x + " : " + data["sequences"][x]["name"];
+			select.appendChild(seq);
+		}
 	});
 }
 
@@ -141,9 +191,11 @@ function hlms_model_load_complete(successful) {
 		var img = popup.getElementsByTagName("img")[0];
 		var canvas = popup.getElementsByTagName("canvas")[0];
 		
-		canvas.style.visibility = "visible";
-		img.style.display = "none";
-		img.setAttribute("src", "");
+		if (document.getElementById("3d_on").checked) {
+			canvas.style.visibility = "visible";
+			img.style.display = "none";
+			img.setAttribute("src", "");
+		}
 		
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
 		popup.getElementsByClassName("loader-text")[0].style.visibility = "hidden";
@@ -359,6 +411,29 @@ function handle_resize(event) {
 	details.style.height = "" + renderHeight + "px";
 };
 
+function handle_3d_toggle() {
+	var popup = document.getElementById("model-popup");
+	var img = popup.getElementsByTagName("img")[0];
+	var canvas = popup.getElementsByTagName("canvas")[0];
+	
+	if (g_3d_enabled) {
+		canvas.style.visibility = "visible";
+		img.style.display = "none";
+		img.setAttribute("src", "");
+		
+		Module.ccall('pause', null, ["number"], [0], {async: true});
+		if (!g_model_was_loaded) {
+			view_model(g_view_model_name);
+		}
+	} else {
+		canvas.style.visibility = "hidden";
+		img.style.display = "block";
+		img.setAttribute("src", img.getAttribute("src_large"));
+		
+		Module.ccall('pause', null, ["number"], [1], {async: true});
+	}
+}
+
 document.addEventListener("DOMContentLoaded",function() {
 	fetchJSONFile("models.json", function(data) {
 		model_data = data;
@@ -383,4 +458,16 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementsByClassName("page-first-container")[0].addEventListener("click", first_page);
 	document.getElementsByClassName("page-last-container")[0].addEventListener("click", last_page);
 	document.getElementById("name-filter").addEventListener("keyup", apply_filters);
+	document.getElementsByClassName('animations')[0].onchange = function() {
+		set_animation(this.selectedIndex);
+	}
+	document.getElementById("3d_on").onchange = function() {
+		g_3d_enabled = this.checked;
+		handle_3d_toggle();
+	}
+	document.getElementById("cl_himodels").onchange = function() {
+		let body = this.checked ? 1 : 0;
+		Module.ccall('set_body', null, ["number"], [body], {async: true});
+		update_poly_count();
+	}
 });
