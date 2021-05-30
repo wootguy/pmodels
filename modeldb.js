@@ -142,7 +142,7 @@ function update_model_details() {
 	var polyColor = "";
 	if (totalPolys < 1000) {
 		polyColor = "#0f0";
-		if (totalPolys < 500) {
+		if (totalPolys < 600) {
 			popup.getElementsByClassName("polycount")[0].innerHTML += "&nbsp;&nbsp;👍";
 		}
 	} else if (totalPolys < 2000) {
@@ -155,13 +155,15 @@ function update_model_details() {
 		polyColor = "red";
 	}
 	
-	if (totalPolys >= 50*1000) {
-		popup.getElementsByClassName("polycount")[0].classList.add("insane");
+	if (totalPolys >= 60*1000) {
 		popup.getElementsByClassName("polyflame")[0].style.visibility = "visible";
 	}
-	else if (totalPolys >= 30*1000) {
-		popup.getElementsByClassName("polycount")[0].innerHTML = "🚨&nbsp;&nbsp;"
-		+ popup.getElementsByClassName("polycount")[0].innerHTML + "&nbsp;&nbsp;🚨";
+	if (totalPolys >= 40*1000) {
+		popup.getElementsByClassName("polycount")[0].classList.add("insane");
+	}
+	if (totalPolys >= 20*1000) {
+		popup.getElementsByClassName("polycount")[0].innerHTML = "🚨 "
+		+ popup.getElementsByClassName("polycount")[0].innerHTML + " 🚨";
 	}
 	popup.getElementsByClassName("polycount")[0].style.color = polyColor;
 	
@@ -281,7 +283,7 @@ function hlms_model_load_complete(successful) {
 			img.setAttribute("src", "");
 			Module.ccall('set_wireframe', null, ["number"], [document.getElementById("wireframe").checked ? 1 : 0], {async: true});
 		}
-		set_animation(4); // debug
+		//set_animation(4); // debug
 		
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
 		popup.getElementsByClassName("loader-text")[0].style.visibility = "hidden";
@@ -369,16 +371,18 @@ function apply_filters() {
 	
 	if (hide_old_ver && Object.keys(model_data).length > 0) {
 		for (var i = 0; i < model_names.length; i++) {
-			/*
+			
 			if (model_data[model_names[i]]["is_latest_version"]) {
 				model_names_filtered.push(model_names[i]);
 			}
-			*/
+			
+			/*
 			if (get_model_base_name(model_names[i]) in g_latest_versions) {
 				model_names_filtered.push(model_names[i]);
 			} else if (model_names[i] == "007tux_v2") {
 				console.log("NOT ADDING: " + model_names[i] + " " + get_model_base_name(model_names[i]));
 			}
+			*/
 		}
 	} else {
 		model_names_filtered = model_names;
