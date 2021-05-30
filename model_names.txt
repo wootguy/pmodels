@@ -560,7 +560,7 @@ alice2_hev_alt
 alice_nude
 alien
 alien-zm1
-alien_v2
+alien2
 alienslv
 alienteam1
 alienteam2
@@ -784,7 +784,7 @@ aviator_crash
 avp2marine
 avp2marine_v2
 avp2pred
-avp2pred_v2
+avp2pred2
 avp_predator
 avp_predator_n
 axelpro
@@ -1059,6 +1059,7 @@ billy_v2
 bio_snake
 bio_snake_v2
 bio_tfc_sniper
+bio_tfc_sniper_v2
 biofermin
 biohazard
 biohazardkeen
@@ -1310,7 +1311,7 @@ bunny_teto
 bunny_v2
 bunny_yukari
 bunny_yukari_v2
-bunny_yukari_v2_v2
+bunny_yukari_v3
 bunnygirl
 bunnygirl_buruma
 bunnygirl_buruma_v2
@@ -1856,7 +1857,7 @@ cptrod
 crash
 crash_alt
 crash_bandicoot
-crash_bandicoot_v2
+crash_bandicoot2
 crash_color
 crasher2
 crasher2_v2
@@ -2792,7 +2793,7 @@ final_starman_c
 firedrake
 firemonkey
 fishman
-fishman_v2
+fishman2
 flamethrower_leet
 flanders
 flanders_v2
@@ -3481,8 +3482,8 @@ haruhi_yui
 hatsune-mikuver2
 hatsunemiku
 hatsunemiku1
+hatsunemiku_10a2
 hatsunemiku_10a_v1
-hatsunemiku_10a_v2
 hatsunemiku_v2
 havok2
 havok2_v2
@@ -4109,7 +4110,7 @@ kancolle_atago_n
 kancolle_bismarck
 kancolle_bismarck_n
 kancolle_harbour
-kancolle_harbour_v2
+kancolle_harbour2
 kancolle_hibiki
 kancolle_hibiki_n
 kancolle_shimakaze
@@ -4178,7 +4179,7 @@ kermit
 kermit_costume
 kermit_costume_v2
 kermit_ninja
-kermit_v2_v2
+kermit_v2
 kf_baron
 kf_bloat
 kf_briar
@@ -6871,8 +6872,8 @@ shade
 shadic
 shadow
 shadow1
-shadow1_v2
 shadow2
+shadow2_v2
 shadow_girl
 shadowman
 shambler
@@ -7651,11 +7652,11 @@ tacteq
 tails_ale
 tails_custom_s5
 tails_dark_s5
+tails_ld
 tails_s5
 tails_sc4
 tails_v2
 tails_v3
-tails_v4
 takamori
 takecover
 takedeppo
@@ -7825,7 +7826,6 @@ tfc_sniper
 tfc_sniper2
 tfc_sniper_hd
 tfc_sniper_v2
-tfc_sniper_v2_v2
 tfc_soldier
 tfc_soldier_hd
 tfc_spy
@@ -8351,7 +8351,7 @@ vocaloid_akita
 vocaloid_haku
 vocaloid_kasane
 vocaloid_miku
-vocaloid_miku_v2
+vocaloid_miku2
 vocaloid_rin
 vocaloid_yukari-yuzuki
 vocaloid_yukari_yuzuki

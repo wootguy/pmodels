@@ -14,6 +14,16 @@ grunt -> grunt2
 hgrunt_hd -> hgrunt_hd_v2
 hgrunt -> hgrunt_hd
 vamp -> vamp2
+alien -> alien2
+avp2pred -> avp2pred2
+crash_bandicoot -> crash_bandicoot2
+fishman -> fishman2
+hatsunemiku_10a -> hatsunemiku_10a2
+james -> james2
+kancolle_harbour -> kancolle_harbour2
+shadow1 -> shadow2_v2
+tails -> tails_ld
+vocaloid_miku -> vocaloid_miku2
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.

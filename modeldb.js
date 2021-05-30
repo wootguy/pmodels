@@ -283,7 +283,6 @@ function hlms_model_load_complete(successful) {
 			img.setAttribute("src", "");
 			Module.ccall('set_wireframe', null, ["number"], [document.getElementById("wireframe").checked ? 1 : 0], {async: true});
 		}
-		//set_animation(4); // debug
 		
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
 		popup.getElementsByClassName("loader-text")[0].style.visibility = "hidden";
@@ -371,18 +370,9 @@ function apply_filters() {
 	
 	if (hide_old_ver && Object.keys(model_data).length > 0) {
 		for (var i = 0; i < model_names.length; i++) {
-			
 			if (model_data[model_names[i]]["is_latest_version"]) {
 				model_names_filtered.push(model_names[i]);
 			}
-			
-			/*
-			if (get_model_base_name(model_names[i]) in g_latest_versions) {
-				model_names_filtered.push(model_names[i]);
-			} else if (model_names[i] == "007tux_v2") {
-				console.log("NOT ADDING: " + model_names[i] + " " + get_model_base_name(model_names[i]));
-			}
-			*/
 		}
 	} else {
 		model_names_filtered = model_names;
