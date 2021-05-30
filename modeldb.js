@@ -1,6 +1,7 @@
 
 var model_data = {};
 var g_view_model_data = {};
+var g_latest_versions = {};
 var model_names;
 var can_load_new_model = false;
 var model_load_queue;
@@ -20,16 +21,22 @@ var g_3d_enabled = true;
 var g_model_was_loaded = false;
 var g_view_model_name = "";
 
-function fetchJSONFile(path, callback) {
+function fetchTextFile(path, callback) {
 	var httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function() {
 		if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
-			var data = JSON.parse(httpRequest.responseText);
+			var data = httpRequest.responseText;
 			callback(data);
 		}
 	};
 	httpRequest.open('GET', path);
-	httpRequest.send(); 
+	httpRequest.send();
+}
+
+function fetchJSONFile(path, callback) {	
+	fetchTextFile(path, function(data) {
+		callback(JSON.parse(data));
+	});
 }
 
 function stopDownloads() {
@@ -66,7 +73,12 @@ function hlms_load_model(model_name, t_model, seq_groups) {
 	}
 }
 
-function update_poly_count() {
+function humanFileSize(size) {
+    var i = Math.floor( Math.log(size) / Math.log(1024) );
+    return ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['B', 'KB', 'MB', 'GB', 'TB'][i];
+};
+
+function update_model_details() {
 	var popup = document.getElementById("model-popup");
 	
 	var totalPolys = 0;
@@ -78,7 +90,7 @@ function update_poly_count() {
 		if (models.length > 1) {
 			hasLdModel = true;
 			if (document.getElementById("cl_himodels").checked) {
-				polys = parseInt(models[1]["polys"]); // cl_himodels 1 (default client setting)
+				polys = parseInt(models[models.length-1]["polys"]); // cl_himodels 1 (default client setting)
 			}
 		}
 		
@@ -89,7 +101,70 @@ function update_poly_count() {
 		popup.getElementsByClassName("hd_setting")[0].style.display = "block";
 	}
 	
+	var soundTable = "";
+	for (var i = 0; i < g_view_model_data["events"].length; i++) {
+		var evt = g_view_model_data["events"][i];
+		if (evt["event"] == 5004 && evt["options"].length > 0) {
+			var seq = evt["sequence"]
+			var seq_name = g_view_model_data["sequences"][seq]["name"];
+			soundTable += '<div class="sound_row"><div>' + seq + " : " + seq_name + "</div><div>" + evt["options"] + "</div></div>";
+		}
+	}
+	if (soundTable.length > 0) {
+		soundTable = '<div class="soundTable">' + soundTable + "</div>";
+	}
+	
+	var has_mouth = false;
+	if (g_view_model_data["controllers"].length > 4) {
+		var ctl =  g_view_model_data["controllers"][4];
+		has_mouth = ctl.bone >= 0 && ctl.start != ctl.end;
+	}
+	
+	var ext_mdl = "No";
+	var ext_tex = g_view_model_data["t_model"];
+	var ext_anim = g_view_model_data["seq_groups"] > 1;
+	if (ext_tex && ext_anim) {
+		ext_mdl = "Textures + Sequences";
+	} else if (ext_tex) {
+		ext_mdl = "Textures";
+	} else if (ext_anim) {
+		ext_mdl = "Sequences";
+	}
+	
 	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
+	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_model_data["size"]);
+	popup.getElementsByClassName("compilename")[0].textContent = g_view_model_data["name"];
+	popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
+	popup.getElementsByClassName("sounds")[0].innerHTML = soundTable.length > 0 ? soundTable : "None";
+	popup.getElementsByClassName("md5")[0].textContent = g_view_model_data["md5"];
+	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "Yes" : "No";
+	
+	var polyColor = "";
+	if (totalPolys < 1000) {
+		polyColor = "#0f0";
+		if (totalPolys < 500) {
+			popup.getElementsByClassName("polycount")[0].innerHTML += "&nbsp;&nbsp;👍";
+		}
+	} else if (totalPolys < 2000) {
+		polyColor = "white";
+	} else if (totalPolys < 4*1000) {
+		polyColor = "yellow";
+	} else if (totalPolys < 10*1000) {
+		polyColor = "orange";
+	} else {
+		polyColor = "red";
+	}
+	
+	if (totalPolys >= 50*1000) {
+		popup.getElementsByClassName("polycount")[0].classList.add("insane");
+		popup.getElementsByClassName("polyflame")[0].style.visibility = "visible";
+	}
+	else if (totalPolys >= 30*1000) {
+		popup.getElementsByClassName("polycount")[0].innerHTML = "🚨&nbsp;&nbsp;"
+		+ popup.getElementsByClassName("polycount")[0].innerHTML + "&nbsp;&nbsp;🚨";
+	}
+	popup.getElementsByClassName("polycount")[0].style.color = polyColor;
+	
 }
 
 function view_model(model_name) {
@@ -112,9 +187,18 @@ function view_model(model_name) {
 	
 	popup.getElementsByClassName("details-header")[0].textContent = model_name;
 	popup.getElementsByClassName("polycount")[0].textContent = "???";
+	popup.getElementsByClassName("filesize")[0].textContent = "???";
+	popup.getElementsByClassName("compilename")[0].textContent = "???";
+	popup.getElementsByClassName("ext_mdl")[0].textContent = "???";
+	popup.getElementsByClassName("sounds")[0].textContent = "???";
+	popup.getElementsByClassName("md5")[0].textContent = "???";
+	popup.getElementsByClassName("has_mouth")[0].textContent = "???";
 	popup.getElementsByClassName("loader")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].textContent = "Loading (0%)";
+	popup.getElementsByClassName("polycount")[0].style.color = "";
+	popup.getElementsByClassName("polycount")[0].classList.remove("insane");
+	popup.getElementsByClassName("polyflame")[0].style.visibility = "hidden";
 	
 	let select = popup.getElementsByClassName("animations")[0];
 	select.textContent = "";
@@ -140,7 +224,7 @@ function view_model(model_name) {
 		console.log(data);
 		g_view_model_data = data;
 		
-		update_poly_count();
+		update_model_details();
 		
 		if (document.getElementById("3d_on").checked) {
 			let t_model = data["t_model"] ? model_name + "t.mdl" : "";
@@ -197,6 +281,7 @@ function hlms_model_load_complete(successful) {
 			img.setAttribute("src", "");
 			Module.ccall('set_wireframe', null, ["number"], [document.getElementById("wireframe").checked ? 1 : 0], {async: true});
 		}
+		set_animation(4); // debug
 		
 		popup.getElementsByClassName("loader")[0].style.visibility = "hidden";
 		popup.getElementsByClassName("loader-text")[0].style.visibility = "hidden";
@@ -277,22 +362,42 @@ function load_results() {
 
 function apply_filters() {
 	var name_filter = document.getElementById("name-filter").value;
+	var hide_old_ver = document.getElementById("filter_ver").checked;
+	
+	var model_names_filtered = [];
+	console.log("Applying filters");
+	
+	if (hide_old_ver && Object.keys(model_data).length > 0) {
+		for (var i = 0; i < model_names.length; i++) {
+			/*
+			if (model_data[model_names[i]]["is_latest_version"]) {
+				model_names_filtered.push(model_names[i]);
+			}
+			*/
+			if (get_model_base_name(model_names[i]) in g_latest_versions) {
+				model_names_filtered.push(model_names[i]);
+			} else if (model_names[i] == "007tux_v2") {
+				console.log("NOT ADDING: " + model_names[i] + " " + get_model_base_name(model_names[i]));
+			}
+		}
+	} else {
+		model_names_filtered = model_names;
+	}
 	
 	if (name_filter.length > 0) {
 		name_parts = name_filter.toLowerCase().split(" ");
-		console.log("FILTER: " + name_filter);
 		
 		model_results = [];
-		for (var i = 0; i < model_names.length; i++) {
+		for (var i = 0; i < model_names_filtered.length; i++) {
 			for (var k = 0; k < name_parts.length; k++) {
-				if (model_names[i].toLowerCase().includes(name_parts[k])) {
-					model_results.push(model_names[i]);
+				if (model_names_filtered[i].toLowerCase().includes(name_parts[k])) {
+					model_results.push(model_names_filtered[i]);
 				}
 			}
 		}
 	}
 	else
-		model_results = model_names;
+		model_results = model_names_filtered;
 	
 	load_results();
 }
@@ -435,10 +540,26 @@ function handle_3d_toggle() {
 	}
 }
 
+function get_model_base_name(name) {
+	var ver_regex = /_v\d+$/g;
+	var verSuffix = name.match(ver_regex);
+	
+	if (verSuffix) {
+		return name.replace(verSuffix[0], "");
+	}
+	
+	return name;
+}
+
 document.addEventListener("DOMContentLoaded",function() {
-	fetchJSONFile("models.json", function(data) {
-		model_data = data;
-		model_names = Object.keys(model_data);
+	fetchTextFile("model_names.txt", function(data) {
+		model_names = data.split("\n");
+		model_names = model_names.filter(function (name) {
+			return name.length > 0;
+		});
+		
+		console.log("loaded " + model_names.length + " model names");
+		
 		model_names.sort(function(x, y) {
 			if (x.toLowerCase() < y.toLowerCase()) {
 				return -1;
@@ -450,6 +571,49 @@ document.addEventListener("DOMContentLoaded",function() {
 		apply_filters();
 		
 		handle_resize();
+	});
+	
+	fetchJSONFile("models.json", function(data) {
+		console.log(data);
+		model_data = data;
+		
+		console.log("Get version suffixes");
+		var ver_regex = /_v\d+$/g;
+		for (var key in model_data) {
+			var is_latest = true;			
+			
+			var verSuffix = key.match(ver_regex);
+			if (verSuffix) {
+				var baseName = key.replace(verSuffix[0], "");
+				var verNum = parseInt(verSuffix[0].replace("_v", ""));
+				
+				if (baseName in g_latest_versions) {
+					if (g_latest_versions[baseName]["version"] < verNum) {
+						g_latest_versions[baseName] = {
+							name: key,
+							version: verNum
+						}
+					}
+				} else {
+					g_latest_versions[baseName] = {
+						name: key,
+						version: verNum
+					}
+				}
+				
+			}
+		}
+		
+		console.log(g_latest_versions);
+		
+		console.log("Marking latest version");
+		for (var key in model_data) {
+			var baseName = get_model_base_name(key);
+			var isLatest = !(baseName in g_latest_versions) || g_latest_versions[baseName]["name"] == key;
+			model_data[key]["is_latest_version"] = isLatest;
+		}
+		
+		apply_filters();
 	});
 	
 	
@@ -469,9 +633,12 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementById("cl_himodels").onchange = function() {
 		let body = this.checked ? 255 : 0;
 		Module.ccall('set_body', null, ["number"], [body], {async: true});
-		update_poly_count();
+		update_model_details();
 	}
 	document.getElementById("wireframe").onchange = function() {
 		Module.ccall('set_wireframe', null, ["number"], [this.checked ? 1 : 0], {async: true});
+	}
+	document.getElementById("filter_ver").onchange = function() {
+		apply_filters();
 	}
 });

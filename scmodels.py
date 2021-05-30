@@ -5,7 +5,7 @@ from io import StringIO
 # TODO:
 # - some models I added _v2 to are actually a completely different model
 # - delete all thumbs.db and .ztmp
-# - lowercase before adding new models
+# - add to alias when renaming
 
 master_json = {}
 master_json_name = 'models.json'
@@ -294,7 +294,9 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	all_dirs = get_sorted_dirs(work_path)
 	total_dirs = len(all_dirs)
 	
-	#list_file = open("updated.txt","w") 
+	list_file = None
+	if update_master_json:
+		list_file = open("model_names.txt","w") 
 	failed_models = []
 	
 	for idx, dir in enumerate(all_dirs):
@@ -382,20 +384,44 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 			if not skip_on_error:
 				sys.exit()
 				
-		#if anything_updated:
-		#	list_file.write("%s\n" % model_name)
-		#	print("")
-	
-		os.chdir(start_dir)
+		if update_master_json:
+			list_file.write("%s\n" % model_name)
 		
 		if update_master_json:
-			master_json[model_name] = {}
+			filter_dat = {}
+			
+			if os.path.isfile(info_json_path):
+				with open(info_json_path) as f:
+					json_dat = f.read()
+					infoJson = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+					
+					totalPolys = 0
+					totalPolysLd = 0
+					hasLdModel = False
+					for body in infoJson["bodies"]:
+						models = body["models"]
+						polys = int(models[0]["polys"])
+						
+						if len(models) > 1:
+							hasLdModel = True
+							totalPolysLd += polys
+							polys = int(models[len(models)-1]["polys"])
+							totalPolys += polys
+						else:
+							totalPolys += polys
+					
+					filter_dat['polys'] = totalPolys
+					filter_dat['polys_ld'] = totalPolysLd
+					filter_dat['size'] = infoJson["size"]
+					
+			master_json[model_name] = filter_dat
+			
+		os.chdir(start_dir)
 			
 	if update_master_json:
 		with open(master_json_name, 'w') as outfile:
 			json.dump(master_json, outfile)
-		
-	#list_file.close()
+		list_file.close()
 	
 	print("\nFinished!")
 	
@@ -764,7 +790,9 @@ def install_new_models():
 	write_updated_models_list()
 	update_models(models_path, True, True, False, False, True)
 		
-	print("Finished.")
+	print("Finished. Now run this if everything went well:")
+	print("python3 git_init.py update")
+	print("Then change the last-updated date in index.html and push changes")
 
 args = sys.argv[1:]
 
@@ -803,6 +831,7 @@ if len(args) > 0:
 	elif args[0].lower() == 'validate':
 		validate_model_isolated()
 	elif args[0].lower() == 'rename':
+		print("TODO: Add to alias after rename")
 		rename_model(args[1], args[2], models_path)
 		os.chdir(start_dir)
 		update_models(models_path, skip_existing=True, skip_on_error=True, errors_only=False, info_only=True, update_master_json=True)

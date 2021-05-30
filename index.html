@@ -105,6 +105,10 @@
 				border-left: 10px solid rgb(48, 52, 54);
 			}
 			
+			.details td {
+				padding-right: 20px;
+			}
+			
 			#model-popup .details-header {
 				text-align: center;
 			}
@@ -181,6 +185,10 @@
 				/*margin-right: 20px;*/
 			}
 			
+			.filter-types {
+				position: absolute;
+			}
+			
 			.model-controls {
 				position: absolute;
 				bottom: 10px;
@@ -188,6 +196,87 @@
 			input[type="checkbox"][disabled] + label {
 				color: #ccc;
 			}
+			
+			.details-table {
+				width: calc(100% - 10px);
+				border: 1px solid #333;
+				max-height: calc(100% - 150px);
+			}
+			.details-table > div {
+				white-space: nowrap;
+				display: block;
+				border-bottom: 1px solid #333;
+			}
+			.details-table > div > div {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 2px 0;
+			}
+			.details-table > div > div:first-child {
+				width: 150px;
+				padding-right: 20px;
+			}
+			.details-table > div > div:last-child {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				width: calc(100% - 200px);
+				border-left: 1px solid #333;
+				padding-left: 20px;
+			}
+			.soundTable td {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.details-table .soundTable {
+				max-height: 200px;
+				overflow-y: auto;
+			}
+			.details-table div.sound_table_row > div.sounds {
+				overflow: visible;
+				white-space: initial;
+			}
+			.sound_row > div {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				display: inline-block;
+			}
+			.sound_row > div:first-child {
+				width: 40%;
+				padding-right: 20px;
+				box-sizing: border-box;
+			}
+			.sound_row > div:last-child {
+				width: 60%;
+				direction: rtl;
+				text-align: left;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			
+			.poly-cell {
+				position: relative;
+			}
+			#model-popup img.polyflame {
+				position: absolute;
+				height: 20px;
+				width: 100%;
+				height: 100%;
+				margin-left: -20px;
+			}
+			#model-popup span.polycount {
+				position: relative;
+				z-index: 1;
+			}
+			#model-popup span.polycount.insane {
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: black;
+				font-weight: bold;
+				font-size: 50px;
+			}
+			
 			
 			.loader {
 			  color: #ffffff;
@@ -285,6 +374,10 @@
 		<a class="about-link" href="about.html">About</a>
 		<hr>
 		
+		<div class="filter-types">
+			<input type="checkbox" id="filter_ver">
+			<label for="filter_ver" title="Show only the latest version for each model. This only works for models that use the '_v2' style suffixes">Hide old versions</label>
+		</div>
 		<div class="filter-search">
 			<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
 			<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
@@ -322,7 +415,15 @@
 			</div>
 			<div class="details">
 				<h2 class="details-header">Header text</h2>
-				<div>Polygons: <span class="polycount">???</span></div>
+				<div class="details-table">
+					<div><div>Polygons:</div><div class="poly-cell"><img class="polyflame" src="flamingline.gif"/><span class="polycount">???</span></div></div>
+					<div><div>Size:</div><div class="filesize">???</div></div>
+					<div><div>Compiled Name:</div><div class="compilename">???</div></div>
+					<div><div>Animated Mouth:</div><div class="has_mouth">???</div></div>
+					<div><div>External Models:</div><div class="ext_mdl">???</div></div>
+					<div><div>MD5:</div><div class="md5">???</div></div>
+					<div class="sound_table_row"><div>Sounds:</div><div class="sounds">???</div></div>					
+				</div>
 				<div class="model-controls">
 					<input type="checkbox" id="3d_on" checked>
 					<label for="3d_on" title="Enable the 3D model renderer">Render 3D</label>
