@@ -37,6 +37,7 @@
 				background: #444;
 				border-radius: 5px;
 				padding-bottom: 2px;
+				position: relative;
 			}
 			.model-cell .name {
 				text-align: center;
@@ -277,6 +278,42 @@
 				font-size: 50px;
 			}
 			
+			#group-banner {
+				position: relative;
+				background: #6af;
+				height: 35px;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+			}
+			#group-banner .group-back {
+				position: absolute;
+				left: 10px;
+				background: #333;
+				padding: 0 10px;
+				border-radius: 5px;
+				cursor: pointer;
+				user-select: none;
+			}
+			#group-banner .group-title {
+				color: black;
+			}
+			#group-banner .groupname {
+				color: white;
+			}
+			
+			.model-group-name {
+				background: #6af;
+				position: absolute;
+				padding: 0 5px;
+				color: black;
+				border: 1px solid black;
+				pointer-events: none;
+			}
+			
+			.hidden {
+				display: none;
+			}
 			
 			.loader {
 			  color: #ffffff;
@@ -368,6 +405,7 @@
 		<script type="text/javascript" src="modeldb.js"></script>
 		<script async type="text/javascript" src="hlms.js"></script>
 	</head>
+	<textarea id="debug"></textarea>
 	
 	<body>
 		<h1>Sven Co-op Model Database</h1>
@@ -377,6 +415,9 @@
 		<div class="filter-types">
 			<input type="checkbox" id="filter_ver">
 			<label for="filter_ver" title="Show only the latest version for each model. This only works for models that use the '_v2' style suffixes. Modellers sometimes use '_v2' for different clothes/colors, too.">Hide old versions</label>
+			<br>
+			<input type="checkbox" id="filter_group">
+			<label for="filter_group" title="Group models that are of the same character, or that look very similar">Group alternate versions</label>
 		</div>
 		<div class="filter-search">
 			<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
@@ -392,12 +433,16 @@
 		</div>
 		
 		<hr>
-		
+		<div id="group-banner" class="hidden">
+			<span class="group-back">Back</span>
+			<span class="group-title">Viewing group: <span class="groupname">???</span></span>
+		</div>
 		<div id="model-grid">
 		
 		</div>
 		
 		<div id="model-cell-template">
+			<div class="model-group-name hidden">+<span class="group-count"></span> models</div>
 			<img/>
 			<hr>
 			<div class="name"></div>
@@ -417,12 +462,12 @@
 				<h2 class="details-header">Header text</h2>
 				<div class="details-table">
 					<div><div title="More polys = worse in-game performance.">Polygons:</div><div class="poly-cell"><img class="polyflame" src="flamingline.gif"/><span class="polycount">???</span></div></div>
-					<div><div title="Exludes the preview image size and animation sounds">Size:</div><div class="filesize">???</div></div>
+					<div><div title="Size exluding the preview image size and animation sounds">Size:</div><div class="filesize">???</div></div>
 					<div><div title="The name this model had when it was compiled.">Internal Name:</div><div class="compilename">???</div></div>
-					<div><div title="Some models have mouths that move when the player is using voice chat.">Animated Mouth:</div><div class="has_mouth">???</div></div>
-					<div><div title="Some models store textures and animations in separate model files.">External Models:</div><div class="ext_mdl">???</div></div>
+					<div><div title="Whether or not the mouth/head moves when using voice chat.">Animated Mouth:</div><div class="has_mouth">???</div></div>
+					<div><div title="Whether or not textures and animations are stored in separate model files.">External Models:</div><div class="ext_mdl">???</div></div>
 					<div><div title="Hash result after merging external models, if they exist.">MD5:</div><div class="md5">???</div></div>
-					<div class="sound_table_row"><div title="Some models play sounds during animations.">Sounds:</div><div class="sounds">???</div></div>					
+					<div class="sound_table_row"><div title="Sounds that play during animations.">Sounds:</div><div class="sounds">???</div></div>					
 				</div>
 				<div class="model-controls">
 					<input type="checkbox" id="3d_on" checked>

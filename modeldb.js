@@ -2,6 +2,9 @@
 var model_data = {};
 var g_view_model_data = {};
 var g_latest_versions = {};
+var g_groups = {};
+var g_group_filter = '';
+var g_offset_before_group = 0;
 var model_names;
 var can_load_new_model = false;
 var model_load_queue;
@@ -20,6 +23,8 @@ var antialias = 2;
 var g_3d_enabled = true;
 var g_model_was_loaded = false;
 var g_view_model_name = "";
+
+var g_debug_copy = "";
 
 function fetchTextFile(path, callback) {
 	var httpRequest = new XMLHttpRequest();
@@ -363,38 +368,73 @@ function load_results() {
 
 function apply_filters() {
 	var name_filter = document.getElementById("name-filter").value;
-	var hide_old_ver = document.getElementById("filter_ver").checked;
+	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(model_data).length > 0;
+	var use_groups = document.getElementById("filter_group").checked
+						&& Object.keys(model_data).length > 0
+						&& Object.keys(g_groups).length > 0;
 	
-	var model_names_filtered = [];
 	console.log("Applying filters");
 	
-	if (hide_old_ver && Object.keys(model_data).length > 0) {
-		for (var i = 0; i < model_names.length; i++) {
-			if (model_data[model_names[i]]["is_latest_version"]) {
-				model_names_filtered.push(model_names[i]);
-			}
-		}
-	} else {
-		model_names_filtered = model_names;
-	}
+	var temp_model_names = model_names;
+	var blacklist = {};
 	
-	if (name_filter.length > 0) {
-		name_parts = name_filter.toLowerCase().split(" ");
-		
-		model_results = [];
-		for (var i = 0; i < model_names_filtered.length; i++) {
-			for (var k = 0; k < name_parts.length; k++) {
-				if (model_names_filtered[i].toLowerCase().includes(name_parts[k])) {
-					model_results.push(model_names_filtered[i]);
+	if (hide_old_ver) {
+		for (var i = 0; i < temp_model_names.length; i++) {
+			if (!model_data[temp_model_names[i]]["is_latest_version"]) {
+				var is_group = false;
+				for (var key in g_groups) {
+					if (g_groups[key][0] == temp_model_names[i]) {
+						is_group = true;
+						break;
+					}
+				}
+				
+				if (!is_group) {
+					blacklist[temp_model_names[i]] = true;
 				}
 			}
 		}
 	}
-	else
-		model_results = model_names_filtered;
+	
+	if (use_groups) {
+		for (var key in g_groups) {
+			if (key == g_group_filter) {
+				continue;
+			}
+			for (var i = 1; i < g_groups[key].length; i++) {
+				blacklist[g_groups[key][i]] = true;
+			}
+		}
+	}
+	
+	if (g_group_filter.length) {
+		for (var i = 0; i < temp_model_names.length; i++) {
+			if (model_data[temp_model_names[i]]["group"] != g_group_filter) {
+				blacklist[temp_model_names[i]] = true;
+			}
+		}
+	}
+	
+	if (name_filter.length > 0 && g_group_filter.length == 0) {
+		name_parts = name_filter.toLowerCase().split(" ");
+		
+		for (var i = 0; i < temp_model_names.length; i++) {
+			for (var k = 0; k < name_parts.length; k++) {
+				if (!temp_model_names[i].toLowerCase().includes(name_parts[k])) {
+					blacklist[temp_model_names[i]] = true;
+				}
+			}
+		}
+	}
+	
+	model_results = temp_model_names.filter(function (name) {
+		return !(name in blacklist);
+	});
 	
 	load_results();
 }
+
+var last_text = "";
 
 function update_model_grid() {
 	var total_models = model_names.length;
@@ -408,21 +448,45 @@ function update_model_grid() {
 	model_results.every(function(model_name) {
 		//console.log("Loading model: " + model_name);
 		
+		let group_name = Object.keys(model_data).length > 0 ? model_data[model_name].group : undefined;
+		let is_group = document.getElementById("filter_group").checked && group_name && group_name in g_groups && g_groups[group_name][0] == model_name && g_group_filter != group_name;
+		
 		idx += 1;
-		if (idx < result_offset) {
+		if (idx <= result_offset) {
 			return true;
 		}
 		
 		var cell = cell_template.cloneNode(true);
 		var img = cell.getElementsByTagName("img")[0];
 		var name = cell.getElementsByClassName("name")[0];
+		var group_header = cell.getElementsByClassName("model-group-name")[0];
+		var group_count = cell.getElementsByClassName("group-count")[0];
 		var repo_url = get_repo_url(model_name);
 		cell.setAttribute("class", "model-cell");
 		cell.removeAttribute("id");
 		img.setAttribute("src", repo_url + "models/player/" + model_name + "/" + model_name + "_small.png");
-		img.addEventListener("click", function() {view_model(model_name);} );
+		
+		if (is_group) {
+			group_count.textContent = "" + g_groups[group_name].length-1;
+			group_header.classList.remove("hidden");
+		}
+		
+		img.addEventListener("click", function() {
+			if (is_group) {
+				document.getElementById("name-filter").setAttribute("disabled", true);
+				g_group_filter = group_name;
+				g_offset_before_group = result_offset;
+				document.getElementById("group-banner").classList.remove("hidden");
+				document.getElementsByClassName("groupname")[0].textContent = group_name;
+				apply_filters();
+			} else {
+				view_model(model_name);
+			}
+		});
 		name.innerHTML = model_name;
 		name.setAttribute("title", model_name);
+		
+		
 		name.addEventListener("mousedown", function(event) { 
 			
 			var oldText = event.target.textContent;
@@ -430,10 +494,21 @@ function update_model_grid() {
 				return; // don't copy the user message
 			}
 			
-			event.target.textContent = "model " + oldText;
+			event.target.textContent = oldText;
 			
-			window.getSelection().selectAllChildren(event.target);
-			document.execCommand("copy");
+			// debug
+			if (g_debug_copy.length) {
+				g_debug_copy += ',\n\t\t"' + oldText + '"';
+			} else {
+				g_debug_copy += '"' + oldText + '"';
+			}
+			//event.target.textContent = g_debug_copy;
+			// end debug
+			
+			//window.getSelection().selectAllChildren(event.target);
+			//document.execCommand("copy");
+			
+			copyStringWithNewLineToClipBoard(g_debug_copy);
 			
 			event.target.textContent = "Copied!";
 			
@@ -446,6 +521,20 @@ function update_model_grid() {
 		total_cells += 1;
 		return total_cells < results_per_page;
 	});
+}
+
+function copyStringWithNewLineToClipBoard(stringWithNewLines){
+	console.log("COPY THIS " + stringWithNewLines)
+    // Step3: find an id element within the body to append your myFluffyTextarea there temporarily
+    const element = document.getElementById('debug');
+	element.innerHTML = stringWithNewLines;
+    
+    // Step 4: Simulate selection of your text from myFluffyTextarea programmatically 
+    element.select();
+    
+    // Step 5: simulate copy command (ctrl+c)
+    // now your string with newlines should be copied to your clipboard 
+    document.execCommand('copy');
 }
 
 function get_repo_url(model_name) {
@@ -594,7 +683,6 @@ document.addEventListener("DOMContentLoaded",function() {
 						version: verNum
 					}
 				}
-				
 			}
 		}
 		
@@ -607,9 +695,20 @@ document.addEventListener("DOMContentLoaded",function() {
 			model_data[key]["is_latest_version"] = isLatest;
 		}
 		
-		apply_filters();
+		fetchJSONFile("groups.json", function(data) {
+			console.log(data);
+			g_groups = data;
+			
+			for (var key in g_groups) {
+				for (var i = 0; i < g_groups[key].length; i++) {
+					model_data[g_groups[key][i]]["group"] = key;
+				}
+			}
+			
+			apply_filters();
+		});
 	});
-	
+
 	
 	document.getElementById("model-popup-bg").addEventListener("click", close_model_viewer);
 	document.getElementsByClassName("page-next-container")[0].addEventListener("click", next_page);
@@ -635,4 +734,21 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementById("filter_ver").onchange = function() {
 		apply_filters();
 	}
+	document.getElementById("filter_group").onchange = function() {
+		apply_filters();
+	}
+	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
+		g_group_filter = "";
+		document.getElementById("group-banner").classList.add("hidden");
+		document.getElementById("name-filter").removeAttribute("disabled");
+		apply_filters();
+		result_offset = g_offset_before_group;
+		load_page();
+	});
+	
+	document.onkeypress = function (e) {
+		e = e || window.event;
+		g_debug_copy = "";
+		console.log("CLEARED DEBUG COPY");
+	};
 });

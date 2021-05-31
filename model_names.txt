@@ -690,9 +690,9 @@ arctic
 arctic-assault
 arctic16
 arctic_hd
+arctic_hd_v2
 arctic_swat
 arctic_terrorist
-arctic_v2
 arcticgrey
 arcticgrey_v2
 arcticwoman
@@ -1055,7 +1055,7 @@ bikercop
 bills
 billy
 billy2
-billy_v2
+billy2_v2
 bio_snake
 bio_snake_v2
 bio_tfc_sniper
@@ -2513,7 +2513,7 @@ drake_v2
 drblood
 drblood_v2
 dreadstar
-dreadstar_v2_v2
+dreadstar_v2
 dreggman
 drill
 drill_barnes
