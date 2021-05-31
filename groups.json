@@ -420,7 +420,6 @@
 		"orkinbarney",
 		"sabre_barney",
 		"sc_barney",
-		"skeleton_barney",
 		"soldier_barney2_v2",
 		"soldier_barney3_v2",
 		"soldier_barney_v2",
@@ -1074,7 +1073,6 @@
 		"cod4_ghillie",
 		"cod4_griggs",
 		"cod4_marsoc1",
-		"green_flame",
 		"cod4_marsoc2",
 		"cod4_marsoc3",
 		"cod4_marsoc4",
@@ -1458,10 +1456,7 @@
 		"greyfox_v2",
 		"ninja",
 		"shade",
-		"ssjgreyfox",
-		"liquid",
-		"mercury",
-		"nobody"
+		"ssjgreyfox"
 	],
 	"Dragon Ball Z - Goku": [
 		"da_goku",
@@ -1768,6 +1763,7 @@
 		"sahturbo_v3",
 		"psycho-firth_v2",
 		"civilgordon_v2",
+		"lurid2",
 		"hlf_dedz_grdn",
 		"blur_v2",
 		"capturedgordon",
@@ -1907,6 +1903,8 @@
 		"alpha_grunt2",
 		"alpha_grunt3",
 		"pyro_hecu",
+		"green_flame",
+		"sc_desert_v2",
 		"~int0x~",
 		"ctf_flanker",
 		"thehorror",
@@ -2565,11 +2563,6 @@
 		"fallout3_t-51b",
 		"fnv_t-51b"
 	],
-	"Gunman Chronicles - Soldier": [
-		"gunman",
-		"gunman_soldier",
-		"gunmanchronicles"
-	],
 	"Half-Life - HEV Suit": [
 		"dm_helmet",
 		"devilhelmet_v2",
@@ -2846,6 +2839,7 @@
 		"hkate",
 		"dm_kate",
 		"dis_kate",
+		"dis_mad",
 		"cap_kate",
 		"codename_natasha_v2",
 		"2d_kate_naked",
@@ -4446,7 +4440,8 @@
 		"2d_mdn_tenno_uzume-mizugi",
 		"2d_mdn_tenno_uzume-c3",
 		"2d_mdn_tenno_uzume-c2",
-		"mdn_ankokuboshi_kurome"
+		"mdn_ankokuboshi_kurome",
+		"h-mdn_anko_kurome"
 	],
 	"Milos": [
 		"milos",
@@ -4755,7 +4750,10 @@
 	],
 	"Gunman Chronicles - Soldier": [
 		"gcsoldier",
-		"gmc_soldier"
+		"gmc_soldier",
+		"gunman",
+		"gunman_soldier",
+		"gunmanchronicles"
 	],
 	"Stars - Officer": [
 		"stars_cap",
@@ -4789,7 +4787,12 @@
 		"commando",
 		"gastly",
 		"[pot]",
+		"freeman2",
+		"gfk",
 		"wampa",
+		"liquid",
+		"mercury",
+		"nobody",
 		"-psycho-firth-",
 		"lord-midas",
 		"wireframe",
@@ -5026,6 +5029,10 @@
 		"angelfire_v2",
 		"wanted_annie_v2"
 	],
+	"Elf Archer": [
+		"elfarcherf",
+		"elfarcherfa_v2"
+	],
 	"Half-Life - Skeleton": [
 		"aou-skeleton_v2",
 		"aouclan_v2",
@@ -5034,6 +5041,7 @@
 		"lopan",
 		"redbones_v2",
 		"skeleton",
+		"skeleton_barney",
 		"skeleton_hev",
 		"skeleton_spooky",
 		"undeadmarine",
@@ -5312,7 +5320,8 @@
 		"toy_bonnie",
 		"withered_bonnie",
 		"plushtrap",
-		"springtrap"
+		"springtrap",
+		"da_springtrap"
 	],
 	"SPX - Berserker": [
 		"spx_berserker",
@@ -5342,7 +5351,8 @@
 		"toyfreddy_swag",
 		"da_nightmare",
 		"withered_golden",
-		"da_withered_golden"
+		"da_withered_golden",
+		"da_nm_fredbear"
 	],
 	"Dragon Ball Z - Jeice": [
 		"da_jeice",
@@ -5797,7 +5807,12 @@
 		"illemonati",
 		"initiate",
 		"memnoch",
-		"momia"
+		"momia",
+		"death"
+	],
+	"Demonica": [
+		"demonica1",
+		"demonica_v2"
 	],
 	"Iron Man": [
 		"iron_man",
@@ -6264,7 +6279,8 @@
 		"tfcengineer_v2",
 		"toon_engineer",
 		"toon_engineer_c",
-		"thebard_eng"
+		"thebard_eng",
+		"hillybilly"
 	],
 	"TFC - Heavy": [
 		"hvyweapon",
@@ -6353,7 +6369,9 @@
 		"hellzadmin3_v2",
 		"toon_soldier_c",
 		"toon_civilian",
-		"adminsuit"
+		"adminsuit",
+		"civilian_toon",
+		"civilian_v2"
 	],
 	"Scotty Fox": [
 		"scottyfox",
@@ -6373,8 +6391,16 @@
 		"ladygarden_v2",
 		"livingdeadgirl_v2",
 		"scarlet",
+		"sexy",
+		"sexy2",
 		"tigger2",
-		"vixen_v2"
+		"vixen_v2",
+		"nympho_v2",
+		"at&tgirl_v2"
+	],
+	"Bati": [
+		"bati",
+		"batidillo"
 	],
 	"CSX - Schoolgirl": [
 		"csx_schoolgirl",
@@ -6386,7 +6412,8 @@
 	],
 	"Martian": [
 		"mars",
-		"marciano"
+		"marciano",
+		"martian2"
 	],
 	"Babygirl": [
 		"babygirl",
@@ -6397,6 +6424,7 @@
 		"liquid_illusion_v2",
 		"lum2_v2",
 		"marry",
+		"mistymod_v2",
 		"ozggirl_v2",
 		"pinkonna",
 		"sky_v2",
@@ -6405,7 +6433,9 @@
 		"stilleto_v2",
 		"tankgirl_v2",
 		"britneyspears_v2",
-		"debonna"
+		"debonna",
+		"bluesteel_v2",
+		"christina_v2"
 	],
 	"Pink Panther": [
 		"pink_panther",
@@ -6951,15 +6981,6 @@
 		"austin_v2",
 		"power2"
 	],
-	"Sexy": [
-		"sexy",
-		"sexy2",
-		"shedevil",
-		"team_blow_v2",
-		"tgp_postlady7_v2",
-		"420girlyskin",
-		"7of9_v2"
-	],
 	"Gitty": [
 		"gitty_v2",
 		"eric-e_v2",
@@ -6982,12 +7003,19 @@
 		"naruto_kakashi",
 		"kakashi_v2"
 	],
-	"Sexy2": [
+	"Sexy Girl": [
 		"sexy_les",
 		"queenofswords_v2",
 		"sexybride_v2",
+		"shedevil",
+		"team_blow_v2",
+		"tgp_postlady7_v2",
+		"420girlyskin",
+		"7of9_v2",
 		"shadow_girl",
 		"raven",
+		"dawn_v2",
+		"masked_ninja_v2",
 		"southern_belle2",
 		"southern_belle_v2",
 		"predatrice_v2",
@@ -7152,7 +7180,8 @@
 	],
 	"Pokemon - Cinderace": [
 		"sw_cinderace",
-		"sw_cinderace_c"
+		"sw_cinderace_c",
+		"sw_cinderace_r"
 	],
 	"Sylvanas": [
 		"sylvanas",
@@ -7222,7 +7251,17 @@
 	"They Hunger - Paul": [
 		"th_civpaul",
 		"th_civpaul_sd",
-		"paul"
+		"paul",
+		"th_paul",
+		"th_paul_sd"
+	],
+	"The Fist": [
+		"the_fist_v2",
+		"[hop]"
+	],
+	"ZMF Zombie": [
+		"zmfcheese",
+		"zmfknifed"
 	],
 	"They Hunger - Dave": [
 		"th_dave",
@@ -7248,7 +7287,7 @@
 		"th_grunt",
 		"th_grunt2"
 	],
-	"They Hunger - Gangster": [
+	"They Hunger - Grunt": [
 		"th_grunt",
 		"th_grunt2"
 	],
@@ -7262,7 +7301,8 @@
 	],
 	"They Hunger - Neil": [
 		"th_neil",
-		"th_neil_sd"
+		"th_neil_sd",
+		"neil"
 	],
 	"They Hunger - Nurse": [
 		"th_nurse",
