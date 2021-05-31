@@ -6352,7 +6352,8 @@
 	"TFC - VIP": [
 		"hellzadmin3_v2",
 		"toon_soldier_c",
-		"toon_civilian"
+		"toon_civilian",
+		"adminsuit"
 	],
 	"Scotty Fox": [
 		"scottyfox",
@@ -6391,7 +6392,6 @@
 		"babygirl",
 		"badbitch",
 		"dp8_v2",
-		"isaac",
 		"jessie",
 		"lilbitty",
 		"liquid_illusion_v2",

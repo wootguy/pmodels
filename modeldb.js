@@ -497,18 +497,17 @@ function update_model_grid() {
 			event.target.textContent = oldText;
 			
 			// debug
+			/*
 			if (g_debug_copy.length) {
 				g_debug_copy += ',\n\t\t"' + oldText + '"';
 			} else {
 				g_debug_copy += '"' + oldText + '"';
 			}
-			//event.target.textContent = g_debug_copy;
-			// end debug
-			
-			//window.getSelection().selectAllChildren(event.target);
-			//document.execCommand("copy");
-			
 			copyStringWithNewLineToClipBoard(g_debug_copy);
+			*/
+			
+			window.getSelection().selectAllChildren(event.target);
+			document.execCommand("copy");
 			
 			event.target.textContent = "Copied!";
 			
@@ -746,9 +745,11 @@ document.addEventListener("DOMContentLoaded",function() {
 		load_page();
 	});
 	
+	/*
 	document.onkeypress = function (e) {
 		e = e || window.event;
 		g_debug_copy = "";
 		console.log("CLEARED DEBUG COPY");
 	};
+	*/
 });
