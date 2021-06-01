@@ -767,8 +767,6 @@ document.addEventListener("DOMContentLoaded",function() {
 					g_old_versions[versions[i][k]] = true;
 				}
 			}
-			
-			console.log("NEW VERSIONS: ", versions);
 		});
 		
 		fetchJSONFile("groups.json", function(data) {
@@ -779,6 +777,14 @@ document.addEventListener("DOMContentLoaded",function() {
 				for (var i = 0; i < g_groups[key].length; i++) {
 					var name = g_groups[key][i];
 					if (name in model_data) {
+						if (model_data[name]["group"]) {
+							if (model_data[name]["group"] != key) {
+								console.error(name + " is in group '" + model_data[name]["group"] + "' AND '" + key + "'");
+							} else {
+								console.error(name + " is in group '" + model_data[name]["group"] + "' more than once");
+							}
+							
+						}
 						model_data[name]["group"] = key;
 					} else {
 						console.error("MISSING MODEL: " + name + " in group " + key);
