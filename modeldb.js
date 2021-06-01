@@ -633,6 +633,12 @@ function handle_resize(event) {
 	renderHeight = Math.floor( Math.max(100, window.innerHeight - 100) );
 	renderWidth = Math.floor( renderHeight * (500.0 / 800.0) );
 	
+	var maxCanvasWidth = window.innerWidth*0.4; // need some space for model details
+	if (renderWidth > maxCanvasWidth) {
+		renderWidth = maxCanvasWidth;
+		renderHeight = Math.floor( renderWidth * (800.0 / 500.0) );
+	}
+	
 	var popup = document.getElementById("model-popup");
 	var img = popup.getElementsByTagName("img")[0];
 	var canvas = popup.getElementsByTagName("canvas")[0];
