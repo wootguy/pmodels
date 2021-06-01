@@ -38,7 +38,7 @@ function fetchTextFile(path, callback) {
 			callback(data);
 		}
 	};
-	httpRequest.open('GET', path);
+	httpRequest.open('GET', path + '?nocache=' + (new Date()).getTime());
 	httpRequest.send();
 }
 
