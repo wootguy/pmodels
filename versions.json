@@ -307,6 +307,7 @@
 	],
 	[
 		"amy_v3",
+		"amy_v2",
 		"amy"
 	],
 	[
@@ -459,15 +460,6 @@
 		"playerslayer"
 	],
 	[
-		"zombie_source_v3",
-		"zombie_source_v2",
-		"zombie_source_v1"
-	],
-	[
-		"mikuhatsune_v2",
-		"mikuhatsune_v1"
-	],
-	[
 		"hungerzork_v2",
 		"hungerzork"
 	],
@@ -570,9 +562,9 @@
 	],
 	[
 		"kz_mikutda_v4",
+		"kz_mikutda_v3",
 		"kz_mikutda_v2",
-		"kz_mikutda_v1",
-		"kz_mikutda_v3"
+		"kz_mikutda_v1"
 	],
 	[
 		"re_stars_forrest_v2",
@@ -604,11 +596,8 @@
 	],
 	[
 		"leonrpd_v3",
+		"leonrpd_v2",
 		"leonrpd"
-	],
-	[
-		"knuckles_v3",
-		"knuckles"
 	],
 	[
 		"demonica_v2",
@@ -647,11 +636,6 @@
 		"blueteam"
 	],
 	[
-		"kz_elin_04_v3",
-		"kz_elin_04_v1",
-		"kz_elin_04_v2"
-	],
-	[
 		"xan_mk_i_purple_v2",
 		"xan_mk_i_purple"
 	],
@@ -678,10 +662,6 @@
 	[
 		"wanted_hoss_v2",
 		"wanted_hoss"
-	],
-	[
-		"scorpion_v2",
-		"scorpion"
 	],
 	[
 		"mapleleafs_v2",
@@ -736,6 +716,8 @@
 		"kakashi"
 	],
 	[
+		"penguin_v3",
+		"penguin_v2",
 		"penguin_v1",
 		"penguin"
 	],
@@ -750,10 +732,6 @@
 	[
 		"007tux_v2",
 		"007tux"
-	],
-	[
-		"toy_chica_v2",
-		"toy_chica_v1"
 	],
 	[
 		"tommy_vercetti_v2",
@@ -773,9 +751,9 @@
 	],
 	[
 		"nekopara_ethanol_v4",
-		"nekopara_ethanol_v1",
+		"nekopara_ethanol_v3",
 		"nekopara_ethanol_v2",
-		"nekopara_ethanol_v3"
+		"nekopara_ethanol_v1"
 	],
 	[
 		"exo_tank_v2",
@@ -1034,10 +1012,6 @@
 		"greenstick"
 	],
 	[
-		"grunt_v2",
-		"grunt"
-	],
-	[
 		"nekomimi_maid2_v2",
 		"nekomimi_maid2"
 	],
@@ -1170,7 +1144,10 @@
 		"re_succ_security_unit"
 	],
 	[
+		"jixleet_v5final",
 		"jixleet_v4",
+		"jixleet_v3beta",
+		"jixleet_v2",
 		"jixleet"
 	],
 	[
@@ -1232,10 +1209,6 @@
 	[
 		"shinobi_v2",
 		"shinobi"
-	],
-	[
-		"kc_harbour_v4",
-		"kc_harbour_v3"
 	],
 	[
 		"dreadstar_v2",
@@ -1374,10 +1347,6 @@
 		"silversurferhev"
 	],
 	[
-		"gs_miku_v3",
-		"gs_miku"
-	],
-	[
 		"sister_mary_ellie_fant_v2",
 		"sister_mary_ellie_fant"
 	],
@@ -1454,10 +1423,6 @@
 		"clans8n"
 	],
 	[
-		"touhou_chen_v2",
-		"touhou_chen"
-	],
-	[
 		"aquatic_v2",
 		"aquatic"
 	],
@@ -1508,10 +1473,6 @@
 	[
 		"milly_g_v2",
 		"milly_g"
-	],
-	[
-		"aan3_v2",
-		"aan3"
 	],
 	[
 		"venomreal_v2",
@@ -1754,10 +1715,6 @@
 		"reaper"
 	],
 	[
-		"kz_elin_05_v2",
-		"kz_elin_05_v1"
-	],
-	[
 		"geoff_v2",
 		"geoff"
 	],
@@ -1938,11 +1895,6 @@
 		"ccsakura"
 	],
 	[
-		"dmc4_nero_v5",
-		"dmc4_nero_v2",
-		"dmc4_nero"
-	],
-	[
 		"gunsurvivor_ark_v2",
 		"gunsurvivor_ark"
 	],
@@ -1988,7 +1940,8 @@
 	],
 	[
 		"sahturbo_v3",
-		"sahturbo_v2"
+		"sahturbo_v2",
+		"sahturbo_v1beta"
 	],
 	[
 		"sol_char_v3",
@@ -2179,10 +2132,6 @@
 		"soldier_mpf"
 	],
 	[
-		"da_toy_chica_v2",
-		"da_toy_chica_v1"
-	],
-	[
 		"srobo_v2",
 		"srobo"
 	],
@@ -2201,10 +2150,6 @@
 	[
 		"elvis68_v2",
 		"elvis68"
-	],
-	[
-		"mikuhev_v2",
-		"mikuhev_v1"
 	],
 	[
 		"brave_v2",
@@ -2417,10 +2362,6 @@
 	[
 		"prdel_v2",
 		"prdel"
-	],
-	[
-		"jason_v2",
-		"jason"
 	],
 	[
 		"tfc_sniper_v2",
@@ -2743,10 +2684,6 @@
 		"bunnygirl"
 	],
 	[
-		"conflict_v2",
-		"conflict"
-	],
-	[
 		"species_v2",
 		"species"
 	],
@@ -2769,10 +2706,6 @@
 	[
 		"legends_wizard_v2",
 		"legends_wizard"
-	],
-	[
-		"ba90_v2",
-		"ba90"
 	],
 	[
 		"wind_shark_v2",
@@ -2919,6 +2852,7 @@
 		"fu2"
 	],
 	[
+		"cof_simon_v3",
 		"cof_simon_v2",
 		"cof_simon"
 	],
@@ -3045,10 +2979,6 @@
 	[
 		"soldier_recon_v2",
 		"soldier_recon"
-	],
-	[
-		"terminator_v2",
-		"terminator"
 	],
 	[
 		"monoko2_v2",
@@ -3479,10 +3409,6 @@
 		"plaingreen"
 	],
 	[
-		"raus_de_v2",
-		"raus_de"
-	],
-	[
 		"ethan_hunt_v2",
 		"ethan_hunt"
 	],
@@ -3547,6 +3473,7 @@
 		"para_alpha6"
 	],
 	[
+		"comradetiki_v3",
 		"comradetiki_v2",
 		"comradetiki"
 	],
@@ -3611,10 +3538,7 @@
 		"re_succ_medic_unit"
 	],
 	[
-		"james_v2",
-		"james"
-	],
-	[
+		"cream_v3",
 		"cream_v2",
 		"cream"
 	],
@@ -3879,10 +3803,6 @@
 		"aslave"
 	],
 	[
-		"sc_helmet_v2",
-		"sc_helmet"
-	],
-	[
 		"mummie_v2",
 		"mummie"
 	],
@@ -3909,10 +3829,6 @@
 	[
 		"soldier_medicf_v2",
 		"soldier_medicf"
-	],
-	[
-		"touhou_tenshi_v2",
-		"touhou_tenshi"
 	],
 	[
 		"wanted_colonel_v2",
@@ -3949,10 +3865,6 @@
 	[
 		"evilman_v2",
 		"evilman"
-	],
-	[
-		"touhou_clownpiece_v2",
-		"touhou_clownpiece"
 	],
 	[
 		"soldier_hgruntf_v2",
@@ -4139,6 +4051,7 @@
 		"nekomata2_mizugi"
 	],
 	[
+		"solidsnake_v3",
 		"solidsnake_v2",
 		"solidsnake"
 	],
@@ -4163,6 +4076,7 @@
 		"punkgirlz"
 	],
 	[
+		"gruntzombie_v3",
 		"gruntzombie_v2",
 		"gruntzombie"
 	],
@@ -4451,10 +4365,6 @@
 		"q2_viper"
 	],
 	[
-		"aan2_v2",
-		"aan2"
-	],
-	[
 		"foxsoldr_v2",
 		"foxsoldr"
 	],
@@ -4615,6 +4525,7 @@
 		"ladydeath19"
 	],
 	[
+		"bunny_yukari_v3",
 		"bunny_yukari_v2",
 		"bunny_yukari"
 	],
