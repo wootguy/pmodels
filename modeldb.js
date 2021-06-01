@@ -114,9 +114,10 @@ function update_model_details() {
 	for (var i = 0; i < g_view_model_data["events"].length; i++) {
 		var evt = g_view_model_data["events"][i];
 		if (evt["event"] == 5004 && evt["options"].length > 0) {
-			var seq = evt["sequence"]
-			var seq_name = g_view_model_data["sequences"][seq]["name"];
-			soundTable += '<div class="sound_row"><div>' + seq + " : " + seq_name + "</div><div>" + evt["options"] + "</div></div>";
+			var seq = evt["sequence"];
+			var seqName = seq + " : " + g_view_model_data["sequences"][seq]["name"];
+			var path = evt["options"];
+			soundTable += '<div class="sound_row"><div title="' + seqName + '">' + seqName + '</div><div title="' + path + '">' + path + "</div></div>";
 		}
 	}
 	if (soundTable.length > 0) {
@@ -140,12 +141,24 @@ function update_model_details() {
 		ext_mdl = "Sequences";
 	}
 	
+	var aliases = model_data[g_view_model_name]["aliases"];
+	if (aliases) {
+		aliases = aliases.join("<br>")
+	}
+	
 	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
+	popup.getElementsByClassName("polycount")[0].setAttribute("title", totalPolys.toLocaleString(undefined));
 	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_model_data["size"]);
+	popup.getElementsByClassName("filesize")[0].setAttribute("title", humanFileSize(g_view_model_data["size"]));
 	popup.getElementsByClassName("compilename")[0].textContent = g_view_model_data["name"];
+	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_model_data["name"]);
+	popup.getElementsByClassName("aliases")[0].innerHTML = aliases ? aliases : "None";
+	popup.getElementsByClassName("aliases")[0].setAttribute("title", aliases ? aliases.replaceAll("<br>", "\n") : "This model has no known aliases.");
 	popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
+	popup.getElementsByClassName("ext_mdl")[0].setAttribute("title", ext_mdl);
 	popup.getElementsByClassName("sounds")[0].innerHTML = soundTable.length > 0 ? soundTable : "None";
 	popup.getElementsByClassName("md5")[0].textContent = g_view_model_data["md5"];
+	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_model_data["md5"]);
 	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "Yes" : "No";
 	
 	var polyColor = "";
@@ -198,11 +211,18 @@ function view_model(model_name) {
 	
 	popup.getElementsByClassName("details-header")[0].textContent = model_name;
 	popup.getElementsByClassName("polycount")[0].textContent = "???";
+	popup.getElementsByClassName("polycount")[0].removeAttribute("title");
 	popup.getElementsByClassName("filesize")[0].textContent = "???";
+	popup.getElementsByClassName("filesize")[0].removeAttribute("title");
 	popup.getElementsByClassName("compilename")[0].textContent = "???";
+	popup.getElementsByClassName("compilename")[0].removeAttribute("title");
 	popup.getElementsByClassName("ext_mdl")[0].textContent = "???";
+	popup.getElementsByClassName("ext_mdl")[0].removeAttribute("title");
 	popup.getElementsByClassName("sounds")[0].textContent = "???";
+	popup.getElementsByClassName("aliases")[0].textContent = "???";
+	popup.getElementsByClassName("aliases")[0].removeAttribute("title");
 	popup.getElementsByClassName("md5")[0].textContent = "???";
+	popup.getElementsByClassName("md5")[0].removeAttribute("title");
 	popup.getElementsByClassName("has_mouth")[0].textContent = "???";
 	popup.getElementsByClassName("loader")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].style.visibility = "visible";
@@ -402,7 +422,7 @@ function apply_filters() {
 	
 	g_groups_with_results = {};
 	
-	if (name_filter.length > 0) {
+	if (name_filter.length > 0 && Object.keys(model_data).length > 0) {
 		name_parts = name_filter.toLowerCase().split(" ");
 		
 		for (var i = 0; i < temp_model_names.length; i++) {
@@ -416,7 +436,11 @@ function apply_filters() {
 			for (var k = 0; k < name_parts.length; k++) {
 				var modelName = temp_model_names[i].toLowerCase();
 				var group = model_data[temp_model_names[i]]["group"];
-				if (!modelName.includes(name_parts[k]) && !(group && group.toLowerCase().includes(name_parts[k]))) {
+				
+				// TODO: Add this when it's clear that a result is shown because the group name matches:
+				//       !(group && group.toLowerCase().includes(name_parts[k]))
+				
+				if (!modelName.includes(name_parts[k])) {
 					blacklist[temp_model_names[i]] = true;
 				} else if (use_groups && !did_group_match) {
 					did_group_match = true;
@@ -712,7 +736,7 @@ document.addEventListener("DOMContentLoaded",function() {
 	});
 	
 	fetchJSONFile("models.json", function(data) {
-		console.log(data);
+		console.log("Global model data: ", data);
 		model_data = data;
 		
 		console.log("Get version suffixes");
@@ -741,7 +765,7 @@ document.addEventListener("DOMContentLoaded",function() {
 			}
 		}
 		
-		console.log(g_latest_versions);
+		console.log("Model versions: ", g_latest_versions);
 		
 		console.log("Marking latest version");
 		for (var key in model_data) {
@@ -751,7 +775,7 @@ document.addEventListener("DOMContentLoaded",function() {
 		}
 		
 		fetchJSONFile("groups.json", function(data) {
-			console.log(data);
+			console.log("Group data (from server): ", data);
 			g_groups = data;
 			
 			for (var key in g_groups) {
@@ -794,13 +818,22 @@ document.addEventListener("DOMContentLoaded",function() {
 					console.log("MODEL WITH MULTIPLE VERSIONS BUT NO GROUP: " + key);
 				}
 			}
-			console.log("NEW GROUPS");
-			console.log(g_groups);
+			console.log("Group data (modified): ", g_groups);
 			
 			apply_filters();
 		});
 		
-		
+		fetchJSONFile("alias.json", function(data) {
+			console.log("Aliases: ", data);
+			for (var key in data) {
+				if (!model_data[key]) {
+					console.error("Aliases for unknown model: " + key);
+					continue;
+				}
+				
+				model_data[key]["aliases"] = data[key];
+			}
+		});
 	});
 
 	
