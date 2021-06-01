@@ -1360,6 +1360,7 @@ cactuar
 cadaver
 cadiansarge
 cadiantrooper
+caleb
 calisto
 camo_hev
 camo_hev_blue
@@ -2795,6 +2796,7 @@ firedrake
 firemonkey
 fishman
 fishman2
+fkotomine
 flamethrower_leet
 flanders
 flanders_v2
@@ -6219,6 +6221,7 @@ re4merchant
 re4zomb
 re4zomb_nb
 re4zomb_nc
+re8alcina
 re_barry
 re_barry_v2
 re_brad

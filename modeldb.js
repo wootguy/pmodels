@@ -839,9 +839,11 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
 		g_group_filter = "";
 		document.getElementById("group-banner").classList.add("hidden");
-		result_offset = g_offset_before_group;
 		document.getElementById("name-filter").value = g_search_before_group;
 		apply_filters();
+		
+		result_offset = g_offset_before_group;
+		load_page();
 	});
 	
 	/*

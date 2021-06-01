@@ -954,7 +954,9 @@
 		"b2calebg",
 		"b2calebr",
 		"b2calebrev",
-		"b2caleby"
+		"caleb",
+		"b2caleby",
+		"nr_caleb_remake"
 	],
 	"Blood 2 - Gabriella": [
 		"b2gabriella",
@@ -4567,7 +4569,12 @@
 		"british",
 		"british-grenadier_v2",
 		"british2",
-		"british-grenadier"
+		"british-grenadier",
+		"german-grenadier_v2"
+	],
+	"The Wastes - Mena": [
+		"thewastes_mena",
+		"tw_mena"
 	],
 	"Vinnie Gognitti": [
 		"vinnie_gognitti",
@@ -6692,6 +6699,7 @@
 		"re_jill_v2",
 		"re_stars_jill_v2",
 		"pedro",
+		"ada",
 		"re_jill",
 		"re_stars_jill",
 		"re2_nemesis_jill"
@@ -7305,6 +7313,7 @@
 		"sexy",
 		"sexy2",
 		"tigger2",
+		"jena_bean",
 		"vixen_v2",
 		"nympho_v2",
 		"at&tgirl_v2",
