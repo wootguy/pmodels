@@ -786,13 +786,6 @@ document.addEventListener("DOMContentLoaded",function() {
 				}
 			}
 			
-			for (var key in g_groups) {
-				if (g_groups[key].length == 1) {
-					delete g_groups[key];
-				}
-			}
-			console.log("NEW GROUPS ", g_groups);
-			
 			apply_filters();
 		});
 		
