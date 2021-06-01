@@ -1828,6 +1828,7 @@ construction_v2
 controller
 cooking_mama
 cop
+cop2
 corona_chan
 corona_chan_merania
 corona_chan_meranian
@@ -2817,6 +2818,7 @@ flyincreep
 flying_gerbil
 flying_gerbil_v2
 fman
+fmash
 fmcat
 fmcat_v2
 fnf_boyfriend
@@ -3039,7 +3041,10 @@ gi_diona
 gi_diona_meranian
 gi_ganyu
 gi_hutao
+gi_keqing
 gi_klee
+gi_sucrose
+gi_yanfei
 giacomo
 giacomo_2
 giacomo_2_v2

@@ -361,6 +361,7 @@
 		"dm_barney",
 		"alpha_barney",
 		"alphabarney",
+		"cop2",
 		"cl_barney",
 		"mp_barney",
 		"ta_assault",
@@ -4743,6 +4744,10 @@
 		"op_cow_v2",
 		"madgit_v2",
 		"al_git_v2"
+	],
+	"Nekopara - Ethanol": [
+		"nekopara_ethanol_v4",
+		"nekopara_ethanol_red"
 	],
 	"Dog": [
 		"[dogs]_v2",
