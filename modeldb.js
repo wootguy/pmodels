@@ -700,7 +700,12 @@ document.addEventListener("DOMContentLoaded",function() {
 			
 			for (var key in g_groups) {
 				for (var i = 0; i < g_groups[key].length; i++) {
-					model_data[g_groups[key][i]]["group"] = key;
+					var name = g_groups[key][i];
+					if (name in model_data) {
+						model_data[name]["group"] = key;
+					} else {
+						console.error("MISSING MODEL: " + name + " in group " + key);
+					}
 				}
 			}
 			
