@@ -7700,6 +7700,7 @@ taskforce_terror
 taskforce_urban
 taskforce_viper
 taskforcecar
+tatical
 tboi_azazel
 tboi_bluebaby
 tboi_cain
