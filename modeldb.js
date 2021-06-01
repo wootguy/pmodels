@@ -1,7 +1,7 @@
 
 var model_data = {};
 var g_view_model_data = {};
-var g_latest_versions = {};
+var g_old_versions = {}; // for filtering
 var g_groups = {};
 var g_group_filter = '';
 var model_names;
@@ -404,7 +404,7 @@ function apply_filters() {
 	
 	if (hide_old_ver) {
 		for (var i = 0; i < temp_model_names.length; i++) {
-			if (!model_data[temp_model_names[i]]["is_latest_version"]) {
+			if (temp_model_names[i] in g_old_versions) {
 				var is_group = false;
 				for (var key in g_groups) {
 					if (g_groups[key][0] == temp_model_names[i]) {
@@ -413,7 +413,7 @@ function apply_filters() {
 					}
 				}
 				
-				if (!is_group) {
+				if (!use_groups || !is_group) {
 					blacklist[temp_model_names[i]] = true;
 				}
 			}
@@ -534,7 +534,7 @@ function update_model_grid() {
 			for (var i = 0; i < g_groups[group_name].length; i++) {
 				var testName = g_groups[group_name][i];
 				var baseName = get_model_base_name(testName);
-				if (!hide_old_ver || !g_latest_versions[baseName] || g_latest_versions[baseName]["name"] == testName) {
+				if (!hide_old_ver || !g_old_versions[testName]) {
 					total_in_group += 1;
 				}
 			}
@@ -753,44 +753,23 @@ document.addEventListener("DOMContentLoaded",function() {
 		handle_resize();
 	});
 	
+	
 	fetchJSONFile("models.json", function(data) {
 		console.log("Global model data: ", data);
 		model_data = data;
 		
-		console.log("Get version suffixes");
-		var ver_regex = /_v\d+$/g;
-		for (var key in model_data) {
-			var is_latest = true;			
+		fetchJSONFile("versions.json", function(versions) {
+			console.log("Version info: ", versions);
 			
-			var verSuffix = key.match(ver_regex);
-			if (verSuffix) {
-				var baseName = key.replace(verSuffix[0], "");
-				var verNum = parseInt(verSuffix[0].replace("_v", ""));
-				
-				if (baseName in g_latest_versions) {
-					if (g_latest_versions[baseName]["version"] < verNum) {
-						g_latest_versions[baseName] = {
-							name: key,
-							version: verNum
-						}
-					}
-				} else {
-					g_latest_versions[baseName] = {
-						name: key,
-						version: verNum
-					}
+			for (var i = 0; i < versions.length; i++) {
+				// skip first value of the list, which is the latest version
+				for (var k = 1; k < versions[i].length; k++) {
+					g_old_versions[versions[i][k]] = true;
 				}
 			}
-		}
-		
-		console.log("Model versions: ", g_latest_versions);
-		
-		console.log("Marking latest version");
-		for (var key in model_data) {
-			var baseName = get_model_base_name(key);
-			var isLatest = !(baseName in g_latest_versions) || g_latest_versions[baseName]["name"] == key;
-			model_data[key]["is_latest_version"] = isLatest;
-		}
+			
+			console.log("NEW VERSIONS: ", versions);
+		});
 		
 		fetchJSONFile("groups.json", function(data) {
 			console.log("Group data (from server): ", data);
@@ -807,36 +786,12 @@ document.addEventListener("DOMContentLoaded",function() {
 				}
 			}
 			
-			for (var key in model_data) {
-				if (model_data[key]["group"]) {
-					continue;
-				}
-				
-				var baseName = get_model_base_name(key);
-				if (!g_latest_versions[baseName]) {
-					continue;
-				}
-				
-				var latestModel = g_latest_versions[baseName]["name"];
-				
-				if (!model_data[latestModel]["group"] && !g_groups[baseName]) {
-					g_groups[baseName] = [];
-					if (key != latestModel) {
-						g_groups[baseName].push(latestModel);
-					}
-					
-					model_data[key]["group"] = baseName;
-					model_data[latestModel]["group"] = baseName;
-				}
-				
-				if (model_data[latestModel]["group"]) {
-					model_data[key]["group"] = model_data[latestModel]["group"];
-					g_groups[model_data[key]["group"]].push(key);
-				} else {
-					console.log("MODEL WITH MULTIPLE VERSIONS BUT NO GROUP: " + key);
+			for (var key in g_groups) {
+				if (g_groups[key].length == 1) {
+					delete g_groups[key];
 				}
 			}
-			console.log("Group data (modified): ", g_groups);
+			console.log("NEW GROUPS ", g_groups);
 			
 			apply_filters();
 		});

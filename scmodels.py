@@ -1,4 +1,5 @@
 import sys, os, shutil, collections, json, subprocess, stat, hashlib, traceback, time
+from datetime import datetime
 from glob import glob
 from io import StringIO
 
@@ -796,9 +797,43 @@ def install_new_models():
 	write_updated_models_list()
 	update_models(models_path, True, True, False, False, True)
 		
-	print("\nFinished adding models. Now run this if everything went well:")
-	print("python3 git_init.py update")
-	print("Then change the last-updated date in index.html and push changes")
+	print("\nFinished adding models. Next:")
+	print("- Update alias.json if you renamed any models")
+	print("- Add or update groups.json if needed")
+	print("- python3 git_init.py update")
+	print("- Change the last-updated date in index.html and push changes")
+	print("- git add -A; git commit; git push;")
+	print("")
+
+def pack_models(all_models):
+	global models_path
+	
+	fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
+	
+	if all_models:
+		cmd = 'zip -r %s models/player -x "*.png" -x "*.json"' % fname
+		print(cmd)
+		os.system(cmd)
+		return
+	
+	add_models = []
+	with open('versions.json') as f:
+		json_dat = f.read()
+		versions = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+		
+		exclude = set()
+		for group in versions:
+			for idx, name in enumerate(group):
+				if idx == 0:
+					continue
+				exclude.add(name.lower())
+		
+		old_dirs = get_sorted_dirs(models_path)
+		all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir)) and dir.lower() not in exclude]
+		all_dirs = sorted(all_dirs, key=str.casefold)
+		
+		print("PACK %s of %s" % (len(all_dirs), len(old_dirs)))
+		
 
 args = sys.argv[1:]
 
@@ -814,6 +849,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
+	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
 	
 	sys.exit()
 
@@ -836,6 +872,12 @@ if len(args) > 0:
 		find_duplicate_models(install_path)
 	elif args[0].lower() == 'validate':
 		validate_model_isolated()
+	elif args[0].lower() == 'pack':
+		all_models = True
+		if len(args) > 1 and args[1].lower() == "latest":
+			all_models = False
+			
+		pack_models(all_models)
 	elif args[0].lower() == 'rename':
 		print("TODO: Add to alias after rename")
 		rename_model(args[1], args[2], models_path)
@@ -845,9 +887,11 @@ if len(args) > 0:
 		list_file.write("%s\n" % args[1])
 		list_file.write("%s\n" % args[2])
 		list_file.close()
-		print("\nNow run:")
-		print("python3 git_init.py update")
-		print("then push changes to main repo")
+		print("\nFinished rename. Next:")
+		print("- update name in groups.json (TODO: automate)")
+		print("- update name in versions.json")
+		print("- python3 git_init.py update")
+		print("- push changes to main repo")
 	elif args[0].lower() == 'fixup':
 		all_dirs = get_sorted_dirs(models_path)
 		for dir in all_dirs:

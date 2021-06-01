@@ -7456,7 +7456,7 @@ stalker_military
 stalker_military1
 stalker_military_2
 stalker_military_v2
-stalker_military_v2_v2
+stalker_military_v3
 stalker_militaryexo
 stalker_milstalker
 stalker_mono_exo
@@ -8081,7 +8081,7 @@ touhou_tenko
 touhou_tenshi
 touhou_tenshi_40k
 touhou_tenshi_v2
-touhou_tenshi_v2_v2
+touhou_tenshi_v3
 touhou_udongein
 touhou_udongein_mmd
 touhou_utsuho
