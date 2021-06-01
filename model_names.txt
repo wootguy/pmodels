@@ -5373,6 +5373,7 @@ nekopara_azuki
 nekopara_chocola
 nekopara_coconut
 nekopara_coconut_kz
+nekopara_ethanol_red
 nekopara_ethanol_v1
 nekopara_ethanol_v2
 nekopara_ethanol_v3

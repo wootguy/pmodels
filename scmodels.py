@@ -751,9 +751,15 @@ def install_new_models():
 		for idx, old in enumerate(old_dirs):
 			if lowernew == old.lower():
 				print("ERROR: %s already exists" % old)
-				rename_model(old, old + "_v2", models_path)
+				any_dups = True
+				#rename_model(old, old + "_v2", models_path)
+		
+		for key, val in alt_names.items():
+			for alt in val:
+				if alt.lower() == lowernew:
+					print("ERROR: %s is a known alias of %s")
+					any_dups = True
 			
-	
 	if any_dups:
 		print("No models were added due to duplicates.")
 		return
@@ -790,7 +796,7 @@ def install_new_models():
 	write_updated_models_list()
 	update_models(models_path, True, True, False, False, True)
 		
-	print("Finished. Now run this if everything went well:")
+	print("\nFinished adding models. Now run this if everything went well:")
 	print("python3 git_init.py update")
 	print("Then change the last-updated date in index.html and push changes")
 
