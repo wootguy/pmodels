@@ -4,12 +4,15 @@ var g_view_model_data = {};
 var g_latest_versions = {};
 var g_groups = {};
 var g_group_filter = '';
-var g_offset_before_group = 0;
 var model_names;
 var can_load_new_model = false;
 var model_load_queue;
 var model_unload_waiting;
 var hlms_is_ready = false;
+
+// returning from the group view_model
+var g_offset_before_group = 0;
+var g_search_before_group = 0;
 
 var model_results; // subset of model_names
 var results_per_page = 40;
@@ -23,6 +26,7 @@ var antialias = 2;
 var g_3d_enabled = true;
 var g_model_was_loaded = false;
 var g_view_model_name = "";
+var g_groups_with_results = {};
 
 var g_debug_copy = "";
 
@@ -396,13 +400,30 @@ function apply_filters() {
 		}
 	}
 	
-	if (use_groups) {
-		for (var key in g_groups) {
-			if (key == g_group_filter) {
+	g_groups_with_results = {};
+	
+	if (name_filter.length > 0) {
+		name_parts = name_filter.toLowerCase().split(" ");
+		
+		for (var i = 0; i < temp_model_names.length; i++) {
+			if (blacklist[temp_model_names[i]]) {
 				continue;
 			}
-			for (var i = 1; i < g_groups[key].length; i++) {
-				blacklist[g_groups[key][i]] = true;
+			
+			// don't flag groups as found if searching within a group
+			var did_group_match = g_group_filter.length != 0;
+			
+			for (var k = 0; k < name_parts.length; k++) {
+				var modelName = temp_model_names[i].toLowerCase();
+				var group = model_data[temp_model_names[i]]["group"];
+				if (!modelName.includes(name_parts[k]) && !(group && group.toLowerCase().includes(name_parts[k]))) {
+					blacklist[temp_model_names[i]] = true;
+				} else if (use_groups && !did_group_match) {
+					did_group_match = true;
+					if (group) {
+						g_groups_with_results[group] = g_groups_with_results[group] ? g_groups_with_results[group] + 1 : 1;
+					}
+				}
 			}
 		}
 	}
@@ -415,20 +436,23 @@ function apply_filters() {
 		}
 	}
 	
-	if (name_filter.length > 0 && g_group_filter.length == 0) {
-		name_parts = name_filter.toLowerCase().split(" ");
-		
-		for (var i = 0; i < temp_model_names.length; i++) {
-			for (var k = 0; k < name_parts.length; k++) {
-				if (!temp_model_names[i].toLowerCase().includes(name_parts[k])) {
-					blacklist[temp_model_names[i]] = true;
-				}
+	// remove models that are in groups, unless it's the first model or if any grouped models matched the search terms
+	if (use_groups) {
+		for (var key in g_groups) {
+			if (key == g_group_filter) {
+				continue;
+			}
+			for (var i = 1; i < g_groups[key].length; i++) {
+				blacklist[g_groups[key][i]] = true;
+			}
+			if (g_groups_with_results[key]) {
+				blacklist[g_groups[key][0]] = false;
 			}
 		}
 	}
 	
 	model_results = temp_model_names.filter(function (name) {
-		return !(name in blacklist);
+		return !(blacklist[name]);
 	});
 	
 	load_results();
@@ -440,6 +464,9 @@ function update_model_grid() {
 	var total_models = model_names.length;
 	var grid = document.getElementById("model-grid");
 	var cell_template = document.getElementById("model-cell-template");
+	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(model_data).length > 0;
+	var group_mode = document.getElementById("filter_group").checked;
+	var is_searching = document.getElementById("name-filter").value.length > 0;
 	
 	grid.innerHTML = "";
 	
@@ -448,34 +475,57 @@ function update_model_grid() {
 	model_results.every(function(model_name) {
 		//console.log("Loading model: " + model_name);
 		
-		let group_name = Object.keys(model_data).length > 0 ? model_data[model_name].group : undefined;
-		let is_group = document.getElementById("filter_group").checked && group_name && group_name in g_groups && g_groups[group_name][0] == model_name && g_group_filter != group_name;
-		
 		idx += 1;
 		if (idx <= result_offset) {
 			return true;
 		}
 		
+		let group_name = Object.keys(model_data).length > 0 ? model_data[model_name].group : undefined;
+		let is_group = group_mode
+						&& group_name
+						&& group_name in g_groups
+						&& g_groups[group_name][0] == model_name
+						&& g_group_filter != group_name;
+						
+		var total_in_group = 0;
+		if (is_group) {
+			for (var i = 0; i < g_groups[group_name].length; i++) {
+				var testName = g_groups[group_name][i];
+				var baseName = get_model_base_name(testName);
+				if (!hide_old_ver || !g_latest_versions[baseName] || g_latest_versions[baseName]["name"] == testName) {
+					total_in_group += 1;
+				}
+			}
+			if (total_in_group <= 1) {
+				is_group = false;
+			}
+		}
+ 		
 		var cell = cell_template.cloneNode(true);
 		var img = cell.getElementsByTagName("img")[0];
 		var name = cell.getElementsByClassName("name")[0];
-		var group_header = cell.getElementsByClassName("model-group-name")[0];
-		var group_count = cell.getElementsByClassName("group-count")[0];
 		var repo_url = get_repo_url(model_name);
 		cell.setAttribute("class", "model-cell");
 		cell.removeAttribute("id");
 		img.setAttribute("src", repo_url + "models/player/" + model_name + "/" + model_name + "_small.png");
 		
 		if (is_group) {
-			group_count.textContent = "" + g_groups[group_name].length-1;
-			group_header.classList.remove("hidden");
+			var group_count = cell.getElementsByClassName("model-group-count")[0];
+			
+			if (is_searching) {
+				group_count.textContent = "" + g_groups_with_results[group_name] + " / " + total_in_group + " match";
+			} else {
+				group_count.textContent = "" + total_in_group + " models";
+			}
+			
+			group_count.classList.remove("hidden");
 		}
 		
 		img.addEventListener("click", function() {
 			if (is_group) {
-				document.getElementById("name-filter").setAttribute("disabled", true);
 				g_group_filter = group_name;
 				g_offset_before_group = result_offset;
+				g_search_before_group = document.getElementById("name-filter").value;
 				document.getElementById("group-banner").classList.remove("hidden");
 				document.getElementsByClassName("groupname")[0].textContent = group_name;
 				apply_filters();
@@ -709,8 +759,42 @@ document.addEventListener("DOMContentLoaded",function() {
 				}
 			}
 			
+			for (var key in model_data) {
+				if (model_data[key]["group"]) {
+					continue;
+				}
+				
+				var baseName = get_model_base_name(key);
+				if (!g_latest_versions[baseName]) {
+					continue;
+				}
+				
+				var latestModel = g_latest_versions[baseName]["name"];
+				
+				if (!model_data[latestModel]["group"] && !g_groups[baseName]) {
+					g_groups[baseName] = [];
+					if (key != latestModel) {
+						g_groups[baseName].push(latestModel);
+					}
+					
+					model_data[key]["group"] = baseName;
+					model_data[latestModel]["group"] = baseName;
+				}
+				
+				if (model_data[latestModel]["group"]) {
+					model_data[key]["group"] = model_data[latestModel]["group"];
+					g_groups[model_data[key]["group"]].push(key);
+				} else {
+					console.log("MODEL WITH MULTIPLE VERSIONS BUT NO GROUP: " + key);
+				}
+			}
+			console.log("NEW GROUPS");
+			console.log(g_groups);
+			
 			apply_filters();
 		});
+		
+		
 	});
 
 	
@@ -744,10 +828,9 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
 		g_group_filter = "";
 		document.getElementById("group-banner").classList.add("hidden");
-		document.getElementById("name-filter").removeAttribute("disabled");
-		apply_filters();
 		result_offset = g_offset_before_group;
-		load_page();
+		document.getElementById("name-filter").value = g_search_before_group;
+		apply_filters();
 	});
 	
 	/*
