@@ -426,27 +426,45 @@ function apply_filters() {
 		name_parts = name_filter.toLowerCase().split(" ");
 		
 		for (var i = 0; i < temp_model_names.length; i++) {
+			var modelName = temp_model_names[i];
+			var group = model_data[modelName]["group"];
+			
 			if (blacklist[temp_model_names[i]]) {
 				continue;
 			}
 			
-			// don't flag groups as found if searching within a group
-			var did_group_match = g_group_filter.length != 0;
+			var aliases = [modelName];
+			if (model_data[modelName]["aliases"]) {
+				aliases = aliases.concat(model_data[modelName]["aliases"]);
+			}
 			
-			for (var k = 0; k < name_parts.length; k++) {
-				var modelName = temp_model_names[i].toLowerCase();
-				var group = model_data[temp_model_names[i]]["group"];
+			var anyMatch = false;
+			for (var a = 0; a < aliases.length; a++) {
+				var testName = aliases[a].toLowerCase();
 				
-				// TODO: Add this when it's clear that a result is shown because the group name matches:
-				//       !(group && group.toLowerCase().includes(name_parts[k]))
-				
-				if (!modelName.includes(name_parts[k])) {
-					blacklist[temp_model_names[i]] = true;
-				} else if (use_groups && !did_group_match) {
-					did_group_match = true;
-					if (group) {
-						g_groups_with_results[group] = g_groups_with_results[group] ? g_groups_with_results[group] + 1 : 1;
+				var aliasMatched = true;
+				for (var k = 0; k < name_parts.length; k++) {					
+					// TODO: Add this when it's clear that a result is shown because the group name matches:
+					//       !(group && group.toLowerCase().includes(name_parts[k]))
+					
+					if (!testName.includes(name_parts[k])) {
+						aliasMatched = false;
+						break;
 					}
+				}
+				
+				if (aliasMatched) {
+					anyMatch = true;
+					break;
+				}
+			}
+			
+			if (!anyMatch) {
+				blacklist[temp_model_names[i]] = true;
+			}
+			else if (g_group_filter.length == 0 && group) {
+				if (group) {
+					g_groups_with_results[group] = g_groups_with_results[group] ? g_groups_with_results[group] + 1 : 1;
 				}
 			}
 		}
