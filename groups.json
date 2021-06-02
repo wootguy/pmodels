@@ -2096,8 +2096,6 @@
 		"mikkelthefreak",
 		"model135",
 		"punisherbot_v2",
-		"power_v2",
-		"t3_v2",
 		"pwnbot",
 		"reniah",
 		"soctom_new",
@@ -2107,10 +2105,8 @@
 		"antivirus",
 		"boxes",
 		"chrome_v2",
-		"t3",
 		"chrome",
 		"soldier_robo",
-		"power",
 		"4500robo",
 		"punisherbot",
 		"sc_camo_robo",
@@ -4522,7 +4518,8 @@
 		"swat2",
 		"swat3",
 		"swat4",
-		"billy2_v2"
+		"billy2_v2",
+		"billy2"
 	],
 	"Swat": [
 		"swat",
@@ -4530,7 +4527,9 @@
 	],
 	"Blackcat": [
 		"blackcat_v2",
-		"narkosha_v2"
+		"blackcat",
+		"narkosha_v2",
+		"narkosha"
 	],
 	"Touhou - Tenshi": [
 		"tenshi",
@@ -4700,6 +4699,9 @@
 		"british2",
 		"british-grenadier",
 		"german-grenadier",
+		"dainippon1",
+		"dainippon2",
+		"dainippon3",
 		"ija_gunner",
 		"ija_rifleman",
 		"ija_sniper",
@@ -5606,9 +5608,13 @@
 		"w2hpcpundtec2",
 		"commando",
 		"gastly",
+		"power_v2",
+		"power",
 		"gbpacker",
 		"[pot]",
 		"aquaman_v2",
+		"t3",
+		"t3_v2",
 		"freeman2",
 		"gfk",
 		"urkel",
@@ -6314,11 +6320,6 @@
 		"roshi",
 		"da_roshi"
 	],
-	"Nippon Soldier": [
-		"dainippon1",
-		"dainippon2",
-		"dainippon3"
-	],
 	"Samus": [
 		"samus",
 		"dark_samus"
@@ -6550,10 +6551,6 @@
 		"fp_twi",
 		"mlp_twilight",
 		"twilightsparkle"
-	],
-	"Gundum - Freedom": [
-		"freedom",
-		"freedom2"
 	],
 	"FSN - Saber": [
 		"fsn_saber",
@@ -7407,11 +7404,17 @@
 		"zgundam",
 		"gx",
 		"hell",
+		"heavyarms_v2",
+		"heavyarms",
 		"deathscythehell",
 		"deathscythehell2",
 		"rx78-2",
 		"rx78_2",
 		"rx93-2",
+		"aegis",
+		"freedom",
+		"gp01fb",
+		"freedom2",
 		"strike-a",
 		"strike",
 		"wz",
@@ -9187,10 +9190,6 @@
 		"kroenen2_v2",
 		"kroenen2"
 	],
-	"heavyarms": [
-		"heavyarms_v2",
-		"heavyarms"
-	],
 	"8bitman": [
 		"8bitman_v2",
 		"8bitman"
@@ -9546,7 +9545,8 @@
 	"Male SWAT": [
 		"male_swat_v2",
 		"male_swat",
-		"counterx_v2"
+		"counterx_v2",
+		"counterx"
 	],
 	"Miss Wong": [
 		"misswong",
