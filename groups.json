@@ -20,7 +20,8 @@
 		"mercgirl",
 		"xmas_pussy",
 		"hibari",
-		"tgp_postlady"
+		"tgp_postlady",
+		"sam1"
 	],
 	"40k Marine": [
 		"40k_assault_marine_1",
@@ -76,7 +77,9 @@
 		"re_ubss_hunk",
 		"re_umbrella_hunk",
 		"re_umbrella_hunk2",
-		"8bitwarlock_hunk"
+		"8bitwarlock_hunk",
+		"hunk_v2",
+		"hunk"
 	],
 	"8toushin": [
 		"8toushin_v2",
@@ -194,7 +197,9 @@
 		"boss",
 		"pliskin",
 		"tux",
-		"bio_snake"
+		"bio_snake",
+		"solidsnake_v2",
+		"solidsnake"
 	],
 	"God of War - Kratos": [
 		"ab_kratos",
@@ -213,7 +218,10 @@
 		"agent_1",
 		"agent_2",
 		"agent_3",
-		"agent_4"
+		"agent_4",
+		"freeman_v2",
+		"freeman",
+		"onyx"
 	],
 	"Airborne": [
 		"airborne01",
@@ -311,7 +319,8 @@
 		"afterlife_uboa",
 		"uboa_pizza_employee",
 		"uboa_pizza_employee2",
-		"uboa2"
+		"uboa2",
+		"tempo"
 	],
 	"Uboa3": [
 		"uboa3w",
@@ -342,11 +351,19 @@
 	],
 	"Uboa9": [
 		"uboa9",
-		"uboa9b"
+		"uboa9b",
+		"ba90_v2",
+		"ba90"
 	],
 	"Uboa10": [
 		"uboa10",
 		"uboa10b"
+	],
+	"Tough Guy with Turtleneck Armor": [
+		"thearm_v2",
+		"thearm",
+		"sahris",
+		"barbarian"
 	],
 	"Allied": [
 		"allied2",
@@ -362,12 +379,8 @@
 		"alliedsoldier",
 		"allies",
 		"mlc_allied_soldier",
-		"allied"
-	],
-	"Sad-Looking Soldier": [
-		"rt",
-		"blackops",
-		"seal"
+		"allied",
+		"sabre"
 	],
 	"Inuyasha": [
 		"xinuyasha",
@@ -375,19 +388,46 @@
 	],
 	"Shrek - Puss in Boots": [
 		"puss_in_boots",
-		"scientist7"
+		"scientist7",
+		"gs_gatiito",
+		"kotik"
+	],
+	"Naruto - Itachi": [
+		"naruto_itachi",
+		"itachi"
+	],
+	"The Ship - John": [
+		"ship_john",
+		"ship_john2",
+		"john"
+	],
+	"Touhou - Rinnosuke": [
+		"touhou_rinnosuke",
+		"rinnosuke"
 	],
 	"Half-Life - Barney": [
 		"dm_barney",
 		"alpha_barney",
+		"mrdumb",
+		"rico",
 		"alphabarney",
+		"shifty_v2",
+		"shifty",
 		"cop2",
+		"security",
 		"cl_barney",
+		"svencouzi_v2",
+		"svencouzi",
 		"mp_barney",
 		"ta_assault",
 		"headcrab_hat",
+		"po_security",
+		"nav_v2",
+		"nav",
 		"angry_barney",
 		"ctf_assault",
+		"irobot_v2",
+		"irobot",
 		"angry_barney_cnc",
 		"green2_v2",
 		"barney",
@@ -475,6 +515,10 @@
 		"green2",
 		"barnabus"
 	],
+	"Shover/Pusher Robot": [
+		"shoverrobot",
+		"pusherrobot"
+	],
 	"Half-Life - Otis": [
 		"otis",
 		"otimus2",
@@ -482,6 +526,7 @@
 		"otis2",
 		"orkinotis",
 		"otis3",
+		"starschina_otisus",
 		"otis_hev1",
 		"otishev",
 		"otto",
@@ -490,6 +535,8 @@
 		"camootis_v2",
 		"cadaver",
 		"riza",
+		"prdel_v2",
+		"prdel",
 		"camootis"
 	],
 	"Amy Rose": [
@@ -598,10 +645,13 @@
 		"csx_seal3",
 		"csx_seal4",
 		"csx_seal5",
+		"syphon_v2",
+		"syphon",
 		"csx_seal6",
 		"csx_seal7",
 		"csx_seal8",
 		"ts_seal",
+		"xouual",
 		"seal_arctic",
 		"taskforce_desert",
 		"taskforce_urban"
@@ -619,6 +669,7 @@
 		"csx_gign3",
 		"csmodel",
 		"gign1",
+		"stealth2",
 		"gign16",
 		"gign2",
 		"gign3",
@@ -642,6 +693,7 @@
 		"cso_gsg9",
 		"css_gsg9",
 		"csw_gsg9",
+		"grom",
 		"csx_gsg9",
 		"csx_gsg92",
 		"csx_gsg93",
@@ -706,6 +758,7 @@
 		"alaris_leet",
 		"cscz2_leet",
 		"cscz_leet",
+		"cop",
 		"cso_leet",
 		"css_leet",
 		"csw_leet",
@@ -782,6 +835,7 @@
 		"cz_urban",
 		"nurban",
 		"toon_urban",
+		"rpd_officer6",
 		"urban",
 		"urban16",
 		"urban4",
@@ -804,12 +858,16 @@
 		"csx_terror2",
 		"csx_terror3",
 		"terror16",
+		"terrorist_m492",
 		"terror2",
 		"terror3",
 		"terror4",
+		"retardedanimal_v2",
+		"retardedanimal",
 		"terror_terrorist",
 		"toon_terror",
 		"terror",
+		"stealth3",
 		"css_phoenix",
 		"css_t",
 		"css_terro",
@@ -819,7 +877,9 @@
 		"electric_v2",
 		"oldcs4",
 		"exorcisor",
-		"electric"
+		"electric",
+		"playerslayer_v2",
+		"playerslayer"
 	],
 	"Counter Strike - VIP": [
 		"cs_vip",
@@ -957,6 +1017,14 @@
 		"caleb",
 		"b2caleby",
 		"nr_caleb_remake"
+	],
+	"Girl with Dress": [
+		"-girlygirl-heaven-",
+		"femaleklingon",
+		"femaleklingon_v2",
+		"klingondurassfemale",
+		"sister_mary_ellie_fant",
+		"sister_mary_ellie_fant_v2"
 	],
 	"Blood 2 - Gabriella": [
 		"b2gabriella",
@@ -1314,16 +1382,28 @@
 		"simon",
 		"aresaka"
 	],
-	"Bikini": [
-		"bluebikini",
-		"bluebikini2",
-		"bluebikini3"
-	],
-	"Blue coat": [
+	"Blue girl": [
 		"bluecoat",
 		"bluecoat2",
 		"bluecoat3",
-		"bluejacket"
+		"bluejacket",
+		"bluebikini",
+		"bluebikini2",
+		"bluebikini3",
+		"bluepolice",
+		"bluesexy"
+	],
+	"Half-Life: Xen Bird": [
+		"boidshit",
+		"aflock"
+	],
+	"Carvino": [
+		"carvino",
+		"borderpatrol"
+	],
+	"Business Man": [
+		"bussiness_man",
+		"hageri-man"
 	],
 	"Combine Soldier": [
 		"combine_cp",
@@ -1810,7 +1890,8 @@
 		"cwc_rus1",
 		"cwc_rus2",
 		"cwc_rus3",
-		"cwc_rus4"
+		"cwc_rus4",
+		"strelok900"
 	],
 	"CWC - US": [
 		"cwc_us1",
@@ -1821,25 +1902,6 @@
 		"cwc_us6",
 		"cwc_us7",
 		"cwc_us8"
-	],
-	"Exo": [
-		"exo_dolg_v2",
-		"exo_mpblue_v2",
-		"exo_specnaz_v2",
-		"exo_svoboda_v2",
-		"exo_tank_v2",
-		"exo_v2",
-		"exoskeleton",
-		"exoskeleton_dolg",
-		"exoskeleton_monolith",
-		"exoskeleton_specnaz",
-		"exoskeleton_svoboda",
-		"exo_tank",
-		"exo_specnaz",
-		"exo_mpblue",
-		"exo_dolg",
-		"exo",
-		"exo_svoboda"
 	],
 	"F-Zero - Car": [
 		"f_zero_car1",
@@ -1898,10 +1960,10 @@
 		"halosonic"
 	],
 	"Shadow The Hedgehog": [
+		"sonicshadow_v2",
 		"fp_eroku2018_v2",
 		"ru_shadow",
 		"metalshadow",
-		"sonicshadow_v2",
 		"superalphashadow",
 		"supershadow",
 		"sonicshadow",
@@ -1921,6 +1983,7 @@
 		"civilgordon_v2",
 		"lurid2",
 		"hlf_dedz_grdn",
+		"skeleton1",
 		"blur_v2",
 		"crysisgordon",
 		"capturedgordon",
@@ -2055,6 +2118,11 @@
 		"srobo",
 		"rgrunt2"
 	],
+	"Condiment": [
+		"mayonnaise",
+		"shouyubin",
+		"tablesalt"
+	],
 	"Half-Life - Gina": [
 		"dm_gina",
 		"capturedgina",
@@ -2067,6 +2135,7 @@
 		"lexi-gina",
 		"sc_gina",
 		"holo",
+		"ginacol_v2",
 		"grandma",
 		"vitani_v2",
 		"ctf_support",
@@ -2088,14 +2157,20 @@
 		"alpha_grunt",
 		"alpha_grunt2",
 		"alpha_grunt3",
+		"mrdumbsbrother",
 		"pyro_hecu",
 		"green_flame",
 		"sc_desert_v2",
+		"~w@r_v2",
+		"~w@r",
 		"~int0x~",
+		"smashdespecialh",
 		"ctf_flanker",
 		"thehorror",
 		"sharks_v2",
 		"hell_recon",
+		"hevsf",
+		"cyborg",
 		"torch_bloody",
 		"hls_hgruntb",
 		"blueteam_v2",
@@ -2525,6 +2600,10 @@
 		"nekomimiku",
 		"hatsunemiku"
 	],
+	"MLP - Little Pip": [
+		"littlepip",
+		"littlepip2"
+	],
 	"Hyperdimension Neptunia - Neptune": [
 		"neptune",
 		"hdnr_neptune-c3_big",
@@ -2872,7 +2951,8 @@
 		"cso_spetsnaz",
 		"csx_spetsnaz",
 		"csx_spetsnaz2",
-		"csx_spetsnaz3"
+		"csx_spetsnaz3",
+		"ubcshorror"
 	],
 	"Fallout - Power Armor": [
 		"gs_t45d_army",
@@ -3128,6 +3208,10 @@
 		"adidas",
 		"drblood"
 	],
+	"Pokemon - Professor Oak": [
+		"profoak",
+		"okido"
+	],
 	"IOAF - Soldier": [
 		"ioaf_bond",
 		"ioaf_baolongv3",
@@ -3135,11 +3219,13 @@
 		"ioaf_bonclay",
 		"ioaf_burns",
 		"ioaf_chief",
+		"okhayko",
 		"ioaf_chris",
 		"ioaf_dailucfps",
 		"ioaf_deadmaster",
 		"ioaf_denti",
 		"ioaf_diamond",
+		"nikeboots",
 		"ioaf_frost",
 		"ioaf_ghost",
 		"ioaf_grinch",
@@ -3319,6 +3405,14 @@
 		"q2yellow",
 		"q2howitzer"
 	],
+	"Peanut": [
+		"peanut",
+		"lt_cacahuate"
+	],
+	"Saw - Billy": [
+		"saw_billy",
+		"lt_saw"
+	],
 	"HOE - Grunt": [
 		"hoe_mikeforce1",
 		"hoe_mikeforce2",
@@ -3343,6 +3437,7 @@
 		"hoe_namgrunt9",
 		"hoe_nammedic1",
 		"hoe_nammedic2",
+		"lrrp",
 		"hoe_sog1",
 		"hoe_sog2",
 		"hoe_sog3",
@@ -3350,7 +3445,12 @@
 		"hoe_vc",
 		"hoe_vc2",
 		"mikeforce",
-		"cl_sarge"
+		"rt",
+		"blackops",
+		"seal",
+		"gruntcap",
+		"grunthelmet",
+		"grunthelmet2"
 	],
 	"Homer Simpson": [
 		"homer_simpson",
@@ -3360,11 +3460,6 @@
 		"homero",
 		"homer",
 		"homer1"
-	],
-	"IJA - Soldier": [
-		"ija_gunner",
-		"ija_rifleman",
-		"ija_sniper"
 	],
 	"Kancolle - Harbour": [
 		"kancolle_harbour",
@@ -3492,7 +3587,8 @@
 		"mfboonie",
 		"mflrrp",
 		"mfrt",
-		"mfseal"
+		"mfseal",
+		"namgrunt"
 	],
 	"Metal Gear Solid 4 - Soldier": [
 		"mgs4_pmc1",
@@ -3501,7 +3597,8 @@
 		"mgs4_pmc4",
 		"mgs4_pmc5",
 		"mgs4_pmc6",
-		"mgs4_pmc7"
+		"mgs4_pmc7",
+		"mgs4_pmc"
 	],
 	"Milly": [
 		"milly_v2",
@@ -3831,7 +3928,8 @@
 		"nina",
 		"nina2",
 		"nina3",
-		"nina4"
+		"nina4",
+		"bike_nina"
 	],
 	"NVA Soldier": [
 		"nva-amobe1",
@@ -3875,21 +3973,6 @@
 		"old_delta2",
 		"old_delta1"
 	],
-	"Paranoia - Alpha": [
-		"para_alpha1",
-		"para_alpha2",
-		"para_alpha3",
-		"para_alpha4",
-		"para_alpha5_v2",
-		"para_alpha6_v2",
-		"para_alpha6",
-		"para_alpha5"
-	],
-	"Paranoia - Buzzer": [
-		"para_batia",
-		"para_buzzer",
-		"para_buzzerrc"
-	],
 	"Paranoia - Clone": [
 		"para_clon1",
 		"para_clon2",
@@ -3901,12 +3984,6 @@
 	"Paranoia - Cook": [
 		"para_cook",
 		"para_cook_cyka"
-	],
-	"Paranoia - Diversant": [
-		"para_diversant1",
-		"para_diversant2",
-		"para_diversant3",
-		"para_diversant4"
 	],
 	"Paranoia - Elektrik": [
 		"para_elektrik1",
@@ -3925,6 +4002,33 @@
 		"para_signal2"
 	],
 	"Paranoia - Soldier": [
+		"para_soldier1",
+		"para_soldier2",
+		"para_soldier3",
+		"para_soldier4",
+		"para_batia",
+		"para_buzzer",
+		"para_buzzerrc",
+		"para_eagle",
+		"para_gas",
+		"para_id",
+		"para_rukas",
+		"para_vitos",
+		"para_vitosc",
+		"para_diversant1",
+		"para_diversant2",
+		"para_diversant3",
+		"para_diversant4",
+		"para_alpha1",
+		"para_alpha2",
+		"para_alpha3",
+		"para_alpha4",
+		"para_alpha5_v2",
+		"para_alpha6_v2",
+		"para_alpha6",
+		"para_alpha5"
+	],
+	"Paranoia - Terrorist": [
 		"para_terror1",
 		"para_terror2",
 		"para_terror3",
@@ -3932,10 +4036,6 @@
 		"para_terror5",
 		"para_terror_v2",
 		"para_terror"
-	],
-	"Paranoia - Vitos": [
-		"para_vitos",
-		"para_vitosc"
 	],
 	"Max Payne": [
 		"payne_2",
@@ -3986,7 +4086,8 @@
 		"rem_bikini",
 		"touhou_new_remilia",
 		"touhou_remi_dress",
-		"touhou_remilia"
+		"touhou_remilia",
+		"police1"
 	],
 	"Ribbon": [
 		"ribbon2",
@@ -4025,6 +4126,7 @@
 	"s8n": [
 		"s8n_h",
 		"s8n_king",
+		"potking",
 		"s8n_techno",
 		"s8n_fuse",
 		"s8n_df",
@@ -4087,6 +4189,7 @@
 		"sovarmy2cap_1965",
 		"sovarmy4_1967c",
 		"sovarmy4_1970c",
+		"comrade",
 		"sovarmy4_1988cc",
 		"sovarmy4_1988cc2",
 		"sovarmy_1970p",
@@ -4269,7 +4372,24 @@
 		"stalker_dutyexo_2",
 		"2d_stalker_duty_exo",
 		"stalker",
-		"stalker_svoboda"
+		"stalker_svoboda",
+		"exo_dolg_v2",
+		"exo_mpblue_v2",
+		"exo_specnaz_v2",
+		"exo_svoboda_v2",
+		"exo_tank_v2",
+		"exo_v2",
+		"exoskeleton",
+		"exoskeleton_dolg",
+		"exoskeleton_monolith",
+		"exoskeleton_specnaz",
+		"exoskeleton_svoboda",
+		"exo_tank",
+		"exo_specnaz",
+		"exo_mpblue",
+		"exo_dolg",
+		"exo",
+		"exo_svoboda"
 	],
 	"Stalker - Heavy": [
 		"stalker_duty_heavy",
@@ -4396,12 +4516,21 @@
 		"suzy3_nocape",
 		"suzy_nocape"
 	],
-	"Swat": [
+	"Swat 2": [
 		"swat1",
 		"swat-fix",
 		"swat2",
 		"swat3",
-		"swat4"
+		"swat4",
+		"billy2_v2"
+	],
+	"Swat": [
+		"swat",
+		"police"
+	],
+	"Blackcat": [
+		"blackcat_v2",
+		"narkosha_v2"
 	],
 	"Touhou - Tenshi": [
 		"tenshi",
@@ -4570,11 +4699,36 @@
 		"british-grenadier_v2",
 		"british2",
 		"british-grenadier",
+		"german-grenadier",
+		"ija_gunner",
+		"ija_rifleman",
+		"ija_sniper",
 		"german-grenadier_v2"
 	],
 	"The Wastes - Mena": [
 		"thewastes_mena",
 		"tw_mena"
+	],
+	"Paranoid": [
+		"paranoid",
+		"afterlife_hollow",
+		"wirez"
+	],
+	"Fu": [
+		"fu",
+		"fu1",
+		"fu2",
+		"fu2_v2",
+		"alhazred",
+		"fur1",
+		"fur1_v2",
+		"hito",
+		"hito1",
+		"hito1_v2"
+	],
+	"Action Fox": [
+		"actiondarkfox",
+		"kit"
 	],
 	"Vinnie Gognitti": [
 		"vinnie_gognitti",
@@ -4736,7 +4890,9 @@
 		"2d_albert_wesker",
 		"re_hcf_wesker",
 		"re_stars_wesker",
-		"re_wesker"
+		"re_wesker",
+		"wesker_v2",
+		"wesker"
 	],
 	"Aniki": [
 		"aniki",
@@ -4750,8 +4906,7 @@
 		"dm_barniel",
 		"dm_barniel2",
 		"sc_barniel",
-		"2d_barniel_naked",
-		"po_security"
+		"2d_barniel_naked"
 	],
 	"Gumi": [
 		"bunny_gumi",
@@ -4785,7 +4940,6 @@
 	],
 	"Colette": [
 		"dm_colette",
-		"ginacol_v2",
 		"hl2_colette",
 		"colette_casual",
 		"colette",
@@ -4860,7 +5014,8 @@
 	"Soldier Girl": [
 		"gs_soldiergirl_v2",
 		"2d_gs_soldiergirl_v2",
-		"2d_lt_bradpquito_sg"
+		"2d_lt_bradpquito_sg",
+		"fp_chupetin"
 	],
 	"Vector": [
 		"gs_vector",
@@ -5023,6 +5178,10 @@
 		"mce_ene",
 		"2d_mce_ene"
 	],
+	"Tennosuke": [
+		"tennosuke",
+		"meatcube"
+	],
 	"Hyperdimension Neptunia - Uzume Tennouboshi": [
 		"h-mdn_tenno_uzume",
 		"mdn_tenno_uzume-c2",
@@ -5162,7 +5321,8 @@
 		"sakuya",
 		"touhou_izayoi_sakuya",
 		"2d_touhou_izayoi_sakuya",
-		"doggy_sakuya"
+		"doggy_sakuya",
+		"police3"
 	],
 	"Touhou - Kazami Yuuka": [
 		"touhou_kazami_yuuka_1",
@@ -5262,10 +5422,6 @@
 		"gorillaz",
 		"lt_gorillaz"
 	],
-	"XCCP": [
-		"xccp",
-		"2d_xccp"
-	],
 	"Hyperdimension Neptunia - Yellow Heart": [
 		"yellow_heart",
 		"2d_yellow_heart"
@@ -5277,7 +5433,8 @@
 		"cursed_yoda",
 		"2d_yoda2",
 		"rabid",
-		"yoda"
+		"yoda",
+		"rip_van_drip"
 	],
 	"NieR - YoRHa": [
 		"yorha_2b",
@@ -5287,10 +5444,6 @@
 		"ys_yandere",
 		"ys_yandere_insane",
 		"2d_ys_yandere_insane"
-	],
-	"Starlight": [
-		"starlight",
-		"-starlight-"
 	],
 	"Cow": [
 		"420cow_v2",
@@ -5335,12 +5488,27 @@
 	],
 	"Common Soldier": [
 		"common",
-		"common2"
+		"common2",
+		"ghillie2",
+		"ghillie_v2",
+		"ghillie",
+		"marmor1",
+		"marmor2",
+		"marmor_v2",
+		"marmor",
+		"medic1",
+		"medic2"
 	],
 	"Wanted - Cowboy": [
 		"wanted_cowboy_v2",
 		"cowboy",
-		"wanted_cowboy"
+		"wanted_cowboy",
+		"officerhoankan"
+	],
+	"Man With Job": [
+		"pizzaboy_v2",
+		"pizzaboy",
+		"officer"
 	],
 	"Assassin's Creed - Assassin": [
 		"ezio",
@@ -5363,14 +5531,17 @@
 		"gcbandit_v2",
 		"gmc_bandit",
 		"sn_bandit",
-		"gcbandit"
+		"gcbandit",
+		"hlpc_billy_v2",
+		"hlpc_billy"
 	],
 	"Gunman Chronicles - Scientist": [
 		"gc_scientist_v2",
 		"gcscientist_v2",
 		"gmc_scientist",
 		"gcscientist",
-		"gc_scientist"
+		"gc_scientist",
+		"fosrer"
 	],
 	"Gunman Chronicles - Soldier": [
 		"gcsoldier",
@@ -5415,16 +5586,42 @@
 		"biped",
 		"bobbit_biped"
 	],
+	"TS Castor": [
+		"ts_castor",
+		"castor"
+	],
+	"CSX Busniess man": [
+		"csx_businessman",
+		"csx_businessman_young"
+	],
+	"Daedelus": [
+		"daedelus1_v2",
+		"daedelus1",
+		"michigan_v2",
+		"michigan"
+	],
 	"Punisher": [
 		"punisher",
 		"punisher2",
 		"w2hpcpundtec2",
 		"commando",
 		"gastly",
+		"gbpacker",
 		"[pot]",
 		"aquaman_v2",
 		"freeman2",
 		"gfk",
+		"urkel",
+		"fume_v2",
+		"will_v2",
+		"will",
+		"fume",
+		"resurrection",
+		"captain_hornet_v2",
+		"capt-hornet_v2",
+		"capt-hornet",
+		"captain_hornet",
+		"cowboy1",
 		"wampa",
 		"liquid",
 		"mercury",
@@ -5613,6 +5810,8 @@
 		"leonrpdhd",
 		"leonrpd_v3",
 		"leon_umbrella",
+		"leonrpd_v2",
+		"leonrpd",
 		"leon_sudamerica",
 		"leon_sin_cazadora",
 		"leon_s_kennedy",
@@ -5661,6 +5860,7 @@
 		"hevconstruction",
 		"construction_v2",
 		"construction",
+		"chavo",
 		"cap_hl_construction_2",
 		"cap_hl_construction",
 		"bc_gus",
@@ -5756,7 +5956,8 @@
 	],
 	"Half-Life - Big Momma": [
 		"kintama",
-		"big_mom"
+		"big_mom",
+		"gonach"
 	],
 	"Klonoa": [
 		"klonoa",
@@ -5905,7 +6106,15 @@
 		"re_stars_brad_v2",
 		"re_stars_brad",
 		"re_brad",
-		"re_dead_brad"
+		"re_dead_brad",
+		"gagettora_v2",
+		"gagettora"
+	],
+	"Desert Camo Soldier": [
+		"hoot",
+		"galentine",
+		"grimes",
+		"sanderson"
 	],
 	"Half-Life - Breen": [
 		"breen_hd",
@@ -5930,12 +6139,6 @@
 		"captain_scarlet_v2",
 		"captain_scarlet"
 	],
-	"Captain Hornet": [
-		"captain_hornet_v2",
-		"capt-hornet_v2",
-		"capt-hornet",
-		"captain_hornet"
-	],
 	"Carter": [
 		"carter_v2",
 		"dr.carter",
@@ -5946,7 +6149,8 @@
 		"8bitwarlock_cinema_v2",
 		"8bitwarlock_cinema",
 		"carter",
-		"carter_bm"
+		"carter_bm",
+		"wolfrikhastings"
 	],
 	"Buttercupz": [
 		"buttercupz_n",
@@ -6026,11 +6230,21 @@
 	"Cultist": [
 		"cultist1",
 		"cultist2",
-		"cultist3"
+		"cultist3",
+		"serpentman"
 	],
 	"CWC - HECU": [
 		"cwc_hecu1",
 		"cwc_hecu2"
+	],
+	"TS Setsuna": [
+		"setsuna_ts",
+		"setsuna"
+	],
+	"Grey Egypt Guy": [
+		"anubis",
+		"goauld3",
+		"sg1jafar"
 	],
 	"Killer Bunny": [
 		"bunny_v2",
@@ -6054,17 +6268,14 @@
 		"springtrap",
 		"da_springtrap"
 	],
-	"SPX - Berserker": [
+	"SPX - Zombie": [
 		"spx_berserker",
-		"spx_berserker_charlie"
-	],
-	"SPX - Female": [
+		"spx_berserker_charlie",
 		"spx_female_jewless",
-		"spx_female_tentacle"
-	],
-	"SPX - Peasant": [
+		"spx_female_tentacle",
 		"spx_peasant_cthulhu",
-		"spx_peasant_redshirt"
+		"spx_peasant_redshirt",
+		"spx_soldier"
 	],
 	"Pitusas": [
 		"pitusas_hq",
@@ -6142,7 +6353,8 @@
 	],
 	"Tough Girl 2": [
 		"chingamy",
-		"angel"
+		"angel",
+		"mamimi"
 	],
 	"Half-Life - Tank": [
 		"dc_tank",
@@ -6202,6 +6414,9 @@
 		"mallcop",
 		"clowncop_v2",
 		"=$irens=oz_v2",
+		"mask_v2",
+		"texasranger",
+		"mask",
 		"bh_jed_v2",
 		"clowncop",
 		"bh_jed",
@@ -6322,7 +6537,9 @@
 		"foxprvtr_v2",
 		"foxsoldr_v2",
 		"foxsoldr",
-		"foxprvtr"
+		"foxprvtr",
+		"hellzadmin2_v2",
+		"hellzadmin2"
 	],
 	"Flora": [
 		"flora",
@@ -6345,12 +6562,6 @@
 	"VC": [
 		"vc",
 		"vc2"
-	],
-	"Fu": [
-		"fu2_v2",
-		"fu1",
-		"fu",
-		"fu2"
 	],
 	"Meme face": [
 		"fuckyeaface",
@@ -6422,11 +6633,6 @@
 		"gfl_ump9",
 		"gfl_ump9-c2"
 	],
-	"Ghillie": [
-		"ghillie2",
-		"ghillie_v2",
-		"ghillie"
-	],
 	"Giacomo": [
 		"giacomo_2_v2",
 		"giacomo_v2",
@@ -6455,11 +6661,6 @@
 	"Half-Life - Father Grigori": [
 		"grigori",
 		"grigori_hd"
-	],
-	"Grunt": [
-		"gruntcap",
-		"grunthelmet",
-		"grunthelmet2"
 	],
 	"GS Battlet": [
 		"gs_battlet01",
@@ -6547,11 +6748,6 @@
 		"ts_hitman",
 		"hitman"
 	],
-	"Hito": [
-		"hito",
-		"hito1_v2",
-		"hito1"
-	],
 	"Half-Life - Eli Vance": [
 		"eli_hd",
 		"hl2_eli",
@@ -6580,10 +6776,15 @@
 		"hostage06",
 		"brony-ninjablack",
 		"iiotoko",
+		"kunie",
 		"iiotoko2",
 		"otoko1",
 		"otoko2",
 		"otoko3"
+	],
+	"Military Officer": [
+		"officer_steel",
+		"kurtz"
 	],
 	"Humvee": [
 		"humvee_be",
@@ -6620,7 +6821,8 @@
 		"iron-man",
 		"ironman",
 		"ironlantern_v2",
-		"ironlantern"
+		"ironlantern",
+		"trip"
 	],
 	"Jack Skellington": [
 		"jack",
@@ -6709,7 +6911,8 @@
 		"josephfrost",
 		"re_joseph",
 		"re_stars_joseph_v2",
-		"re_stars_joseph"
+		"re_stars_joseph",
+		"tails_ale"
 	],
 	"Junkie": [
 		"junkie",
@@ -6839,12 +7042,14 @@
 		"lingling",
 		"lingling_hev"
 	],
-	"Lumpbizkit": [
+	"HM": [
+		"hm",
 		"limp_v2",
 		"limpbizkit_rulz",
 		"oldskool_v2",
 		"oldskool",
-		"limp"
+		"limp",
+		"teenagepolices"
 	],
 	"Lobo": [
 		"lobo_v2",
@@ -6921,16 +7126,6 @@
 		"madotuki_bu-n",
 		"poniko"
 	],
-	"Mad Max": [
-		"madmax",
-		"madmax_kv"
-	],
-	"MArmor": [
-		"marmor1",
-		"marmor2",
-		"marmor_v2",
-		"marmor"
-	],
 	"Marco": [
 		"marco",
 		"marco_cartoon",
@@ -6947,6 +7142,7 @@
 		"maya_dawn_v2_1"
 	],
 	"MBT Tank": [
+		"tank_mbt",
 		"mbt",
 		"mbts"
 	],
@@ -6973,14 +7169,16 @@
 		"p_x",
 		"x2"
 	],
-	"Megatron": [
+	"Transformers - Megatron": [
 		"megatron-slaughter",
 		"megatron_v2",
-		"megatron"
+		"megatron",
+		"owatarobo",
+		"owatarobo_s"
 	],
-	"Medic": [
-		"medic1",
-		"medic2"
+	"Memphis": [
+		"memphis",
+		"nephthys"
 	],
 	"Mewtwo": [
 		"mewtwo",
@@ -7019,6 +7217,8 @@
 		"morphbeta_v2",
 		"ts_laurence",
 		"admin",
+		"gamespy_v2",
+		"gamespy",
 		"morphbeta"
 	],
 	"BRS Male": [
@@ -7167,11 +7367,13 @@
 		"tfc_hvyweapon_hd",
 		"toon_hvyweapon",
 		"bc_hwg",
-		"cobra2"
+		"cobra2",
+		"mjornir_recon_n54"
 	],
 	"Toothpaste": [
 		"aquafresh",
-		"colgate"
+		"colgate",
+		"hipoglos"
 	],
 	"Bushsmoke": [
 		"buschsmoke",
@@ -7188,15 +7390,44 @@
 		"new_pyro",
 		"pyro_noxx",
 		"pyrosity",
+		"adminmordekai",
 		"pyro_toon",
 		"tfc_pyro",
 		"toon_pyro",
 		"tfc_pyro_hd"
 	],
+	"Virii": [
+		"virii",
+		"mcclane",
+		"alienslv"
+	],
+	"Gundam - Gundam": [
+		"god",
+		"gundam",
+		"zgundam",
+		"gx",
+		"hell",
+		"deathscythehell",
+		"deathscythehell2",
+		"rx78-2",
+		"rx78_2",
+		"rx93-2",
+		"strike-a",
+		"strike",
+		"wz",
+		"wzc",
+		"f91",
+		"sandrock",
+		"nataku",
+		"tallgeese3",
+		"wingzero"
+	],
 	"TFC - Scout": [
 		"new_scout",
 		"scout",
 		"scout_toon",
+		"enforcer",
+		"hg",
 		"tfc_scout",
 		"tfc_scout_hd",
 		"toon_scout"
@@ -7212,6 +7443,8 @@
 		"bubba_gump_v2",
 		"bio_tfc_sniper",
 		"bubba_gump",
+		"aussie_v2",
+		"aussie",
 		"bwsniper"
 	],
 	"Claw Guy": [
@@ -7252,7 +7485,9 @@
 		"toon_spy",
 		"re_succ_citizen_unit",
 		"new_spy",
-		"dark_spy"
+		"dark_spy",
+		"east_v2",
+		"east"
 	],
 	"Judge": [
 		"judge_fronberg",
@@ -7262,7 +7497,17 @@
 		"drjmaul_v2",
 		"darthmaul",
 		"maul",
-		"drjmaul"
+		"drjmaul",
+		"doa_v2",
+		"doa"
+	],
+	"Dolboeb": [
+		"dolboeb",
+		"lt_dildo"
+	],
+	"CSCZ - Druglord": [
+		"druglord_cscz",
+		"italian_vip"
 	],
 	"TFC - Medic": [
 		"medic",
@@ -7280,7 +7525,7 @@
 		"[girlz]ninja_girl",
 		"sariah_ninja"
 	],
-	"TFC - VIP": [
+	"TFC - Civilian": [
 		"hellzadmin3_v2",
 		"toon_soldier_c",
 		"toon_civilian",
@@ -7288,7 +7533,29 @@
 		"civilian_toon",
 		"civilian_v2",
 		"hellzadmin3",
-		"civilian"
+		"civilian",
+		"k4zuko_v2",
+		"k4zuko",
+		"kim1"
+	],
+	"Nobita": [
+		"nobita",
+		"kiteretu"
+	],
+	"Sano": [
+		"sano",
+		"kiwami"
+	],
+	"Kamikaze": [
+		"kamikaze",
+		"obi01"
+	],
+	"Gundam - MSN-06": [
+		"msn-06s_sc4",
+		"kazextreme2_v2",
+		"kazextreme2",
+		"sazabi_v2",
+		"sazabi"
 	],
 	"Scotty Fox": [
 		"scottyfox",
@@ -7306,16 +7573,27 @@
 		"banshee",
 		"britney",
 		"hellsangel_f1_v2",
+		"sierra",
 		"hotlips",
+		"riotgrrrl_v2",
+		"siren",
+		"vamp2",
+		"riotgrrrl",
+		"starlight",
+		"-starlight-",
 		"ladygarden_v2",
 		"livingdeadgirl_v2",
 		"scarlet",
+		"mia",
 		"sexy",
 		"sexy2",
 		"tigger2",
 		"jena_bean",
 		"vixen_v2",
 		"nympho_v2",
+		"flying_gerbil_v2",
+		"flying_gerbil",
+		"eclipse",
 		"at&tgirl_v2",
 		"vixen",
 		"at&tgirl",
@@ -7326,7 +7604,26 @@
 	],
 	"Bati": [
 		"bati",
-		"batidillo"
+		"batidillo",
+		"lucas",
+		"luquitas"
+	],
+	"Edgar": [
+		"edgar",
+		"bike_edgar"
+	],
+	"Eightball": [
+		"eightball",
+		"bike_eightball"
+	],
+	"Louis": [
+		"louis",
+		"bike_louis"
+	],
+	"Molly": [
+		"molly",
+		"molly2",
+		"bike_molly"
 	],
 	"CSX - Schoolgirl": [
 		"csx_schoolgirl",
@@ -7445,7 +7742,8 @@
 	],
 	"Nuku": [
 		"nuku",
-		"nuku-b"
+		"nuku-b",
+		"zz_kinesiologa"
 	],
 	"CS Urban Girl": [
 		"csurbangirl",
@@ -7473,11 +7771,17 @@
 		"tomb_rider_v2",
 		"laracroft_v2",
 		"nuderaider_v2",
-		"lara",
 		"lara2",
 		"nuderaider",
 		"tomb_rider",
-		"laracroft"
+		"laracroft",
+		"fem-aggression_v2",
+		"fem-aggression",
+		"nameless"
+	],
+	"Majork": [
+		"majork",
+		"female"
 	],
 	"Legends Rogue": [
 		"legends_rogue_v2",
@@ -7519,10 +7823,6 @@
 		"ov_entoma",
 		"ov_entoma_noflatshade"
 	],
-	"Owatarobo": [
-		"owatarobo",
-		"owatarobo_s"
-	],
 	"P2 Spetsnaz": [
 		"p2spetsnaza",
 		"p2spetsnazb",
@@ -7534,12 +7834,6 @@
 	"Persona 4 - Jack Frost": [
 		"p4_jack_frost",
 		"p4_jack_frost_flat"
-	],
-	"Para Soldier": [
-		"para_soldier1",
-		"para_soldier2",
-		"para_soldier3",
-		"para_soldier4"
 	],
 	"Peasant Male": [
 		"peasantmale1",
@@ -7580,9 +7874,9 @@
 		"picard"
 	],
 	"Bugs Bunny": [
-		"pernalonga",
 		"bugs_v2",
-		"bugs"
+		"bugs",
+		"pernalonga"
 	],
 	"Bush": [
 		"plantshit1",
@@ -7619,7 +7913,9 @@
 		"jester_gibbed_v2",
 		"potjester",
 		"jester_head",
-		"jester_gibbed"
+		"jester_gibbed",
+		"foolish_v2",
+		"foolish"
 	],
 	"Pot Leaf": [
 		"potleaf_v2",
@@ -7650,9 +7946,13 @@
 		"frankenstein_v2",
 		"frankenstein"
 	],
-	"Pyro Skeleton": [
+	"Warrior Skeleton": [
+		"esqueleto_soldier",
+		"immortal_skeleton",
+		"soldiers_skeleton",
 		"pyro_skeleton",
-		"pyro_esqueleto"
+		"pyro_esqueleto",
+		"warrior_skeleton"
 	],
 	"Quisty": [
 		"quisty",
@@ -7676,7 +7976,8 @@
 	"Ray": [
 		"ray",
 		"ray2",
-		"ray_old"
+		"ray_old",
+		"armenian_mafia"
 	],
 	"Rayman": [
 		"rayman2",
@@ -7899,10 +8200,6 @@
 		"rwby_weissschnee",
 		"rwby_weiss"
 	],
-	"RX78": [
-		"rx78-2",
-		"rx78_2"
-	],
 	"Ninja Gaiden - Ryu": [
 		"ryu",
 		"ryuhayabusa"
@@ -7914,12 +8211,18 @@
 	],
 	"Saito": [
 		"saito",
-		"saito2"
+		"saito2",
+		"kenshin",
+		"tohkarh"
 	],
 	"Sam": [
 		"sam_casual",
 		"sam_hev",
 		"sam_hev_nohelmet"
+	],
+	"Corpse": [
+		"rotting",
+		"mummy"
 	],
 	"Santa Claus": [
 		"santa_v2",
@@ -7932,7 +8235,8 @@
 		"nomble",
 		"anti-claws",
 		"santa",
-		"santa-naked"
+		"santa-naked",
+		"mrshoe"
 	],
 	"Bellona": [
 		"sbellona",
@@ -8032,6 +8336,18 @@
 		"force",
 		"re_succ_hrd_medium"
 	],
+	"League of Legends - Morgana": [
+		"lolomorgana",
+		"lolcmorgana"
+	],
+	"Lopan Spawn": [
+		"spawn2",
+		"lopanspawn"
+	],
+	"Stealth Box": [
+		"stealthbox",
+		"pitusasbox"
+	],
 	"Sexy Girl": [
 		"sexy_les",
 		"queenofswords_v2",
@@ -8039,9 +8355,17 @@
 		"shedevil",
 		"team_blow_v2",
 		"tgp_postlady7_v2",
+		"marilee_v2",
+		"piratess_v2",
+		"piratess",
+		"marilee",
 		"ms._pc_punisher",
+		"livingdeadgirl-",
+		"mynx_v2",
+		"mynx",
 		"shadow_girl",
 		"raven",
+		"green",
 		"dawn_v2",
 		"masked_ninja_v2",
 		"southern_belle2",
@@ -8098,7 +8422,8 @@
 		"clanpb_v2",
 		"sarge2",
 		"sod",
-		"clanpb"
+		"clanpb",
+		"cl_sarge"
 	],
 	"Sperm": [
 		"spermgrey",
@@ -8131,14 +8456,17 @@
 	],
 	"Naruto - Sakura": [
 		"naruto_sakura",
-		"shippudden_sakura"
+		"shippudden_sakura",
+		"terranrp_16_v2",
+		"terranrp_16"
 	],
 	"Squad": [
 		"squad",
 		"squad-fix",
 		"preda",
 		"silencer_v2",
-		"silencer"
+		"silencer",
+		"slickiller"
 	],
 	"Skelepuncher": [
 		"skelepuncher",
@@ -8151,7 +8479,23 @@
 	"Toonrun - Grunt": [
 		"smid",
 		"smij",
-		"smijv4"
+		"smijv4",
+		"pingwin",
+		"tspingwin"
+	],
+	"The Wastes - Ezekial": [
+		"thewastes_ezekial",
+		"tw_ezekial"
+	],
+	"The Wastes - Kali": [
+		"thewastes_kali",
+		"tw_kali"
+	],
+	"The Wastes - Player": [
+		"tw_player",
+		"carnage",
+		"madmax_kv",
+		"madmax"
 	],
 	"The Matrix - Agent Smith": [
 		"agent_v2",
@@ -8166,7 +8510,8 @@
 	"Metal Gear Solid - Sniper Wolf": [
 		"snipergreen",
 		"sniperwhite",
-		"tfed"
+		"tfed",
+		"star"
 	],
 	"Softon": [
 		"softon",
@@ -8199,7 +8544,8 @@
 	"Spike": [
 		"spike",
 		"spike2_v2",
-		"spike2"
+		"spike2",
+		"nabeshin"
 	],
 	"Vash": [
 		"vash",
@@ -8249,7 +8595,10 @@
 		"syndicate3",
 		"syndicate4",
 		"syndicate5",
-		"syndicate6"
+		"syndicate6",
+		"hunted",
+		"sbo_hunted_v2",
+		"sbo_hunted"
 	],
 	"Pokemon - Brock": [
 		"brock",
@@ -8267,7 +8616,10 @@
 		"tango-urbanwinter",
 		"tango-vinnie",
 		"tango_somali",
-		"tango-blackpants"
+		"tango-blackpants",
+		"tango-afro",
+		"tango-al",
+		"tango-aziz"
 	],
 	"Terrant": [
 		"terrant_v1",
@@ -8299,7 +8651,8 @@
 		"terroristm22",
 		"terroristme",
 		"terroristmo",
-		"terroristmo2"
+		"terroristmo2",
+		"scotsman"
 	],
 	"Touhou - Tenko": [
 		"tenko",
@@ -8452,13 +8805,17 @@
 		"touhou_yuyusama",
 		"touhou_yuyusama2"
 	],
-	"Pirate": [
-		"nicepirate_v2",
-		"trollskipper_v2",
+	"Black Beard": [
 		"blackbeard_v2",
 		"blackbeard",
+		"nicepirate_v2",
+		"trollskipper_v2",
 		"trollskipper",
 		"nicepirate"
+	],
+	"Pirate": [
+		"pirate",
+		"evh"
 	],
 	"US Girl": [
 		"usgirl",
@@ -8549,7 +8906,8 @@
 	],
 	"Zaku": [
 		"zaku",
-		"zakuii"
+		"zakuii",
+		"z_zaku"
 	],
 	"Legend of Zelda - Zelda": [
 		"zelda2_v2",
@@ -8645,10 +9003,6 @@
 		"bigratshit",
 		"bigfatrat"
 	],
-	"Blue Police": [
-		"bluepolice",
-		"bluesexy"
-	],
 	"BMRF Truck": [
 		"bmrftruck",
 		"bmrftruck2"
@@ -8661,17 +9015,10 @@
 		"chester_v2",
 		"chester"
 	],
-	"shifty": [
-		"shifty_v2",
-		"shifty"
-	],
 	"naluri": [
 		"naluri_v2",
-		"naluri"
-	],
-	"prdel": [
-		"prdel_v2",
-		"prdel"
+		"naluri",
+		"nurani"
 	],
 	"q2_bitch": [
 		"q2_bitch_v2",
@@ -8680,10 +9027,6 @@
 	"doc_holliday": [
 		"doc_holliday_v2",
 		"doc_holliday"
-	],
-	"fem-aggression": [
-		"fem-aggression_v2",
-		"fem-aggression"
 	],
 	"saucer": [
 		"saucer_v2",
@@ -8695,7 +9038,14 @@
 	],
 	"platov": [
 		"platov_v2",
-		"platov"
+		"platov",
+		"xccp",
+		"2d_xccp",
+		"eu_recon"
+	],
+	"Eva": [
+		"eva",
+		"nge_eva01"
 	],
 	"deldar": [
 		"deldar_v2",
@@ -8708,10 +9058,6 @@
 	"gangster": [
 		"gangster_v2",
 		"gangster"
-	],
-	"~w@r": [
-		"~w@r_v2",
-		"~w@r"
 	],
 	"barnes": [
 		"barnes_v2",
@@ -8730,9 +9076,9 @@
 		"dmc4_nero"
 	],
 	"comradetiki": [
+		"comradetiki_v3",
 		"comradetiki",
-		"comradetiki_v2",
-		"comradetiki_v3"
+		"comradetiki_v2"
 	],
 	"sunshine": [
 		"sunshine_v2",
@@ -8762,9 +9108,18 @@
 		"pizzaman_v2",
 		"pizzaman"
 	],
-	"taliban": [
+	"Resident Evil - Cindy": [
+		"outbreak_cindy",
+		"re_outbreak_cindy"
+	],
+	"Taliban": [
 		"taliban_v2",
-		"taliban"
+		"taliban",
+		"opfor3"
+	],
+	"Resident Evil - Yoko": [
+		"re_outbreak_yoko",
+		"outbreak_yoko"
 	],
 	"re_umbrella_huntera": [
 		"re_umbrella_huntera_v2",
@@ -8778,17 +9133,19 @@
 		"mystique_v2",
 		"mystique"
 	],
-	"syphon": [
-		"syphon_v2",
-		"syphon"
-	],
 	"gunsurvivor_ark": [
 		"gunsurvivor_ark_v2",
-		"gunsurvivor_ark"
+		"gunsurvivor_ark",
+		"rusty"
 	],
-	"wesker": [
-		"wesker_v2",
-		"wesker"
+	"Jihad": [
+		"jihad",
+		"hamas",
+		"hezbollah"
+	],
+	"Hans": [
+		"hans",
+		"werewolfhans"
 	],
 	"re_umbrella_mrx": [
 		"re_umbrella_mrx_v2",
@@ -8810,25 +9167,9 @@
 		"leon_v2",
 		"leon"
 	],
-	"ss_droid": [
-		"ss_droid_v2",
-		"ss_droid"
-	],
-	"sister_mary_ellie_fant": [
-		"sister_mary_ellie_fant_v2",
-		"sister_mary_ellie_fant"
-	],
 	"inf_gruppen": [
 		"inf_gruppen_v2",
 		"inf_gruppen"
-	],
-	"fuctnny": [
-		"fuctnny_v2",
-		"fuctnny"
-	],
-	"irobot": [
-		"irobot_v2",
-		"irobot"
 	],
 	"pumpkin": [
 		"pumpkin_v2",
@@ -8846,10 +9187,6 @@
 		"kroenen2_v2",
 		"kroenen2"
 	],
-	"terranrp_16": [
-		"terranrp_16_v2",
-		"terranrp_16"
-	],
 	"heavyarms": [
 		"heavyarms_v2",
 		"heavyarms"
@@ -8858,33 +9195,23 @@
 		"8bitman_v2",
 		"8bitman"
 	],
-	"gagettora": [
-		"gagettora_v2",
-		"gagettora"
-	],
-	"leonrpd": [
-		"leonrpd_v2",
-		"leonrpd"
-	],
-	"nige111": [
+	"Quake 3 - Pyro": [
+		"q3tf_pyro",
 		"nige111_v2",
 		"nige111"
 	],
-	"counterx": [
-		"counterx_v2",
-		"counterx"
+	"Gangsta": [
+		"gangsta",
+		"team-[crow]"
+	],
+	"Gauntman": [
+		"gauntman",
+		"sv_gauntman_v2",
+		"sv_gauntman"
 	],
 	"guybrush": [
 		"guybrush_v2",
 		"guybrush"
-	],
-	"gamespy": [
-		"gamespy_v2",
-		"gamespy"
-	],
-	"re_succ_hrd_light": [
-		"re_succ_hrd_light_v2",
-		"re_succ_hrd_light"
 	],
 	"wanted_twnwest": [
 		"wanted_twnwest_v2",
@@ -8893,10 +9220,6 @@
 	"votoms": [
 		"votoms_v2",
 		"votoms"
-	],
-	"foolish": [
-		"foolish_v2",
-		"foolish"
 	],
 	"vasiliy": [
 		"vasiliy_v2",
@@ -8930,21 +9253,9 @@
 		"ghetpimp_v2",
 		"ghetpimp"
 	],
-	"michigan": [
-		"michigan_v2",
-		"michigan"
-	],
-	"billy2": [
-		"billy2_v2",
-		"billy2"
-	],
 	"arm": [
 		"arm_v2",
 		"arm"
-	],
-	"marilee": [
-		"marilee_v2",
-		"marilee"
 	],
 	"wanted_ramone": [
 		"wanted_ramone_v2",
@@ -8952,15 +9263,12 @@
 	],
 	"butch": [
 		"butch_v2",
-		"butch"
+		"butch",
+		"rocko"
 	],
 	"legends_wizard": [
 		"legends_wizard_v2",
 		"legends_wizard"
-	],
-	"ba90": [
-		"ba90_v2",
-		"ba90"
 	],
 	"hanky": [
 		"hanky_v2",
@@ -8975,9 +9283,10 @@
 		"infected_businessman_v2",
 		"infected_businessman"
 	],
-	"monster_hunter": [
+	"Vamp": [
 		"monster_hunter_v2",
-		"monster_hunter"
+		"monster_hunter",
+		"vamp"
 	],
 	"bot_light": [
 		"bot_light_v2",
@@ -8990,18 +9299,6 @@
 	"wanted_miner": [
 		"wanted_miner_v2",
 		"wanted_miner"
-	],
-	"piratess": [
-		"piratess_v2",
-		"piratess"
-	],
-	"sbo_hunted": [
-		"sbo_hunted_v2",
-		"sbo_hunted"
-	],
-	"sv_gauntman": [
-		"sv_gauntman_v2",
-		"sv_gauntman"
 	],
 	"bullseye": [
 		"bullseye_v2",
@@ -9021,31 +9318,31 @@
 	],
 	"fry": [
 		"fry_v2",
-		"fry"
+		"fry",
+		"lt_fry"
 	],
-	"ff7_anim_redxiii": [
+	"Final Fantasy - Red": [
 		"ff7_anim_redxiii_v2",
-		"ff7_anim_redxiii"
+		"ff7_anim_redxiii",
+		"ff7redxiii"
 	],
-	"fur1": [
-		"fur1_v2",
-		"fur1"
+	"JTHM": [
+		"jthm_v2",
+		"jthm",
+		"fuctnny_v2",
+		"fuctnny"
+	],
+	"Killing Floor - Flesh Pound": [
+		"kf_fleshpound",
+		"fleashpound_v1"
 	],
 	"ernie": [
 		"ernie_v2",
 		"ernie"
 	],
-	"freeman": [
-		"freeman_v2",
-		"freeman"
-	],
 	"badday": [
 		"badday_v2",
 		"badday"
-	],
-	"riotgrrrl": [
-		"riotgrrrl_v2",
-		"riotgrrrl"
 	],
 	"giggles": [
 		"giggles_v2",
@@ -9055,14 +9352,6 @@
 		"brave_v2",
 		"brave"
 	],
-	"flying_gerbil": [
-		"flying_gerbil_v2",
-		"flying_gerbil"
-	],
-	"neet64": [
-		"neet64_v2",
-		"neet64"
-	],
 	"ff7barret": [
 		"ff7barret_v2",
 		"ff7barret"
@@ -9070,14 +9359,6 @@
 	"badtaste": [
 		"badtaste_v2",
 		"badtaste"
-	],
-	"nav": [
-		"nav_v2",
-		"nav"
-	],
-	"aussie": [
-		"aussie_v2",
-		"aussie"
 	],
 	"whitesuit": [
 		"whitesuit_v2",
@@ -9095,21 +9376,9 @@
 		"21emon_v2",
 		"21emon"
 	],
-	"thearm": [
-		"thearm_v2",
-		"thearm"
-	],
 	"aeonflux": [
 		"aeonflux_v2",
 		"aeonflux"
-	],
-	"doa": [
-		"doa_v2",
-		"doa"
-	],
-	"k4zuko": [
-		"k4zuko_v2",
-		"k4zuko"
 	],
 	"backbeard": [
 		"backbeard_v2",
@@ -9127,10 +9396,6 @@
 		"007tux_v2",
 		"007tux"
 	],
-	"svencouzi": [
-		"svencouzi_v2",
-		"svencouzi"
-	],
 	"jra": [
 		"jra_v2",
 		"jra"
@@ -9145,7 +9410,9 @@
 	],
 	"tiger_woods": [
 		"tiger_woods_v2",
-		"tiger_woods"
+		"tiger_woods",
+		"neet64_v2",
+		"neet64"
 	],
 	"wanted_townmex": [
 		"wanted_townmex_v2",
@@ -9155,29 +9422,24 @@
 		"legends_cleric_v2",
 		"legends_cleric"
 	],
-	"narkosha": [
-		"narkosha_v2",
-		"narkosha"
-	],
-	"hlpc_billy": [
-		"hlpc_billy_v2",
-		"hlpc_billy"
-	],
 	"cyclops": [
 		"cyclops_v2",
 		"cyclops"
 	],
-	"nizj2": [
+	"T-Ster1": [
+		"t-ster1",
+		"ns-ster1",
+		"ss_droid_v2",
+		"ss_droid"
+	],
+	"QTZ": [
+		"qtz",
 		"nizj2_v2",
 		"nizj2"
 	],
 	"ff7vincent": [
 		"ff7vincent_v2",
 		"ff7vincent"
-	],
-	"mynx": [
-		"mynx_v2",
-		"mynx"
 	],
 	"bob2": [
 		"bob2_v2",
@@ -9186,10 +9448,6 @@
 	"empirialklingon": [
 		"empirialklingon_v2",
 		"empirialklingon"
-	],
-	"fume": [
-		"fume_v2",
-		"fume"
 	],
 	"fuuko": [
 		"fuuko_v2",
@@ -9211,21 +9469,14 @@
 		"eviljohn_v2",
 		"eviljohn"
 	],
-	"playerslayer": [
-		"playerslayer_v2",
-		"playerslayer"
-	],
 	"slidje": [
 		"slidje_v2",
 		"slidje"
 	],
-	"solidsnake": [
-		"solidsnake_v2",
-		"solidsnake"
-	],
-	"mp_security": [
+	"MP Security": [
 		"mp_security_v2",
-		"mp_security"
+		"mp_security",
+		"securityguard"
 	],
 	"touhou_kogasa": [
 		"touhou_kogasa_v2",
@@ -9239,13 +9490,14 @@
 		"ginger_v2",
 		"ginger"
 	],
-	"ship_whitestripe": [
+	"The Ship - White Stripe": [
 		"ship_whitestripe_v2",
-		"ship_whitestripe"
+		"ship_whitestripe",
+		"ranulf"
 	],
-	"east": [
-		"east_v2",
-		"east"
+	"The Ship - Suit": [
+		"ship_greensuit",
+		"ship_redsuit"
 	],
 	"2pic": [
 		"2pic_v2",
@@ -9283,33 +9535,23 @@
 		"mrrogers_v2",
 		"mrrogers"
 	],
-	"sazabi": [
-		"sazabi_v2",
-		"sazabi"
-	],
 	"avp2marine": [
 		"avp2marine_v2",
 		"avp2marine"
-	],
-	"daedelus1": [
-		"daedelus1_v2",
-		"daedelus1"
-	],
-	"mask": [
-		"mask_v2",
-		"mask"
-	],
-	"elves": [
-		"elves_v2",
-		"elves"
 	],
 	"wanted_rogan": [
 		"wanted_rogan_v2",
 		"wanted_rogan"
 	],
-	"male_swat": [
+	"Male SWAT": [
 		"male_swat_v2",
-		"male_swat"
+		"male_swat",
+		"counterx_v2"
+	],
+	"Miss Wong": [
+		"misswong",
+		"malysa",
+		"lara"
 	],
 	"chainsaw": [
 		"chainsaw_v2",
@@ -9318,10 +9560,6 @@
 	"incredhulk": [
 		"incredhulk_v2",
 		"incredhulk"
-	],
-	"femaleklingon": [
-		"femaleklingon_v2",
-		"femaleklingon"
 	],
 	"legends_warrior": [
 		"legends_warrior_v2",
@@ -9339,13 +9577,15 @@
 		"worm_v2",
 		"worm"
 	],
-	"hunk": [
-		"hunk_v2",
-		"hunk"
-	],
-	"re_succ_hrd_shield": [
+	"Heavy Spetznaz": [
+		"heavy_spetznaz",
 		"re_succ_hrd_shield_v2",
 		"re_succ_hrd_shield"
+	],
+	"Spetznaz with goggles": [
+		"spetznaz",
+		"re_succ_hrd_light_v2",
+		"re_succ_hrd_light"
 	],
 	"gitnes": [
 		"gitnes_v2",
@@ -9367,14 +9607,6 @@
 		"bclinton_v2",
 		"bclinton"
 	],
-	"german-grenadier": [
-		"german-grenadier_v2",
-		"german-grenadier"
-	],
-	"retardedanimal": [
-		"retardedanimal_v2",
-		"retardedanimal"
-	],
 	"zaxel": [
 		"zaxel_v2",
 		"zaxel"
@@ -9389,7 +9621,9 @@
 	],
 	"mib": [
 		"mib_v2",
-		"mib"
+		"mib",
+		"elves_v2",
+		"elves"
 	],
 	"~]sp[~": [
 		"~]sp[~_v2",
@@ -9399,9 +9633,9 @@
 		"benson_v2",
 		"benson"
 	],
-	"jthm": [
-		"jthm_v2",
-		"jthm"
+	"EL Chivo": [
+		"el_chivo",
+		"master"
 	],
 	"sahchandler": [
 		"sahchandler_v2",
@@ -9419,10 +9653,6 @@
 		"rb_ct_v2",
 		"rb_ct"
 	],
-	"pizzaboy": [
-		"pizzaboy_v2",
-		"pizzaboy"
-	],
 	"headless_horseman": [
 		"headless_horseman_v2",
 		"headless_horseman"
@@ -9431,13 +9661,37 @@
 		"cream_v2",
 		"cream"
 	],
-	"blackcat": [
-		"blackcat_v2",
-		"blackcat"
+	"Marionette": [
+		"marionette",
+		"da_puppet"
+	],
+	"Jonnyq": [
+		"jonnyq",
+		"dc_jonnyq"
+	],
+	"Succubus": [
+		"succubus",
+		"demonia"
+	],
+	"Raptor": [
+		"raptor",
+		"derposaur"
+	],
+	"Halloween": [
+		"halloween_v2",
+		"halloween",
+		"derpx0r"
+	],
+	"Face": [
+		"face",
+		"dieter",
+		"longbaugh",
+		"roggesemmel"
 	],
 	"kikyou": [
 		"kikyou_v2",
-		"kikyou"
+		"kikyou",
+		"xkikyou"
 	],
 	"gfl_hk416": [
 		"gfl_hk416_v2",
@@ -9458,10 +9712,6 @@
 	"wanted_bandit_mex": [
 		"wanted_bandit_mex_v2",
 		"wanted_bandit_mex"
-	],
-	"halloween": [
-		"halloween_v2",
-		"halloween"
 	],
 	"bert": [
 		"bert_v2",
@@ -9495,17 +9745,9 @@
 		"t801_v2",
 		"t801"
 	],
-	"will": [
-		"will_v2",
-		"will"
-	],
 	"wanted_colonel": [
 		"wanted_colonel_v2",
 		"wanted_colonel"
-	],
-	"hellzadmin2": [
-		"hellzadmin2_v2",
-		"hellzadmin2"
 	],
 	"dave": [
 		"dave_v2",
@@ -9518,10 +9760,6 @@
 	"q3a_bones": [
 		"q3a_bones_v2",
 		"q3a_bones"
-	],
-	"kazextreme2": [
-		"kazextreme2_v2",
-		"kazextreme2"
 	],
 	"knute_and_bolte": [
 		"knute_and_bolte_v2",
