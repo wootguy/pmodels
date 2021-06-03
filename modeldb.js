@@ -349,7 +349,7 @@ function download_model() {
 			
 			document.getElementsByClassName("download-but-text")[0].textContent = "Creating Zip";
 			
-			zip.generateAsync({type: "blob",compression: "STORE"}).then(function(content) {
+			zip.generateAsync({type: "blob",compression: "DEFLATE"}).then(function(content) {
 				document.getElementsByClassName("download-but-text")[0].textContent = "Download";
 				document.getElementsByClassName("download-loader")[0].classList.add("hidden");
 				
