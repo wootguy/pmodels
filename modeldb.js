@@ -303,6 +303,11 @@ function view_model(model_name) {
 }
 
 function download_model() {	
+	if (g_downloader_interval != null) {
+		console.log("Already downloading file");
+		return;
+		
+	}
 	var fileList = [
 		g_model_path + g_view_model_name + "/" + g_view_model_name + ".bmp",
 		g_model_path + g_view_model_name + "/" + g_view_model_name + ".mdl"
@@ -329,10 +334,10 @@ function download_model() {
 	
 	document.getElementsByClassName("download-loader")[0].classList.remove("hidden");
 	
+	clearInterval(g_downloader_interval);
 	g_downloader_interval = setInterval(function() {		
 		if (Object.keys(fileData).length >= fileList.length) {
 			clearInterval(g_downloader_interval);
-			g_downloader_interval = null;
 			
 			var zip = new JSZip();
 			
@@ -342,15 +347,18 @@ function download_model() {
 				}
 			}
 			
-			zip.generateAsync({type: "blob",compression: "STORE"}, function updateCallback(metadata) {
-				document.getElementsByClassName("download-but-text")[0].textContent =
-					//"Creating Zip "+ metadata.percent.toFixed(2) + " %";
-					"Creating Zip";
-			})
-			.then(function(content) {
+			document.getElementsByClassName("download-but-text")[0].textContent = "Creating Zip";
+			
+			zip.generateAsync({type: "blob",compression: "STORE"}).then(function(content) {
 				document.getElementsByClassName("download-but-text")[0].textContent = "Download";
 				document.getElementsByClassName("download-loader")[0].classList.add("hidden");
-				console.log("Finished creating zip");
+				
+				if (g_downloader_interval == null) { // cancelled download
+					console.log("Zip filed created but user cancelled");
+					return;
+				}
+				
+				g_downloader_interval = null;
 				saveAs(content, g_view_model_name + ".zip");
 			});
 		} else {
