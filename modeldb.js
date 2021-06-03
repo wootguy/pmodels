@@ -320,7 +320,7 @@ function download_model() {
 		(function(path) {
 			console.log("Downloading: " + path);
 			
-			fetchBinaryFile(get_repo_url + path, function(data) {
+			fetchBinaryFile(get_repo_url(g_view_model_name) + path, function(data) {
 				fileData[path] = data;
 				console.log("Downloaded " + path);
 			});
