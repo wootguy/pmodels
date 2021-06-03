@@ -1,20 +1,25 @@
 
-var model_data = {};
-var g_view_model_data = {};
+var g_model_data = {};
+var g_view_g_model_data = {};
 var g_old_versions = {}; // for filtering
 var g_groups = {};
+var g_tags = {};
+var g_verions = [];
+var g_aliases = {};
 var g_group_filter = '';
-var model_names;
+var g_model_names;
 var can_load_new_model = false;
 var model_load_queue;
 var model_unload_waiting;
 var hlms_is_ready = false;
+var g_db_files_loaded = 0;
+var g_debug_mode = false; // for quickly creating lists of models for tagging/grouping
 
 // returning from the group view_model
 var g_offset_before_group = 0;
 var g_search_before_group = 0;
 
-var model_results; // subset of model_names
+var model_results; // subset of g_model_names
 var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
@@ -44,7 +49,14 @@ function fetchTextFile(path, callback) {
 
 function fetchJSONFile(path, callback) {	
 	fetchTextFile(path, function(data) {
-		callback(JSON.parse(data));
+		try {
+			callback(JSON.parse(data));
+		} catch(e) {
+			console.error("Failed to load JSON file: " + path +"\n\n", e);
+			var loader = document.getElementsByClassName("site-loader")[0];
+			loader.classList.remove("loader");
+			loader.textContent = "Failed to load file: " + path;
+		}
 	});
 }
 
@@ -92,8 +104,8 @@ function update_model_details() {
 	
 	var totalPolys = 0;
 	var hasLdModel = false;
-	for (var i = 0; i < g_view_model_data["bodies"].length; i++) {
-		let models = g_view_model_data["bodies"][i]["models"];
+	for (var i = 0; i < g_view_g_model_data["bodies"].length; i++) {
+		let models = g_view_g_model_data["bodies"][i]["models"];
 		let polys = parseInt(models[0]["polys"]);
 		
 		if (models.length > 1) {
@@ -111,11 +123,11 @@ function update_model_details() {
 	}
 	
 	var soundTable = "";
-	for (var i = 0; i < g_view_model_data["events"].length; i++) {
-		var evt = g_view_model_data["events"][i];
+	for (var i = 0; i < g_view_g_model_data["events"].length; i++) {
+		var evt = g_view_g_model_data["events"][i];
 		if (evt["event"] == 5004 && evt["options"].length > 0) {
 			var seq = evt["sequence"];
-			var seqName = seq + " : " + g_view_model_data["sequences"][seq]["name"];
+			var seqName = seq + " : " + g_view_g_model_data["sequences"][seq]["name"];
 			var path = evt["options"];
 			soundTable += '<div class="sound_row"><div title="' + seqName + '">' + seqName + '</div><div title="' + path + '">' + path + "</div></div>";
 		}
@@ -125,14 +137,14 @@ function update_model_details() {
 	}
 	
 	var has_mouth = false;
-	if (g_view_model_data["controllers"].length > 4) {
-		var ctl =  g_view_model_data["controllers"][4];
+	if (g_view_g_model_data["controllers"].length > 4) {
+		var ctl =  g_view_g_model_data["controllers"][4];
 		has_mouth = ctl.bone >= 0 && ctl.start != ctl.end;
 	}
 	
 	var ext_mdl = "No";
-	var ext_tex = g_view_model_data["t_model"];
-	var ext_anim = g_view_model_data["seq_groups"] > 1;
+	var ext_tex = g_view_g_model_data["t_model"];
+	var ext_anim = g_view_g_model_data["seq_groups"] > 1;
 	if (ext_tex && ext_anim) {
 		ext_mdl = "Textures + Sequences";
 	} else if (ext_tex) {
@@ -141,24 +153,24 @@ function update_model_details() {
 		ext_mdl = "Sequences";
 	}
 	
-	var aliases = model_data[g_view_model_name]["aliases"];
+	var aliases = g_model_data[g_view_model_name]["aliases"];
 	if (aliases) {
 		aliases = aliases.join("<br>")
 	}
 	
 	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
 	popup.getElementsByClassName("polycount")[0].setAttribute("title", totalPolys.toLocaleString(undefined));
-	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_model_data["size"]);
-	popup.getElementsByClassName("filesize")[0].setAttribute("title", humanFileSize(g_view_model_data["size"]));
-	popup.getElementsByClassName("compilename")[0].textContent = g_view_model_data["name"];
-	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_model_data["name"]);
+	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_g_model_data["size"]);
+	popup.getElementsByClassName("filesize")[0].setAttribute("title", humanFileSize(g_view_g_model_data["size"]));
+	popup.getElementsByClassName("compilename")[0].textContent = g_view_g_model_data["name"];
+	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_g_model_data["name"]);
 	popup.getElementsByClassName("aliases")[0].innerHTML = aliases ? aliases : "None";
 	popup.getElementsByClassName("aliases")[0].setAttribute("title", aliases ? aliases.replaceAll("<br>", "\n") : "This model has no known aliases.");
 	popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
 	popup.getElementsByClassName("ext_mdl")[0].setAttribute("title", ext_mdl);
 	popup.getElementsByClassName("sounds")[0].innerHTML = soundTable.length > 0 ? soundTable : "None";
-	popup.getElementsByClassName("md5")[0].textContent = g_view_model_data["md5"];
-	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_model_data["md5"]);
+	popup.getElementsByClassName("md5")[0].textContent = g_view_g_model_data["md5"];
+	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_g_model_data["md5"]);
 	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "Yes" : "No";
 	
 	var polyColor = "";
@@ -253,7 +265,7 @@ function view_model(model_name) {
 	g_model_was_loaded = false;
 	fetchJSONFile(repo_url + model_path + model_name + ".json", function(data) {
 		console.log(data);
-		g_view_model_data = data;
+		g_view_g_model_data = data;
 		
 		update_model_details();
 		
@@ -390,52 +402,62 @@ function load_results() {
 	first_page();
 }
 
-function apply_filters() {
+function apply_filters(no_reload) {
 	var name_filter = document.getElementById("name-filter").value;
-	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(model_data).length > 0;
-	var use_groups = document.getElementById("filter_group").checked
-						&& Object.keys(model_data).length > 0
-						&& Object.keys(g_groups).length > 0;
+	var tag_filter = document.getElementsByClassName("categories")[0].value.toLowerCase();
+	var hide_old_ver = document.getElementById("filter_ver").checked;
+	var use_groups = document.getElementById("filter_group").checked;
 	
 	console.log("Applying filters");
 	
-	var temp_model_names = model_names;
 	var blacklist = {};
 	
-	if (hide_old_ver) {
-		for (var i = 0; i < temp_model_names.length; i++) {
-			if (temp_model_names[i] in g_old_versions) {
+	g_groups_with_results = {};
+	
+	var name_parts = [];
+	if (name_filter.length > 0 && Object.keys(g_model_data).length > 0) {
+		name_parts = name_filter.toLowerCase().split(" ");
+	}
+	var is_tag_filtering = tag_filter.length > 0 && tag_filter != "all";
+	var show_group_matches = (name_parts.length > 0 || is_tag_filtering) && g_group_filter.length == 0;
+	
+	for (var i = 0; i < g_model_names.length; i++) {
+		var modelName = g_model_names[i];
+		var group = g_model_data[modelName]["group"];
+		var shouldExclude = false;
+		
+		if (g_group_filter.length) {
+			if (group != g_group_filter) {
+				shouldExclude = true;
+			}
+		}
+		
+		if (!shouldExclude && is_tag_filtering) {
+			if (!(g_model_data[modelName]["tags"]) || !g_model_data[modelName]["tags"].has(tag_filter)) {
+				shouldExclude = true;
+			}
+		}
+		
+		if (!shouldExclude && hide_old_ver) {
+			if (modelName in g_old_versions) {
 				var is_group = false;
 				for (var key in g_groups) {
-					if (g_groups[key][0] == temp_model_names[i]) {
+					if (g_groups[key][0] == modelName) {
 						is_group = true;
 						break;
 					}
 				}
 				
 				if (!use_groups || !is_group) {
-					blacklist[temp_model_names[i]] = true;
+					shouldExclude = true;
 				}
 			}
 		}
-	}
-	
-	g_groups_with_results = {};
-	
-	if (name_filter.length > 0 && Object.keys(model_data).length > 0) {
-		name_parts = name_filter.toLowerCase().split(" ");
 		
-		for (var i = 0; i < temp_model_names.length; i++) {
-			var modelName = temp_model_names[i];
-			var group = model_data[modelName]["group"];
-			
-			if (blacklist[temp_model_names[i]]) {
-				continue;
-			}
-			
+		if (!shouldExclude && name_parts.length > 0) {		
 			var aliases = [modelName];
-			if (model_data[modelName]["aliases"]) {
-				aliases = aliases.concat(model_data[modelName]["aliases"]);
+			if (g_model_data[modelName]["aliases"]) {
+				aliases = aliases.concat(g_model_data[modelName]["aliases"]);
 			}
 			
 			var anyMatch = false;
@@ -460,21 +482,15 @@ function apply_filters() {
 			}
 			
 			if (!anyMatch) {
-				blacklist[temp_model_names[i]] = true;
-			}
-			else if (g_group_filter.length == 0 && group) {
-				if (group) {
-					g_groups_with_results[group] = g_groups_with_results[group] ? g_groups_with_results[group] + 1 : 1;
-				}
+				shouldExclude = true;
 			}
 		}
-	}
-	
-	if (g_group_filter.length) {
-		for (var i = 0; i < temp_model_names.length; i++) {
-			if (model_data[temp_model_names[i]]["group"] != g_group_filter) {
-				blacklist[temp_model_names[i]] = true;
-			}
+		
+		if (shouldExclude) {
+			blacklist[g_model_names[i]] = true;
+		}
+		else if (show_group_matches && group) {
+			g_groups_with_results[group] = g_groups_with_results[group] ? g_groups_with_results[group] + 1 : 1;
 		}
 	}
 	
@@ -493,22 +509,26 @@ function apply_filters() {
 		}
 	}
 	
-	model_results = temp_model_names.filter(function (name) {
+	model_results = g_model_names.filter(function (name) {
 		return !(blacklist[name]);
 	});
 	
-	load_results();
+	if (no_reload === true) {
+		load_page();
+	} else {
+		load_results();
+	}
 }
 
 var last_text = "";
 
 function update_model_grid() {
-	var total_models = model_names.length;
+	var total_models = g_model_names.length;
 	var grid = document.getElementById("model-grid");
 	var cell_template = document.getElementById("model-cell-template");
-	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(model_data).length > 0;
+	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(g_model_data).length > 0;
 	var group_mode = document.getElementById("filter_group").checked;
-	var is_searching = document.getElementById("name-filter").value.length > 0;
+	var is_searching = Object.keys(g_groups_with_results).length > 0;
 	
 	grid.innerHTML = "";
 	
@@ -522,7 +542,7 @@ function update_model_grid() {
 			return true;
 		}
 		
-		let group_name = Object.keys(model_data).length > 0 ? model_data[model_name].group : undefined;
+		let group_name = Object.keys(g_model_data).length > 0 ? g_model_data[model_name].group : undefined;
 		let is_group = group_mode
 						&& group_name
 						&& group_name in g_groups
@@ -589,17 +609,18 @@ function update_model_grid() {
 			event.target.textContent = oldText;
 			
 			// debug
-			/*
-			if (g_debug_copy.length) {
-				g_debug_copy += ',\n\t\t"' + oldText + '"';
-			} else {
-				g_debug_copy += '"' + oldText + '"';
+			if (g_debug_mode) {
+				if (g_debug_copy.length) {
+					g_debug_copy += ',\n\t\t"' + oldText + '"';
+				} else {
+					g_debug_copy += '"' + oldText + '"';
+				}
+				copyStringWithNewLineToClipBoard(g_debug_copy);
 			}
-			copyStringWithNewLineToClipBoard(g_debug_copy);
-			*/
-			
-			window.getSelection().selectAllChildren(event.target);
-			document.execCommand("copy");
+			else {
+				window.getSelection().selectAllChildren(event.target);
+				document.execCommand("copy");
+			}
 			
 			event.target.textContent = "Copied!";
 			
@@ -617,7 +638,7 @@ function update_model_grid() {
 function copyStringWithNewLineToClipBoard(stringWithNewLines){
 	console.log("COPY THIS " + stringWithNewLines)
     // Step3: find an id element within the body to append your myFluffyTextarea there temporarily
-    const element = document.getElementById('debug');
+    const element = document.getElementsByClassName("debug")[0];
 	element.innerHTML = stringWithNewLines;
     
     // Step 4: Simulate selection of your text from myFluffyTextarea programmatically 
@@ -731,83 +752,162 @@ function get_model_base_name(name) {
 	return name;
 }
 
-document.addEventListener("DOMContentLoaded",function() {
+function json_post_load() {
+	document.getElementsByClassName("content")[0].classList.remove("hidden");
+	document.getElementsByClassName("site-loader")[0].classList.add("hidden");
+	
+	if (g_debug_mode) {
+		document.getElementsByClassName("debug")[0].classList.remove("hidden");
+	}
+	
+	// process group info
+	for (var key in g_groups) {
+		for (var i = 0; i < g_groups[key].length; i++) {
+			var name = g_groups[key][i];
+			if (name in g_model_data) {
+				if (g_model_data[name]["group"]) {
+					if (g_model_data[name]["group"] != key) {
+						console.error(name + " is in group '" + g_model_data[name]["group"] + "' AND '" + key + "'");
+					} else {
+						console.error(name + " is in group '" + g_model_data[name]["group"] + "' more than once");
+					}
+				}
+				g_model_data[name]["group"] = key;
+			} else {
+				console.error("MISSING MODEL: " + name + " in group " + key);
+			}
+		}
+	}
+	
+	// process tag info
+	var categories = document.getElementsByClassName("categories")[0];
+	for (var tag in g_tags) {
+		let opt = document.createElement("option");
+		opt.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+		categories.appendChild(opt);
+		
+		for (var i = 0; i < g_tags[tag].length; i++) {
+			var model = g_tags[tag][i];
+			
+			if (!("tags" in g_model_data[model])) {
+				g_model_data[model]["tags"] = new Set();
+			}
+			
+			g_model_data[model]["tags"].add(tag);
+		}
+	}
+	
+	// process version info
+	for (var i = 0; i < g_versions.length; i++) {
+		// skip first value of the list, which is the latest version
+		var latest_version = g_versions[i][0];
+		
+		for (var k = 1; k < g_versions[i].length; k++) {
+			var modelName = g_versions[i][k];
+			g_old_versions[modelName] = true;
+			var parentGroup = g_model_data[latest_version]["group"];
+			
+			// inherit group/tag info from latest version
+			if (parentGroup) {
+				g_groups[parentGroup].push(modelName);
+				g_model_data[modelName]["group"] = g_model_data[latest_version]["group"];
+			} else {
+				var newGroupName = get_model_base_name(modelName);
+				g_groups[newGroupName] = [latest_version, modelName];
+				g_model_data[modelName]["group"] = g_model_data[latest_version]["group"] = newGroupName;
+			}
+			
+			if (g_model_data[latest_version]["tags"]) {
+				g_model_data[modelName]["tags"] = new Set(g_model_data[latest_version]["tags"]);
+			}
+		}
+	}
+	
+	console.log("NEW GROUP: ", g_groups);
+	
+	// process alias info
+	for (var key in g_aliases) {
+		if (!g_model_data[key]) {
+			console.error("Aliases for unknown model: " + key);
+			continue;
+		}
+		g_model_data[key]["aliases"] = g_aliases[key];
+	}
+	
+	apply_filters();
+	handle_resize();
+}
+
+function wait_for_json_to_load() {
+	if (g_db_files_loaded < 6) {
+		setTimeout(function() {
+			wait_for_json_to_load();
+		}, 10);
+	} else {
+		console.log("All json files loaded. Time to process them.");
+		json_post_load();
+	}
+}
+
+function load_database_files() {
 	fetchTextFile("model_names.txt", function(data) {
-		model_names = data.split("\n");
-		model_names = model_names.filter(function (name) {
+		g_model_names = data.split("\n");
+		g_model_names = g_model_names.filter(function (name) {
 			return name.length > 0;
 		});
 		
-		console.log("loaded " + model_names.length + " model names");
+		console.log("loaded " + g_model_names.length + " model names");
 		
-		model_names.sort(function(x, y) {
+		g_model_names.sort(function(x, y) {
 			if (x.toLowerCase() < y.toLowerCase()) {
 				return -1;
 			}
 			return 1;
 		});
-		model_results = model_names;
 		
-		apply_filters();
 		
-		handle_resize();
+		//model_results = g_model_names;
+		//apply_filters();
+		//handle_resize();
+		
+		g_db_files_loaded += 1;
 	});
-	
 	
 	fetchJSONFile("models.json", function(data) {
 		console.log("Global model data: ", data);
-		model_data = data;
-		
-		fetchJSONFile("versions.json", function(versions) {
-			console.log("Version info: ", versions);
-			
-			for (var i = 0; i < versions.length; i++) {
-				// skip first value of the list, which is the latest version
-				for (var k = 1; k < versions[i].length; k++) {
-					g_old_versions[versions[i][k]] = true;
-				}
-			}
-		});
-		
-		fetchJSONFile("groups.json", function(data) {
-			console.log("Group data (from server): ", data);
-			g_groups = data;
-			
-			for (var key in g_groups) {
-				for (var i = 0; i < g_groups[key].length; i++) {
-					var name = g_groups[key][i];
-					if (name in model_data) {
-						if (model_data[name]["group"]) {
-							if (model_data[name]["group"] != key) {
-								console.error(name + " is in group '" + model_data[name]["group"] + "' AND '" + key + "'");
-							} else {
-								console.error(name + " is in group '" + model_data[name]["group"] + "' more than once");
-							}
-							
-						}
-						model_data[name]["group"] = key;
-					} else {
-						console.error("MISSING MODEL: " + name + " in group " + key);
-					}
-				}
-			}
-			
-			apply_filters();
-		});
-		
-		fetchJSONFile("alias.json", function(data) {
-			console.log("Aliases: ", data);
-			for (var key in data) {
-				if (!model_data[key]) {
-					console.error("Aliases for unknown model: " + key);
-					continue;
-				}
-				
-				model_data[key]["aliases"] = data[key];
-			}
-		});
+		g_model_data = data;
+		g_db_files_loaded += 1;
 	});
+	
+	fetchJSONFile("versions.json", function(versions) {
+		console.log("Version info: ", versions);
+		g_versions = versions;
+		g_db_files_loaded += 1;
+	});
+	
+	fetchJSONFile("tags.json", function(tags) {
+		console.log("Tag info: ", tags);
+		g_tags = tags;
+		g_db_files_loaded += 1;
+	});
+	
+	fetchJSONFile("groups.json", function(data) {
+		console.log("Group data (from server): ", data);
+		g_groups = data;
+		g_db_files_loaded += 1;
+	});
+	
+	fetchJSONFile("alias.json", function(data) {
+		console.log("Aliases: ", data);
+		g_aliases = data;
+		g_db_files_loaded += 1;
+	});
+	
+	wait_for_json_to_load();
+}
 
+document.addEventListener("DOMContentLoaded",function() {
+	load_database_files();
 	
 	document.getElementById("model-popup-bg").addEventListener("click", close_model_viewer);
 	document.getElementsByClassName("page-next-container")[0].addEventListener("click", next_page);
@@ -815,6 +915,9 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementsByClassName("page-first-container")[0].addEventListener("click", first_page);
 	document.getElementsByClassName("page-last-container")[0].addEventListener("click", last_page);
 	document.getElementById("name-filter").addEventListener("keyup", apply_filters);
+	document.getElementsByClassName('categories')[0].onchange = function() {
+		apply_filters();
+	}
 	document.getElementsByClassName('animations')[0].onchange = function() {
 		set_animation(this.selectedIndex);
 	}
@@ -831,7 +934,7 @@ document.addEventListener("DOMContentLoaded",function() {
 		Module.ccall('set_wireframe', null, ["number"], [this.checked ? 1 : 0], {async: true});
 	}
 	document.getElementById("filter_ver").onchange = function() {
-		apply_filters();
+		apply_filters(g_group_filter.length == 0);
 	}
 	document.getElementById("filter_group").onchange = function() {
 		apply_filters();
@@ -846,11 +949,12 @@ document.addEventListener("DOMContentLoaded",function() {
 		load_page();
 	});
 	
-	/*
-	document.onkeypress = function (e) {
-		e = e || window.event;
-		g_debug_copy = "";
-		console.log("CLEARED DEBUG COPY");
-	};
-	*/
+	if (g_debug_mode) {
+		document.onkeypress = function (e) {
+			e = e || window.event;
+			g_debug_copy = "";
+			console.log("CLEARED DEBUG COPY");
+		};
+	}
+	
 });

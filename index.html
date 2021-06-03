@@ -316,6 +316,14 @@
 				display: none;
 			}
 			
+			.site-loader, .site-loader.loader {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 20px;
+			}
+			
 			.loader {
 			  color: #ffffff;
 			  font-size: 4px;
@@ -406,40 +414,53 @@
 		<script type="text/javascript" src="modeldb.js"></script>
 		<script async type="text/javascript" src="hlms.js"></script>
 	</head>
-	<!-- <textarea id="debug"></textarea> -->
+	<textarea class="debug hidden"></textarea>
 	
 	<body>
 		<h1>Sven Co-op Model Database</h1>
 		<a class="about-link" href="about.html">About</a>
 		<hr>
 		
-		<div class="filter-types">
-			<input type="checkbox" id="filter_ver">
-			<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
-			<br>
-			<input type="checkbox" id="filter_group">
-			<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
-		</div>
-		<div class="filter-search">
-			<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
-			<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
-		</div>
+		<div class="loader site-loader"></div>
 		
-		<div class="page-num-container">
-			<span class="page-far page-first-container"><span class="page-bar"></span><span class="page-first"></span></span>
-			<span class="page-close page-prev-container"><span class="page-prev"></span></span>
-			<span class="page-num-text"><span class="page-start">1</span> - <span class="page-end">X</span> of <span class="result-total">Y</span></span>
-			<span class="page-close page-next-container"><span class="page-next"></span></span>
-			<span class="page-far page-last-container"><span class="page-last"></span><span class="page-bar"></span></span>
-		</div>
-		
-		<hr>
-		<div id="group-banner" class="hidden">
-			<span class="group-back">Back</span>
-			<span class="group-title">Viewing group: <span class="groupname">???</span></span>
-		</div>
-		<div id="model-grid">
-		
+		<div class="content hidden">
+			<div class="filter-types">
+				<input type="checkbox" id="filter_ver" checked>
+				<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
+				<br>
+				<input type="checkbox" id="filter_group">
+				<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
+				<br>
+				Category:
+				<select class="categories">
+					<option>All</option>
+				</select>
+			</div>
+			<div class="filter-search">
+				<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
+				<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
+			</div>
+			
+			<div class="page-num-container">
+				<span class="page-far page-first-container"><span class="page-bar"></span><span class="page-first"></span></span>
+				<span class="page-close page-prev-container"><span class="page-prev"></span></span>
+				<span class="page-num-text"><span class="page-start">1</span> - <span class="page-end">X</span> of <span class="result-total">Y</span></span>
+				<span class="page-close page-next-container"><span class="page-next"></span></span>
+				<span class="page-far page-last-container"><span class="page-last"></span><span class="page-bar"></span></span>
+			</div>
+			
+			<hr>
+			
+			<div id="group-banner" class="hidden">
+				<span class="group-back">Back</span>
+				<span class="group-title">Viewing group: <span class="groupname">???</span></span>
+			</div>
+			<div id="model-grid">
+			
+			</div>
+			
+			<div style="clear:both"></div>
+			<hr>
 		</div>
 		
 		<div id="model-cell-template">
@@ -487,8 +508,6 @@
 			</div>
 		</div>
 		
-		<div style="clear:both"></div>
-		<hr>
 		<small class="last-update-time" title="Last time I downloaded stuff from GameBanana and uploaded here">
 			Last updated: June 1, 2021
 		</small>
