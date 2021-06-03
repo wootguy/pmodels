@@ -519,17 +519,11 @@ function apply_filters(no_reload) {
 		
 		if (sort_by == "polys") {
 			model_results.sort(function(x, y) {
-				if (g_model_data[x].polys > g_model_data[y].polys) {
-					return -1;
-				}
-				return 1;
+				return g_model_data[y].polys - g_model_data[x].polys;
 			});
 		} else if (sort_by == "size") {
 			model_results.sort(function(x, y) {
-				if (g_model_data[x].size > g_model_data[y].size) {
-					return -1;
-				}
-				return 1;
+				return g_model_data[y].size - g_model_data[x].size;
 			});
 		}
 	}
@@ -855,6 +849,12 @@ function json_post_load() {
 		g_model_data[key]["aliases"] = g_aliases[key];
 	}
 	
+	// make sure the sort keys exist
+	for (var key in g_model_data) {
+		g_model_data[key]['polys'] = g_model_data[key]['polys'] || 0;
+		g_model_data[key]['size'] = g_model_data[key]['size'] || 0;
+	}
+	
 	apply_filters();
 	handle_resize();
 }
@@ -958,7 +958,8 @@ document.addEventListener("DOMContentLoaded",function() {
 		Module.ccall('set_wireframe', null, ["number"], [this.checked ? 1 : 0], {async: true});
 	};
 	document.getElementById("filter_ver").onchange = function() {
-		apply_filters(g_group_filter.length == 0);
+		var use_groups = document.getElementById("filter_group").checked;
+		apply_filters(use_groups && g_group_filter.length == 0);
 	};
 	document.getElementById("filter_group").onchange = function() {
 		apply_filters();
