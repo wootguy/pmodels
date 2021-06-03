@@ -407,6 +407,7 @@ function apply_filters(no_reload) {
 	var tag_filter = document.getElementsByClassName("categories")[0].value.toLowerCase();
 	var hide_old_ver = document.getElementById("filter_ver").checked;
 	var use_groups = document.getElementById("filter_group").checked;
+	var sort_by = document.getElementsByClassName("sort")[0].value.toLowerCase();
 	
 	console.log("Applying filters");
 	
@@ -512,6 +513,26 @@ function apply_filters(no_reload) {
 	model_results = g_model_names.filter(function (name) {
 		return !(blacklist[name]);
 	});
+	
+	if (sort_by != "name") {
+		console.log("SORT BY: " + sort_by);
+		
+		if (sort_by == "polys") {
+			model_results.sort(function(x, y) {
+				if (g_model_data[x].polys > g_model_data[y].polys) {
+					return -1;
+				}
+				return 1;
+			});
+		} else if (sort_by == "size") {
+			model_results.sort(function(x, y) {
+				if (g_model_data[x].size > g_model_data[y].size) {
+					return -1;
+				}
+				return 1;
+			});
+		}
+	}
 	
 	if (no_reload === true) {
 		load_page();
@@ -917,28 +938,31 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementById("name-filter").addEventListener("keyup", apply_filters);
 	document.getElementsByClassName('categories')[0].onchange = function() {
 		apply_filters();
+	};
+	document.getElementsByClassName('sort')[0].onchange = function() {
+		apply_filters();
 	}
 	document.getElementsByClassName('animations')[0].onchange = function() {
 		set_animation(this.selectedIndex);
-	}
+	};
 	document.getElementById("3d_on").onchange = function() {
 		g_3d_enabled = this.checked;
 		handle_3d_toggle();
-	}
+	};
 	document.getElementById("cl_himodels").onchange = function() {
 		let body = this.checked ? 255 : 0;
 		Module.ccall('set_body', null, ["number"], [body], {async: true});
 		update_model_details();
-	}
+	};
 	document.getElementById("wireframe").onchange = function() {
 		Module.ccall('set_wireframe', null, ["number"], [this.checked ? 1 : 0], {async: true});
-	}
+	};
 	document.getElementById("filter_ver").onchange = function() {
 		apply_filters(g_group_filter.length == 0);
-	}
+	};
 	document.getElementById("filter_group").onchange = function() {
 		apply_filters();
-	}
+	};
 	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
 		g_group_filter = "";
 		document.getElementById("group-banner").classList.add("hidden");

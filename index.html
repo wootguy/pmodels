@@ -183,12 +183,16 @@
 				width: 100%;
 			}
 			#name-filter {
-				/*margin-right: 20px;*/
+				font-size: 28px;
 			}
 			
 			.filter-types {
 				position: absolute;
 				z-index: 1;
+			}
+			.filter-types td:last-child {
+				padding-left: 20px;
+				padding-bottom: 5px;
 			}
 			
 			.model-controls {
@@ -424,18 +428,34 @@
 		<div class="loader site-loader"></div>
 		
 		<div class="content hidden">
-			<div class="filter-types">
-				<input type="checkbox" id="filter_ver" checked>
-				<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
-				<br>
-				<input type="checkbox" id="filter_group">
-				<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
-				<br>
-				Category:
-				<select class="categories">
-					<option>All</option>
-				</select>
-			</div>
+			<table class="filter-types">
+				<tr>
+					<td>Category:</td>
+					<td>
+						<select class="categories">
+							<option>All</option>
+						</select>
+					</td>
+					<td>
+						<input type="checkbox" id="filter_ver" checked>
+						<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Sort by:</td>
+					<td>
+						<select class="sort">
+							<option>Name</option>
+							<option>Polys</option>
+							<option>Size</option>
+						</select>
+					</td>
+					<td>
+						<input type="checkbox" id="filter_group">
+						<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
+					</td>
+				</tr>
+			</table>
 			<div class="filter-search">
 				<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
 				<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
