@@ -33,6 +33,7 @@ var g_model_was_loaded = false;
 var g_view_model_name = "";
 var g_groups_with_results = {};
 var g_model_path = "models/player/";
+var g_downloader_interval = null; // for model downloads
 
 var g_debug_copy = "";
 
@@ -52,6 +53,8 @@ function fetchBinaryFile(path, callback) {
 	httpRequest.onreadystatechange = function() {
 		if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
 			callback(httpRequest.response);
+		} else if (httpRequest.readyState === 4 && callback) {
+			callback(null);
 		}
 	};
 	httpRequest.open('GET', path);
@@ -318,31 +321,41 @@ function download_model() {
 	var fileData = {};	
 	for (var i = 0; i < fileList.length; i++) {
 		(function(path) {
-			console.log("Downloading: " + path);
-			
 			fetchBinaryFile(get_repo_url(g_view_model_name) + path, function(data) {
 				fileData[path] = data;
-				console.log("Downloaded " + path);
 			});
 		})(fileList[i]);
 	}
 	
-	var interval = setInterval(function() {
-		console.log("Waiting for file downloads... " + Object.keys(fileData).length + " / " + fileList.length);
-		
+	document.getElementsByClassName("download-loader")[0].classList.remove("hidden");
+	
+	g_downloader_interval = setInterval(function() {		
 		if (Object.keys(fileData).length >= fileList.length) {
-			console.log("FINISHED!");
-			clearInterval(interval);
+			clearInterval(g_downloader_interval);
+			g_downloader_interval = null;
 			
 			var zip = new JSZip();
 			
 			for (var key in fileData) {
-				zip.file(key, fileData[key]);
+				if (fileData[key]) {
+					zip.file(key, fileData[key]);
+				}
 			}
 			
-			zip.generateAsync({type:"blob"}).then(function(content) {
+			zip.generateAsync({type: "blob",compression: "STORE"}, function updateCallback(metadata) {
+				document.getElementsByClassName("download-but-text")[0].textContent =
+					//"Creating Zip "+ metadata.percent.toFixed(2) + " %";
+					"Creating Zip";
+			})
+			.then(function(content) {
+				document.getElementsByClassName("download-but-text")[0].textContent = "Download";
+				document.getElementsByClassName("download-loader")[0].classList.add("hidden");
+				console.log("Finished creating zip");
 				saveAs(content, g_view_model_name + ".zip");
 			});
+		} else {
+			document.getElementsByClassName("download-but-text")[0].innerHTML =
+				"Downloading " + (Object.keys(fileData).length+1) + " / " + fileList.length;
 		}
 	}, 100);
 	
@@ -359,6 +372,11 @@ function close_model_viewer() {
 	} else {
 		model_unload_waiting = true;
 	}
+	
+	clearInterval(g_downloader_interval);
+	g_downloader_interval = null;
+	document.getElementsByClassName("download-but-text")[0].textContent = "Download model";
+	document.getElementsByClassName("download-loader")[0].classList.add("hidden");
 }
 
 function hlms_do_queued_action() {

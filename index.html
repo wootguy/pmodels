@@ -317,7 +317,7 @@
 			}
 			
 			.hidden {
-				display: none;
+				display: none !important;
 			}
 			
 			.site-loader, .site-loader.loader {
@@ -341,6 +341,11 @@
 				cursor: pointer;
 				user-select: none;
 			}
+			.download-loader {
+				display: inline-block;
+				margin-left: 30px;
+				vertical-align: middle;
+			}
 			
 			.loader {
 			  color: #ffffff;
@@ -348,15 +353,17 @@
 			  width: 1em;
 			  height: 1em;
 			  border-radius: 50%;
-			  position: absolute;
 			  text-indent: -9999em;
 			  -webkit-animation: load4 0.5s infinite linear;
 			  animation: load4 0.5s infinite linear;
 			  -webkit-transform: translateZ(0);
 			  -ms-transform: translateZ(0);
 			  transform: translateZ(0);
-			  top: 40px;
-			  left: 55px;
+			}
+			.render .loader {
+				position: absolute;
+				top: 40px;
+				left: 55px;
 			}
 			.loader-text {
 				color: #eee;
@@ -529,7 +536,7 @@
 					<div class="sound_table_row"><div title="Sounds that play during animations.">Sounds:</div><div class="sounds">???</div></div>					
 				</div>
 				<div class="download-but-container">
-					<div class="download-but">Download model</div>
+					<div class="download-but"><span class="download-but-text">Download model</span><div class="download-loader loader hidden"></div></div>
 				</div>
 				
 				<div class="model-controls">
@@ -549,7 +556,7 @@
 		</div>
 		
 		<small class="last-update-time" title="Last time I downloaded stuff from GameBanana and uploaded here">
-			Last updated: June 2, 2021
+			Last updated: June 3, 2021
 		</small>
 		<br>
 		
