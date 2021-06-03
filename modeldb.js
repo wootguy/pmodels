@@ -1,6 +1,6 @@
 
 var g_model_data = {};
-var g_view_g_model_data = {};
+var g_view_model_data = {};
 var g_old_versions = {}; // for filtering
 var g_groups = {};
 var g_tags = {};
@@ -32,6 +32,7 @@ var g_3d_enabled = true;
 var g_model_was_loaded = false;
 var g_view_model_name = "";
 var g_groups_with_results = {};
+var g_model_path = "models/player/";
 
 var g_debug_copy = "";
 
@@ -39,11 +40,22 @@ function fetchTextFile(path, callback) {
 	var httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function() {
 		if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
-			var data = httpRequest.responseText;
-			callback(data);
+			callback(httpRequest.responseText);
 		}
 	};
 	httpRequest.open('GET', path + '?nocache=' + (new Date()).getTime());
+	httpRequest.send();
+}
+
+function fetchBinaryFile(path, callback) {
+	var httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = function() {
+		if (httpRequest.readyState === 4 && httpRequest.status === 200 && callback) {
+			callback(httpRequest.response);
+		}
+	};
+	httpRequest.open('GET', path);
+	httpRequest.responseType = "blob";
 	httpRequest.send();
 }
 
@@ -104,8 +116,8 @@ function update_model_details() {
 	
 	var totalPolys = 0;
 	var hasLdModel = false;
-	for (var i = 0; i < g_view_g_model_data["bodies"].length; i++) {
-		let models = g_view_g_model_data["bodies"][i]["models"];
+	for (var i = 0; i < g_view_model_data["bodies"].length; i++) {
+		let models = g_view_model_data["bodies"][i]["models"];
 		let polys = parseInt(models[0]["polys"]);
 		
 		if (models.length > 1) {
@@ -123,11 +135,11 @@ function update_model_details() {
 	}
 	
 	var soundTable = "";
-	for (var i = 0; i < g_view_g_model_data["events"].length; i++) {
-		var evt = g_view_g_model_data["events"][i];
+	for (var i = 0; i < g_view_model_data["events"].length; i++) {
+		var evt = g_view_model_data["events"][i];
 		if (evt["event"] == 5004 && evt["options"].length > 0) {
 			var seq = evt["sequence"];
-			var seqName = seq + " : " + g_view_g_model_data["sequences"][seq]["name"];
+			var seqName = seq + " : " + g_view_model_data["sequences"][seq]["name"];
 			var path = evt["options"];
 			soundTable += '<div class="sound_row"><div title="' + seqName + '">' + seqName + '</div><div title="' + path + '">' + path + "</div></div>";
 		}
@@ -137,14 +149,14 @@ function update_model_details() {
 	}
 	
 	var has_mouth = false;
-	if (g_view_g_model_data["controllers"].length > 4) {
-		var ctl =  g_view_g_model_data["controllers"][4];
+	if (g_view_model_data["controllers"].length > 4) {
+		var ctl =  g_view_model_data["controllers"][4];
 		has_mouth = ctl.bone >= 0 && ctl.start != ctl.end;
 	}
 	
 	var ext_mdl = "No";
-	var ext_tex = g_view_g_model_data["t_model"];
-	var ext_anim = g_view_g_model_data["seq_groups"] > 1;
+	var ext_tex = g_view_model_data["t_model"];
+	var ext_anim = g_view_model_data["seq_groups"] > 1;
 	if (ext_tex && ext_anim) {
 		ext_mdl = "Textures + Sequences";
 	} else if (ext_tex) {
@@ -160,17 +172,17 @@ function update_model_details() {
 	
 	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
 	popup.getElementsByClassName("polycount")[0].setAttribute("title", totalPolys.toLocaleString(undefined));
-	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_g_model_data["size"]);
-	popup.getElementsByClassName("filesize")[0].setAttribute("title", humanFileSize(g_view_g_model_data["size"]));
-	popup.getElementsByClassName("compilename")[0].textContent = g_view_g_model_data["name"];
-	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_g_model_data["name"]);
+	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_model_data["size"]);
+	popup.getElementsByClassName("filesize")[0].setAttribute("title", humanFileSize(g_view_model_data["size"]));
+	popup.getElementsByClassName("compilename")[0].textContent = g_view_model_data["name"];
+	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_model_data["name"]);
 	popup.getElementsByClassName("aliases")[0].innerHTML = aliases ? aliases : "None";
 	popup.getElementsByClassName("aliases")[0].setAttribute("title", aliases ? aliases.replaceAll("<br>", "\n") : "This model has no known aliases.");
 	popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
 	popup.getElementsByClassName("ext_mdl")[0].setAttribute("title", ext_mdl);
 	popup.getElementsByClassName("sounds")[0].innerHTML = soundTable.length > 0 ? soundTable : "None";
-	popup.getElementsByClassName("md5")[0].textContent = g_view_g_model_data["md5"];
-	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_g_model_data["md5"]);
+	popup.getElementsByClassName("md5")[0].textContent = g_view_model_data["md5"];
+	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_model_data["md5"]);
 	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "Yes" : "No";
 	
 	var polyColor = "";
@@ -265,7 +277,7 @@ function view_model(model_name) {
 	g_model_was_loaded = false;
 	fetchJSONFile(repo_url + model_path + model_name + ".json", function(data) {
 		console.log(data);
-		g_view_g_model_data = data;
+		g_view_model_data = data;
 		
 		update_model_details();
 		
@@ -285,6 +297,55 @@ function view_model(model_name) {
 			select.appendChild(seq);
 		}
 	});
+}
+
+function download_model() {	
+	var fileList = [
+		g_model_path + g_view_model_name + "/" + g_view_model_name + ".bmp",
+		g_model_path + g_view_model_name + "/" + g_view_model_name + ".mdl"
+	];
+	
+	for (var i = 0; i < g_view_model_data["seq_groups"]-1; i++) {
+		var num = i+1;
+		var suffix = i < 10 ? "0" + num : num;
+		fileList.push(g_model_path + g_view_model_name + "/" + g_view_model_name + suffix + ".mdl");
+	}
+	
+	if (g_view_model_data["t_model"]) {
+		fileList.push(g_model_path + g_view_model_name + "/" + g_view_model_name + "t.mdl");
+	}
+	
+	var fileData = {};	
+	for (var i = 0; i < fileList.length; i++) {
+		(function(path) {
+			console.log("Downloading: " + path);
+			
+			fetchBinaryFile(path, function(data) {
+				fileData[path] = data;
+				console.log("Downloaded " + path);
+			});
+		})(fileList[i]);
+	}
+	
+	var interval = setInterval(function() {
+		console.log("Waiting for file downloads... " + Object.keys(fileData).length + " / " + fileList.length);
+		
+		if (Object.keys(fileData).length >= fileList.length) {
+			console.log("FINISHED!");
+			clearInterval(interval);
+			
+			var zip = new JSZip();
+			
+			for (var key in fileData) {
+				zip.file(key, fileData[key]);
+			}
+			
+			zip.generateAsync({type:"blob"}).then(function(content) {
+				saveAs(content, g_view_model_name + ".zip");
+			});
+		}
+	}, 100);
+	
 }
 
 function close_model_viewer() {
@@ -514,9 +575,7 @@ function apply_filters(no_reload) {
 		return !(blacklist[name]);
 	});
 	
-	if (sort_by != "name") {
-		console.log("SORT BY: " + sort_by);
-		
+	if (sort_by != "name") {		
 		if (sort_by == "polys") {
 			model_results.sort(function(x, y) {
 				return g_model_data[y].polys - g_model_data[x].polys;
@@ -851,8 +910,8 @@ function json_post_load() {
 	
 	// make sure the sort keys exist
 	for (var key in g_model_data) {
-		g_model_data[key]['polys'] = g_model_data[key]['polys'] || 0;
-		g_model_data[key]['size'] = g_model_data[key]['size'] || 0;
+		g_model_data[key]['polys'] = g_model_data[key]['polys'] || -1;
+		g_model_data[key]['size'] = g_model_data[key]['size'] || -1;
 	}
 	
 	apply_filters();
@@ -935,6 +994,7 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementsByClassName("page-prev-container")[0].addEventListener("click", prev_page);
 	document.getElementsByClassName("page-first-container")[0].addEventListener("click", first_page);
 	document.getElementsByClassName("page-last-container")[0].addEventListener("click", last_page);
+	document.getElementsByClassName("download-but")[0].addEventListener("click", download_model);
 	document.getElementById("name-filter").addEventListener("keyup", apply_filters);
 	document.getElementsByClassName('categories')[0].onchange = function() {
 		apply_filters();
