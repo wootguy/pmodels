@@ -24,6 +24,7 @@ var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
 var data_repo_domain = "https://wootdata.github.io/";
+var g_sound_repo_url = "https://wootdata.github.io/scmodels_data_snd/";
 var data_repo_count = 32;
 var renderWidth = 500;
 var renderHeight = 800;
@@ -323,10 +324,27 @@ function download_model() {
 		fileList.push(g_model_path + g_view_model_name + "/" + g_view_model_name + "t.mdl");
 	}
 	
+	for (var i = 0; i < g_view_model_data["events"].length; i++) {
+		var evt = g_view_model_data["events"][i];		
+		if (evt["event"] == 5004 && evt["options"].length > 0) {
+			var path = evt["options"].toLowerCase();
+			if (path[0] == "/" || path[0] == "\\") {
+				path = path.substr(1);
+			}
+			path = "sound/" + path;
+			
+			if (fileList.indexOf(path) == -1) {
+				fileList.push(path);
+			}
+		}
+	}
+	
 	var fileData = {};	
 	for (var i = 0; i < fileList.length; i++) {
 		(function(path) {
-			fetchBinaryFile(get_repo_url(g_view_model_name) + path, function(data) {
+			var repo_url = path.indexOf("sound/") == 0 ? g_sound_repo_url : get_repo_url(g_view_model_name);
+			
+			fetchBinaryFile(repo_url + path, function(data) {
 				fileData[path] = data;
 			});
 		})(fileList[i]);
