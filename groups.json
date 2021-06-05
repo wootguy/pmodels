@@ -286,7 +286,7 @@
 		"vansam",
 		"vansamld",
 		"samvan"
-	]
+	],
 	"Uboa": [
 		"uboa_s5",
 		"uboa_v2",
@@ -2510,7 +2510,10 @@
 		"2d_touhou_flandre_scarlet",
 		"touhou_flandre_v2",
 		"police1s",
-		"police2"
+		"police2",
+		"touhou_flandre_scarlet",
+		"touhou_flandre_socks",
+		"touhou_flandre_bikini2"
 	],
 	"Touhou - Clownpiece": [
 		"touhou_clownpiece",
@@ -4298,7 +4301,7 @@
 	"Kizuna AI": [
 		"vtuber_kizuna",
 		"vtuber_kizuna_black",
-		"vtuber_kizuna_ld_v2"
+		"vtuber_kizuna_ld_v2",
 		"vtuber_kizuna_ld_v3"
 	],
 	"Resident Evil - Merchant": [
