@@ -752,7 +752,7 @@ def install_new_models():
 	old_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
 	old_dirs_lower = [dir.lower() for dir in old_dirs]
 	
-	alt_name_risk = True
+	alt_name_risk = False
 	
 	for dir in new_dirs:
 		lowernew = dir.lower()

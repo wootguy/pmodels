@@ -1574,6 +1574,7 @@ chewie
 chewie_v2
 chiana
 chiana_v2
+chibi_wattson
 chica_fnaf
 chichi
 chicken
@@ -2935,6 +2936,7 @@ fman
 fmash
 fmcat
 fmcat_v2
+fmordred
 fnf_boyfriend
 fnv_riotranger
 fnv_t-51b
@@ -8348,6 +8350,7 @@ touhou_daiyousei_v2
 touhou_flandre
 touhou_flandre_bikini2
 touhou_flandre_scarlet
+touhou_flandre_shoes
 touhou_flandre_socks
 touhou_flandre_v2
 touhou_hieda_no_akyuu
