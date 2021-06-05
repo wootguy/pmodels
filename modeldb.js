@@ -984,7 +984,7 @@ function wait_for_json_to_load() {
 }
 
 function load_database_files() {
-	fetchTextFile("model_names.txt", function(data) {
+	fetchTextFile("database/model_names.txt", function(data) {
 		g_model_names = data.split("\n");
 		g_model_names = g_model_names.filter(function (name) {
 			return name.length > 0;
@@ -1007,31 +1007,31 @@ function load_database_files() {
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("models.json", function(data) {
+	fetchJSONFile("database/models.json", function(data) {
 		console.log("Global model data: ", data);
 		g_model_data = data;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("versions.json", function(versions) {
+	fetchJSONFile("database/versions.json", function(versions) {
 		console.log("Version info: ", versions);
 		g_versions = versions;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("tags.json", function(tags) {
+	fetchJSONFile("database/tags.json", function(tags) {
 		console.log("Tag info: ", tags);
 		g_tags = tags;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("groups.json", function(data) {
+	fetchJSONFile("database/groups.json", function(data) {
 		console.log("Group data (from server): ", data);
 		g_groups = data;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("alias.json", function(data) {
+	fetchJSONFile("database/alias.json", function(data) {
 		console.log("Aliases: ", data);
 		g_aliases = data;
 		g_db_files_loaded += 1;
