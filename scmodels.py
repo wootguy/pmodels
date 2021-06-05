@@ -858,59 +858,6 @@ def pack_models(all_models):
 		os.remove("zip_latest.txt")
 		
 		print("\nFinished!")
-
-def generate_too_many_polys_list():
-	global replacements_json_name
-	global master_json_name
-	
-	model_list_path = "too_many_polys/models.txt"
-	old_vers_path = "too_many_polys/old_versions.txt"
-	
-	if not os.path.exists(replacements_json_name):
-		print("%s not found. Aborting" % replacements_json_name)
-	print("Loading model info")
-	
-	replacements = {}
-	with open(replacements_json_name) as f:
-		json_dat = f.read()
-		replacements = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
-		
-	model_info = {}
-	with open(master_json_name) as f:
-		json_dat = f.read()
-		model_info = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
-	
-	model_versions = {}
-	with open(versions_json_name) as f:
-		json_dat = f.read()
-		model_versions = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
-	
-	old_versions = set()
-	for ver_group in model_versions:
-		old_versions.update(set(ver_group[1:]))
-		
-	all_keys = list(model_info.keys())
-	for model in all_keys:
-		if model in old_versions:
-			del model_info[model]
-	
-	if not os.path.exists('too_many_polys'):
-		os.makedirs('too_many_polys')
-	
-	model_list = open(model_list_path, "w")
-	for model in model_info:
-		polys = model_info[model]["polys"] if "polys" in model_info[model] else -1
-		replace_sd = replacements[model][0] if model in replacements else ''
-		replace_ld = replacements[model][1] if model in replacements else ''
-		model_list.write("%s/%s/%s/%s\n" % (model, polys, replace_sd, replace_ld))
-	model_list.close()
-	print("Wrote %s" % model_list_path)
-	
-	old_vers_file = open(old_vers_path, "w")
-	for ver_group in model_versions:
-		old_vers_file.write('/'.join(ver_group) + '\n')
-	old_vers_file.close()
-	print("Wrote %s" % old_vers_path)
 	
 
 args = sys.argv[1:]
@@ -928,7 +875,6 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
 	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
-	print("toomanypolys - generate a replacement list for the TooManyPolys server plugin")
 	
 	sys.exit()
 
@@ -971,8 +917,6 @@ if len(args) > 0:
 		print("- update name in versions.json")
 		print("- python3 git_init.py update")
 		print("- push changes to main repo")
-	elif args[0].lower() == 'toomanypolys':
-		generate_too_many_polys_list()
 	elif args[0].lower() == 'fixup':
 		pass
 	
