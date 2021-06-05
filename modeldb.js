@@ -71,7 +71,7 @@ function fetchJSONFile(path, callback) {
 			console.error("Failed to load JSON file: " + path +"\n\n", e);
 			var loader = document.getElementsByClassName("site-loader")[0];
 			loader.classList.remove("loader");
-			loader.textContent = "Failed to load file: " + path;
+			loader.innerHTML = "Failed to load file: " + path + "<br><br>" + e;
 		}
 	});
 }
@@ -882,18 +882,19 @@ function json_post_load() {
 	for (var key in g_groups) {
 		for (var i = 0; i < g_groups[key].length; i++) {
 			var name = g_groups[key][i];
-			if (name in g_model_data) {
-				if (g_model_data[name]["group"]) {
-					if (g_model_data[name]["group"] != key) {
-						console.error(name + " is in group '" + g_model_data[name]["group"] + "' AND '" + key + "'");
-					} else {
-						console.error(name + " is in group '" + g_model_data[name]["group"] + "' more than once");
-					}
-				}
-				g_model_data[name]["group"] = key;
-			} else {
+			if (!(name in g_model_data)) {
 				console.error("MISSING MODEL: " + name + " in group " + key);
+				continue;
 			}
+			
+			if (g_model_data[name]["group"]) {
+				if (g_model_data[name]["group"] != key) {
+					console.error(name + " is in group '" + g_model_data[name]["group"] + "' AND '" + key + "'");
+				} else {
+					console.error(name + " is in group '" + g_model_data[name]["group"] + "' more than once");
+				}
+			}
+			g_model_data[name]["group"] = key;
 		}
 	}
 	
@@ -906,6 +907,11 @@ function json_post_load() {
 		
 		for (var i = 0; i < g_tags[tag].length; i++) {
 			var model = g_tags[tag][i];
+			
+			if (!(model in g_model_data)) {
+				console.error("tags.json model does not exist: " + model);
+				continue;
+			}
 			
 			if (!("tags" in g_model_data[model])) {
 				g_model_data[model]["tags"] = new Set();
@@ -922,6 +928,10 @@ function json_post_load() {
 		
 		for (var k = 1; k < g_versions[i].length; k++) {
 			var modelName = g_versions[i][k];
+			if (!(modelName in g_model_data)) {
+				console.error("groups.json model not found: " + modelName);
+				continue;
+			}
 			g_old_versions[modelName] = true;
 			var parentGroup = g_model_data[latest_version]["group"];
 			

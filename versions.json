@@ -120,12 +120,101 @@
 		"kate_swedish_3_hat"
 	],
 	[
+		"recruit2_v3",
 		"recruit2_v2",
 		"recruit2"
 	],
 	[
+		"robo_1317_v2",
+		"robo_1317"
+	],
+	[
+		"robo_1317_ap_v2",
+		"robo_1317_ap"
+	],
+	[
+		"robo_1337_v2",
+		"robo_1337"
+	],
+	[
+		"sc_barney_v2",
+		"sc_barney"
+	],
+	[
+		"sc_barney2_v2",
+		"sc_barney2"
+	],
+	[
+		"sc_barniel_v2",
+		"sc_barniel"
+	],
+	[
 		"nekomata_goth_v2",
 		"nekomata_goth"
+	],
+	[
+		"sc_betty_v2",
+		"sc_betty"
+	],
+	[
+		"sc_betty2_v2",
+		"sc_betty2"
+	],
+	[
+		"sc_caroline_v2",
+		"sc_caroline"
+	],
+	[
+		"sc_caroline2_v2",
+		"sc_caroline2"
+	],
+	[
+		"sc_cave_v2",
+		"sc_cave"
+	],
+	[
+		"sc_cave2_v2",
+		"sc_cave2"
+	],
+	[
+		"sc_colette_v2",
+		"sc_colette"
+	],
+	[
+		"sc_gina_v2",
+		"sc_gina"
+	],
+	[
+		"sc_gordon_v2",
+		"sc_gordon"
+	],
+	[
+		"sc_helmet_v2",
+		"sc_helmet"
+	],
+	[
+		"sc_helmet2_v2",
+		"sc_helmet2"
+	],
+	[
+		"sc_helmet3_v2",
+		"sc_helmet3"
+	],
+	[
+		"sc_leon_v2",
+		"sc_leon"
+	],
+	[
+		"sc_mel_v2",
+		"sc_mel"
+	],
+	[
+		"sc_miller_v2",
+		"sc_miller"
+	],
+	[
+		"sc_miller2_v2",
+		"sc_miller2"
 	],
 	[
 		"jihadarctic_v2",
@@ -416,6 +505,7 @@
 		"zelda_twilight"
 	],
 	[
+		"engineer_v3",
 		"engineer_v2",
 		"engineer"
 	],
@@ -564,7 +654,19 @@
 		"kz_mikutda_v4",
 		"kz_mikutda_v3",
 		"kz_mikutda_v2",
-		"kz_mikutda_v1"
+		"kz_mikutda_v1",
+		"kz_mikutda_v1_2",
+		"kz_mikutda_v2_2",
+		"kz_mikutda_v3_2",
+		"kz_mikutda_v4_2"
+	],
+	[
+		"lingling_v2",
+		"lingling"
+	],
+	[
+		"kz_nerutda_v1",
+		"kz_nerutda_v2"
 	],
 	[
 		"re_stars_forrest_v2",
@@ -752,8 +854,7 @@
 	[
 		"nekopara_ethanol_v4",
 		"nekopara_ethanol_v3",
-		"nekopara_ethanol_v2",
-		"nekopara_ethanol_v1"
+		"nekopara_ethanol_v2"
 	],
 	[
 		"exo_tank_v2",
@@ -784,6 +885,7 @@
 		"bunnygirl_buruma"
 	],
 	[
+		"recon_v3",
 		"recon_v2",
 		"recon"
 	],
@@ -904,6 +1006,7 @@
 		"silencer"
 	],
 	[
+		"monoko1_v3",
 		"monoko1_v2",
 		"monoko1"
 	],
@@ -1303,6 +1406,7 @@
 		"giacomo_2"
 	],
 	[
+		"larry_v3",
 		"larry_v2",
 		"larry"
 	],
@@ -1319,6 +1423,7 @@
 		"chewie"
 	],
 	[
+		"grey_v3",
 		"grey_v2",
 		"grey"
 	],
@@ -1539,6 +1644,7 @@
 		"russarctic"
 	],
 	[
+		"madotuki2_v3",
 		"madotuki2_v2",
 		"madotuki2"
 	],
@@ -1831,6 +1937,7 @@
 		"sc_camo_robo"
 	],
 	[
+		"admin3_v3",
 		"admin3_v2",
 		"admin3"
 	],
@@ -1843,6 +1950,7 @@
 		"mp_security"
 	],
 	[
+		"recruit_v3",
 		"recruit_v2",
 		"recruit"
 	],
@@ -1852,11 +1960,40 @@
 	],
 	[
 		"vtuber_kizuna_ld_v3",
+		"vtuber_kizuna_ld_v2",
 		"vtuber_kizuna_ld"
 	],
 	[
 		"nekomata2_miko_v2",
 		"nekomata2_miko"
+	],
+	[
+		"xalice_v2",
+		"xalice"
+	],
+	[
+		"xsesshomaru_v2",
+		"xsesshomaru"
+	],
+	[
+		"yokotaro_v2",
+		"yokotaro"
+	],
+	[
+		"yuri_le_v2",
+		"yuri_le"
+	],
+	[
+		"xinuyasha_v2",
+		"xinuyasha"
+	],
+	[
+		"xkagome_v2",
+		"xkagome"
+	],
+	[
+		"xkikyou_v2",
+		"xkikyou"
 	],
 	[
 		"predatrice_v2",
@@ -2468,6 +2605,7 @@
 		"soldier_barney"
 	],
 	[
+		"pitusas_v3",
 		"pitusas_v2",
 		"pitusas"
 	],
@@ -2584,6 +2722,7 @@
 		"foolish"
 	],
 	[
+		"larry_military_v3",
 		"larry_military_v2",
 		"larry_military"
 	],
@@ -2596,8 +2735,8 @@
 		"nekomata_armor"
 	],
 	[
-		"kf_greywolf_v2",
-		"kf_greywolf"
+		"kf_greywolf_kz_v2",
+		"kf_greywolf_kz"
 	],
 	[
 		"para_elektrik_v2",
@@ -2696,12 +2835,175 @@
 		"gs_happy_beta"
 	],
 	[
+		"snowgrunt_v3",
 		"snowgrunt_v2",
 		"snowgrunt"
 	],
 	[
+		"sonic_forces_classic_c_v3",
+		"sonic_forces_classic_c_v2",
+		"sonic_forces_classic_c"
+	],
+	[
+		"sonic_forces_classic_v3",
+		"sonic_forces_classic_v2",
+		"sonic_forces_classic"
+	],
+	[
 		"black_hev_2_v2",
 		"black_hev_2"
+	],
+	[
+		"spforce_v2",
+		"spforce"
+	],
+	[
+		"teenagepolices_v2",
+		"teenagepolices"
+	],
+	[
+		"terrant_v2",
+		"terrant_v1"
+	],
+	[
+		"tf2_engineer_v2",
+		"tf2_engineer"
+	],
+	[
+		"tf2_medic_v2",
+		"tf2_medic"
+	],
+	[
+		"tf2_pyro_v2",
+		"tf2_pyro"
+	],
+	[
+		"tf2_scout_v2",
+		"tf2_scout"
+	],
+	[
+		"tf2_sniper_v2",
+		"tf2_sniper"
+	],
+	[
+		"tf2_soldier_v2",
+		"tf2_soldier"
+	],
+	[
+		"tf2_spy_v2",
+		"tf2_spy"
+	],
+	[
+		"spiderma_v2",
+		"spiderma"
+	],
+	[
+		"touhou_flandre_v2",
+		"touhou_flandre"
+	],
+	[
+		"touhou_kaguya_v2",
+		"touhou_kaguya"
+	],
+	[
+		"touhou_keine_v2",
+		"touhou_keine"
+	],
+	[
+		"touhou_meiling_v2",
+		"touhou_meiling"
+	],
+	[
+		"touhou_alice_v2",
+		"touhou_alice"
+	],
+	[
+		"touhou_daiyousei_v2",
+		"touhou_daiyousei"
+	],
+	[
+		"touhou_inaba_tewi_v2",
+		"touhou_inaba_tewi"
+	],
+	[
+		"touhou_izayoi_sakuya_v2",
+		"touhou_izayoi_sakuya"
+	],
+	[
+		"touhou_kochiya_sanae_v2",
+		"touhou_kochiya_sanae"
+	],
+	[
+		"touhou_nagae_iku_v2",
+		"touhou_nagae_iku"
+	],
+	[
+		"touhou_rumia_v2",
+		"touhou_rumia"
+	],
+	[
+		"touhou_udongein_mmd_v2",
+		"touhou_udongein_mmd"
+	],
+	[
+		"touhou_yakumo_yukari_v2",
+		"touhou_yakumo_yukari"
+	],
+	[
+		"touhou_cirno_v2",
+		"touhou_cirno"
+	],
+	[
+		"tfc_demo_hd_v2",
+		"tfc_demo_hd"
+	],
+	[
+		"tfc_engineer_hd_v2",
+		"tfc_engineer_hd"
+	],
+	[
+		"the_joker_v2",
+		"the_joker"
+	],
+	[
+		"toon_madness_v2",
+		"toon_madness"
+	],
+	[
+		"torch_bloody_v2",
+		"torch_bloody"
+	],
+	[
+		"tfc_hvyweapon_hd_v2",
+		"tfc_hvyweapon_hd"
+	],
+	[
+		"tfc_medic_hd_v2",
+		"tfc_medic_hd"
+	],
+	[
+		"tfc_pyro_hd_v2",
+		"tfc_pyro_hd"
+	],
+	[
+		"tfc_scout_hd_v2",
+		"tfc_scout_hd"
+	],
+	[
+		"tfc_sniper_hd_v2",
+		"tfc_sniper_hd"
+	],
+	[
+		"tfc_soldier_hd_v2",
+		"tfc_soldier_hd"
+	],
+	[
+		"tfc_spy_hd_v2",
+		"tfc_spy_hd"
+	],
+	[
+		"starlight2_v2",
+		"starlight2"
 	],
 	[
 		"legends_wizard_v2",
@@ -2977,16 +3279,85 @@
 		"punk"
 	],
 	[
+		"noire_v2",
+		"noire"
+	],
+	[
+		"nr_ran_v2",
+		"nr_ran"
+	],
+	[
+		"nva-amobe1_v2",
+		"nva-amobe1"
+	],
+	[
+		"nva-flach1_v2",
+		"nva-flach1"
+	],
+	[
+		"nva-flach1feld_v2",
+		"nva-flach1feld"
+	],
+	[
+		"nva-strich1_v2",
+		"nva-strich1"
+	],
+	[
+		"nva-strich1feld_v2",
+		"nva-strich1feld"
+	],
+	[
 		"soldier_recon_v2",
 		"soldier_recon"
 	],
 	[
+		"opfor_balaclava_v2",
+		"opfor_balaclava"
+	],
+	[
+		"opfor_hgrunt_v2",
+		"opfor_hgrunt"
+	],
+	[
+		"opfor_medic_v2",
+		"opfor_medic"
+	],
+	[
+		"opfor_recon_v2",
+		"opfor_recon"
+	],
+	[
+		"opfor_saw_v2",
+		"opfor_saw"
+	],
+	[
+		"opfor_torch_v2",
+		"opfor_torch"
+	],
+	[
+		"opfor_tower_v2",
+		"opfor_tower"
+	],
+	[
+		"monoko2_v3",
 		"monoko2_v2",
 		"monoko2"
 	],
 	[
 		"halo_elite_blue_v2",
 		"halo_elite_blue"
+	],
+	[
+		"mrbubbles_v2",
+		"mrbubbles"
+	],
+	[
+		"mrdumbsbrother_v2",
+		"mrdumbsbrother"
+	],
+	[
+		"nekopara_azuki_v2",
+		"nekopara_azuki"
 	],
 	[
 		"soldier_captainf_v2",
@@ -3165,6 +3536,43 @@
 		"sharks"
 	],
 	[
+		"maggotusa_v2",
+		"maggotusa"
+	],
+	[
+		"pioschicken",
+		"zz_pioschicken"
+	],
+	[
+		"mlp_luna_v2",
+		"mlp_luna"
+	],
+	[
+		"mlp_twilight_v2",
+		"mlp_twilight"
+	],
+	[
+		"monoe_v2",
+		"monoe"
+	],
+	[
+		"mlp_celestia_v2",
+		"mlp_celestia"
+	],
+	[
+		"massn_black_v2",
+		"massn_black"
+	],
+	[
+		"miketama_small_v2",
+		"miketama_small"
+	],
+	[
+		"maya_dawn_v2",
+		"maya_dawn"
+	],
+	[
+		"madotuki_v3",
 		"madotuki_v2",
 		"madotuki"
 	],
@@ -3253,10 +3661,6 @@
 		"narkosha"
 	],
 	[
-		"kf_shoebill_v2",
-		"kf_shoebill"
-	],
-	[
 		"bio_snake_v2",
 		"bio_snake"
 	],
@@ -3317,12 +3721,21 @@
 		"monster_hunter"
 	],
 	[
+		"sexy_v2",
+		"sexy"
+	],
+	[
+		"scream_v3",
 		"scream_v2",
 		"scream"
 	],
 	[
 		"re_wesker_v2",
 		"re_wesker"
+	],
+	[
+		"sdgrunt_v2",
+		"sdgrunt"
 	],
 	[
 		"miniblackgrunt_v2",
@@ -3433,6 +3846,7 @@
 		"q2_sniper"
 	],
 	[
+		"bananaboy_v3",
 		"bananaboy_v2",
 		"bananaboy"
 	],
@@ -3599,6 +4013,7 @@
 		"aouclan"
 	],
 	[
+		"larry_young_v3",
 		"larry_young_v2",
 		"larry_young"
 	],
@@ -3739,6 +4154,22 @@
 		"stix"
 	],
 	[
+		"uboac_rampage2_p1_v2",
+		"uboac_rampage2_p1"
+	],
+	[
+		"uboac_rampage2_p2_v2",
+		"uboac_rampage2_p2"
+	],
+	[
+		"uboac_rampage2_p3_v2",
+		"uboac_rampage2_p3"
+	],
+	[
+		"uboac_rampage2_p3_v2",
+		"uboac_rampage2_p3"
+	],
+	[
 		"empirialklingon_v2",
 		"empirialklingon"
 	],
@@ -3817,10 +4248,6 @@
 	[
 		"jailson_v2",
 		"jailson"
-	],
-	[
-		"kf_serval_v2",
-		"kf_serval"
 	],
 	[
 		"bravo_v2",
@@ -4081,6 +4508,7 @@
 		"gruntzombie"
 	],
 	[
+		"poniko_v3",
 		"poniko_v2",
 		"poniko"
 	],
@@ -4089,16 +4517,60 @@
 		"barneyzombie"
 	],
 	[
-		"kancolle_shimakaze_v2",
-		"kancolle_shimakaze"
-	],
-	[
 		"robot1_v2",
 		"robot1"
 	],
 	[
+		"ranger2_v2",
+		"ranger2"
+	],
+	[
+		"ranger3_v2",
+		"ranger3"
+	],
+	[
+		"ranger4_v2",
+		"ranger4"
+	],
+	[
+		"ranger5_v2",
+		"ranger5"
+	],
+	[
+		"ranger6_v2",
+		"ranger6"
+	],
+	[
+		"ranger7_v2",
+		"ranger7"
+	],
+	[
+		"ranger8_v2",
+		"ranger8"
+	],
+	[
+		"ranger9_v2",
+		"ranger9"
+	],
+	[
 		"erik_v2",
 		"erik"
+	],
+	[
+		"re_stars_chris_v2",
+		"re_stars_chris"
+	],
+	[
+		"re_stars_joseph_v2",
+		"re_stars_joseph"
+	],
+	[
+		"re_stars_richard_v2",
+		"re_stars_richard"
+	],
+	[
+		"re_ubcs_militia_v2",
+		"re_ubcs_militia"
 	],
 	[
 		"hl2_combine_elite_v2",
@@ -4532,5 +5004,293 @@
 	[
 		"re_dead_brad_v2",
 		"re_dead_brad"
+	],
+	[
+		"18stcrewleader_v2",
+		"18stcrewleader"
+	],
+	[
+		"_ph_rejsyg_v2",
+		"_ph_rejsyg"
+	],
+	[
+		"_wh_rejsyg_v2",
+		"_wh_rejsyg"
+	],
+	[
+		"ab_dorothy_v2",
+		"ab_dorothy"
+	],
+	[
+		"agentrage_v2",
+		"agentrage"
+	],
+	[
+		"akatsuki_yuriv2_v2",
+		"akatsuki_yuriv2"
+	],
+	[
+		"angelsmoke_v2",
+		"angelsmoke"
+	],
+	[
+		"antivirus_v2",
+		"antivirus"
+	],
+	[
+		"arachnind-x_v3",
+		"arachnind-x_v2",
+		"arachnind-x"
+	],
+	[
+		"arcticx_v2",
+		"arcticx"
+	],
+	[
+		"arknights_exusiai-c2",
+		"arknights_exusiai"
+	],
+	[
+		"arover_v2",
+		"arover"
+	],
+	[
+		"azur_lane_enterprise_v2",
+		"azur_lane_enterprise"
+	],
+	[
+		"babewire_v2",
+		"babewire"
+	],
+	[
+		"balaclablack_v2",
+		"balaclablack"
+	],
+	[
+		"be_grunt_desert_v2",
+		"be_grunt_desert"
+	],
+	[
+		"be_grunt_special_v2",
+		"be_grunt_special"
+	],
+	[
+		"beast_v2",
+		"beast"
+	],
+	[
+		"betagordonhd_v2",
+		"betagordonhd"
+	],
+	[
+		"biker_v2",
+		"biker"
+	],
+	[
+		"bodyguard_v2",
+		"bodyguard"
+	],
+	[
+		"burninggrunt_v2",
+		"burninggrunt"
+	],
+	[
+		"grunt_v3",
+		"grunt_v2"
+	],
+	[
+		"civilian_v3",
+		"civilian_v2",
+		"civilian"
+	],
+	[
+		"cybertrooper_v3",
+		"cybertrooper_v2",
+		"cybertrooper"
+	],
+	[
+		"dc_major_v2",
+		"dc_major"
+	],
+	[
+		"demonica_v3",
+		"demonica_v2",
+		"demonica"
+	],
+	[
+		"drill_v2",
+		"drill"
+	],
+	[
+		"evilred_v2",
+		"evilred"
+	],
+	[
+		"grunt_spas_v2",
+		"grunt_spas"
+	],
+	[
+		"holo_v2",
+		"holo"
+	],
+	[
+		"airborne01_h_v2",
+		"airborne01_h"
+	],
+	[
+		"airborne01_hm_v2",
+		"airborne01_hm"
+	],
+	[
+		"airborne01_hr_v2",
+		"airborne01_hr"
+	],
+	[
+		"airborne01_hs_v2",
+		"airborne01_hs"
+	],
+	[
+		"airborne01_m_v2",
+		"airborne01_m"
+	],
+	[
+		"airborne01_r_v2",
+		"airborne01_r"
+	],
+	[
+		"airborne01_s_v2",
+		"airborne01_s"
+	],
+	[
+		"airborne01_v2",
+		"airborne01"
+	],
+	[
+		"airborne02_h_v2",
+		"airborne02_h"
+	],
+	[
+		"airborne02_hm_v2",
+		"airborne02_hm"
+	],
+	[
+		"airborne02_hr_v2",
+		"airborne02_hr"
+	],
+	[
+		"airborne02_hs_v2",
+		"airborne02_hs"
+	],
+	[
+		"airborne02_m_v2",
+		"airborne02_m"
+	],
+	[
+		"airborne02_r_v2",
+		"airborne02_r"
+	],
+	[
+		"airborne02_s_v2",
+		"airborne02_s"
+	],
+	[
+		"airborne02_v2",
+		"airborne02"
+	],
+	[
+		"airborne03_h_v2",
+		"airborne03_h"
+	],
+	[
+		"airborne03_hm_v2",
+		"airborne03_hm"
+	],
+	[
+		"airborne03_hr_v2",
+		"airborne03_hr"
+	],
+	[
+		"airborne03_hs_v2",
+		"airborne03_hs"
+	],
+	[
+		"airborne03_m_v2",
+		"airborne03_m"
+	],
+	[
+		"airborne03_r_v2",
+		"airborne03_r"
+	],
+	[
+		"airborne03_s_v2",
+		"airborne03_s"
+	],
+	[
+		"airborne03_v2",
+		"airborne03"
+	],
+	[
+		"airborne04_h_v2",
+		"airborne04_h"
+	],
+	[
+		"airborne04_hm_v2",
+		"airborne04_hm"
+	],
+	[
+		"airborne04_hr_v2",
+		"airborne04_hr"
+	],
+	[
+		"airborne04_hs_v2",
+		"airborne04_hs"
+	],
+	[
+		"airborne04_m_v2",
+		"airborne04_m"
+	],
+	[
+		"airborne04_r_v2",
+		"airborne04_r"
+	],
+	[
+		"airborne04_s_v2",
+		"airborne04_s"
+	],
+	[
+		"airborne04_v2",
+		"airborne04"
+	],
+	[
+		"chupetin_truj",
+		"chupetin"
+	],
+	[
+		"gf_9a-91_smol_v2",
+		"gf_9a-91_smol"
+	],
+	[
+		"gi_klee_v2",
+		"gi_klee"
+	],
+	[
+		"gorillaz_v2",
+		"gorillaz"
+	],
+	[
+		"green_special_v2",
+		"green_special"
+	],
+	[
+		"kanatekoman_v2",
+		"kanatekoman"
+	],
+	[
+		"kumamon_v2",
+		"kumamon"
+	],
+	[
+		"kz_bowsette_v2",
+		"kz_bowsette"
 	]
 ]

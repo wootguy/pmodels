@@ -75,7 +75,7 @@ def get_sorted_dirs(path):
 
 def get_model_modified_date(mdl_name, work_path):
 	mdl_path = os.path.join(work_path, mdl_name, mdl_name + ".mdl")
-	return time.ctime(os.path.getmtime(mdl_path))
+	return int(os.path.getmtime(mdl_path))
 
 def rename_model(old_dir_name, new_name, work_path):
 	global master_json
@@ -585,7 +585,11 @@ def load_all_model_hashes(path):
 		if os.path.exists(json_path):
 			with open(json_path) as f:
 				json_dat = f.read()
-				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)					
+				dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)		
+				if 'md5' not in dat:
+					os.remove(json_path)
+					print("\nMissing hash for %s. Deleted the json for it." % json_path)
+					continue
 				hash = dat['md5']
 				
 				if hash not in model_hashes:
@@ -743,9 +747,12 @@ def install_new_models():
 		for dup in dups:
 			path = os.path.join(install_path, dup)
 			shutil.rmtree(path)
+		new_dirs = get_sorted_dirs(install_path)
 	
 	old_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
 	old_dirs_lower = [dir.lower() for dir in old_dirs]
+	
+	alt_name_risk = True
 	
 	for dir in new_dirs:
 		lowernew = dir.lower()
@@ -758,12 +765,17 @@ def install_new_models():
 		for key, val in alt_names.items():
 			for alt in val:
 				if alt.lower() == lowernew:
-					print("ERROR: %s is a known alias of %s")
-					any_dups = True
+					print("ERROR: %s is a known alias of %s" % (lowernew, key))
+					alt_name_risk = True
 			
 	if any_dups:
 		print("No models were added due to duplicates.")
 		return
+	
+	if alt_name_risk:
+		x = input("Continue adding models even though people probably have different versions of these installed? (y/n): ")
+		if x != 'y':
+			return
 	
 	print("\n-- Lowercasing files")
 	for dir in new_dirs:
@@ -808,9 +820,8 @@ def install_new_models():
 def pack_models(all_models):
 	global models_path
 	
-	fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
-	
 	if all_models:
+		fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
 		cmd = 'zip -r %s models/player -x "*.png" -x "*.json"' % fname
 		print(cmd)
 		os.system(cmd)
@@ -832,7 +843,20 @@ def pack_models(all_models):
 		all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir)) and dir.lower() not in exclude]
 		all_dirs = sorted(all_dirs, key=str.casefold)
 		
-		print("PACK %s of %s" % (len(all_dirs), len(old_dirs)))
+		list_file = open("zip_latest.txt","w")
+		for dir in all_dirs:
+			for file in os.listdir(os.path.join(models_path, dir)):
+				if file.endswith('.mdl') or file.endswith('.bmp'):
+					list_file.write("%s\n" % os.path.join(models_path, dir, file))
+		list_file.close()
+		
+		fname = 'models/latest_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
+		cmd = 'zip %s -r . -i@zip_latest.txt' % fname
+		print(cmd)
+		os.system(cmd)
+		os.remove("zip_latest.txt")
+		
+		print("\nFinished!")
 		
 
 args = sys.argv[1:]
@@ -850,6 +874,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
 	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
+	print("soundlist - generate a list of all model sounds")
 	
 	sys.exit()
 
@@ -893,21 +918,39 @@ if len(args) > 0:
 		print("- python3 git_init.py update")
 		print("- push changes to main repo")
 	elif args[0].lower() == 'fixup':
-		all_dirs = get_sorted_dirs(models_path)
-		for dir in all_dirs:
-			json_path = os.path.join(models_path, dir, dir + ".json")
-			if os.path.exists(json_path):
-				with open(json_path) as f:
-					json_dat = f.read()
-					dat = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
-				if len(dat['bodies'][0]['models']) > 2:
-					print("LD MODE: %s %s" % (len(dat['bodies'][0]['models']), dir))
-					files = [file for file in os.listdir(os.path.join(models_path, dir))]
-					for file in files:
-						if '_tiny.png' in file or '_small.png' in file or '_large.png' in file:
-							src = os.path.join(models_path, dir, file)
-							os.remove(src)
-						
+		pass
+	
+		'''
+		new_dirs = get_sorted_dirs(install_path)
+	
+		old_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir))]
+		old_dirs_lower = [dir.lower() for dir in old_dirs]
+
+		for dir in new_dirs:
+			#if not os.path.exists(os.path.join(models_path, dir + '_v2')):
+			#	continue
+			if os.path.exists(os.path.join(models_path, dir + '_v2')):
+				continue
+				
+			lowernew = dir.lower()
+			for idx, old in enumerate(old_dirs):
+				if lowernew == old.lower():
+					newDate = get_model_modified_date(dir, install_path)
+					oldDate = get_model_modified_date(dir, models_path)
+					
+					diff = "NEWER" if oldDate > newDate else "OLDER"
+					
+					if oldDate < newDate:
+						#print("RENAME " + dir)
+						#rename_model(dir, dir + "_v2", install_path)
+						#os.chdir(start_dir)
+						#break
+						pass
+					
+					print("ERROR: %s already exists (%s)" % (old, diff))
+					any_dups = True
+					#rename_model(old, old + "_v2", models_path)
+		'''
 	else:
 		print("Unrecognized command. Run without options to see help")
 
