@@ -4424,6 +4424,11 @@ klonoa_2
 km_karenkujo
 km_karenkujo_alt
 kmd_kanna
+kmd_kanna_christmas_ld
+kmd_kanna_halloween_ld
+kmd_kanna_human_ld
+kmd_kanna_ld
+kmd_kanna_urban_ld
 kmd_lucoa
 kmd_lucoa_alt
 kmd_lucoa_alt_hatm
@@ -8942,6 +8947,7 @@ xmasrepman
 xouual
 xsesshomaru
 xsesshomaru_v2
+xt-10
 xy_meowsticf
 xy_meowsticf_fs
 xy_meowsticf_v2

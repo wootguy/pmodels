@@ -3055,7 +3055,12 @@
 		"2d_ab_kanna_coco",
 		"kanna",
 		"kanna_human",
-		"kanna_urban"
+		"kanna_urban",
+		"kmd_kanna_christmas_ld",
+		"kmd_kanna_halloween_ld",
+		"kmd_kanna_human_ld",
+		"kmd_kanna_ld",
+		"kmd_kanna_urban_ld"
 	],
 	"KMD - Lucoa": [
 		"kmd_lucoa",
