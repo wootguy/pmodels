@@ -1008,7 +1008,7 @@
 		"b2opheliay"
 	],
 	"Banana Boy": [
-		"bananaboy_v2",
+		"bananaboy_v3",
 		"bananaboy_virt",
 		"bananaboy_yellow",
 		"bananaboy_reg",
@@ -1884,7 +1884,7 @@
 		"capturedgordon",
 		"snake1",
 		"gormit_v2",
-		"betagordonhd",
+		"betagordonhd_v2",
 		"betagordon",
 		"capturedchaosknight",
 		"sabre_helmet",
@@ -1984,7 +1984,7 @@
 		"soctomv2",
 		"soctomv3",
 		"squarepusher_v2",
-		"antivirus",
+		"antivirus_v2",
 		"boxes",
 		"chrome_v2"
 	],
@@ -2012,7 +2012,7 @@
 		"ld_gina",
 		"lexi-gina",
 		"sc_gina_v2",
-		"holo",
+		"holo_v2",
 		"ginacol_v2",
 		"grandma",
 		"vitani_v2",
@@ -2035,7 +2035,6 @@
 		"green_flame",
 		"grunt_tfc_engineer",
 		"opfor_balaclava2",
-		"opfor_balaclava_v2",
 		"sc_desert_v2",
 		"~w@r_v2",
 		"~int0x~",
@@ -2083,7 +2082,7 @@
 		"po_fowley",
 		"po_hamilton",
 		"engineer2_v2",
-		"evilred",
+		"evilred_v2",
 		"hgrunt",
 		"ctf_marine",
 		"jojo_sheppard",
@@ -2102,7 +2101,7 @@
 		"dc_jungle_v2",
 		"h_commando",
 		"dc_shadow_v2",
-		"dc_major",
+		"dc_major_v2",
 		"dc_snow_v2",
 		"deadgrunt",
 		"ctf_tank",
@@ -2115,7 +2114,7 @@
 		"corporation",
 		"grunt_v3",
 		"grunt2",
-		"grunt_spas",
+		"grunt_spas_v2",
 		"hwgrunt_v2",
 		"insan_grunt_v2",
 		"krauser_grunt_v2",
@@ -2136,9 +2135,9 @@
 		"xhgrunt1",
 		"xhgrunt2",
 		"xhgrunt3",
-		"be_grunt_desert",
-		"be_grunt_special",
-		"burninggrunt",
+		"be_grunt_desert_v2",
+		"be_grunt_special_v2",
+		"burninggrunt_v2",
 		"hgrunt2_v2",
 		"hgrunt3",
 		"opfor_grunt",
@@ -2166,7 +2165,7 @@
 		"op4_torch2",
 		"op4_tower",
 		"op4_tower2",
-		"opfor_balaclava",
+		"opfor_balaclava_v2",
 		"opfor_medic_v2",
 		"opfor_recon_v2",
 		"opfor_saw_v2",
@@ -2253,10 +2252,10 @@
 		"maggotusa_v2",
 		"2d_maggotusa",
 		"2d_miniblackgrunt",
-		"arachnind-x_v2",
+		"arachnind-x_v3",
 		"arctic-assault",
 		"argentina_v2",
-		"balaclablack",
+		"balaclablack_v2",
 		"balaclava_v2",
 		"bc_recon",
 		"beret",
@@ -2328,7 +2327,7 @@
 		"gs_op_evilmiku",
 		"hatsunemiku1",
 		"hatsunemiku_10a2",
-		"cybertrooper_v2",
+		"cybertrooper_v3",
 		"hatsunemiku_10a_v1",
 		"hatsunemiku_v2",
 		"kv_zatsunemiku",
@@ -2449,8 +2448,7 @@
 		"2d_hn_purple_heart_n",
 		"2d_hn_purple_heart_a",
 		"2d_gs_purplesister",
-		"_nud_rejsyg",
-		"_ph_rejsyg",
+		"_ph_rejsyg_v2",
 		"nud_rejsygstella_1",
 		"ph_rejsygstella_2"
 	],
@@ -2491,7 +2489,7 @@
 		"misery",
 		"bc_gman",
 		"bman_v2",
-		"bodyguard",
+		"bodyguard_v2",
 		"bodyguard2",
 		"bodyguardshit",
 		"evilman_v2"
@@ -3394,8 +3392,7 @@
 		"mw2_tf141_5",
 		"mw2_tf141_6",
 		"mw2_tf141_7",
-		"mw2_tf141_8",
-		"mrbored"
+		"mw2_tf141_8"
 	],
 	"NAM Soldier": [
 		"nam_bill",
@@ -3565,7 +3562,7 @@
 		"nva-schneestrich1",
 		"nva-schneestrich1net",
 		"nva-sniper",
-		"nva-strich1",
+		"nva-strich1_v2",
 		"nva-strich1b",
 		"nva-strich1feld_v2",
 		"nva-strich1moto",
@@ -3771,7 +3768,7 @@
 		"screamiii",
 		"screamkiller",
 		"tongue_v2",
-		"admin3_v2",
+		"admin3_v3",
 		"rockarolla",
 		"jmal",
 		"barneyscream",
@@ -4307,7 +4304,6 @@
 	"Kizuna AI": [
 		"vtuber_kizuna",
 		"vtuber_kizuna_black",
-		"vtuber_kizuna_ld_v2",
 		"vtuber_kizuna_ld_v3"
 	],
 	"Resident Evil - Merchant": [
@@ -4387,7 +4383,7 @@
 	],
 	"Dorothy": [
 		"dorothy",
-		"ab_dorothy",
+		"ab_dorothy_v2",
 		"2d_ab_dorothy"
 	],
 	"Rin Shibuya": [
@@ -4482,8 +4478,7 @@
 		"colette_casual",
 		"colette",
 		"2d_colette",
-		"sc_colette_v2",
-		"ginacol"
+		"sc_colette_v2"
 	],
 	"SC Cave": [
 		"sc_cave_v2",
@@ -4562,7 +4557,7 @@
 	"Hyperdimension Neptunia - White Heart": [
 		"gs_whiteheart",
 		"2d_gs_whiteheart",
-		"_wh_rejsyg",
+		"_wh_rejsyg_v2",
 		"fp_greth2017"
 	],
 	"HEV Snark": [
@@ -4640,7 +4635,7 @@
 		"2d_km_karenkujo"
 	],
 	"Bowsette": [
-		"kz_bowsette",
+		"kz_bowsette_v2",
 		"2d_kz_bowsette"
 	],
 	"Tera - Elin": [
@@ -4681,7 +4676,8 @@
 		"kz_megumin_r",
 		"kz_megumin_r_nohat",
 		"kz_megumi_v2",
-		"2d_kz_megumi_v2"
+		"2d_kz_megumi_v2",
+		"kz_megumin"
 	],
 	"Portal - Glados (Waifu Modo)": [
 		"gs_moeglados",
@@ -5352,7 +5348,7 @@
 	"Angelina": [
 		"angel01",
 		"angelina_v2",
-		"angelsmoke"
+		"angelsmoke_v2"
 	],
 	"Sakura": [
 		"anime_sakura",
@@ -5486,7 +5482,7 @@
 	"Wanted - Bear": [
 		"wanted_bear_v2",
 		"bear_smokemen_v2",
-		"beast"
+		"beast_v2"
 	],
 	"Sieni": [
 		"sieni",
@@ -5807,7 +5803,7 @@
 		"mightymousev2"
 	],
 	"Half-Life - Drill Sergeant": [
-		"drill",
+		"drill_v2",
 		"drill_barnes",
 		"drill_sharpe",
 		"blackface",
@@ -6178,7 +6174,7 @@
 	],
 	"Demonica": [
 		"demonica1",
-		"demonica_v2"
+		"demonica_v3"
 	],
 	"Iron Man": [
 		"iron_man",
@@ -6520,7 +6516,7 @@
 	"Miketama": [
 		"miketama",
 		"miketama_ahl",
-		"miketama_small"
+		"miketama_small_v2"
 	],
 	"Miko": [
 		"miko_black_v2",
@@ -6835,7 +6831,7 @@
 		"toon_civilian",
 		"adminsuit",
 		"civilian_toon",
-		"civilian_v2",
+		"civilian_v3",
 		"k4zuko_v2",
 		"kim1",
 		"toon_engineer_c"
@@ -7369,7 +7365,7 @@
 	],
 	"Resident Evil - Richard Aiken": [
 		"richard",
-		"re_stars_richard",
+		"re_stars_richard_v2",
 		"richard aiken",
 		"richard_aiken",
 		"sdrichard_v2"
@@ -8048,7 +8044,7 @@
 	],
 	"Yuri": [
 		"yuri",
-		"akatsuki_yuriv2",
+		"akatsuki_yuriv2_v2",
 		"yuri2_hev",
 		"yuri2_hev_alt_v2",
 		"yuri_le_v2",
@@ -8124,7 +8120,7 @@
 		"axis-inf_j"
 	],
 	"Babewire": [
-		"babewire",
+		"babewire_v2",
 		"babewire2"
 	],
 	"bgman": [
@@ -8283,10 +8279,6 @@
 	"EL Chivo": [
 		"el_chivo",
 		"master"
-	],
-	"cream": [
-		"cream_v2",
-		"cream"
 	],
 	"Marionette": [
 		"marionette",

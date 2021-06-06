@@ -871,12 +871,15 @@ function get_model_base_name(name) {
 }
 
 function json_post_load() {
+		console.log("JSON POST LOAD");
 	document.getElementsByClassName("content")[0].classList.remove("hidden");
 	document.getElementsByClassName("site-loader")[0].classList.add("hidden");
 	
 	if (g_debug_mode) {
 		document.getElementsByClassName("debug")[0].classList.remove("hidden");
 	}
+	
+	var initialGroupData = JSON.parse(JSON.stringify(g_groups));
 	
 	// process group info
 	for (var key in g_groups) {
@@ -922,6 +925,7 @@ function json_post_load() {
 	}
 	
 	// process version info
+	var all_old_versions = new Set();
 	for (var i = 0; i < g_versions.length; i++) {
 		// skip first value of the list, which is the latest version
 		var latest_version = g_versions[i][0];
@@ -929,9 +933,11 @@ function json_post_load() {
 		for (var k = 1; k < g_versions[i].length; k++) {
 			var modelName = g_versions[i][k];
 			if (!(modelName in g_model_data)) {
-				console.error("groups.json model not found: " + modelName);
+				console.error("versions.json model not found: " + modelName);
 				continue;
 			}
+			
+			all_old_versions.add(modelName);
 			g_old_versions[modelName] = true;
 			var parentGroup = g_model_data[latest_version]["group"];
 			
@@ -951,8 +957,6 @@ function json_post_load() {
 		}
 	}
 	
-	console.log("NEW GROUP: ", g_groups);
-	
 	// process alias info
 	for (var key in g_aliases) {
 		if (!g_model_data[key]) {
@@ -966,6 +970,26 @@ function json_post_load() {
 	for (var key in g_model_data) {
 		g_model_data[key]['polys'] = g_model_data[key]['polys'] || -1;
 		g_model_data[key]['size'] = g_model_data[key]['size'] || -1;
+	}
+	
+	// check that the latest versions are used in groups/tags
+	for (var key in initialGroupData) {
+		for (var i = 0; i < initialGroupData[key].length; i++) {
+			var model = initialGroupData[key][i];
+			
+			if (all_old_versions.has(model)) {
+				console.error("Old model version in group " + key + ": " + model);
+			}
+		}	
+	}
+	for (var key in g_tags) {
+		for (var i = 0; i < g_tags[key].length; i++) {
+			var model = g_tags[key][i];
+			
+			if (all_old_versions.has(model)) {
+				console.error("Old model version in tags.json: " + model);
+			}
+		}	
 	}
 	
 	apply_filters();
