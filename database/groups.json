@@ -2088,6 +2088,67 @@
 		"snapon_v2",
 		"r_orbb"
 	],
+	"Counter Strike Neo - CSF Male": [
+		"csneo_csf",
+		"csneo_csf2",
+		"csneo_csf3",
+		"csneo_csf4",
+		"csneo_seeker",
+		"csneo_nightforce",
+		"csneo_csf8",
+		"csneo_ranger",
+		"csneo_csf5"
+	],
+	"Counter Strike Neo - CSF Female": [
+		"csneo_csf6",
+		"csneo_csf7",
+		"csneo_force24_f",
+		"csneo_ranger_f",
+		"csneo_seeker_f",
+		"csneo_soldierace",
+		"csneo_soldierace2",
+		"csneo_new_leet",
+		"csneo_greyhound_f",
+		"csneo_nightforce_f",
+		"csneo_heavy_f"
+	],
+	"Counter Strike Neo - Phantom": [
+		"csneo_phantom",
+		"csneo_phantom2",
+		"csneo_phantom3"
+	],
+	"Counter Strike Neo - Cyclops": [
+		"csneo_cyclops",
+		"csneo_cyclops2"
+	],
+	"Counter Strike Neo - Heavy Male": [
+		"csneo_heavy",
+		"csneo_csf9",
+		"csneo_force24"
+	],
+	"Counter Strike Neo - Neo Male": [
+		"csneo_neo",
+		"csneo_neo2",
+		"csneo_neo3",
+		"csneo_neo4",
+		"csneo_typezero_v2",
+		"csneo_typezerostorm",
+		"csneo_typezero2",
+		"csneo_skull",
+		"csneo_lostnumber",
+		"csneo_skull2"
+	],
+	"Counter Strike Neo - Neo Female": [
+		"csneo_neo6",
+		"csneo_neo5",
+		"csneo_neo6",
+		"csneo_neo7",
+		"csneo_neo8",
+		"csneo_neo9",
+		"csneo_typezero_f",
+		"csneo_typezero_f2",
+		"csneo_missing"
+	],
 	"Half-Life - Grunt": [
 		"alpha_grunt",
 		"alpha_grunt2",

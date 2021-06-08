@@ -929,6 +929,10 @@ function json_post_load() {
 	for (var i = 0; i < g_versions.length; i++) {
 		// skip first value of the list, which is the latest version
 		var latest_version = g_versions[i][0];
+		if (!(latest_version in g_model_data)) {
+				console.error("versions.json model not found: " + latest_version);
+				continue;
+			}
 		
 		for (var k = 1; k < g_versions[i].length; k++) {
 			var modelName = g_versions[i][k];

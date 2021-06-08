@@ -811,9 +811,10 @@ def install_new_models():
 	update_models(models_path, True, True, False, False, True)
 		
 	print("\nFinished adding models. Next:")
-	print("- Update alias.json if you renamed any models")
-	print("- Add or update groups.json if needed")
 	print("- python3 git_init.py update")
+	print("- Update alias.json if you renamed any models")
+	print("- Update groups.json and tags.json if needed")
+	print("- Update replacements.json in TooManyPlugins plugin if any new")
 	print("- Change the last-updated date in index.html and push changes")
 	print("- git add -A; git commit; git push;")
 	print("")
