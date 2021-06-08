@@ -147,7 +147,8 @@
 		"2d_hdn_uni",
 		"2d_hn_uni_maid",
 		"hdn_uni",
-		"hn_uni_maid"
+		"hn_uni_maid",
+		"_uni_rejsyg"
 	],
 	"adonis": [
 		"adonis",
@@ -243,7 +244,8 @@
 	],
 	"Anonymous": [
 		"anonymous_hacker",
-		"anon"
+		"anon",
+		"v"
 	],
 	"ඞ AMOGUS ඞ": [
 		"among_us",
@@ -413,9 +415,16 @@
 		"mrdumb",
 		"good_barnabus",
 		"rico",
+		"sahadmin",
 		"alphabarney",
+		"barney_cs",
 		"shifty_v2",
 		"cop2",
+		"civ_undead",
+		"civ_undead2",
+		"civ_undead3",
+		"civ_survivor2",
+		"civ_survivor3",
 		"security",
 		"cl_barney",
 		"svencouzi_v2",
@@ -499,6 +508,10 @@
 		"cap_bs_unarmored_2",
 		"capturedsnipers",
 		"carbon_v2"
+	],
+	"Kancolle - Berni": [
+		"kc_berni",
+		"kc_berni_n"
 	],
 	"Shover/Pusher Robot": [
 		"shoverrobot",
@@ -965,6 +978,8 @@
 		"2d_touhou_aya",
 		"aya",
 		"aya2",
+		"touhou_aya3",
+		"touhou_aya2",
 		"aya_h"
 	],
 	"Blood 2 - Caleb": [
@@ -1088,12 +1103,19 @@
 		"can5",
 		"can6"
 	],
+	"Touhou - Meiling": [
+		"touhou_meiling_v2",
+		"touhou_meiling2"
+	],
 	"Touhou - Cirno": [
 		"cirno_1",
 		"cirno_2",
 		"cirno_3",
 		"cirno2",
 		"cirno",
+		"touhou_cirno2b",
+		"touhou_cirno3b",
+		"touhou_cirno_bikini",
 		"touhou_cirno_v2",
 		"touhou_new_cirno",
 		"gigacirno_v2",
@@ -1130,7 +1152,8 @@
 		"th_cl_suit",
 		"ta_research",
 		"th_cl_suit_sd",
-		"wrim"
+		"wrim",
+		"ld_cl_suit"
 	],
 	"CJ": [
 		"cj",
@@ -1577,6 +1600,7 @@
 		"dmz_goku",
 		"dmz_goku1",
 		"dmz_ssjgoku",
+		"goku_ultra_instinct",
 		"esf_goku",
 		"esf_gokussj",
 		"evil_goku",
@@ -1819,11 +1843,27 @@
 		"astolfo_mazz",
 		"astolfo_mazz_old"
 	],
+	"South Park - Terrance and Phillip": [
+		"sp_phillip",
+		"sp_terrance"
+	],
+	"The Binding of Isaac - Character": [
+		"tboi_isaac",
+		"tboi_azazel",
+		"tboi_bluebaby",
+		"tboi_cain",
+		"tboi_eve",
+		"tboi_evedemon",
+		"tboi_judas",
+		"tboi_lazarus",
+		"tboi_samson"
+	],
 	"Sonic The Hedgehog": [
 		"sonic_v4",
 		"frost_v2",
 		"darksonic_sc4",
 		"darksonic_v2",
+		"sonic_hd",
 		"halosonic_v2",
 		"metalsonic",
 		"sonic_custom_s5",
@@ -1969,6 +2009,7 @@
 		"robo_1317_v2",
 		"robo_1317_ap_v2",
 		"robo_1337_v2",
+		"robo_1317_ap_gay",
 		"eisendk",
 		"ibsniper",
 		"ibsniper_admin",
@@ -1995,7 +2036,12 @@
 	],
 	"Pepsi Man": [
 		"pepsiman",
-		"pepsiman2"
+		"pepsiman2",
+		"cocacolaman"
+	],
+	"Lucy": [
+		"elfenlied_lucy",
+		"gs_op_lucy"
 	],
 	"Giggles": [
 		"giggles_v2",
@@ -2026,10 +2072,40 @@
 		"ladybug_v2",
 		"acidburn"
 	],
+	"Immolater": [
+		"immolator",
+		"immolator2"
+	],
+	"Pepe": [
+		"pepe",
+		"pepe_hazmat"
+	],
+	"Space Channel 5 - Ulala": [
+		"ulala",
+		"ulala_part2"
+	],
+	"Snapon": [
+		"snapon_v2",
+		"r_orbb"
+	],
 	"Half-Life - Grunt": [
 		"alpha_grunt",
 		"alpha_grunt2",
 		"alpha_grunt3",
+		"grunt_enemy",
+		"grunt_tfc_demo",
+		"tower_enemy",
+		"shotgun",
+		"cigar",
+		"shotgun_enemy",
+		"recon_enemy",
+		"grunt_tfc_hvyweapon",
+		"grunt_tfc_pyro",
+		"opfor_commander",
+		"opfor_grunt2",
+		"opfor_grunt_v2",
+		"opfor_major",
+		"grunt_tfc_sniper",
 		"mrdumbsbrother_v2",
 		"pyro_hecu",
 		"green_flame",
@@ -2039,6 +2115,20 @@
 		"~w@r_v2",
 		"~int0x~",
 		"smashdespecialh",
+		"bm_hgrunt_band",
+		"bm_hgrunt_black",
+		"bm_hgrunt_black2",
+		"bm_hgrunt_commander",
+		"bm_hgrunt_commander2",
+		"bm_hgrunt_commander3",
+		"bm_hgrunt_gasmask",
+		"bm_hgrunt_gasmask2",
+		"bm_hgrunt_masked",
+		"bm_hgrunt_masked2",
+		"bm_hgrunt_mp",
+		"bm_hgrunt_white",
+		"bm_hgrunt_white2",
+		"cigar_enemy",
 		"ctf_flanker",
 		"thehorror",
 		"sharks_v2",
@@ -2314,6 +2404,7 @@
 		"2d_gs_mikupanda",
 		"2d_kz_lolimiku",
 		"2d_kz_miku",
+		"snk_mikasa_miku",
 		"2d_kz_mikutda_v2",
 		"2d_kz_op_evilmiku",
 		"2d_sp_arabianmiku",
@@ -2382,6 +2473,7 @@
 		"hdnr_neptune-c3",
 		"hdnr_neptune-c2",
 		"hdnr_neptune",
+		"_nud_rejsyg",
 		"hdn_neptunev-c4",
 		"hdn_neptunev-c3",
 		"hdn_neptunev-c2",
@@ -2475,7 +2567,6 @@
 		"bigmoneyshaggs_v2",
 		"thej",
 		"theperfectcreature",
-		"joker2",
 		"gmansanta_v2",
 		"gmansdayoff_v2",
 		"gmansmall_v2",
@@ -2723,6 +2814,7 @@
 		"combat_hev",
 		"cryodark1a",
 		"hev_drip",
+		"barney_hev_helmet",
 		"ld_def",
 		"assaulthelmet",
 		"2d_hl2_helmet",
@@ -2838,7 +2930,6 @@
 		"prisoner_slick",
 		"prisoner_walter",
 		"tc_alternat-dr.kleiner",
-		"joker1",
 		"yahoosuit",
 		"clerk_v2",
 		"janitor",
@@ -2850,7 +2941,6 @@
 		"mc_bigote",
 		"cl_sci1",
 		"cl_sci2",
-		"jokerrage",
 		"po_damien",
 		"po_fuller",
 		"po_heinbach",
@@ -3785,6 +3875,15 @@
 		"shygal2_wet",
 		"shygal_shiny_outlined"
 	],
+	"Batman - Joker": [
+		"joker",
+		"joker2",
+		"the_joker_v2",
+		"jokerldr_v2",
+		"joker!!!",
+		"joker1",
+		"jokerrage"
+	],
 	"Soviet Soldier": [
 		"sovarmy2_1965",
 		"sovarmy2_1965c",
@@ -3793,6 +3892,7 @@
 		"sovarmy4_1967c",
 		"sovarmy4_1970c",
 		"comrade",
+		"ivan",
 		"sovarmy4_1988cc",
 		"sovarmy4_1988cc2",
 		"sovarmy_1970p",
@@ -4117,6 +4217,7 @@
 		"touhou_tenshi_40k",
 		"2d_touhou_tenshi_v2",
 		"hinanai_v3",
+		"touhou_hinanawi",
 		"touhou_tenshi"
 	],
 	"TF2 - Demoman": [
@@ -4395,6 +4496,12 @@
 		"2d_ab_sakura_kinomoto",
 		"lt_sexologo_v3"
 	],
+	"Touhou - Sakura": [
+		"touhou_sakuya2",
+		"touhou_sakuya_bikini",
+		"touhou_sakuya_gothic",
+		"touhou_sakuya_gothic2"
+	],
 	"Sandman": [
 		"sandman",
 		"sandmanghost_v2",
@@ -4478,7 +4585,8 @@
 		"colette_casual",
 		"colette",
 		"2d_colette",
-		"sc_colette_v2"
+		"sc_colette_v2",
+		"ld_colette"
 	],
 	"SC Cave": [
 		"sc_cave_v2",
@@ -4568,16 +4676,20 @@
 		"kancolle_shimakaze_v2",
 		"2d_kc_shimakaze_v2_n",
 		"2d_kc_shimakaze",
-		"2d_kancolle_shimakaze_v2"
+		"2d_kancolle_shimakaze_v2",
+		"kancolle_shimakaze",
+		"kc_shimakaze_v2_n"
 	],
 	"Kemono Friends - Greywolf": [
 		"kf_greywolf_kz_v2",
 		"kf_greywolf",
-		"2d_kf_greywolf"
+		"2d_kf_greywolf",
+		"kf_japwolf"
 	],
 	"Kancolle - Akatsuki": [
 		"kc_akatsuki",
-		"2d_kc_akatsuki"
+		"2d_kc_akatsuki",
+		"kc_akatsuki_n"
 	],
 	"Kancolle - Amatsukaze": [
 		"kancolle_amatsukaze",
@@ -4598,11 +4710,15 @@
 	"Kancolle - Destroyer": [
 		"kc_destroyer",
 		"kc_destroyer_1",
-		"2d_kc_destroyer"
+		"2d_kc_destroyer",
+		"kc_destroyer_n"
 	],
 	"Kancolle - Ikazuchi": [
 		"kc_ikazuchi",
-		"2d_kc_ikazuchi"
+		"2d_kc_ikazuchi",
+		"kc_ikazuchi_n",
+		"kc_inazuma",
+		"kc_inazuma_n"
 	],
 	"Kancolle - Nothern": [
 		"kc_northern_v2",
@@ -4651,7 +4767,12 @@
 		"2d_kz_elin_04_v2",
 		"kz_elin_04_v1",
 		"kz_elin_05_v1",
-		"kz_elin_04_v2"
+		"kz_elin_04_v2",
+		"tera_popori"
+	],
+	"TMCM": [
+		"tmcm",
+		"tmcmb"
 	],
 	"Fate/Grand Order - Mysterious Heroine": [
 		"kz_fgo_mheroine",
@@ -4704,7 +4825,9 @@
 		"reimu3",
 		"touhou_reimu",
 		"2d_touhou_reimu_mmd",
-		"2d_kz_reimu"
+		"2d_kz_reimu",
+		"touhou_reimu3",
+		"touhou_reimu_mmd"
 	],
 	"MCE ENE": [
 		"mce_ene",
@@ -5173,13 +5296,11 @@
 		"stu",
 		"techno",
 		"yellow",
-		"the_joker_v2",
 		"thorn",
 		"thrall",
 		"s-uk_v2",
 		"c-r-o-w",
 		"team-[raven]",
-		"joker!!!",
 		"sl!der",
 		"species_v2",
 		"ssa",
@@ -5196,7 +5317,6 @@
 		"prowler",
 		"psycho_v2",
 		"psychoace",
-		"jokerldr_v2",
 		"raziel",
 		"razor_v2",
 		"dekker",
@@ -5597,11 +5717,6 @@
 		"civ_zombie3",
 		"civ_zombie4",
 		"civ_zombie5"
-	],
-	"Civ Undead": [
-		"civ_undead",
-		"civ_undead2",
-		"civ_undead3"
 	],
 	"Cleric": [
 		"clericpartridge",
@@ -6652,7 +6767,8 @@
 		"toon_demo_c",
 		"toon_demo",
 		"demo_toon",
-		"demo_v2"
+		"demo_v2",
+		"marine_rf"
 	],
 	"TFC - Engineer": [
 		"engineer_v3",
@@ -7676,7 +7792,8 @@
 	],
 	"SNK Mikasa": [
 		"snk_mikasa",
-		"snk_mikasa_origin"
+		"snk_mikasa_origin",
+		"snk_mikasa_momiji"
 	],
 	"Metal Gear Solid - Sniper Wolf": [
 		"snipergreen",
@@ -8042,6 +8159,10 @@
 		"_anarchy_",
 		"baktaria_v2"
 	],
+	"Apache": [
+		"apacheshit",
+		"apachef"
+	],
 	"Yuri": [
 		"yuri",
 		"akatsuki_yuriv2_v2",
@@ -8049,7 +8170,8 @@
 		"yuri2_hev_alt_v2",
 		"yuri_le_v2",
 		"zombie_girl6",
-		"zombie_girl7"
+		"zombie_girl7",
+		"akatsuki_yuri"
 	],
 	"Zaku": [
 		"zaku",
