@@ -35,3 +35,7 @@ TWLZ player model pack. Sometimes _v3 and _v4 were added to match chronological
 dates of the models, meaning the original name isn't used anymore because I only
 know for sure that the _v2 version is correctly named (e.g. rouge -> rouge_v3 instead
 of swapping rouge_v2 and rouge).
+
+added "_ld" to all player models from this pack:
+https://gamebanana.com/mods/167285
+They overwrite the default player models otherwise.
