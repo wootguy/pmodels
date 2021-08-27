@@ -664,7 +664,8 @@
 		"xouual",
 		"seal_arctic",
 		"taskforce_desert",
-		"taskforce_urban"
+		"taskforce_urban",
+		"csscterror"
 	],
 	"Counter Strike - GIGN": [
 		"cs_gign",
@@ -892,7 +893,6 @@
 		"oldcs4",
 		"playerslayer_v2",
 		"cs5.0_terror",
-		"csscterror",
 		"cssphoenix",
 		"cssterror"
 	],
@@ -7132,7 +7132,12 @@
 		"sandrock",
 		"nataku",
 		"tallgeese3",
-		"wingzero"
+		"wingzero",
+		"gundam_rx-78"
+	],
+	"Haruhi Suzumiya - Haruhi Suzumiya": [
+		"haruhi_haruhi",
+		"haruhi"
 	],
 	"TFC - Scout": [
 		"new_scout",
