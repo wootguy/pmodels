@@ -6105,6 +6105,11 @@
 		"dgf_p_spetsnaz",
 		"dgf_p_spetsnaz_s5"
 	],
+	"BSLM": [
+		"cs_bslm1",
+		"cs_bslm2",
+		"cs_bslm3"
+	],
 	"DGF USCM": [
 		"dgf_uscm_male01",
 		"dgf_uscm_male02",

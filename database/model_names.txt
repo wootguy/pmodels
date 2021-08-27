@@ -2027,10 +2027,15 @@ cs5.0_sas
 cs5.0_terror
 cs5.0_urban
 cs_arctic
+cs_bslm1
+cs_bslm2
+cs_bslm3
+cs_ddh
 cs_gign
 cs_gsg9
 cs_guerilla
 cs_leet
+cs_lqc
 cs_sas
 cs_terror
 cs_urban
@@ -3661,6 +3666,7 @@ h-mdn_tenno_uzume
 h_commando
 hachikuji_v1
 hageri-man
+half-cyborg
 halloween
 halloween_v2
 halluziniest
