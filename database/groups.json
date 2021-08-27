@@ -49,6 +49,11 @@
 		"darkangel_v2",
 		"whok"
 	],
+	"Genshin Impact - Ganyu": [
+		"gi_ganyu",
+		"gi_ganyu_hz",
+		"gi_ganyu_hz_alt"
+	],
 	"Resident Evil - Hunk": [
 		"8bitwarlock_hunk2",
 		"8bitwarlock_hunk_fix",
@@ -274,7 +279,16 @@
 	"Azure Lane - Nagato": [
 		"al_nagato",
 		"al_nagato_ld",
-		"al_nagato_meranian"
+		"al_nagato_meranian",
+		"al_meragato_v1"
+	],
+	"Looney Toons - Bugs Bunny": [
+		"bugs_v2",
+		"bugs",
+		"bigchungus",
+		"bigchunguscb",
+		"bigchungusce",
+		"bigchungusuganda"
 	],
 	"Ultra Kill": [
 		"ultrakill_v1",
@@ -626,7 +640,8 @@
 		"re_succ_arctic_unit_v2",
 		"toon_arctic",
 		"alaris_arctic",
-		"arctic_hd_v2"
+		"arctic_hd_v2",
+		"cssarctic"
 	],
 	"Furry Monster": [
 		"ariin",
@@ -677,7 +692,8 @@
 		"gignbig",
 		"toon_gign",
 		"css_gigin",
-		"stealth"
+		"stealth",
+		"cssgign"
 	],
 	"Counter Strike - GSG9": [
 		"cs_gsg9",
@@ -711,7 +727,9 @@
 		"cso_sozo",
 		"oldcs2",
 		"taskforce",
-		"oldcs"
+		"oldcs",
+		"cs5.0_gsg9",
+		"cssgsg9"
 	],
 	"Chicken": [
 		"chicken",
@@ -744,7 +762,8 @@
 		"guerilla_terrorist",
 		"toon_guerilla",
 		"taskforce_arab",
-		"taskforce_terror"
+		"taskforce_terror",
+		"cssguerilla"
 	],
 	"Counter Strike - Leet": [
 		"cs_leet",
@@ -768,7 +787,9 @@
 		"toon_leet",
 		"arab_terrorist",
 		"csb_arab",
-		"hevleet"
+		"hevleet",
+		"cs5.0_arab",
+		"cssleet"
 	],
 	"Power Puff Girl": [
 		"blossom",
@@ -811,7 +832,9 @@
 		"sas9",
 		"sas_cterrorist",
 		"toon_sas",
-		"wounded_sas"
+		"wounded_sas",
+		"cs5.0_sas",
+		"csssas"
 	],
 	"Counter Strike - Urban": [
 		"cs_urban",
@@ -832,7 +855,9 @@
 		"urban5",
 		"urban6",
 		"urban_cterrorist",
-		"css_ct"
+		"css_ct",
+		"cs5.0_urban",
+		"cssurban"
 	],
 	"Counter Strike - Phoenix": [
 		"alaris_terror",
@@ -865,7 +890,11 @@
 		"ts_merc",
 		"electric_v2",
 		"oldcs4",
-		"playerslayer_v2"
+		"playerslayer_v2",
+		"cs5.0_terror",
+		"csscterror",
+		"cssphoenix",
+		"cssterror"
 	],
 	"Counter Strike - VIP": [
 		"cs_vip",
@@ -1779,7 +1808,31 @@
 		"dod_axis-light",
 		"dod_axis-medium",
 		"dod_axis-mg",
-		"dod_axis-sniper"
+		"dod_axis-sniper",
+		"dod_american_assault",
+		"dod_american_mg",
+		"dod_american_rifleman",
+		"dod_american_rocket",
+		"dod_american_sniper",
+		"dod_american_support",
+		"dod_a_as_nh",
+		"dod_a_mg_nh",
+		"dod_a_rc_nh",
+		"dod_a_rf_nh",
+		"dod_a_sn_nh",
+		"dod_a_su_nh",
+		"dod_german_assault",
+		"dod_german_mg",
+		"dod_german_rifleman",
+		"dod_german_rocket",
+		"dod_german_sniper",
+		"dod_german_support",
+		"dod_g_as_nh",
+		"dod_g_mg_nh",
+		"dod_g_rc_nh",
+		"dod_g_rf_nh",
+		"dod_g_sn_nh",
+		"dod_g_su_nh"
 	],
 	"Day of Defeat - Soldier (dead)": [
 		"dod_axis_1",
@@ -2573,11 +2626,20 @@
 		"nya_rabi",
 		"mikuhev_v1",
 		"gs_miku",
-		"mikuhatsune_v1"
+		"mikuhatsune_v1",
+		"miku_neko"
+	],
+	"Mint Sukumizu": [
+		"mint",
+		"mint_sukumizu"
 	],
 	"MLP - Little Pip": [
 		"littlepip",
 		"littlepip2"
+	],
+	"My Life as a Teenage Robot - XJ-9": [
+		"mltrxj9",
+		"mltrxj9big"
 	],
 	"Hyperdimension Neptunia - Neptune": [
 		"neptune",
@@ -2742,7 +2804,8 @@
 		"spess_kagerou_ld",
 		"spess_kagerou_woof",
 		"touhou_kagerou_bikini",
-		"touhou_kagerou_v2"
+		"touhou_kagerou_v2",
+		"spess_kagerou_sweater"
 	],
 	"Halo - Soldier": [
 		"halo_banks",
@@ -2792,7 +2855,8 @@
 		"nr_lolipirate",
 		"nr_lolisleepy",
 		"-finallyitworks",
-		"-finallyitworks2"
+		"-finallyitworks2",
+		"blanc_kagu"
 	],
 	"Hyperdimension Neptunia - Compa": [
 		"hdn_compa",
@@ -3258,6 +3322,24 @@
 		"natasha",
 		"morass_mad"
 	],
+	"Girls Frontline - HK416": [
+		"gfl_hk416_v2",
+		"gfl_hk416_hatless"
+	],
+	"Girls Frontline - Negev": [
+		"gfl_negev",
+		"gfl_negev_shoeless"
+	],
+	"Kirby Star Allies - Susie": [
+		"ksa_parallelsusie",
+		"ksa_superparallelsusie",
+		"ksa_susie_broken",
+		"ksa_susie_p1",
+		"ksa_susie_p2",
+		"ksa_susie_p3",
+		"ksa_susie_p4",
+		"ksa_susie_p5"
+	],
 	"KMD - Kanna": [
 		"kmd_kanna",
 		"lt_kanna_urban",
@@ -3275,7 +3357,9 @@
 		"kmd_kanna_halloween_ld",
 		"kmd_kanna_human_ld",
 		"kmd_kanna_ld",
-		"kmd_kanna_urban_ld"
+		"kmd_kanna_urban_ld",
+		"kmd_kanna_cop",
+		"kmd_kunoichi_kanna"
 	],
 	"KMD - Lucoa": [
 		"kmd_lucoa",
@@ -3471,7 +3555,17 @@
 		"chinamario",
 		"mario2",
 		"mario_santa",
-		"mario_v2"
+		"mario_v2",
+		"mario64",
+		"mario64b",
+		"mario64bderpy",
+		"mario64bgranddad",
+		"mario64bmetal",
+		"mario64bnaked",
+		"mario64derpy",
+		"mario64granddad",
+		"mario64metal",
+		"mario64naked"
 	],
 	"Luigi": [
 		"smb_luigi",
@@ -4618,6 +4712,7 @@
 	],
 	"Rin Shibuya": [
 		"ab_rin_shibuya",
+		"ab_rin_shibuya_kp",
 		"2d_ab_rin_shibuya"
 	],
 	"Sakura Kinomoto": [
@@ -5246,6 +5341,7 @@
 		"al_git_v2"
 	],
 	"Nekopara - Ethanol": [
+		"nekopara_ethanol_v5",
 		"nekopara_ethanol_v4",
 		"nekopara_ethanol_v1",
 		"nekopara_ethanol_red"
@@ -6022,7 +6118,52 @@
 		"po",
 		"teletubby",
 		"tinky",
-		"lala"
+		"lala",
+		"dipsy_l4t2_1",
+		"dipsy_l4t2_2",
+		"dipsy_l4t2_3",
+		"dipsy_st",
+		"dipsy_st2",
+		"laalaa_l4t2_1",
+		"laalaa_l4t2_2",
+		"laalaa_l4t2_3",
+		"laalaa_st",
+		"laalaa_st2",
+		"newborn_st2",
+		"player_multiplayer_model_st",
+		"po_l4d2_1",
+		"po_l4d2_2",
+		"po_l4d2_3",
+		"po_st",
+		"po_st2",
+		"tinkywinky_l4d2_1",
+		"tinkywinky_l4d2_2",
+		"tinkywinky_l4d2_3",
+		"tinkywinky_st",
+		"white_tubbie_st"
+	],
+	"Pokemon - Zangoose": [
+		"pzangoose",
+		"pzangoosenf",
+		"pzangooses",
+		"pzangooses-nf"
+	],
+	"Neon Genesis Evangelion - Rei": [
+		"rei_plush",
+		"rei_plushbig"
+	],
+	"Silent Hill - Henry": [
+		"shhenry",
+		"shhenryd",
+		"shhenrydb"
+	],
+	"Super Mario Brothers - Peach": [
+		"smbpeach",
+		"smbpeachf"
+	],
+	"Pokemon - Marnie": [
+		"pmarnie",
+		"pmarnienb"
 	],
 	"Dragon Ball Z - Buu": [
 		"dmz_buu",
@@ -8180,7 +8321,10 @@
 	"Touhou - Kochiya Sanae": [
 		"sanae",
 		"touhou_kochiya_sanae_v2",
-		"touhou_sanae"
+		"touhou_sanae",
+		"touhou_sanae_jkc_v2",
+		"touhou_sanae_jkg_v2",
+		"touhou_sanae_jky_v2"
 	],
 	"Touhou - Mokou": [
 		"mokou",
