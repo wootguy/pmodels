@@ -5734,7 +5734,8 @@
 		"skeleton_gman",
 		"gatekeeper_v2",
 		"kilroy",
-		"muerte_v2"
+		"muerte_v2",
+		"ld_skeleton"
 	],
 	"Naruto - Zabuza": [
 		"naruto_zabuza",
@@ -7231,12 +7232,12 @@
 		"[girlz]ninja_girl"
 	],
 	"TFC - Civilian": [
+		"civilian_v3",
 		"hellzadmin3_v2",
 		"toon_soldier_c",
 		"toon_civilian",
 		"adminsuit",
 		"civilian_toon",
-		"civilian_v3",
 		"k4zuko_v2",
 		"kim1",
 		"toon_engineer_c"
@@ -8617,9 +8618,8 @@
 		"rocko"
 	],
 	"raus_de": [
-		"raus_de",
-		"raus_de_v2",
-		"raus_de_v3"
+		"raus_de_v3",
+		"raus_de_v2"
 	],
 	"Vamp": [
 		"monster_hunter_v2",

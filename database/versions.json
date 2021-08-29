@@ -1369,10 +1369,6 @@
 		"negro"
 	],
 	[
-		"civilian_v2",
-		"civilian"
-	],
-	[
 		"jesus_v2",
 		"jesus"
 	],
@@ -2274,6 +2270,10 @@
 	[
 		"krauser_beret_v2",
 		"krauser_beret"
+	],
+	[
+		"raus_de_v3",
+		"raus_de"
 	],
 	[
 		"billy2_v2",
@@ -4550,6 +4550,10 @@
 	[
 		"robot1_v2",
 		"robot1"
+	],
+	[
+		"ranger1_v2",
+		"ranger1"
 	],
 	[
 		"ranger2_v2",
