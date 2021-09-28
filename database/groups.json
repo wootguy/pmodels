@@ -285,6 +285,7 @@
 	"Looney Toons - Bugs Bunny": [
 		"bugs_v2",
 		"bugs",
+		"pernalonga",
 		"bigchungus",
 		"bigchunguscb",
 		"bigchungusce",
@@ -1385,7 +1386,7 @@
 		"bussiness_man",
 		"hageri-man"
 	],
-	"Combine Soldier": [
+	"Half Life - Combine": [
 		"combine_cp",
 		"combine_cp_beta",
 		"combine_cp_beta_2",
@@ -3322,11 +3323,11 @@
 		"natasha",
 		"morass_mad"
 	],
-	"Girls Frontline - HK416": [
+	"Girls' Frontline - HK416": [
 		"gfl_hk416_v2",
 		"gfl_hk416_hatless"
 	],
-	"Girls Frontline - Negev": [
+	"Girls' Frontline - Negev": [
 		"gfl_negev",
 		"gfl_negev_shoeless"
 	],
@@ -3410,7 +3411,7 @@
 		"saw_billy",
 		"lt_saw"
 	],
-	"HOE - Grunt": [
+	"Heart of Evil - MikeForce": [
 		"hoe_mikeforce1",
 		"hoe_mikeforce2",
 		"hoe_mikeforce3",
@@ -4698,7 +4699,7 @@
 		"americasarmy3",
 		"americasarmy4"
 	],
-	"Alyx": [
+	"Half-Life - Alyx": [
 		"alyx",
 		"alyx_hd",
 		"alyxvance",
@@ -4804,7 +4805,7 @@
 		"bwtgs_sena_kashiwazaki",
 		"2d_bwtgs_sana"
 	],
-	"Colette": [
+	"Half-Life - Colette": [
 		"dm_colette",
 		"hl2_colette",
 		"colette_casual",
@@ -5708,7 +5709,7 @@
 		"woodpixie_v2",
 		"zbright_v2"
 	],
-	"Wated - Annie": [
+	"Wanted - Annie": [
 		"annie",
 		"angelfire_v2",
 		"wanted_annie_v2"
@@ -5792,7 +5793,7 @@
 		"baconmushamushakun",
 		"baconmushamushakun_c"
 	],
-	"Badger": [
+	"Weebls Stuff - Badger": [
 		"badger",
 		"rbadger"
 	],
@@ -7534,10 +7535,6 @@
 	"Star Trek - Picard": [
 		"picard_v2",
 		"picard_krutch"
-	],
-	"Bugs Bunny": [
-		"bugs_v2",
-		"pernalonga"
 	],
 	"Bush": [
 		"plantshit1",
