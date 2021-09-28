@@ -1547,8 +1547,20 @@
 		"clans8n"
 	],
 	[
-		"aquatic_v2",
-		"aquatic"
+		"clans8n_v2",
+		"clans8n"
+	],
+	[
+		"xt-10_mkii",
+		"xt-10"
+	],
+	[
+		"sp_aqua_hatm_v2",
+		"sp_aqua_hatm"
+	],
+	[
+		"sp_aqua_v2",
+		"sp_aqua"
 	],
 	[
 		"gigacirno_v2",
@@ -5090,6 +5102,8 @@
 		"arover"
 	],
 	[
+		"al_enterprise_v2",
+		"al_enterprise_v1",
 		"azur_lane_enterprise_v2",
 		"azur_lane_enterprise"
 	],

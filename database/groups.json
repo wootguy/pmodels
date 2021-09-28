@@ -1192,7 +1192,17 @@
 		"ta_research",
 		"th_cl_suit_sd",
 		"wrim",
-		"ld_cl_suit"
+		"ld_cl_suit",
+		"cl_suit_black",
+		"cl_suit_blue",
+		"cl_suit_brown",
+		"cl_suit_cyan",
+		"cl_suit_green",
+		"cl_suit_lime",
+		"cl_suit_pink",
+		"cl_suit_purple",
+		"cl_suit_red",
+		"cl_suit_yelow"
 	],
 	"CJ": [
 		"cj",
@@ -1444,7 +1454,114 @@
 		"hl2_soldier2",
 		"metrocop",
 		"metrocop_pro",
-		"prison_guard_v2"
+		"prison_guard_v2",
+		"ta_c_badcop2",
+		"ta_c_badcop_armor2",
+		"ta_c_elite",
+		"ta_c_elite_alt",
+		"ta_c_elite_alt2",
+		"ta_c_elite_armor",
+		"ta_c_elite_color",
+		"ta_c_elite_color2",
+		"ta_c_elite_color_armor",
+		"ta_c_elite_color_armor2",
+		"ta_c_e_advisor",
+		"ta_c_e_advisor2",
+		"ta_c_e_advisor_armor",
+		"ta_c_e_advisor_armor2",
+		"ta_c_e_arctic",
+		"ta_c_e_arctic2",
+		"ta_c_e_arctic_armor",
+		"ta_c_e_arctic_armor2",
+		"ta_c_e_city",
+		"ta_c_e_city2",
+		"ta_c_e_city_armor",
+		"ta_c_e_city_armor2",
+		"ta_c_e_coast",
+		"ta_c_e_coast2",
+		"ta_c_e_coast_armor",
+		"ta_c_e_coast_armor2",
+		"ta_c_e_guard",
+		"ta_c_e_guard2",
+		"ta_c_e_guard_armor",
+		"ta_c_e_guard_armor2",
+		"ta_c_e_hunter",
+		"ta_c_e_hunter2",
+		"ta_c_e_hunter_armor",
+		"ta_c_e_hunter_armor2",
+		"ta_c_e_murky",
+		"ta_c_e_murky2",
+		"ta_c_e_murky_armor",
+		"ta_c_e_murky_armor2",
+		"ta_c_e_sentry_guard",
+		"ta_c_e_sentry_guard2",
+		"ta_c_e_shotgun",
+		"ta_c_e_shotgun2",
+		"ta_c_e_shotgun_armor",
+		"ta_c_e_shotgun_armor2",
+		"ta_c_e_soldier",
+		"ta_c_e_soldier2",
+		"ta_c_e_soldier_armor",
+		"ta_c_e_soldier_armor2",
+		"ta_c_shadow-3",
+		"ta_c_shadow-32",
+		"ta_c_shadow-3_armor",
+		"ta_c_shadow-3_armor2",
+		"ta_c_shotgun",
+		"ta_c_shotgun2",
+		"ta_c_shotgun_alt",
+		"ta_c_shotgun_alt2",
+		"ta_c_shotgun_armor",
+		"ta_c_shotgun_armor2",
+		"ta_c_skullbreaker",
+		"ta_c_skullbreaker2",
+		"ta_c_soldier",
+		"ta_c_soldier2",
+		"ta_c_soldier_alt",
+		"ta_c_soldier_alt2",
+		"ta_c_soldier_armor",
+		"ta_c_soldier_armor2",
+		"ta_c_soldier_color",
+		"ta_c_soldier_color2",
+		"ta_c_super",
+		"ta_c_super2",
+		"ta_c_super_armor",
+		"ta_c_super_armor2",
+		"ta_c_s_advisor",
+		"ta_c_s_advisor2",
+		"ta_c_s_advisor_armor",
+		"ta_c_s_advisor_armor2",
+		"ta_c_s_arctic",
+		"ta_c_s_arctic2",
+		"ta_c_s_arctic_armor",
+		"ta_c_s_arctic_armor2",
+		"ta_c_s_city",
+		"ta_c_s_city2",
+		"ta_c_s_city_armor",
+		"ta_c_s_city_armor2",
+		"ta_c_s_coast",
+		"ta_c_s_coast2",
+		"ta_c_s_coast_armor",
+		"ta_c_s_coast_armor2",
+		"ta_c_s_color_armor",
+		"ta_c_s_color_armor2",
+		"ta_c_s_guard",
+		"ta_c_s_guard2",
+		"ta_c_s_guard_armor",
+		"ta_c_s_guard_armor2",
+		"ta_c_s_hunter",
+		"ta_c_s_hunter2",
+		"ta_c_s_hunter_armor",
+		"ta_c_s_hunter_armor2",
+		"ta_c_s_murky",
+		"ta_c_s_murky2",
+		"ta_c_s_murky_armor",
+		"ta_c_s_murky_armor2",
+		"ta_special_juggernaut",
+		"ta_special_juggernaut2",
+		"ta_special_pilot",
+		"ta_special_sniper",
+		"ta_special_sniper2"
 	],
 	"Cream the Rabbit": [
 		"cream_v3",
@@ -1583,7 +1700,8 @@
 		"blackbear",
 		"partybear",
 		"psychobeba",
-		"bibabomination"
+		"bibabomination",
+		"partypanda"
 	],
 	"Star Wars - Battle Droid": [
 		"bdroid_a",
@@ -1905,7 +2023,9 @@
 		"fgo_astolfo-sf",
 		"fgo_astolfo-sf2",
 		"astolfo_mazz",
-		"astolfo_mazz_old"
+		"astolfo_mazz_old",
+		"astolfo_mera_v1",
+		"fgo_astolfo_black"
 	],
 	"South Park - Terrance and Phillip": [
 		"sp_phillip",
@@ -2540,7 +2660,8 @@
 		"lt_ezel",
 		"knuckles",
 		"knuckles_v2",
-		"lt_ugandamiku"
+		"lt_ugandamiku",
+		"ugandan_knuckles_voice"
 	],
 	"Resident Evil - Enrico Marini": [
 		"enrico_marini",
@@ -2857,7 +2978,10 @@
 		"nr_lolisleepy",
 		"-finallyitworks",
 		"-finallyitworks2",
-		"blanc_kagu"
+		"-finallyitworks3",
+		"-finallyitworks4",
+		"blanc_kagu",
+		"blanc_chl_srs"
 	],
 	"Hyperdimension Neptunia - Compa": [
 		"hdn_compa",
@@ -5634,6 +5758,10 @@
 		"ainsley",
 		"ainsleydle"
 	],
+	"League of Legends - Gwen": [
+		"lolgwen",
+		"lolgwendoll"
+	],
 	"Touhou - Alice": [
 		"touhou_alice_v2",
 		"alice",
@@ -5642,7 +5770,10 @@
 	],
 	"AMR - Alice": [
 		"nr_aliceliddell",
-		"amr_alice"
+		"amr_alice",
+		"amalice",
+		"amalice2",
+		"amalice3"
 	],
 	"Alice2": [
 		"alice2_hev",
@@ -6408,7 +6539,8 @@
 	],
 	"Girls' Frontline - UMP9": [
 		"gfl_ump9",
-		"gfl_ump9-c2"
+		"gfl_ump9-c2",
+		"smol_ump9"
 	],
 	"Giacomo": [
 		"giacomo_2_v2",
@@ -7483,6 +7615,31 @@
 		"th_orderly_sd",
 		"th_zombie2"
 	],
+	"They Hunger - Asulym": [
+		"th_asulym",
+		"th_asulymz"
+	],
+	"They Hunger - Commander": [
+		"th_commander",
+		"th_commanderz"
+	],
+	"They Hunger - Soldier": [
+		"th_soldier",
+		"th_soldierz",
+		"th_shotgun",
+		"th_sniper",
+		"th_sniperz",
+		"th_noheadz",
+		"th_commander",
+		"th_commanderz",
+		"th_grunt",
+		"th_grunt2"
+	],
+	"They Hunger - Police Man": [
+		"th_policeman",
+		"th_policemanz",
+		"th_policemanz1"
+	],
 	"Optimus Prime": [
 		"optimus",
 		"optimusprime",
@@ -8270,10 +8427,6 @@
 		"th_gangster_sd",
 		"gangster1"
 	],
-	"They Hunger - Grunt": [
-		"th_grunt",
-		"th_grunt2"
-	],
 	"They Hunger - Host": [
 		"th_host",
 		"th_host_sd"
@@ -8285,7 +8438,8 @@
 	"They Hunger - Neil": [
 		"th_neil",
 		"th_neil_sd",
-		"neil"
+		"neil",
+		"bug_fo_v1"
 	],
 	"They Hunger - Nurse": [
 		"th_nurse",
@@ -8317,7 +8471,8 @@
 	"GTA:VC - Tommy Vercetti": [
 		"tommyvercetti",
 		"tommy_vercetti_v2",
-		"gtavc_tommy"
+		"gtavc_tommy",
+		"vc_tommy"
 	],
 	"Left 4 Dead - Boomer": [
 		"boomer",

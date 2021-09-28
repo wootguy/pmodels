@@ -27,6 +27,8 @@ vocaloid_miku -> vocaloid_miku2
 billy -> billy2_v2
 kf_greywolf -> kf_greywolf_kz
 gi_ganyu -> gi_ganyu_hz
+ugaunda*/dawae/lt_uganda -> uganda_knuckes_voice
+azur_lane_enterprise -> al_enterprise_v1
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
