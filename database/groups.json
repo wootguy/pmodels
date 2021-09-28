@@ -284,7 +284,6 @@
 	],
 	"Looney Toons - Bugs Bunny": [
 		"bugs_v2",
-		"bugs",
 		"pernalonga",
 		"bigchungus",
 		"bigchunguscb",
@@ -2337,7 +2336,6 @@
 		"csneo_skull2"
 	],
 	"Counter Strike Neo - Neo Female": [
-		"csneo_neo6",
 		"csneo_neo5",
 		"csneo_neo6",
 		"csneo_neo7",
@@ -6870,7 +6868,7 @@
 		"kool4"
 	],
 	"Krotchy": [
-		"krotchy",
+		"krotchy_v2",
 		"krotchy2"
 	],
 	"Kurumi Tokisaki": [
@@ -7619,10 +7617,6 @@
 		"th_asulym",
 		"th_asulymz"
 	],
-	"They Hunger - Commander": [
-		"th_commander",
-		"th_commanderz"
-	],
 	"They Hunger - Soldier": [
 		"th_soldier",
 		"th_soldierz",
@@ -8273,8 +8267,8 @@
 		"sora_valor"
 	],
 	"KonoSuba - Aqua": [
-		"sp_aqua",
-		"sp_aqua_hatm"
+		"sp_aqua_v2",
+		"sp_aqua_hatm_v2"
 	],
 	"Spike": [
 		"spike",
