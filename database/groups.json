@@ -16,6 +16,10 @@
 		"xmas_pussy",
 		"sam1"
 	],
+	"Grand Theft Auto - Claude": [
+		"claude",
+		"lc_claude"
+	],
 	"40k Marine": [
 		"40k_assault_marine_1",
 		"40k_assault_marine_2",
@@ -2023,7 +2027,7 @@
 		"fgo_astolfo-sf2",
 		"astolfo_mazz",
 		"astolfo_mazz_old",
-		"astolfo_mera_v1",
+		"astolfo_mera_v2",
 		"fgo_astolfo_black"
 	],
 	"South Park - Terrance and Phillip": [
@@ -3207,7 +3211,8 @@
 		"blackhawk_v2",
 		"bv91_v2",
 		"conflict",
-		"sc_helmet_purple"
+		"sc_helmet_purple",
+		"devil_helmet_hd"
 	],
 	"Colonel Sanders": [
 		"colonel_sanders",

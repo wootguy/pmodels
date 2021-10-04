@@ -817,6 +817,7 @@ assaulthelmet
 astolfo_mazz
 astolfo_mazz_old
 astolfo_mera_v1
+astolfo_mera_v2
 aswat
 aswat-gold
 aswat03
@@ -2033,6 +2034,7 @@ cryokeenbeta
 cryokeenbeta2
 cryomarinealpha
 cryotron1a
+crypto-137
 crysis_asiannano
 crysis_nano1
 crysis_nano2
@@ -2534,6 +2536,7 @@ destro
 destro_v2
 deuce
 deviant
+devil_helmet_hd
 devilhelmet
 devilhelmet_v2
 devilrobo
@@ -4769,6 +4772,7 @@ lavaburn
 lavadog
 lavaurban
 lavaurban_v2
+lc_claude
 lcs_toni
 ld_barney
 ld_barney2
