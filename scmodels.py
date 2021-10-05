@@ -10,6 +10,7 @@ from io import StringIO
 
 master_json = {}
 master_json_name = 'database/models.json'
+hash_json_name = 'database/hashes.json'
 replacements_json_name = 'database/replacements.json'
 alias_json_name = 'database/alias.json'
 versions_json_name = 'database/versions.json'
@@ -24,6 +25,8 @@ posterizer_path = '/home/pi/mediancut-posterizer/posterize'
 pngcrush_path = 'pngcrush'
 magick_path = 'convert'
 debug_render = False
+
+FL_CRASH_MODEL = 1   # model that crashes the game or model viewer
 
 
 # assumes chdir'd to the model directory beforehand
@@ -287,6 +290,8 @@ def generate_info_json(model_name, mdl_path, output_path):
 
 def update_models(work_path, skip_existing=True, skip_on_error=False, errors_only=True, info_only=False, update_master_json=False):
 	global master_json
+	global master_json_name
+	global hash_json_name
 	global magick_path
 	global pngcrush_path
 	global posterizer_path
@@ -300,6 +305,8 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	if update_master_json:
 		list_file = open("database/model_names.txt","w") 
 	failed_models = []
+	
+	hash_json = {}
 	
 	for idx, dir in enumerate(all_dirs):
 		model_name = dir
@@ -344,6 +351,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 		thumbnails_generated = os.path.isfile(tiny_thumb) and os.path.isfile(small_thumb) and os.path.isfile(large_thumb)
 		
 		anything_updated = False
+		broken_model = False
 		
 		try:
 			if (not os.path.isfile(info_json_path) or not skip_existing):
@@ -382,6 +390,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 			print(e)
 			traceback.print_exc()
 			failed_models.append(model_name)
+			broken_model = True
 			anything_updated = False
 			if not skip_on_error:
 				sys.exit()
@@ -413,8 +422,19 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 							totalPolys += polys
 					
 					filter_dat['polys'] = totalPolys
-					filter_dat['polys_ld'] = totalPolysLd
+					#filter_dat['polys_ld'] = totalPolysLd
 					filter_dat['size'] = infoJson["size"]
+					
+					flags = 0
+					if broken_model:
+						flags |= FL_CRASH_MODEL
+					filter_dat['flags'] = flags
+					
+					hash = infoJson['md5']
+					if hash not in hash_json:
+						hash_json[hash] = [model_name]
+					else:
+						hash_json[hash].append(model_name)
 					
 			master_json[model_name] = filter_dat
 			
@@ -423,6 +443,8 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	if update_master_json:
 		with open(master_json_name, 'w') as outfile:
 			json.dump(master_json, outfile)
+		with open(hash_json_name, 'w') as outfile:
+			json.dump(hash_json, outfile)
 		list_file.close()
 	
 	print("\nFinished!")
@@ -605,6 +627,18 @@ def load_all_model_hashes(path):
 	
 	return model_hashes
 
+# it takes a long time to load model hashes for thousands of models, so the list of hashes is saved
+# in a single file whenever the database is updated. This loads much faster.
+def load_cached_model_hashes():
+	global hash_json_name
+	
+	with open(hash_json_name) as f:
+		json_dat = f.read()
+		return json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+		
+	return None
+		
+
 def find_duplicate_models(work_path):	
 	model_hashes = load_all_model_hashes(work_path)
 	print("\nAll duplicates:")
@@ -722,7 +756,7 @@ def install_new_models():
 			print("ERROR: Duplicate models in install folder:" + msg)
 			any_dups = True
 	
-	model_hashes = load_all_model_hashes(models_path)
+	model_hashes = load_cached_model_hashes()
 	dups = []
 	
 	for hash in install_hashes:
