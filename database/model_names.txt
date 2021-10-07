@@ -2036,6 +2036,7 @@ cryomarinealpha
 cryotron1a
 crypto-137
 crypto-137_v2
+crypto-137_v3
 crysis_asiannano
 crysis_nano1
 crysis_nano2
@@ -5685,6 +5686,10 @@ nazi_zomb3
 nazi_zomb4
 nazicap
 nazid250
+necoarc
+necoarcbubbles
+necoarcchaos
+necoarcdestiny
 neet64
 neet64_v2
 negro
@@ -5736,6 +5741,7 @@ nekomata_mizugi
 nekomata_mizugi_d
 nekomata_mizugi_d_v2
 nekomata_mizugi_v2
+nekomata_ouo
 nekomata_scnormal
 nekomata_scnormal_v2
 nekomata_skirt
@@ -7133,6 +7139,7 @@ s8n_techno
 sa_bigsmoke
 sa_cesar
 sa_cj
+sa_cj2
 sa_kendl
 sa_ogloc
 sa_ryder

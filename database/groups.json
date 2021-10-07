@@ -1212,7 +1212,15 @@
 		"cj_hdsuit",
 		"cj_ldsuit",
 		"cj_tcsuit",
-		"cj_udsuit"
+		"cj_udsuit",
+		"sa_cj",
+		"sa_cj2"
+	],
+	"Tsukihime - Neco-Arc ": [
+		"necoarc",
+		"necoarcbubbles",
+		"necoarcchaos",
+		"necoarcdestiny"
 	],
 	"Closers - Tina": [
 		"closers_tina",
@@ -3887,7 +3895,8 @@
 		"nekomata_tback",
 		"nekomata_zinbei_d_v2",
 		"nekomata_zinbei_v2",
-		"nyakotama_v2"
+		"nyakotama_v2",
+		"nekomata_ouo"
 	],
 	"Nekomimi": [
 		"nekomimi_agent2_v2",
