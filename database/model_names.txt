@@ -2037,6 +2037,7 @@ cryotron1a
 crypto-137
 crypto-137_v2
 crypto-137_v3
+crypto-137_v4
 crysis_asiannano
 crysis_nano1
 crysis_nano2
@@ -4502,6 +4503,7 @@ kc_murasame_a
 kc_northern
 kc_northern_avia
 kc_northern_v2
+kc_northern_v3
 kc_shimakaze_v2_n
 keine
 kellerscuba
@@ -5833,6 +5835,7 @@ nekotama4
 nekotama4b
 nekotama_nc
 nekotamab
+nekotoromaid
 neo
 neo2
 neon_cow
@@ -7471,6 +7474,7 @@ shark
 sharks
 sharks_v2
 shaun
+she-venom
 shedevil
 shephard
 shephard_ld
@@ -8650,6 +8654,7 @@ the_fist_v2
 the_flash
 the_joker
 the_joker_v2
+the_legged_bewb
 the_one
 the_terminator
 the_terminator_v2

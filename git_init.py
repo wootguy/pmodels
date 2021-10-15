@@ -14,7 +14,7 @@ ssh_host_name = 'wootdata.github.com' # used to select an ssh key from ~/.ssh/co
 num_buckets = 32
 
 access_token = ''
-with open('access_token.txt', 'r') as file:
+with open('/home/pi/git_access_token.txt', 'r') as file:
     access_token = file.read().replace('\n', '')
 
 github = Github(access_token)

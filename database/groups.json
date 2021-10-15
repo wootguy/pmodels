@@ -20,6 +20,10 @@
 		"claude",
 		"lc_claude"
 	],
+	"Cowboy Bebop - Spike Spiegel": [
+		"spikespiegel",
+		"spikenocoat"
+	],
 	"40k Marine": [
 		"40k_assault_marine_1",
 		"40k_assault_marine_2",
@@ -5480,8 +5484,10 @@
 	"Nekopara - Ethanol": [
 		"nekopara_ethanol_v5",
 		"nekopara_ethanol_v4",
+		"nekopara_ethanol_v3",
 		"nekopara_ethanol_v1",
-		"nekopara_ethanol_red"
+		"nekopara_ethanol_red",
+		"nekotoromaid"
 	],
 	"Dog": [
 		"[dogs]_v2",
@@ -7385,7 +7391,8 @@
 		"civilian_toon",
 		"k4zuko_v2",
 		"kim1",
-		"toon_engineer_c"
+		"toon_engineer_c",
+		"yellow_medic"
 	],
 	"Nobita": [
 		"nobita",
@@ -8531,7 +8538,8 @@
 	],
 	"Touhou - Yuyusama": [
 		"touhou_yuyusama",
-		"touhou_yuyusama2"
+		"touhou_yuyusama2",
+		"touhou_yuyuko_fumo"
 	],
 	"Black Beard": [
 		"blackbeard_v2",
