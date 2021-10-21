@@ -24,6 +24,11 @@
 		"spikespiegel",
 		"spikenocoat"
 	],
+	"Fate/Extra - Rin Tohsaka": [
+		"rintohsaka",
+		"ferin",
+		"fering"
+	],
 	"40k Marine": [
 		"40k_assault_marine_1",
 		"40k_assault_marine_2",
@@ -3224,7 +3229,8 @@
 		"bv91_v2",
 		"conflict",
 		"sc_helmet_purple",
-		"devil_helmet_hd"
+		"devil_helmet_hd",
+		"hevsmile"
 	],
 	"Colonel Sanders": [
 		"colonel_sanders",
@@ -3347,7 +3353,8 @@
 		"tc_dr.kleiner",
 		"tc_alternative-dr.kleiner",
 		"adidas_v2",
-		"boysoldier"
+		"boysoldier",
+		"smileheadscientist"
 	],
 	"Pokemon - Professor Oak": [
 		"profoak",
@@ -4768,7 +4775,8 @@
 	"Kizuna AI": [
 		"vtuber_kizuna",
 		"vtuber_kizuna_black",
-		"vtuber_kizuna_ld_v3"
+		"vtuber_kizuna_ld_v3",
+		"kizuna_halloween"
 	],
 	"Resident Evil - Merchant": [
 		"buoneror4",
@@ -7059,10 +7067,11 @@
 		"mew_new",
 		"mew_lt"
 	],
-	"Uraraka": [
+	"My Hero Academia - Ochaco Uraraka": [
 		"mha_uraraka",
 		"mha_uraraka-visor",
-		"mha_uraraka_school"
+		"mha_uraraka_school",
+		"mha_uraraka_s5"
 	],
 	"Miketama": [
 		"miketama",

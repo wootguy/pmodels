@@ -3028,6 +3028,8 @@ femhostage01
 femhostage02
 femsci
 femspartan
+ferin
+fering
 fey
 ff7_anim_caitsith
 ff7_anim_cloud
@@ -3952,6 +3954,7 @@ hevscientist5_ld
 hevscientist_ld
 hevsf
 hevslick
+hevsmile
 hevsnark
 hevsp
 hevwalter
@@ -4279,6 +4282,9 @@ islave_rb
 islave_rb_v2
 itachi
 italian_vip
+iv_johnny
+iv_luis
+iv_niko
 ivan
 iyou
 j_blue
@@ -4592,6 +4598,7 @@ kitkat
 kitsune_hev
 kiwami
 kiwi
+kizuna_halloween
 kkaoru
 kkk
 kkk_v2
@@ -4905,6 +4912,7 @@ lolgwendoll
 lolinam
 lolipirate
 lolisleepy
+lolkatarina
 lolkdaahri
 lolkindred
 lollux
@@ -5238,6 +5246,7 @@ mgs4_pmc7
 mgs_snake
 mha_uraraka
 mha_uraraka-visor
+mha_uraraka_s5
 mha_uraraka_school
 mhcash
 mhcerberus
@@ -7609,6 +7618,7 @@ smg4melony
 smid
 smij
 smijv4
+smileheadscientist
 smith
 smith_v2
 smokerl4d
