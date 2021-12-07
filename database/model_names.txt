@@ -4637,6 +4637,7 @@ kiwami
 kiwi
 kizuna_halloween
 kizuna_winter
+kizuna_xmas
 kkaoru
 kkk
 kkk_v2
