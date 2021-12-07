@@ -2680,7 +2680,8 @@
 		"hl_recon",
 		"hl_shotgun",
 		"op4_mpg",
-		"op4_mpg2"
+		"op4_mpg2",
+		"bms_shephard"
 	],
 	"Knuckles the Echidna": [
 		"knuckles2",
@@ -3282,53 +3283,37 @@
 		"cleaner",
 		"bryan"
 	],
-	"QuakeWorld Team Fortress - Civilian": [
+	"QuakeWorld Team Fortress - Player": [
 		"qwtf_civilian",
 		"qwtf_civilian_blue",
-		"qwtf_civilian_red"
-	],
-	"QuakeWorld Team Fortress - Demo": [
+		"qwtf_civilian_red",
 		"qwtf_demo",
 		"qwtf_demo_blue",
-		"qwtf_demo_red"
-	],
-	"QuakeWorld Team Fortress - Engineer": [
+		"qwtf_demo_red",
 		"qwtf_engineer",
 		"qwtf_engineer_blue",
 		"qwtf_engineer_old",
 		"qwtf_eng_old_blue",
 		"qwtf_eng_old_red",
-		"qwtf_engineer_red"
-	],
-	"QuakeWorld Team Fortress - Heavy": [
+		"qwtf_engineer_red",
 		"qwtf_heavy",
 		"qwtf_heavy_blue",
 		"qwtf_heavy_red",
 		"qwtf_medic",
 		"qwtf_medic_blue",
-		"qwtf_medic_red"
-	],
-	"QuakeWorld Team Fortress - Pyro": [
+		"qwtf_medic_red",
 		"qwtf_pyro",
 		"qwtf_pyro_blue",
-		"qwtf_pyro_red"
-	],
-	"QuakeWorld Team Fortress - Scout": [
+		"qwtf_pyro_red",
 		"qwtf_scout",
 		"qwtf_scout_blue",
-		"qwtf_scout_red"
-	],
-	"QuakeWorld Team Fortress - Sniper": [
+		"qwtf_scout_red",
 		"qwtf_sniper",
 		"qwtf_sniper_blue",
-		"qwtf_sniper_red"
-	],
-	"QuakeWorld Team Fortress - Soldier": [
+		"qwtf_sniper_red",
 		"qwtf_soldier",
 		"qwtf_soldier_blue",
-		"qwtf_soldier_red"
-	],
-	"QuakeWorld Team Fortress - Spy": [
+		"qwtf_soldier_red",
 		"qwtf_spy",
 		"qwtf_spy_blue",
 		"qwtf_spy_red"
