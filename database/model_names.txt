@@ -4737,15 +4737,18 @@ kurumi_tokisaki
 kv_aperture
 kv_zatsunemiku
 kv_zatsunemiku_s1
+kz_blaze
 kz_bowsette
 kz_bowsette_v2
 kz_elin_01
 kz_elin_02
+kz_elin_03
 kz_elin_04_v1
 kz_elin_04_v2
 kz_elin_04_v3
 kz_elin_05_v1
 kz_elin_05_v2
+kz_elin_07
 kz_fgo_mheroine
 kz_kazami
 kz_lolimiku
@@ -4770,7 +4773,10 @@ kz_nikooneshot
 kz_op_evilmiku
 kz_op_uni
 kz_reimu
+kz_tda_etihw
 kz_touhou_momiji
+kz_yonaka
+kz_yosafire
 l4d2_coach
 l4d2_ellis
 l4d2_nick
@@ -5316,6 +5322,7 @@ mikeforce
 miketama
 miketama_ahl
 miketama_small
+miketama_small_v1
 miketama_small_v2
 mikito
 mikkelthefreak
@@ -8717,6 +8724,7 @@ th_jack_sd
 th_neil
 th_neil_sd
 th_noheadz
+th_nue_houjuu
 th_nurse
 th_nurse_sd
 th_nypdcop
@@ -8933,6 +8941,7 @@ touhou_koishi
 touhou_koishi2
 touhou_koishiscarletv1
 touhou_kotohime
+touhou_kotohime_v2
 touhou_letty
 touhou_marisa3
 touhou_meiling

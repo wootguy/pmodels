@@ -1267,7 +1267,7 @@
 		"touhou_kochiya_sanae_v2",
 		"touhou_kogasa_v2",
 		"touhou_koishi",
-		"touhou_kotohime",
+		"touhou_kotohime_v2",
 		"touhou_letty",
 		"touhou_meiling_v2",
 		"touhou_mia",
@@ -1466,6 +1466,10 @@
 		"kc_hoppou_tot",
 		"kizuna_winter",
 		"kizuna_xmas",
+		"kz_tda_etihw",
+		"kz_yonaka",
+		"kz_yosafire",
+		"th_nue_houjuu",
 		"no-face"
 	]
 }
