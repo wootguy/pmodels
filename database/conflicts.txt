@@ -30,6 +30,7 @@ gi_ganyu -> gi_ganyu_hz
 dawae/lt_uganda/uganda* -> uganda_knuckes_voice
 azur_lane_enterprise -> al_enterprise_v1
 sa_cj -> sa_cj2
+op4_shephard -> bms_shephard
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
@@ -39,6 +40,8 @@ TWLZ player model pack. Sometimes _v3 and _v4 were added to match chronological
 dates of the models, meaning the original name isn't used anymore because I only
 know for sure that the _v2 version is correctly named (e.g. rouge -> rouge_v3 instead
 of swapping rouge_v2 and rouge).
+
+added _v2 to models that were updated on GameBanana without being renamed.
 
 added "_ld" to all player models from this pack:
 https://gamebanana.com/mods/167285

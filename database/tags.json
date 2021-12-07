@@ -525,7 +525,7 @@
 		"freedom2",
 		"freezer",
 		"frieza",
-		"fscathach",
+		"fscathach_v2",
 		"fsn_saber",
 		"fsnsaber(out)",
 		"furry_maid_1",
@@ -764,7 +764,7 @@
 		"kc_murasame",
 		"gf_9a-91_smol_v2",
 		"kc_murasame_a",
-		"kc_northern_avia",
+		"kc_northern_avia_v2",
 		"kc_northern_v3",
 		"keine",
 		"kenshin",
@@ -1453,6 +1453,18 @@
 		"ferin",
 		"fering",
 		"mha_uraraka_s5",
-		"kizuna_halloween"
+		"kizuna_halloween",
+		"astolfo_fumo",
+		"fetaiga",
+		"i_inyuasha",
+		"i_kagome",
+		"i_kykyo",
+		"i_miroku",
+		"i_naraku",
+		"i_sango",
+		"i_sesshomaru",
+		"kc_hoppou_tot",
+		"kizuna_winter",
+		"no-face"
 	]
 }
