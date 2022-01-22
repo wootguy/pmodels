@@ -849,8 +849,12 @@ def install_new_models():
 	print("- Update alias.json if you renamed any models")
 	print("- Update groups.json and tags.json if needed")
 	print("- Update replacements.json in TooManyPlugins plugin if any new")
-	print("- Change the last-updated date in index.html and push changes")
+	print("- Change the last-updated date in index.html")
 	print("- git add -A; git commit; git push;")
+	print("")
+	print("If any model sounds were added:")
+	print("- git --git-dir=.git_snd --work-tree=. add sound -f")
+	print("- commit and push")
 	print("")
 
 def pack_models(all_models):
