@@ -702,13 +702,19 @@
 	],
 	[
 		"kz_mikutda_v4",
-		"kz_mikutda_v3",
-		"kz_mikutda_v2",
-		"kz_mikutda_v1",
-		"kz_mikutda_v1_2",
-		"kz_mikutda_v2_2",
-		"kz_mikutda_v3_2",
 		"kz_mikutda_v4_2"
+	],
+	[
+		"kz_mikutda_v3",
+		"kz_mikutda_v3_2"
+	],
+	[
+		"kz_mikutda_v2",
+		"kz_mikutda_v2_2"
+	],
+	[
+		"kz_mikutda_v1",
+		"kz_mikutda_v1_2"
 	],
 	[
 		"lingling_v2",
