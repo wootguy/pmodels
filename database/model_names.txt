@@ -819,6 +819,8 @@ astolfo_mazz
 astolfo_mazz_old
 astolfo_mera_v1
 astolfo_mera_v2
+astolfo_ranian
+astolfo_xmas
 aswat
 aswat-gold
 aswat03
@@ -1173,6 +1175,7 @@ biokeenop
 biomechanoid
 bip01
 biped
+bipped
 bitch
 bitch_v2
 bitterman
@@ -1534,6 +1537,7 @@ cappie_v2
 capt-hornet
 capt-hornet_v2
 capt_a
+captain_colour
 captain_hornet
 captain_hornet_v2
 captain_scarlet
@@ -1776,6 +1780,13 @@ cloud_strife
 cloud_strife_v2
 clowncop
 clowncop_v2
+cm3d2_catgirl
+cm3d2_dragon
+cm3d2_fox
+cm3d2_kagerou2
+cm3d2_miku_bunny
+cm3d2_succubus_1
+cm3d2_succubus_2
 coat
 cobra1
 cobra2
@@ -2618,6 +2629,7 @@ discoball
 discoman
 discoman2
 discoman_v2
+divayth
 dk64_chunky
 dk64_diddy
 dk64_dixie
@@ -2671,6 +2683,7 @@ dmc4_ns
 dmc5_dante
 dmc_dante
 dmc_vergil
+dmc_vergil2
 dmz_brolly
 dmz_buu
 dmz_cell
@@ -3099,6 +3112,7 @@ flandre_bikini
 flandre_cab_nude
 flandre_nude
 flasher
+flatshade
 fleashpound_v1
 floatershit
 flora
@@ -3227,6 +3241,7 @@ fusespiked
 fuuko
 fuuko_v2
 g_freeman
+g_gintoki
 gaara
 gaara_16
 gabeprismriver
@@ -4022,6 +4037,7 @@ his_royal_guardian
 his_royal_guardian_v2
 hislave
 hitbarney
+hitbox
 hitgrunt
 hithevbar
 hitler
@@ -4086,11 +4102,19 @@ hl_pitdrone
 hl_recon
 hl_sarge
 hl_shotgun
+hlai_sunkist
+hle_sniper_grunt
+hle_sniper_grunt2
+hle_sniper_grunt3
 hlf_dedz_grdn
 hlgawrgura
 hlgawrgurabig
 hlpc_billy
 hlpc_billy_v2
+hlrs_fhelmet
+hlrs_gina
+hlrs_gordon
+hlrs_helmet
 hls_hgrunt
 hls_hgruntb
 hm
@@ -4140,13 +4164,23 @@ holli
 holli_v2
 holo
 holo_aqua_lowpoly
+holo_baelz_lowpoly
 holo_coco_lowpoly
+holo_korone_lowpoly
 holo_mori_lowpoly
 holo_nenechi_lowpoly
+holo_okayu_lowpoly
 holo_ollie_lowpoly
 holo_pekora_lowpoly
+holo_polka_lowpoly
 holo_rushia_lowpoly
+holo_sana_lowpoly
+holo_subaru_ff7
+holo_takodachi_hsize
+holo_takodachi_psize
+holo_towa_lowpoly
 holo_v2
+holo_watame_lowpoly
 holochrome
 hololive_fubuki
 holoshit
@@ -4187,6 +4221,8 @@ hunk
 hunk1
 hunk2
 hunk_hd
+hunk_re2r
+hunk_re2r_v2
 hunk_re4
 hunk_v2
 hunk_v3
@@ -4547,6 +4583,7 @@ kc_northern_avia
 kc_northern_avia_v2
 kc_northern_v2
 kc_northern_v3
+kc_northern_v4
 kc_shimakaze_v2_n
 keine
 kellerscuba
@@ -5096,6 +5133,7 @@ madotuki_v3
 madscientist
 madscientist_ld
 maelstrom00
+maeve_street_v1
 mafiaboss
 mafioso
 mafioso2
@@ -5225,6 +5263,7 @@ mce_ene
 mcpixel
 mdn_ankokuboshi_kurome
 mdn_tenno_uzume-c2
+mdn_tenno_uzume-c2_v2
 mdn_tenno_uzume-c3
 mdn_tenno_uzume-mizugi
 mdn_tennouboshi_uzume
@@ -5284,6 +5323,8 @@ mgs1_guard
 mgs2_tengu
 mgs2snake
 mgs2soldier
+mgs3_ocelot
+mgs3_snake
 mgs4_pmc
 mgs4_pmc1
 mgs4_pmc2
@@ -5297,6 +5338,8 @@ mha_uraraka
 mha_uraraka-visor
 mha_uraraka_s5
 mha_uraraka_school
+mhahimikoa
+mhahimikob
 mhcash
 mhcerberus
 mhhoodb
@@ -5419,8 +5462,13 @@ mk9_kitana
 mk9_smoke
 mk_frost
 mk_kenshi
+mk_kunglao
 mk_nightwolf
+mk_raiden
 mk_rain
+mk_scorpion
+mk_shangtsung
+mk_subzero
 mlc_allied_soldier
 mlc_desert
 mlc_hecu
@@ -5661,6 +5709,11 @@ n64_mario
 n64_mario_map
 n64_metalmario
 nabeshin
+nagato_bikini
+nagato_xmas
+nagato_xmas_black
+nagato_xmas_blackn
+nagato_xmas_n
 naked
 nakedkobold3
 nakedkobold_j4
@@ -5984,6 +6037,7 @@ nomak
 nomble
 nono
 nonon_regalia
+normalmap
 not_precached_man
 not_precached_man_v2
 nox
@@ -6517,6 +6571,7 @@ police4
 policecar
 policecar2
 policeman
+poliisikoira
 politician
 poniko
 poniko_v2
@@ -7712,6 +7767,7 @@ smg4melony_v2
 smid
 smij
 smijv4
+smileheadgman
 smileheadscientist
 smith
 smith_v2
@@ -7944,7 +8000,9 @@ sovvdv_1975cb
 sovvdv_1985c1
 sp22
 sp_aqua
+sp_aqua_color
 sp_aqua_hatm
+sp_aqua_hatm_color
 sp_aqua_hatm_v2
 sp_aqua_v2
 sp_arabianmiku
@@ -9219,6 +9277,7 @@ usmc-regenlistee
 usmc-sniper
 usmcc
 uwan
+uzaki_hana
 v
 v&mgirl
 v_franklin
@@ -9307,6 +9366,8 @@ vocaloid_yukari-yuzuki
 vocaloid_yukari_yuzuki
 vocaloid_yuzuki-yukari
 vocaloid_yuzuki_yukari
+voms_pikamee_lowpoly
+voms_tomo_lowpoly
 vorinc
 vortigaunt_junior
 votoms
@@ -9416,6 +9477,7 @@ wind_shark
 wind_shark_v2
 wingzero
 wireframe
+wireframe2
 wirez
 witch
 withered_bonnie
@@ -9529,6 +9591,7 @@ yellow_medic
 yellowcomet
 yellowstick
 yellowstick_v2
+ying_street_v1
 yoda
 yoda2
 yoda_the_droid
@@ -9596,6 +9659,8 @@ zell
 zero
 zero2
 zerob
+zerotwo_v1
+zerotwo_v2
 zgundam
 zicke
 zicke_fun

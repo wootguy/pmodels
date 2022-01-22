@@ -84,7 +84,8 @@
 		"re_umbrella_hunk",
 		"re_umbrella_hunk2",
 		"re_succ_combat_tech",
-		"re_succ_combat_technician"
+		"re_succ_combat_technician",
+		"hunk_re2r_v2"
 	],
 	"8toushin": [
 		"8toushin_v2",
@@ -199,7 +200,12 @@
 		"bigboss3",
 		"boss",
 		"pliskin",
-		"tux"
+		"tux",
+		"mgs3_snake"
+	],
+	"My Hero Academia - Himiko Toga": [
+		"mhahimikoa",
+		"mhahimikob"
 	],
 	"God of War - Kratos": [
 		"ab_kratos",
@@ -293,7 +299,12 @@
 		"al_nagato",
 		"al_nagato_ld",
 		"al_nagato_meranian",
-		"al_meragato_v1"
+		"al_meragato_v1",
+		"nagato_bikini",
+		"nagato_xmas",
+		"nagato_xmas_black",
+		"nagato_xmas_blackn",
+		"nagato_xmas_n"
 	],
 	"Looney Toons - Bugs Bunny": [
 		"bugs_v2",
@@ -511,6 +522,8 @@
 		"bs_unarmored_barney_2",
 		"camobarney_v2",
 		"dis_barney",
+		"flatshade",
+		"normalmap",
 		"hevbarney",
 		"hevbarney2",
 		"hl2_barney",
@@ -1922,7 +1935,8 @@
 	"Devil May Cry - Vergil": [
 		"vergil_dmc",
 		"dmc_vergil",
-		"dmc3_vergil_v2"
+		"dmc3_vergil_v2",
+		"dmc_vergil2"
 	],
 	"Duke Nukem": [
 		"duke nukem",
@@ -2055,7 +2069,20 @@
 		"astolfo_mazz",
 		"astolfo_mazz_old",
 		"astolfo_mera_v2",
-		"fgo_astolfo_black"
+		"fgo_astolfo_black",
+		"astolfo_ranian",
+		"astolfo_xmas",
+		"astolfo_fumo"
+	],
+	"Biped Model Skeleton": [
+		"bip01",
+		"bipped",
+		"hitbox",
+		"wireframe2"
+	],
+	"DARLING in the FRANXX - Zero Two": [
+		"zerotwo_v1",
+		"zerotwo_v2"
 	],
 	"South Park - Terrance and Phillip": [
 		"sp_phillip",
@@ -2139,6 +2166,7 @@
 		"hlf_dedz_grdn",
 		"skeleton1",
 		"blur_v2",
+		"hlrs_gordon",
 		"betagordon_ld",
 		"crysisgordon",
 		"capturedgordon",
@@ -2304,7 +2332,9 @@
 		"acidburn",
 		"az_gina",
 		"az_gina2",
-		"dc_gina"
+		"dc_gina",
+		"hlrs_fhelmet",
+		"hlrs_gina"
 	],
 	"Immolater": [
 		"immolator",
@@ -2681,7 +2711,10 @@
 		"hl_shotgun",
 		"op4_mpg",
 		"op4_mpg2",
-		"bms_shephard"
+		"bms_shephard",
+		"hle_sniper_grunt",
+		"hle_sniper_grunt2",
+		"hle_sniper_grunt3"
 	],
 	"Knuckles the Echidna": [
 		"knuckles2",
@@ -2893,6 +2926,7 @@
 		"gman_ld",
 		"gman2",
 		"gman_hd",
+		"smileheadgman",
 		"gman_wait",
 		"$",
 		"vatoslocos",
@@ -3149,6 +3183,10 @@
 		"fallout3_t-51b",
 		"fnv_t-51b"
 	],
+	"Hololive - Takodachi": [
+		"holo_takodachi_hsize",
+		"holo_takodachi_psize"
+	],
 	"Half-Life - HEV Suit": [
 		"dm_helmet",
 		"devilhelmet_v2",
@@ -3158,6 +3196,7 @@
 		"combat_hev",
 		"cryodark1a",
 		"hev_drip",
+		"hlrs_helmet",
 		"barney_hev_helmet",
 		"ld_def",
 		"assaulthelmet",
@@ -5184,7 +5223,7 @@
 		"kc_inazuma_n"
 	],
 	"Kancolle - Nothern": [
-		"kc_northern_v3",
+		"kc_northern_v4",
 		"kc_northern_avia_v2",
 		"kc_northern_avia",
 		"2d_kc_northern",
@@ -5296,6 +5335,10 @@
 		"touhou_reimu3",
 		"touhou_reimu_mmd"
 	],
+	"Metal Gear Solid - Ocelot": [
+		"ocelot",
+		"mgs3_ocelot"
+	],
 	"MCE ENE": [
 		"mce_ene",
 		"2d_mce_ene"
@@ -5306,7 +5349,7 @@
 	],
 	"Hyperdimension Neptunia - Uzume Tennouboshi": [
 		"h-mdn_tenno_uzume",
-		"mdn_tenno_uzume-c2",
+		"mdn_tenno_uzume-c2_v2",
 		"mdn_tenno_uzume-c3",
 		"mdn_tenno_uzume-mizugi",
 		"mdn_tennouboshi_uzume",
@@ -6148,7 +6191,8 @@
 	],
 	"Captain Scarlet": [
 		"cappie_v2",
-		"captain_scarlet_v2"
+		"captain_scarlet_v2",
+		"captain_colour"
 	],
 	"Carter": [
 		"carter_v2",
@@ -6840,7 +6884,8 @@
 	],
 	"James Bond": [
 		"jamesbond",
-		"james_bond"
+		"james_bond",
+		"007tux_v2"
 	],
 	"James Soldier": [
 		"jamesdesert",
@@ -8143,7 +8188,8 @@
 		"scorpion2",
 		"scorpion3",
 		"scorpion_v2",
-		"scorpion"
+		"scorpion",
+		"mhahimikob"
 	],
 	"Scrote": [
 		"scrote",
@@ -8390,7 +8436,9 @@
 	],
 	"KonoSuba - Aqua": [
 		"sp_aqua_v2",
-		"sp_aqua_hatm_v2"
+		"sp_aqua_hatm_v2",
+		"sp_aqua_color",
+		"sp_aqua_hatm_color"
 	],
 	"Spike": [
 		"spike",
@@ -8418,7 +8466,8 @@
 		"subzero",
 		"sub-zero2_v2",
 		"sub-zero2test",
-		"sub-zero3"
+		"sub-zero3",
+		"mk_subzero"
 	],
 	"Swat2": [
 		"swatjim",
