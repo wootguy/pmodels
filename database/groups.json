@@ -6376,7 +6376,8 @@
 	],
 	"Moonman": [
 		"moonman",
-		"nr_moonman"
+		"nr_moonman",
+		"moonhitler_v2"
 	],
 	"TGP": [
 		"[ica]2k",
@@ -8658,9 +8659,9 @@
 		"sanae",
 		"touhou_kochiya_sanae_v2",
 		"touhou_sanae",
-		"touhou_sanae_jkc_v2",
-		"touhou_sanae_jkg_v2",
-		"touhou_sanae_jky_v2"
+		"touhou_sanae_jkc_v3",
+		"touhou_sanae_jkg_v3",
+		"touhou_sanae_jky_v3"
 	],
 	"Touhou - Mokou": [
 		"mokou",

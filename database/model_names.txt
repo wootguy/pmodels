@@ -2876,6 +2876,7 @@ einarhev
 einstein
 eirin
 eisendk
+el_chavo
 el_chivo
 el_diablo
 el_diablo_v2
@@ -5542,6 +5543,8 @@ monoko2_v3
 monspeet
 monster_hunter
 monster_hunter_v2
+moonhitler
+moonhitler_v2
 moonman
 morara
 morara2
@@ -9039,10 +9042,13 @@ touhou_sakuya_gothic2
 touhou_sanae
 touhou_sanae_jkc
 touhou_sanae_jkc_v2
+touhou_sanae_jkc_v3
 touhou_sanae_jkg
 touhou_sanae_jkg_v2
+touhou_sanae_jkg_v3
 touhou_sanae_jky
 touhou_sanae_jky_v2
+touhou_sanae_jky_v3
 touhou_sekibanki
 touhou_sekibanki_v2
 touhou_shinmyou
