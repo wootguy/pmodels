@@ -22,7 +22,10 @@
 	],
 	"Cowboy Bebop - Spike Spiegel": [
 		"spikespiegel",
-		"spikenocoat"
+		"spikenocoat",
+		"spike",
+		"spike2_v2",
+		"nabeshin"
 	],
 	"Fate/Extra - Rin Tohsaka": [
 		"rintohsaka",
@@ -8443,11 +8446,6 @@
 		"sp_aqua_hatm_v2",
 		"sp_aqua_color",
 		"sp_aqua_hatm_color"
-	],
-	"Spike": [
-		"spike",
-		"spike2_v2",
-		"nabeshin"
 	],
 	"Vash": [
 		"vash",
