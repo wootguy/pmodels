@@ -307,7 +307,14 @@
 		"nagato_xmas",
 		"nagato_xmas_black",
 		"nagato_xmas_blackn",
-		"nagato_xmas_n"
+		"nagato_xmas_n",
+		"nu_nagato_alphaq",
+		"sazabi_nagato_nobody"
+	],
+	"Henri": [
+		"sc_henri2",
+		"sc_henrihelmet",
+		"sc_henrihelmet2"
 	],
 	"Looney Toons - Bugs Bunny": [
 		"bugs_v2",
@@ -566,7 +573,8 @@
 		"cap_bs_unarmored_1",
 		"cap_bs_unarmored_2",
 		"capturedsnipers",
-		"carbon_v2"
+		"carbon_v2",
+		"ig-ldbarney"
 	],
 	"Kancolle - Berni": [
 		"kc_berni",
@@ -593,7 +601,8 @@
 		"camootis_v2",
 		"cadaver",
 		"riza",
-		"prdel_v2"
+		"prdel_v2",
+		"otis_hev"
 	],
 	"Amy Rose": [
 		"amy_s5",
@@ -642,7 +651,8 @@
 		"david_monster",
 		"david_monster_axe",
 		"darkydude_v2",
-		"p0cketchange"
+		"p0cketchange",
+		"david_da"
 	],
 	"Army": [
 		"army_infantry",
@@ -2076,7 +2086,11 @@
 		"fgo_astolfo_black",
 		"astolfo_ranian",
 		"astolfo_xmas",
-		"astolfo_fumo"
+		"astolfo_fumo",
+		"astolfo_mera_dcf",
+		"astolfo_mera_dcf2",
+		"astolfo_yang_v1",
+		"meranian_v2fa"
 	],
 	"Biped Model Skeleton": [
 		"bip01",
@@ -2228,7 +2242,9 @@
 		"capturedsiler",
 		"az_gordon",
 		"az_gordon2",
-		"dc_gordon"
+		"dc_gordon",
+		"ig-ldgordon",
+		"ivan_space"
 	],
 	"Etac": [
 		"etac",
@@ -3304,7 +3320,8 @@
 		"az_helmetf",
 		"az_helmetf2",
 		"dc_helmet",
-		"tenko_helmet"
+		"tenko_helmet",
+		"retarded_helmet_alpha"
 	],
 	"G-Catman": [
 		"gcatman",
@@ -3595,11 +3612,16 @@
 	],
 	"Girls' Frontline - HK416": [
 		"gfl_hk416_v2",
-		"gfl_hk416_hatless"
+		"gfl_hk416_hatless",
+		"gakusei_hk416"
 	],
 	"Girls' Frontline - Negev": [
 		"gfl_negev",
 		"gfl_negev_shoeless"
+	],
+	"Genshin Impact - Kuki Shinobu": [
+		"gi_kukishinobu",
+		"gi_kukishinobu_nm"
 	],
 	"Kirby Star Allies - Susie": [
 		"ksa_parallelsusie",
@@ -3840,7 +3862,10 @@
 		"mariokartwiimario",
 		"mariosmall",
 		"sbbmario",
-		"sbbmarionohat"
+		"sbbmarionohat",
+		"gusgusgus",
+		"mario64odyssey",
+		"marioodyssey_v2"
 	],
 	"Super Mario Galaxy 4 - Meggy": [
 		"smg4meggy",
@@ -4910,7 +4935,11 @@
 		"vtuber_kizuna_ld_v3",
 		"kizuna_halloween",
 		"kizuna_winter",
-		"kizuna_xmas"
+		"kizuna_xmas",
+		"cyberzuna",
+		"cyberzuna_c",
+		"kizuna_yin_v1",
+		"thicc_kizuna"
 	],
 	"Resident Evil - Merchant": [
 		"buoneror4",
@@ -5607,8 +5636,12 @@
 		"rabid",
 		"rip_van_drip"
 	],
+	"Arknights - Exusiai": [
+		"arknights_exusiai",
+		"arknights_exusiai-c2"
+	],
 	"NieR - YoRHa": [
-		"yorha_2b",
+		"yorha_2b_scuttle_a1",
 		"2d_yorha_2b"
 	],
 	"Yandere Simulator - Girl": [
@@ -5973,7 +6006,21 @@
 		"cap_hl_construction",
 		"bc_gus",
 		"forkliftshit",
-		"technician_v2"
+		"technician_v2",
+		"barney_gus",
+		"clsuit_gus",
+		"combine_gus",
+		"forklift",
+		"gus_heavy",
+		"guss",
+		"hevgus",
+		"hevgus_c",
+		"hevgusmk2",
+		"hevgusmk3",
+		"hl2_gus",
+		"op4_gus",
+		"scientist_gus",
+		"thetalkingheads"
 	],
 	"Half-Life - Valve": [
 		"alpha_valve",
@@ -6231,7 +6278,8 @@
 		"nightmare_chica",
 		"toy_chica_v1",
 		"toy_chica_v2",
-		"withered_chica"
+		"withered_chica",
+		"toychica"
 	],
 	"Half-Life - Chumtoad": [
 		"chubby",
@@ -6316,7 +6364,9 @@
 		"withered_bonnie",
 		"plushtrap",
 		"springtrap",
-		"da_springtrap"
+		"da_springtrap",
+		"toybonnie",
+		"toyfreddy"
 	],
 	"SPX - Zombie": [
 		"spx_berserker",
@@ -6823,7 +6873,9 @@
 	],
 	"Hololive - Gawr Gura": [
 		"hlgawrgura",
-		"hlgawrgurabig"
+		"hlgawrgurabig",
+		"hololive_gura-c1",
+		"hololive_gura-c2"
 	],
 	"Hobo": [
 		"hobo2",
@@ -8091,7 +8143,8 @@
 	"Re:Zero - Felix": [
 		"rezero_felix",
 		"rezero_felix_mazz",
-		"rezero_felix_xmas"
+		"rezero_felix_xmas",
+		"felix_argyle"
 	],
 	"Resident Evil - Richard Aiken": [
 		"richard",
@@ -8877,8 +8930,15 @@
 		"electric-engineer"
 	],
 	"Rat": [
+		"rat_v2",
 		"bigratshit",
-		"bigfatrat"
+		"bigfatrat",
+		"rat_v2_soap_b",
+		"rat_v2_soap_g",
+		"rat_v2_soap_gb",
+		"rat_v2_soap_r",
+		"rat_v2_soap_rb",
+		"rat_v2_soap_rg"
 	],
 	"BMRF Truck": [
 		"bmrftruck",

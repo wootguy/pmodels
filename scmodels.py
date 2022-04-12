@@ -1,3 +1,5 @@
+# sudo apt install libglew-dev libosmesa-dev pngcrush
+
 import sys, os, shutil, collections, json, subprocess, stat, hashlib, traceback, time
 from datetime import datetime
 from glob import glob
@@ -376,7 +378,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 						final_path = "./%s_%s.png" % (model_name, name)
 						subprocess.check_call([magick_path, "./" + render_path, "-resize", size, temp_path], stdout=null_stdout)
 						subprocess.check_call([posterizer_path, posterize_colors, temp_path, final_path], stdout=null_stdout)
-						subprocess.check_call([pngcrush_path, "-ow", "-q", final_path], stdout=null_stdout)
+						subprocess.check_call([pngcrush_path, "-ow", "-s", final_path], stdout=null_stdout)
 						os.remove(temp_path)
 
 					create_thumbnail("large", "500x800", "255")
