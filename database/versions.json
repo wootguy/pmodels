@@ -49,6 +49,7 @@
 		"ryors_sphere"
 	],
 	[
+		"marioodyssey_v3",
 		"marioodyssey_v2",
 		"marioodyssey"
 	],
@@ -508,9 +509,14 @@
 		"re_rpd_leon"
 	],
 	[
+		"hunk_v4",
 		"hunk_v3",
 		"hunk_v2",
 		"hunk"
+	],
+	[
+		"jarjar_v2",
+		"jarjar"
 	],
 	[
 		"kgb_hat_v2",
@@ -771,6 +777,11 @@
 		"re_stars_forrest"
 	],
 	[
+		"kitsune_hev_v2",
+		"kitsune_hev"
+	],
+	[
+		"jthm_v3",
 		"jthm_v2",
 		"jthm"
 	],
@@ -999,8 +1010,138 @@
 		"scientist1"
 	],
 	[
+		"kkk_v3",
 		"kkk_v2",
 		"kkk"
+	],
+	[
+		"opfor_balaclava_v3",
+		"opfor_balaclava_v2",
+		"opfor_balaclava"
+	],
+	[
+		"opfor_grunt_v3",
+		"opfor_grunt_v2",
+		"opfor_grunt"
+	],
+	[
+		"opfor_hgrunt_v3",
+		"opfor_hgrunt_v2",
+		"opfor_hgrunt"
+	],
+	[
+		"opfor_medic_v3",
+		"opfor_medic_v2",
+		"opfor_medic"
+	],
+	[
+		"opfor_recon_v3",
+		"opfor_recon_v2",
+		"opfor_recon"
+	],
+	[
+		"opfor_saw_v3",
+		"opfor_saw_v2",
+		"opfor_saw"
+	],
+	[
+		"opfor_torch_v3",
+		"opfor_torch_v2",
+		"opfor_torch"
+	],
+	[
+		"opfor_tower_v3",
+		"opfor_tower_v2",
+		"opfor_tower"
+	],
+	[
+		"panzer_cop_v2",
+		"panzer_cop"
+	],
+	[
+		"police_v2",
+		"police"
+	],
+	[
+		"poliisikoira_v2",
+		"poliisikoira"
+	],
+	[
+		"re_succ_combat_tech_v2",
+		"re_succ_combat_tech"
+	],
+	[
+		"wrs_digitrevx_v2",
+		"wrs_digitrevx-v2",
+		"wrs_digitrevx"
+	],
+	[
+		"saito2_v2",
+		"saito2"
+	],
+	[
+		"werewolf_fix",
+		"werewolf"
+	],
+	[
+		"sano_v2",
+		"sano"
+	],
+	[
+		"selene_nocape_v2",
+		"selene_nocape"
+	],
+	[
+		"silentsniper_v2",
+		"silentsniper"
+	],
+	[
+		"smid_v2",
+		"smid"
+	],
+	[
+		"smij_v2",
+		"smij"
+	],
+	[
+		"th_grunt_v2",
+		"th_grunt"
+	],
+	[
+		"touhou_hina_v2",
+		"touhou_hina"
+	],
+	[
+		"touhou_utsuho_v2",
+		"touhou_utsuho"
+	],
+	[
+		"th_grunt2_v2",
+		"th_grunt2"
+	],
+	[
+		"mafiaboss_v2",
+		"mafiaboss"
+	],
+	[
+		"mafioso2_v2",
+		"mafioso2"
+	],
+	[
+		"metrocop_v2",
+		"metrocop"
+	],
+	[
+		"mr_zombo_v2",
+		"mr_zombo"
+	],
+	[
+		"mr_zombo2_v2",
+		"mr_zombo2"
+	],
+	[
+		"nekomata_jk_v2",
+		"nekomata_jk"
 	],
 	[
 		"anti-claws_v2",
@@ -2087,6 +2228,96 @@
 		"xalice"
 	],
 	[
+		"alice_v2",
+		"alice"
+	],
+	[
+		"bdroid_v3",
+		"bdroid_v2",
+		"bdroid"
+	],
+	[
+		"bgman_v2",
+		"bgman"
+	],
+	[
+		"billy_v2",
+		"billy"
+	],
+	[
+		"brs_digitrevx_v2",
+		"brs_digitrevx"
+	],
+	[
+		"chris_v2",
+		"chris"
+	],
+	[
+		"chris_redfield_v2",
+		"chris_redfield"
+	],
+	[
+		"cirno_v2",
+		"cirno"
+	],
+	[
+		"civilian_v2",
+		"civilian"
+	],
+	[
+		"cloud_strife_v2",
+		"cloud_strife"
+	],
+	[
+		"crysis_nano1_v2",
+		"crysis_nano1"
+	],
+	[
+		"cs_ddh_v2",
+		"cs_ddh"
+	],
+	[
+		"cs_lqc_v2",
+		"cs_lqc"
+	],
+	[
+		"darthvader_v2",
+		"darthvader"
+	],
+	[
+		"dm_colette_v2",
+		"dm_colette"
+	],
+	[
+		"dm_gina_v2",
+		"dm_gina"
+	],
+	[
+		"dm_gordon_v2",
+		"dm_gordon"
+	],
+	[
+		"ds2_soldier",
+		"ds2_solder"
+	],
+	[
+		"hellboy",
+		"hellboy_v2"
+	],
+	[
+		"duffman_v3",
+		"duffman_v2",
+		"duffman"
+	],
+	[
+		"fnf_boyfriend_v2",
+		"fnf_boyfriend"
+	],
+	[
+		"fnv_riotranger_v2",
+		"fnv_riotranger"
+	],
+	[
 		"xsesshomaru_v2",
 		"xsesshomaru"
 	],
@@ -2236,6 +2467,7 @@
 		"re2_claireredfield"
 	],
 	[
+		"bomberman_v3",
 		"bomberman_v2",
 		"bomberman"
 	],
@@ -2256,6 +2488,8 @@
 		"holli"
 	],
 	[
+		"2d_sanic_v4",
+		"2d_sanic_v3",
 		"2d_sanic_v2",
 		"2d_sanic"
 	],
@@ -2428,6 +2662,7 @@
 		"wanted_crispen"
 	],
 	[
+		"halo_v3",
 		"halo_v2",
 		"halo"
 	],
@@ -3430,34 +3665,6 @@
 		"soldier_recon"
 	],
 	[
-		"opfor_balaclava_v2",
-		"opfor_balaclava"
-	],
-	[
-		"opfor_hgrunt_v2",
-		"opfor_hgrunt"
-	],
-	[
-		"opfor_medic_v2",
-		"opfor_medic"
-	],
-	[
-		"opfor_recon_v2",
-		"opfor_recon"
-	],
-	[
-		"opfor_saw_v2",
-		"opfor_saw"
-	],
-	[
-		"opfor_torch_v2",
-		"opfor_torch"
-	],
-	[
-		"opfor_tower_v2",
-		"opfor_tower"
-	],
-	[
 		"monoko2_v3",
 		"monoko2_v2",
 		"monoko2"
@@ -3571,8 +3778,17 @@
 		"fuuko"
 	],
 	[
+		"grey_fox_v3",
 		"grey_fox_v2",
 		"grey_fox"
+	],
+	[
+		"grievous_v2",
+		"grievous"
+	],
+	[
+		"halo_v2",
+		"halo"
 	],
 	[
 		"blackmesadesert_v2",
@@ -3749,8 +3965,49 @@
 		"hevgrunt"
 	],
 	[
+		"scuba_v3",
 		"scuba_v2",
 		"scuba"
+	],
+	[
+		"allied2-fixed",
+		"allied2"
+	],
+	[
+		"allied3-fixed",
+		"allied3"
+	],
+	[
+		"allied4-fixed",
+		"allied4"
+	],
+	[
+		"allied5-fixed",
+		"allied5"
+	],
+	[
+		"gfl_m4_sopmod_c2",
+		"gfl_m4_sopmod-c2"
+	],
+	[
+		"axis2-fixed",
+		"axis2"
+	],
+	[
+		"axis3-fixed",
+		"axis3"
+	],
+	[
+		"axis4-fixed",
+		"axis4"
+	],
+	[
+		"axis5-fixed",
+		"axis5"
+	],
+	[
+		"axis6-fixed",
+		"axis6"
 	],
 	[
 		"gmansdayoff_v2",
@@ -4112,8 +4369,21 @@
 		"darkydude"
 	],
 	[
+		"gfl_hk416_v3",
 		"gfl_hk416_v2",
 		"gfl_hk416"
+	],
+	[
+		"gfl_m14_v2",
+		"gfl_m14"
+	],
+	[
+		"gfl_m14-c2_v2",
+		"gfl_m14-c2"
+	],
+	[
+		"gir_dogsuit_v2",
+		"gir_dogsuit"
 	],
 	[
 		"tongue_v2",
@@ -4744,8 +5014,12 @@
 		"soldier_captain"
 	],
 	[
-		"yorha_2b_scuttle_a1",
-		"yorha_2b"
+		"yorha_2b_scuttle_a2",
+		"yorha_2b_scuttle_a1"
+	],
+	[
+		"agent_hunk_v2",
+		"agent_hunk"
 	],
 	[
 		"soldier_mp_v2",
@@ -5232,6 +5506,7 @@
 		"grunt_v2"
 	],
 	[
+		"civilian_v4",
 		"civilian_v3",
 		"civilian_v2",
 		"civilian"

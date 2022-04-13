@@ -12,6 +12,7 @@ $iren
 -finallyitworks2
 -finallyitworks3
 -finallyitworks4
+-general-haze-alpha
 -girlygirl-heaven-
 -psycho-firth-
 -starlight-
@@ -198,7 +199,10 @@ $iren
 2d_rezero_ram
 2d_rezero_rem
 2d_sanic
+2d_sanic_3p
 2d_sanic_v2
+2d_sanic_v3
+2d_sanic_v4
 2d_sans
 2d_saw_shell
 2d_shell
@@ -485,6 +489,7 @@ agent_2
 agent_3
 agent_4
 agent_hunk
+agent_hunk_v2
 agent_russian
 agent_russian_v2
 agent_v2
@@ -569,6 +574,8 @@ airborne04_r_v2
 airborne04_s
 airborne04_s_v2
 airborne04_v2
+aisabelle
+aisabelle2
 ak_merilee
 akamar_by_mr
 akatsuki_yuri
@@ -612,6 +619,7 @@ alice
 alice2_hev
 alice2_hev_alt
 alice_nude
+alice_v2
 alien
 alien-zm1
 alien2
@@ -622,12 +630,16 @@ alienteam3
 alienteam4
 allied
 allied2
+allied2-fixed
 allied2_s5
 allied3
+allied3-fixed
 allied3_s5
 allied4
+allied4-fixed
 allied4_s5
 allied5
+allied5-fixed
 allied5_s5
 allied_s5
 allied_v2
@@ -876,15 +888,20 @@ axis
 axis-inf
 axis-inf_j
 axis2
+axis2-fixed
 axis2_s5
 axis2_s5_v2
 axis3
+axis3-fixed
 axis3_s5
 axis4
+axis4-fixed
 axis4_s5
 axis5
+axis5-fixed
 axis5_s5
 axis6
+axis6-fixed
 axis6_s5
 axis_s5
 axisassault
@@ -1086,6 +1103,7 @@ bdroid_cnc_v2
 bdroid_hd
 bdroid_hd_v2
 bdroid_v2
+bdroid_v3
 be_grunt_desert
 be_grunt_desert_v2
 be_grunt_special
@@ -1125,6 +1143,7 @@ bf2_usmc_spop
 bfassn
 bgman
 bgman2
+bgman_v2
 bguts
 bh_jed
 bh_jed_v2
@@ -1172,6 +1191,7 @@ bills
 billy
 billy2
 billy2_v2
+billy_v2
 bio_snake
 bio_snake_v2
 bio_tfc_sniper
@@ -1311,6 +1331,7 @@ bmoore
 bmoore1
 bmrftruck
 bmrftruck2
+bms_helmet
 bms_marrine
 bms_shephard
 bmsoldier
@@ -1339,6 +1360,7 @@ bolsonaro
 bolsonaromicto
 bomberman
 bomberman_v2
+bomberman_v3
 bombermanblack
 bombermanblack_v2
 bombermanblue
@@ -1405,6 +1427,7 @@ brs_dark_mecha
 brs_digitrevx
 brs_digitrevx-v2
 brs_digitrevx2
+brs_digitrevx_v2
 brs_kuroi_mato
 brs_male
 brs_ssj
@@ -1431,6 +1454,7 @@ bubba_gump
 bubba_gump_v2
 bubbles
 buckethead
+budcanman
 bug_fo_v1
 bugs
 bugs_v2
@@ -1648,6 +1672,7 @@ chinesestealtharmor
 chingamy
 chinpoppo
 chippendale
+chips
 chocobo
 chocobo_v2
 chocolate-cow
@@ -1660,8 +1685,10 @@ chris
 chris redfield
 chris_old
 chris_redfield
+chris_redfield_v2
 chris_remake_hd
 chris_rpd_starts
+chris_v2
 chrispratt
 chrisprattgarfield
 chrisprattmario
@@ -1678,6 +1705,7 @@ chupetin
 chupetin_truj
 cigar
 cigar_enemy
+cigartrooper
 cinni
 circle
 cirno
@@ -1685,6 +1713,7 @@ cirno2
 cirno_1
 cirno_2
 cirno_3
+cirno_v2
 citroen
 civ3
 civ_fred
@@ -1713,6 +1742,7 @@ civilian
 civilian_toon
 civilian_v2
 civilian_v3
+civilian_v4
 civilsuspect
 cj
 cj_hdsuit
@@ -1787,6 +1817,7 @@ cloud_ac
 cloud_kh2
 cloud_strife
 cloud_strife_v2
+cloud_strife_v3
 clowncop
 clowncop_v2
 clsuit_gus
@@ -1998,6 +2029,7 @@ comrade
 comradetiki
 comradetiki_v2
 comradetiki_v3
+comtrooper
 conan
 conanbig
 conejo
@@ -2076,6 +2108,7 @@ crypto-137_v3
 crypto-137_v4
 crysis_asiannano
 crysis_nano1
+crysis_nano1_v2
 crysis_nano2
 crysis_nano3
 crysisgordon
@@ -2092,11 +2125,13 @@ cs_bslm1
 cs_bslm2
 cs_bslm3
 cs_ddh
+cs_ddh_v2
 cs_gign
 cs_gsg9
 cs_guerilla
 cs_leet
 cs_lqc
+cs_lqc_v2
 cs_sas
 cs_terror
 cs_urban
@@ -2494,6 +2529,7 @@ darth_sailor
 darth_sailor_v2
 darthmaul
 darthvader
+darthvader_v2
 dave
 dave_v2
 daveen_leatherhoff
@@ -2668,10 +2704,14 @@ dm_chan
 dm_chan2
 dm_chan3
 dm_colette
+dm_colette_v2
 dm_gina
+dm_gina_v2
 dm_gman
 dm_gordon
+dm_gordon_v2
 dm_helmet
+dm_helmet_white
 dm_kate
 dm_robo
 dm_scientist
@@ -2840,6 +2880,7 @@ dryad
 ds1_issac
 ds2_isaac
 ds2_issac
+ds2_solder
 ds2_soldier
 ds_isaac2
 ds_operator
@@ -2848,6 +2889,7 @@ duck_duck_cow
 duck_duck_cow_v2
 duffman
 duffman_v2
+duffman_v3
 duke
 duke nukem
 duke2
@@ -3131,6 +3173,7 @@ flandre5
 flandre_bikini
 flandre_cab_nude
 flandre_nude
+flandre_scarletv1
 flasher
 flatshade
 fleashpound_v1
@@ -3149,7 +3192,9 @@ fmcat
 fmcat_v2
 fmordred
 fnf_boyfriend
+fnf_boyfriend_v2
 fnv_riotranger
+fnv_riotranger_v2
 fnv_t-51b
 fnx
 fockewulftriebflugel
@@ -3163,6 +3208,7 @@ forrest speyer
 forrestspeyer
 fosrer
 fox_mccloud
+foxbr
 foxmulder_v1
 foxnoble
 foxprvtr
@@ -3271,6 +3317,7 @@ gagettora_v2
 gairu
 gakusei_hk416
 galentine
+galgun_akira
 galinha
 gamesaba
 gamespy
@@ -3351,10 +3398,14 @@ gfl_ak12_alt2
 gfl_hk416
 gfl_hk416_hatless
 gfl_hk416_v2
+gfl_hk416_v3
 gfl_m14
 gfl_m14-c2
+gfl_m14-c2_v2
+gfl_m14_v2
 gfl_m4_sopmod
 gfl_m4_sopmod-c2
+gfl_m4_sopmod_c2
 gfl_m4a1
 gfl_negev
 gfl_negev_shoeless
@@ -3442,6 +3493,7 @@ ginger_v2
 giorno
 gir
 gir_dogsuit
+gir_dogsuit_v2
 girlz
 girlz_v2
 gitnes
@@ -3482,6 +3534,7 @@ go_light
 go_medium
 goauld3
 god
+godmother
 gohan
 gohan_ad
 gohan_ssj
@@ -3562,6 +3615,7 @@ grey_fox_black_v2
 grey_fox_red
 grey_fox_red_v2
 grey_fox_v2
+grey_fox_v3
 grey_surfer
 grey_v2
 grey_v3
@@ -3569,6 +3623,7 @@ greyfox
 greyfox2
 greyfox_v2
 grievous
+grievous_v2
 grigori
 grigori_hd
 grimes
@@ -3803,6 +3858,7 @@ halo_smith
 halo_unknown
 halo_unknown_v2
 halo_v2
+halo_v3
 halo_walter
 halo_yellow
 halo_yellow_v2
@@ -3919,6 +3975,7 @@ hdn_neptunev
 hdn_neptunev-c2
 hdn_neptunev-c3
 hdn_neptunev-c4
+hdn_noire-vgen
 hdn_plutia
 hdn_plutia_c2
 hdn_plutia_c3
@@ -3959,6 +4016,7 @@ heisenberg
 hell
 hell_recon
 hellboy
+hellboy_v2
 hellsangel2
 hellsangel3
 hellsangel_f1
@@ -3982,13 +4040,17 @@ helmet_ld
 helmet_red
 helmetscientist
 helmetscientist_v2
+helmtrooper
 henry_stackman
 her_royal_botness_v2
 herman_munster
 heroine_hev
+hev_andrev2
+hev_basyav2
 hev_drip
 hev_goose
 hev_grenheart
+hev_leokingv2
 hev_mulher_rock
 hev_pinkepie
 hevbarnabus
@@ -4069,6 +4131,7 @@ hillybilly
 hinako
 hinanai_v2
 hinanai_v3
+hiney_weeny
 hipertuvi
 hipertuviv2
 hipoglos
@@ -4269,6 +4332,7 @@ hunk_re2r_v2
 hunk_re4
 hunk_v2
 hunk_v3
+hunk_v4
 hunted
 hunter_l4d
 hvyweapon
@@ -4435,6 +4499,7 @@ janitor
 japanese_police
 japanese_police1
 jarjar
+jarjar_v2
 jasmine
 jason
 jason-fri13th
@@ -4517,6 +4582,7 @@ jra
 jra_v2
 jthm
 jthm_v2
+jthm_v3
 jud@s
 judge_fronberg
 judge_kirova
@@ -4717,6 +4783,7 @@ kit
 kiteretu
 kitkat
 kitsune_hev
+kitsune_hev_v2
 kiwami
 kiwi
 kizuna_halloween
@@ -4726,6 +4793,7 @@ kizuna_yin_v1
 kkaoru
 kkk
 kkk_v2
+kkk_v3
 klaymen
 kleiner_hd
 klingon
@@ -4956,6 +5024,7 @@ ld_scientist4
 ld_scientist5
 ld_scientist6
 ld_skeleton
+ldcs
 leela
 leet
 leet2
@@ -5059,8 +5128,13 @@ lolisleepy
 lolkatarina
 lolkdaahri
 lolkindred
+lolkp
+lolkp-1
+lolkp-2
+lolkp-3
 lollux
 lolneekosguard
+lolneekosguardptg
 lolomorgana
 lolsoraka
 longbaugh
@@ -5140,6 +5214,7 @@ lulumuu
 lulumuu_nude
 lum2
 lum2_v2
+luotianyi
 lupin
 luquitas
 lurid
@@ -5196,8 +5271,10 @@ madscientist_ld
 maelstrom00
 maeve_street_v1
 mafiaboss
+mafiaboss_v2
 mafioso
 mafioso2
+mafioso2_v2
 mafioso_v2
 mage_lilia
 mageres
@@ -5239,6 +5316,7 @@ marine2
 marine_rf
 marine_v2
 marinegirl_hev
+marines
 mario
 mario2
 mario64
@@ -5258,6 +5336,7 @@ mariokartwiimario
 marionette
 marioodyssey
 marioodyssey_v2
+marioodyssey_v3
 mariosmall
 marisa
 marisa2
@@ -5381,6 +5460,7 @@ metalshadow
 metalsonic
 metrocop
 metrocop_pro
+metrocop_v2
 mew_lt
 mew_new
 mewtwo
@@ -5655,6 +5735,8 @@ mr.phoemix
 mr_t
 mr_zombo
 mr_zombo2
+mr_zombo2_v2
+mr_zombo_v2
 mrblonde
 mrbored
 mrbored_v2
@@ -5689,6 +5771,8 @@ mulder
 mummie
 mummie_v2
 mummy
+mur_neko
+mur_neko_c
 murasame_br
 musclebase
 musclebase_v2
@@ -5771,6 +5855,7 @@ mw2_tf141_5
 mw2_tf141_6
 mw2_tf141_7
 mw2_tf141_8
+mw2ghost
 mynx
 mynx_v2
 myochin
@@ -5831,6 +5916,7 @@ naruto_shikamaru
 naruto_toon
 naruto_zabuza
 naruto_zabuza2
+nasa
 nataku
 natasha
 natasha_hev
@@ -5918,6 +6004,7 @@ nekomata_goth_v2
 nekomata_jc
 nekomata_jc_v2
 nekomata_jk
+nekomata_jk_v2
 nekomata_maid
 nekomata_maid_d
 nekomata_maid_d_v2
@@ -6037,6 +6124,7 @@ nepnep_mazz
 neptune
 neptuneman
 neptunia_mth
+nepud_rejsyg
 neuronkeen
 nevec_soldier
 new beta gordon
@@ -6064,6 +6152,7 @@ nicepirate_v2
 nicola
 nige111
 nige111_v2
+night_saber
 nightmare_bonnie
 nightmare_chica
 nightmare_foxy
@@ -6349,23 +6438,31 @@ opfor3
 opfor_balaclava
 opfor_balaclava2
 opfor_balaclava_v2
+opfor_balaclava_v3
 opfor_commander
 opfor_grunt
 opfor_grunt2
 opfor_grunt_v2
+opfor_grunt_v3
 opfor_hgrunt
 opfor_hgrunt_v2
+opfor_hgrunt_v3
 opfor_major
 opfor_medic
 opfor_medic_v2
+opfor_medic_v3
 opfor_recon
 opfor_recon_v2
+opfor_recon_v3
 opfor_saw
 opfor_saw_v2
+opfor_saw_v3
 opfor_torch
 opfor_torch_v2
+opfor_torch_v3
 opfor_tower
 opfor_tower_v2
+opfor_tower_v3
 opmsaitama
 optimus
 optimusprime
@@ -6440,6 +6537,7 @@ panda!
 pantera
 panthershit
 panzer_cop
+panzer_cop_v2
 panzerarctic
 panzerdesert
 panzergray
@@ -6570,6 +6668,7 @@ pink_panther
 pinkonna
 pinkstick
 pioschicken
+pipi_p
 pirate
 pirate_tsugumi
 pirate_tsugumi_v2
@@ -6638,6 +6737,8 @@ po_security
 po_st
 po_st2
 pokerface
+pokerface2
+pokerface6
 police
 police1
 police1s
@@ -6645,14 +6746,17 @@ police2
 police2s
 police3
 police4
+police_v2
 policecar
 policecar2
 policeman
 poliisikoira
+poliisikoira_v2
 politician
 poniko
 poniko_v2
 poniko_v3
+pop_p
 postal
 postal_dude
 postal_dude_ts
@@ -6744,6 +6848,7 @@ punk
 punk_v2
 punkgirlz
 punkgirlz_v2
+puro
 purple sister
 purple_sister
 purpleguy
@@ -6899,6 +7004,7 @@ raidenmask
 raidenn
 rainbow6
 ram
+ram_sexy
 ran
 randomgerbil
 ranger1
@@ -7055,6 +7161,7 @@ re_succ_citizen_unit
 re_succ_citizen_unit_v2
 re_succ_combat_response_unit
 re_succ_combat_tech
+re_succ_combat_tech_v2
 re_succ_combat_technician
 re_succ_combat_unit
 re_succ_commander_merc
@@ -7183,6 +7290,7 @@ reisen3
 reisen_v2
 rem_bikini
 rem_nude
+rem_sexy
 remake_kate
 remake_ratty
 remilia
@@ -7239,6 +7347,8 @@ rick
 rico
 ricochet
 ricochet2
+ricochet_female
+ricochet_male
 riddler
 rigell
 rikku
@@ -7404,6 +7514,7 @@ sahturbo_v3
 saint
 saito
 saito2
+saito2_v2
 sakuya
 sam
 sam1
@@ -7427,6 +7538,7 @@ sandrock
 sandstone_grunt
 sangoku
 sano
+sano_v2
 sans
 santa
 santa-naked
@@ -7629,6 +7741,7 @@ scuba
 scuba_crash
 scuba_diver
 scuba_v2
+scuba_v3
 scud
 sd_rouge
 sd_sekai_saionji
@@ -7666,6 +7779,7 @@ selene
 selene2
 selene_new
 selene_nocape
+selene_nocape_v2
 sence
 sence_2018
 sence_night
@@ -7763,6 +7877,7 @@ shizuha_aki
 shodan
 shotgun
 shotgun_enemy
+shotguntrooper
 shouyubin
 shoverrobot
 shrek
@@ -7785,6 +7900,7 @@ sil80
 silencer
 silencer_v2
 silentsniper
+silentsniper_v2
 silvershroud
 silversurferhev
 silversurferhev_v2
@@ -7823,6 +7939,7 @@ skrag_broken
 skrullhead
 sky
 sky_v2
+skywatch
 sl!der
 slapishappy
 slash
@@ -7857,7 +7974,9 @@ smg4meggyn
 smg4melony
 smg4melony_v2
 smid
+smid_v2
 smij
+smij_v2
 smijv4
 smileheadgman
 smileheadscientist
@@ -8155,6 +8274,7 @@ spiderma_v2
 spiderman
 spidermanhev
 spidermanx
+spidey
 spike
 spike2
 spike2_v2
@@ -8174,6 +8294,7 @@ splintercell_red
 spliterl4d
 spongebob
 spongebob_v2
+spookboy
 spooky_hev
 spooty
 spp_gangster
@@ -8434,6 +8555,7 @@ suika
 sunshine
 sunshine_v2
 suntza
+sup_doc
 super_hero
 super_hero_v2
 superalphashadow
@@ -8481,6 +8603,7 @@ svencouzi_v2
 sw_cinderace
 sw_cinderace_c
 sw_cinderace_r
+swabbit
 swat
 swat-fix
 swat1
@@ -8873,6 +8996,8 @@ th_gangster
 th_gangster_sd
 th_grunt
 th_grunt2
+th_grunt2_v2
+th_grunt_v2
 th_host
 th_host_sd
 th_jack
@@ -8984,6 +9109,8 @@ tofusurvivor
 togeataman
 tohkarh
 tohoo
+tohostagea
+tohostageb
 toilet
 tokisaki_kurumi
 tomb_rider
@@ -9039,6 +9166,21 @@ torstaffcolorshit
 torstafffriendlyshit
 torstaffhostileshit
 torstaffrustyshit
+tospnavyseal
+tosppolifem
+tosppoliheavy
+tosppolizei
+tospswatfem
+tospswatheavy
+tospswatlight
+totearctic
+totearcticfem
+toteforzaarm
+toteredmaskld
+toteurbancamo
+toteurbancargo
+toteurbangang
+totewoodland
 touchdown
 touhou_alice
 touhou_alice_v2
@@ -9064,10 +9206,13 @@ touhou_flandre_scarlet
 touhou_flandre_shoes
 touhou_flandre_socks
 touhou_flandre_v2
+touhou_futo
 touhou_hieda_no_akyuu
 touhou_hijiri
 touhou_hina
+touhou_hina_v2
 touhou_hinanawi
+touhou_honmeirin
 touhou_ikusan
 touhou_ikusan_h
 touhou_inaba_tewi
@@ -9101,6 +9246,7 @@ touhou_koishiscarletv1
 touhou_kotohime
 touhou_kotohime_v2
 touhou_letty
+touhou_maribelhearn
 touhou_marisa3
 touhou_meiling
 touhou_meiling2
@@ -9125,6 +9271,7 @@ touhou_reimu
 touhou_reimu3
 touhou_reimu_mmd
 touhou_reisen
+touhou_reisenudongeininaba
 touhou_rem_bikini2
 touhou_remi_dress
 touhou_remilia
@@ -9132,6 +9279,7 @@ touhou_rin
 touhou_rinnosuke
 touhou_rumia
 touhou_rumia_v2
+touhou_rumia_y
 touhou_sakuya2
 touhou_sakuya_bikini
 touhou_sakuya_gothic
@@ -9161,7 +9309,9 @@ touhou_tenshi_v3
 touhou_udongein
 touhou_udongein_mmd
 touhou_udongein_mmd_v2
+touhou_usamirenko
 touhou_utsuho
+touhou_utsuho_v2
 touhou_wakasagi
 touhou_yagokoro_eirin
 touhou_yakumo_ran
@@ -9170,6 +9320,9 @@ touhou_yakumo_yukari
 touhou_yakumo_yukari2
 touhou_yakumo_yukari_v2
 touhou_youmu
+touhou_youmu2what
+touhou_youmu_su
+touhou_youmukonpakuspe
 touhou_yuka
 touhou_yuyuko_fumo
 touhou_yuyusama
@@ -9184,6 +9337,7 @@ toy_bonnie
 toy_chica_v1
 toy_chica_v2
 toy_freddy
+toyakuza
 toybonnie
 toychica
 toyfreddy
@@ -9229,6 +9383,7 @@ trp_medic_hq
 truck
 trump
 trump2
+trumpenstein
 trunks
 trunks_ssj
 ts_agent
@@ -9252,6 +9407,7 @@ tsi
 tspingwin
 tsugumi
 tsugumi_v2
+ttf_ion
 tunas
 tundra_cool
 turgeon
@@ -9268,6 +9424,7 @@ tweety
 twilightsparkle
 twins
 twofeathers
+twokinds_laura
 ubcs_umbrella
 ubcshorror
 uboa
@@ -9330,6 +9487,7 @@ ugandan_knuckles
 ugandan_knuckles_voice
 ugg_goose
 ugg_goosec
+ugg_goosec_v2
 ulala
 ulala_part2
 ultrakill_v1
@@ -9399,6 +9557,7 @@ vamp2
 vamp_master
 vampiro
 vanity
+vanjamie
 vanmax
 vanmaxld
 vansam
@@ -9545,6 +9704,7 @@ weregarurumon
 weregarurumon_shadow
 werewolf
 werewolf_fix
+werewolf_v2
 werewolfhans
 wesker
 wesker_stars
@@ -9556,6 +9716,7 @@ westgang1
 westgang2
 wg_wallace
 wh40k
+whata
 wheelchairb1
 wheelman
 whisper_s5
@@ -9613,6 +9774,7 @@ wounded_sas
 wrim
 wrs_digitrevx
 wrs_digitrevx-v2
+wrs_digitrevx_v2
 wryn
 wryn_p2
 wt_dante
@@ -9711,6 +9873,7 @@ yokotaro
 yokotaro_v2
 yorha_2b
 yorha_2b_scuttle_a1
+yorha_2b_scuttle_a2
 yosuke
 youkan
 youmu
@@ -9817,12 +9980,15 @@ zombief
 zombieg
 zombiegman
 zombiegr
+zombiehecu
 zombiemamon
 zombieman
 zombieman2
 zombieman3
 zombierec
 zombiesci
+zombiescie1
+zombiescie2
 zombiesoldier
 zombiesoldier_v2
 zombiexada

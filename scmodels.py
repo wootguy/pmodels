@@ -189,6 +189,7 @@ def handle_renamed_model(model_dir, work_path):
 		print("r) Enter a new name")
 		print("d) Delete this model")
 		x = input("\nWhich model should be used? ")
+
 		if x == 'd':
 			os.chdir(start_dir)
 			shutil.rmtree(os.path.join(work_path, model_dir))
@@ -778,7 +779,7 @@ def install_new_models():
 					alt_names[primary_name].append(alt)
 	
 	with open(alias_json_name, 'w') as outfile:
-		json.dump(alt_names, outfile)
+		json.dump(alt_names, outfile, indent=4)
 	
 	if len(dups) > 0 and input("\nDelete the duplicate models in the install folder? (y/n)") == 'y':
 		for dup in dups:
@@ -905,7 +906,7 @@ args = sys.argv[1:]
 
 if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("\nUsage:")
-	print("sudo python3 scmodels.py [command]\n")
+	print("python3 scmodels.py [command]\n")
 	
 	print("Available commands:")
 	print("update - generate thumbnails and info jsons for any models.")
