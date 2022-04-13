@@ -5693,7 +5693,7 @@ monspeet
 monster_hunter
 monster_hunter_v2
 moonhitler
-moonhitler_v2
+moonhitler_v3
 moonman
 morara
 morara2
