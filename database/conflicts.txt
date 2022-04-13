@@ -51,3 +51,6 @@ added _v2 to models that were updated on GameBanana without being renamed.
 added "_ld" to all player models from this pack:
 https://gamebanana.com/mods/167285
 They overwrite the default player models otherwise.
+
+added "_up" to the upscaled texture they hunger pack
+https://www.moddb.com/mods/sven-co-op/addons/they-hunger-upscale-ld-quality

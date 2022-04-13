@@ -1242,6 +1242,7 @@
 		"sci_cleansuit",
 		"ctf_research",
 		"th_cl_suit",
+		"th_cl_suit_up",
 		"ta_research",
 		"th_cl_suit_sd",
 		"wrim",
@@ -3504,10 +3505,12 @@
 		"walter2",
 		"slick",
 		"th_slick",
+		"th_slick_up",
 		"th_slick_sd",
 		"luther",
 		"einstein",
 		"th_einstein",
+		"th_einstein_up",
 		"th_einstein_sd",
 		"sci",
 		"sci_evil_v2",
@@ -3901,6 +3904,10 @@
 		"gusgusgus",
 		"mario64odyssey",
 		"marioodyssey_v3"
+	],
+	"Ryor's Sphere": [
+		"ryors_sphere_v2",
+		"ryors_sphere"
 	],
 	"Super Mario Galaxy 4 - Meggy": [
 		"smg4meggy",
@@ -7927,6 +7934,7 @@
 		"orderly_happily",
 		"orderly_punished",
 		"th_orderly",
+		"th_orderly_up",
 		"th_orderly_sd",
 		"th_zombie2"
 	],
@@ -8705,8 +8713,10 @@
 	"They Hunger - Paul": [
 		"th_civpaul",
 		"th_civpaul_sd",
+		"th_civpaul_up",
 		"paul",
 		"th_paul",
+		"th_paul_up",
 		"th_paul_sd"
 	],
 	"Ninja With Hat": [
@@ -8722,10 +8732,12 @@
 	],
 	"They Hunger - Dave": [
 		"th_dave",
+		"th_dave_up",
 		"th_dave_sd"
 	],
 	"They Hunger - Einar": [
 		"th_einar",
+		"th_einar_up",
 		"th_einar_sd",
 		"einar",
 		"einarhev"
@@ -8737,33 +8749,40 @@
 	],
 	"They Hunger - Gangster": [
 		"th_gangster",
+		"th_gangster_up",
 		"th_gangster_sd",
 		"gangster1"
 	],
 	"They Hunger - Host": [
 		"th_host",
+		"th_host_up",
 		"th_host_sd"
 	],
 	"They Hunger - Jack": [
 		"th_jack",
+		"th_jack_up",
 		"th_jack_sd"
 	],
 	"They Hunger - Neil": [
 		"th_neil",
+		"th_neil_up",
 		"th_neil_sd",
 		"neil",
 		"bug_fo_v1"
 	],
 	"They Hunger - Nurse": [
 		"th_nurse",
+		"th_nurse_up",
 		"th_nurse_sd"
 	],
 	"They Hunger - NYPD Cop": [
 		"th_nypdcop",
+		"th_nypdcop_up",
 		"th_nypdcop_sd"
 	],
 	"They Hunger - Patient": [
 		"th_patient",
+		"th_patient_up",
 		"th_patient_sd",
 		"patient",
 		"ship_patient_v2"
@@ -8774,6 +8793,7 @@
 	],
 	"They Hunger - Worker": [
 		"th_worker",
+		"th_worker_up",
 		"th_worker_sd",
 		"worker"
 	],
