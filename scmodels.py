@@ -779,8 +779,9 @@ def fix_json():
 				print("%s -> %s                    " % (group[idx], latest_name))
 				group[idx] = latest_name
 				num_updates += 1
-				
-		groups_json[key] = sorted(groups_json[key])
+			
+		# don't sort so that most appropraite model can be placed as group thumbnail
+		#groups_json[key] = sorted(groups_json[key])
 	
 	with open(tags_json_name, 'w') as outfile:
 		tags_json = dict(sorted(tags_json.items()))
