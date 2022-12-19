@@ -1786,7 +1786,20 @@
 		"psychobeba",
 		"bibabomination",
 		"partypanda",
-		"biba_fumo"
+		"biba_fumo",
+		"oso_palido"
+	],
+	"Payday - Chains": [
+		"pd_chains",
+		"pd2_chains"
+	],
+	"Payday - Dallas": [
+		"pd_dallas",
+		"pd2_dallas"
+	],
+	"Payday - Hoxton": [
+		"pd_hoxton",
+		"pd2_hoxton"
 	],
 	"Star Wars - Battle Droid": [
 		"bdroid_a",
@@ -1993,6 +2006,10 @@
 		"eggman_s5",
 		"eggman_v2",
 		"dreggman"
+	],
+	"Egg": [
+		"egg",
+		"eggc"
 	],
 	"Dice": [
 		"dice1",
@@ -3747,6 +3764,10 @@
 		"ksa_susieparallel",
 		"ksa_susiepresparallel"
 	],
+	"Helltaker - Modeus": [
+		"helltaker_modeus_v2",
+		"2d_helltaker_modeus"
+	],
 	"Rindo / Filian": [
 		"kz_rindo",
 		"kz_rindo_sw",
@@ -5169,7 +5190,8 @@
 	"Dorothy": [
 		"dorothy",
 		"ab_dorothy_v2",
-		"2d_ab_dorothy"
+		"2d_ab_dorothy",
+		"dorothy_mask"
 	],
 	"Rin Shibuya": [
 		"ab_rin_shibuya",
@@ -6795,7 +6817,7 @@
 		"gargantua"
 	],
 	"Dragon Ball Z - Bills": [
-		"bills",
+		"bills_v2",
 		"da_bills"
 	],
 	"Elvis Presley": [
@@ -8671,7 +8693,8 @@
 		"sg_kurisumakise_alt1",
 		"sg_kurisumakise_alt2",
 		"sg_kurisumakise_alt3",
-		"sg_kurisumakise_old"
+		"sg_kurisumakise_old",
+		"makimacsm"
 	],
 	"Shippudden Gaara": [
 		"shippudden_gaara2",
@@ -9114,9 +9137,14 @@
 		"redqubeley"
 	],
 	"Payday - Wolf": [
+		"pd_wolf",
 		"wolf",
 		"paydayth_wolf",
 		"pd2_wolf"
+	],
+	"Hi Hi Puffy AmiYumi - Yumi": [
+		"yumi",
+		"altyumi"
 	],
 	"fredrykphox": [
 		"fredrykphox",
@@ -9129,6 +9157,10 @@
 	"Star Wars - Grievous": [
 		"grievous_v2",
 		"wwdarth_biomech"
+	],
+	"Tongo": [
+		"tongo",
+		"tongousa"
 	],
 	"Pokemon - Meowstic": [
 		"xy_meowsticf_fs",

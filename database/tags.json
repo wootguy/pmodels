@@ -692,7 +692,7 @@
 		"hdnr_neptune-c3_big",
 		"heavyarms_v2",
 		"hell",
-		"helltaker_modeus",
+		"helltaker_modeus_v2",
 		"helmet_black",
 		"helmet_blue",
 		"helmet_red",
@@ -1648,6 +1648,11 @@
 		"ss_wildcat_black",
 		"ss_wildcat_c",
 		"takeda_shoko",
-		"yagar"
+		"yagar",
+		"2d_helltaker_modeus",
+		"altyumi",
+		"yumi",
+		"ami",
+		"makimacsm"
 	]
 }

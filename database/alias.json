@@ -5539,16 +5539,16 @@
     "op4_recon2": [
         "op4_major2"
     ],
-	"weapon_shotgun": [
+    "weapon_shotgun": [
         "shotgun"
     ],
-	"rat2": [
+    "rat2": [
         "rat"
     ],
-	"puro2": [
+    "puro2": [
         "puro"
     ],
-	"steve2": [
+    "steve2": [
         "steve"
     ]
 }

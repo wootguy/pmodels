@@ -118,6 +118,7 @@ $iren
 2d_hdnr_neptune
 2d_hdnr_neptune-c2
 2d_hdnr_neptune-c3
+2d_helltaker_modeus
 2d_hevsnark
 2d_hl2_helmet
 2d_hn_purple_heart_a
@@ -664,6 +665,7 @@ alpha_valve
 alphabarney
 alphawolf
 altair
+altyumi
 alucard
 alucard2
 alucard_v2
@@ -677,6 +679,7 @@ americasarmy
 americasarmy2
 americasarmy3
 americasarmy4
+ami
 among_us
 amongus_crewmate
 amongus_crewmate_black
@@ -1197,6 +1200,7 @@ bikerbarney
 bikerbarney_v2
 bikercop
 bills
+bills_v2
 billy
 billy2
 billy2_v2
@@ -1472,6 +1476,7 @@ bubba_gump_v2
 bubbles
 buckethead
 budcanman
+buff_choijiyoon
 bug_fo_v1
 bugs
 bugs_v2
@@ -1608,6 +1613,7 @@ cardboard_man
 cardboard_man_v2
 cardboard_todd
 carloscone
+carloscone_v2
 carmine
 carnage
 carnivore2
@@ -1702,6 +1708,7 @@ choijiyoon
 choijiyoon2_hev
 choijiyoon_hev
 choijiyoon_hev_alt
+chouwitch
 chris
 chris redfield
 chris_old
@@ -2859,6 +2866,7 @@ dora
 doraemon
 dorane
 dorothy
+dorothy_mask
 dotso_erio
 dotso_erio_touwa
 dp
@@ -2946,6 +2954,7 @@ eee_kevin
 eee_rolf
 egarg1
 egg
+eggc
 eggman
 eggman_s5
 eggman_v2
@@ -4085,6 +4094,7 @@ hellsangel3
 hellsangel_f1
 hellsangel_f1_v2
 helltaker_modeus
+helltaker_modeus_v2
 hellzadmin
 hellzadmin2
 hellzadmin2_v2
@@ -4558,6 +4568,7 @@ ivan_space
 iyou
 j_blue
 jacinta
+jacinta_v2
 jack
 jack1
 jack2
@@ -4970,6 +4981,7 @@ krauser_grunt_v2
 krauser_gruntf
 krauser_gruntf_v2
 krauser_v2
+kroenen
 kroenen2
 kroenen2_v2
 krotchy
@@ -5051,9 +5063,13 @@ l4d2_ellis
 l4d2_nick
 l4d2_rochelle
 l4d_bill
+l4d_bill_v2
 l4d_francis
+l4d_francis_v2
 l4d_louis
+l4d_louis_v2
 l4d_zoey
+l4d_zoey_v2
 l_lawliet
 laalaa
 laalaa_l4t2_1
@@ -5348,6 +5364,7 @@ lurid
 lurid2
 lurker
 luther
+lycan
 lycan_specialist
 lycanroc
 lyn
@@ -5371,6 +5388,7 @@ ma_tanker_red
 macaroni
 macaroni_c
 machin
+machin_v2
 mad2
 mad_lizard
 madbarn
@@ -5412,6 +5430,7 @@ magog
 major
 major_v2
 majork
+makimacsm
 malachous
 male_swat
 male_swat_v2
@@ -5863,6 +5882,7 @@ mp_toadc_big
 mps
 mr.phoemix
 mr_t
+mr_x
 mr_zombo
 mr_zombo2
 mr_zombo2_v2
@@ -5881,6 +5901,7 @@ mrrogers
 mrrogers_v2
 mrshoe
 mrsk
+mrsk_v2
 mrskinny
 mrt
 mrt_v2
@@ -6284,6 +6305,7 @@ ngnl_shiro_v2
 nicepirate
 nicepirate_v2
 nicola
+nicola_v2
 nige111
 nige111_v2
 night_saber
@@ -6623,6 +6645,7 @@ orkinbarney
 orkinotis
 osama
 oscar
+oso_palido
 otimus
 otimus2
 otis
@@ -6761,7 +6784,11 @@ pd2_chains
 pd2_dallas
 pd2_hoxton
 pd2_wolf
+pd_chains
+pd_dallas
 pd_elvis
+pd_hoxton
+pd_wolf
 peam
 peanut
 peasantfemale1
@@ -6774,6 +6801,7 @@ peashy
 pedobear
 pedro
 pedrocastillo
+pedrocastillo_tc
 pencil
 penguin
 penguin1
@@ -6796,6 +6824,7 @@ percy
 pernalonga
 peruano
 peruano_v2
+peruano_v3
 pethan
 pfjules
 pfvincent
@@ -8965,6 +8994,7 @@ tankgirl
 tankgirl_v2
 tapir590
 tapir590_co
+tapir590_v2
 tarles
 taskforce
 taskforce_arab
@@ -9274,6 +9304,7 @@ tiger_woods_v2
 tigger
 tigger2
 timoteo
+timoteo_v2
 tinkasu
 tinky
 tinkywinky
@@ -9307,6 +9338,7 @@ tommy_vercetti
 tommy_vercetti_v2
 tommyvercetti
 tomzao
+tongo
 tongousa
 tongue
 tongue_v2
@@ -9747,6 +9779,7 @@ v_mgirl
 v_michael
 v_trevor
 vader
+valentinewitch
 valve
 valve2
 valve3
@@ -9819,6 +9852,7 @@ vixen
 vixen_v2
 vixina
 vizcarra
+vizcarra_v2
 vocaloid_akita
 vocaloid_haku
 vocaloid_kasane
@@ -10102,6 +10136,7 @@ ys_yandere_insane
 yuffie
 yukari
 yukari2
+yumi
 yunoa
 yuri
 yuri2_hev
