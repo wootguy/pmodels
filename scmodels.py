@@ -864,19 +864,20 @@ def install_new_models(new_versions_mode=False):
 	
 	for dir in new_dirs:
 		lowernew = dir.lower()
-		is_unique_name = False
+		is_unique_name = True
 		
-		if not new_versions_mode:
-			for idx, old in enumerate(old_dirs):
-				if lowernew == old.lower():
+		for idx, old in enumerate(old_dirs):
+			if lowernew == old.lower():
+				if new_versions_mode:
+					is_unique_name = False
+				else:
 					print("ERROR: %s already exists" % old)
 					any_dups = True
-					is_unique_name = False
 					#rename_model(old, old + "_v2", models_path)
 		
 		if is_unique_name and new_versions_mode:
 			any_dups = True
-			print("ERROR: %s is not an update to any model. No model with that name exists.")
+			print("ERROR: %s is not an update to any model. No model with that name exists." % dir)
 		
 		if not new_versions_mode:
 			# not checking alias in new version mode because the models will be renamed
