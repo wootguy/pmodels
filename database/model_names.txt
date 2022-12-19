@@ -622,8 +622,10 @@ albert_wesker
 alcatraz
 alcatraz_v2
 aldi
+alex
 alex_civil
 alex_civil1
+alex_clasica
 alex_mercer
 alexcono
 alhazred
@@ -8871,7 +8873,9 @@ steel
 stene
 steve
 steve2
+steve3
 steve_burnside
+steve_clasico
 stevethesheep
 stick_black
 stick_blue
