@@ -73,7 +73,7 @@
 		"gi_ganyu",
 		"gi_ganyu_hz",
 		"gi_ganyu_hz_alt",
-		"gfl_m4a1_dark"
+		"gi_ganyu_dark"
 	],
 	"Genshin Impact - Lumine": [
 		"gi_lumine",
@@ -322,7 +322,8 @@
 		"nu_nagato_alphaq",
 		"sazabi_nagato_nobody",
 		"nagato_nudie",
-		"nagato_xmas_topless"
+		"nagato_xmas_topless",
+		"nagato_xmas_nfb"
 	],
 	"Tower of Fantasy - Nemesis": [
 		"tof_nemesis",
@@ -1771,7 +1772,6 @@
 		"sofidarkv1",
 		"sofidarkv2",
 		"spartan",
-		"black_phoemix",
 		"black_phoemix_v5"
 	],
 	"BT - Army": [
@@ -2293,7 +2293,7 @@
 		"capturedsiler",
 		"az_gordon",
 		"az_gordon2",
-		"az_gordon2_v2",
+		"az_gordon_v2",
 		"dc_gordon",
 		"ig-ldgordon",
 		"ivan_space"
@@ -2829,7 +2829,8 @@
 		"knuckles",
 		"knuckles_v2",
 		"lt_ugandamiku",
-		"ugandan_knuckles_voice"
+		"ugandan_knuckles_voice",
+		"uganda_girl"
 	],
 	"Resident Evil - Enrico Marini": [
 		"enrico_marini",
@@ -2891,7 +2892,7 @@
 		"miku_alpha",
 		"miku_cute2_arms",
 		"miku_f",
-		"miku_fabulous2",
+		"miku_fabulous2_v2",
 		"miku_kurumi_v2",
 		"miku_pierretta",
 		"miku_verano",
@@ -2948,7 +2949,7 @@
 	],
 	"Hyperdimension Neptunia - Neptune": [
 		"neptune",
-		"hdnr_neptune-c3_big",
+		"hdnr_neptune-c3_big_v2",
 		"hdnr_neptune-c3",
 		"hdnr_neptune-c2",
 		"hdnr_neptune",
@@ -3071,7 +3072,7 @@
 		"flandre2",
 		"flandre",
 		"flandre3",
-		"flandre4",
+		"flandre4_v2",
 		"flandre5",
 		"flandre_bikini",
 		"flandre_cab_nude",
@@ -3756,7 +3757,6 @@
 		"ksa_parallelsusie",
 		"ksa_superparallelsusie",
 		"ksa_susie_broken",
-		"ksa_susie_p1",
 		"ksa_susie_p2_v2",
 		"ksa_susie_p3_v2",
 		"ksa_susie_p4_v2",
@@ -3897,7 +3897,7 @@
 	],
 	"Kancolle - Harbour": [
 		"kancolle_harbour",
-		"kancolle_harbour2",
+		"kancolle_harbour2_v2",
 		"kc_harbour_v4",
 		"2d_kc_harbour_v4",
 		"kc_harbour_v3"
@@ -4657,10 +4657,6 @@
 		"ss_wildcat_black",
 		"ss_wildcat_c"
 	],
-	"Hinchaisraelita": [
-		"hinchaisraelita",
-		"zz_hincha_israelita"
-	],
 	"Splintercell - Sam Fisher": [
 		"splintercell_green",
 		"splintercell_blue",
@@ -5298,7 +5294,7 @@
 		"lt_rin"
 	],
 	"Sena Kashiwazaki": [
-		"bwtgs_sena_kashiwazaki",
+		"bwtgs_sena_kashiwazaki_v2",
 		"2d_bwtgs_sana"
 	],
 	"Half-Life - Colette": [
@@ -5403,7 +5399,7 @@
 		"2d_hevsnark"
 	],
 	"Kancolle - Shimakaze": [
-		"kancolle_shimakaze_v2",
+		"kancolle_shimakaze_v3",
 		"2d_kc_shimakaze_v2_n",
 		"2d_kc_shimakaze",
 		"2d_kancolle_shimakaze_v2",
@@ -5411,7 +5407,7 @@
 		"kc_shimakaze_v2_n"
 	],
 	"Kemono Friends - Greywolf": [
-		"kf_greywolf_kz_v2",
+		"kf_greywolf_kz_v3",
 		"kf_greywolf",
 		"2d_kf_greywolf",
 		"kf_japwolf"
@@ -5427,14 +5423,14 @@
 		"2d_kc_amatsukaze"
 	],
 	"Kancolle - Atago": [
-		"kancolle_atago",
-		"kancolle_atago_n",
+		"kancolle_atago_v2",
+		"kancolle_atago_n_v2",
 		"2d_kc_atago_n",
 		"2d_kc_atago"
 	],
 	"Kancolle - Bismarck": [
-		"kancolle_bismarck",
-		"kancolle_bismarck_n",
+		"kancolle_bismarck_v2",
+		"kancolle_bismarck_n_v2",
 		"2d_kc_bismarck_n"
 	],
 	"Kancolle - Destroyer": [
@@ -5796,7 +5792,7 @@
 	"Touhou - Suwako": [
 		"suwako",
 		"touhou_suwakero",
-		"touhou_suwako",
+		"touhou_suwako_v2",
 		"2d_touhou_suwako2",
 		"2d_touhou_suwako",
 		"2d_touhou_suwakero",
@@ -6077,7 +6073,7 @@
 		"robocop3_v2",
 		"rage",
 		"ragnar",
-		"peruano_v2",
+		"peruano_v3",
 		"reptile_v2",
 		"reptilemk",
 		"prowler",
@@ -7277,8 +7273,8 @@
 		"junkie2"
 	],
 	"Kancolle - Takao": [
-		"kancolle_takao",
-		"kancolle_takao_n_v2"
+		"kancolle_takao_v2",
+		"kancolle_takao_n_v3"
 	],
 	"Kamen Rider": [
 		"kamenriderv3",
@@ -7554,7 +7550,9 @@
 	"Miko": [
 		"miko_black_v2",
 		"miko_b_v2",
-		"miko_v2"
+		"miko_v2",
+		"greentea_miko",
+		"succubus_miko"
 	],
 	"Mortal Kombat - Cyrax": [
 		"mk3_cyrax",
@@ -8874,7 +8872,7 @@
 		"ted2"
 	],
 	"Tapir": [
-		"tapir590",
+		"tapir590_v2",
 		"tapir590_co"
 	],
 	"Dragon Ball Z - Tarles": [
@@ -9132,6 +9130,13 @@
 		"weregarurumon",
 		"weregarurumon_shadow"
 	],
+	"Akiba": [
+		"akiba_rin",
+		"akiba_rin_under",
+		"akiba_woman_1",
+		"akiba_woman_1_under",
+		"akiba_woman_1_under_0"
+	],
 	"Qubeley": [
 		"whitequbeley",
 		"redqubeley"
@@ -9193,7 +9198,8 @@
 	"Zaku": [
 		"zaku",
 		"zakuii",
-		"z_zaku"
+		"z_zaku",
+		"ms_zaku-ii"
 	],
 	"Legend of Zelda - Zelda": [
 		"zelda2_v2",
@@ -9235,7 +9241,8 @@
 	"Jesus": [
 		"jesus_v2",
 		"zz_hincha_israelita",
-		"jesus2"
+		"jesus2",
+		"hinchaisraelita"
 	],
 	"Killing Floor - Agent Wilkes": [
 		"kf_wilkes",
@@ -9378,6 +9385,10 @@
 	"tiger_woods": [
 		"tiger_woods_v2",
 		"neet64_v2"
+	],
+	"Nanachi Tiger": [
+		"nanachi_tiger_long",
+		"nanachi_tiger_short"
 	],
 	"T-Ster1": [
 		"t-ster1",

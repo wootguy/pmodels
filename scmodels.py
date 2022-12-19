@@ -794,10 +794,13 @@ def install_new_models():
 	
 	for dir in new_dirs:
 		lowernew = dir.lower()
+		is_new_model = True
+		
 		for idx, old in enumerate(old_dirs):
 			if lowernew == old.lower():
-				print("ERROR: %s already exists" % old)
+				print("ERROR: %s already exists" % old)				
 				any_dups = True
+				is_new_model = False
 				#rename_model(old, old + "_v2", models_path)
 		
 		for key, val in alt_names.items():

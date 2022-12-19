@@ -2603,6 +2603,7 @@
 		"billy2"
 	],
 	[
+		"kancolle_takao_n_v3",
 		"kancolle_takao_n_v2",
 		"kancolle_takao_n"
 	],
@@ -3083,6 +3084,7 @@
 		"nekomata_armor"
 	],
 	[
+		"kf_greywolf_kz_v3",
 		"kf_greywolf_kz_v2",
 		"kf_greywolf_kz"
 	],
@@ -5790,5 +5792,53 @@
 	[
 		"vizcarra_v2",
 		"vizcarra"
+	],
+	[
+		"bwtgs_sena_kashiwazaki_v2",
+		"bwtgs_sena_kashiwazaki"
+	],
+	[
+		"flandre4_v2",
+		"flandre4"
+	],
+	[
+		"hdnr_neptune-c3_big_v2",
+		"hdnr_neptune-c3_big"
+	],
+	[
+		"kancolle_atago_n_v2",
+		"kancolle_atago_n"
+	],
+	[
+		"kancolle_atago_v2",
+		"kancolle_atago"
+	],
+	[
+		"kancolle_bismarck_n_v2",
+		"kancolle_bismarck_n"
+	],
+	[
+		"kancolle_bismarck_v2",
+		"kancolle_bismarck"
+	],
+	[
+		"kancolle_harbour2_v2",
+		"kancolle_harbour2"
+	],
+	[
+		"kancolle_shimakaze_v3",
+		"kancolle_shimakaze_v2"
+	],
+	[
+		"kancolle_takao_v2",
+		"kancolle_takao"
+	],
+	[
+		"miku_fabulous2_v2",
+		"miku_fabulous2"
+	],
+	[
+		"touhou_suwako_v2",
+		"touhou_suwako"
 	]
 ]	

@@ -1739,7 +1739,8 @@
     "kf_greywolf_kz_v2": [
         "kf_greywolf_0fa18",
         "lt_greywolf",
-        "kf_greywolf_v2"
+        "kf_greywolf_v2",
+        "kf_greywolf"
     ],
     "bruvleader_v2": [
         "bruvleader"
@@ -5550,5 +5551,11 @@
     ],
     "steve2": [
         "steve"
+    ],
+    "jarjar_v2": [
+        "jarjar"
+    ],
+    "ugg_goosec_v2": [
+        "ugg_goosec"
     ]
 }

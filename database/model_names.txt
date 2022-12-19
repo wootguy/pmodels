@@ -591,6 +591,11 @@ akeen2
 akeen3
 akeen4
 akeen5
+akiba_rin
+akiba_rin_under
+akiba_woman_1
+akiba_woman_1_under
+akiba_woman_1_under_0
 akyu
 al_akashi
 al_ayanami
@@ -1542,6 +1547,7 @@ bw_helmet
 bwsniper
 bwsniper_v2
 bwtgs_sena_kashiwazaki
+bwtgs_sena_kashiwazaki_v2
 byakuya
 c-r-o-w
 c3po
@@ -1835,6 +1841,7 @@ cloakflames
 cloke
 clone
 clone_hd
+closers_mirai
 closers_tina
 closers_tina-c2
 closers_tina-ss1
@@ -1850,8 +1857,10 @@ clowncop
 clowncop_v2
 clsuit_gus
 cm3d2_catgirl
+cm3d2_cowgirl
 cm3d2_dragon
 cm3d2_fox
+cm3d2_ghost
 cm3d2_kagerou2
 cm3d2_miku_bunny
 cm3d2_succubus_1
@@ -2711,6 +2720,7 @@ discoman
 discoman2
 discoman_v2
 divayth
+division_hunter
 dk64_chunky
 dk64_diddy
 dk64_dixie
@@ -3020,6 +3030,9 @@ eod
 eod_v2
 eole
 epsilon_hs
+eq_monk
+eq_paladin
+eq_warrior
 equsoldier
 eric
 eric-e
@@ -3206,6 +3219,7 @@ flandre
 flandre2
 flandre3
 flandre4
+flandre4_v2
 flandre5
 flandre_bikini
 flandre_cab_nude
@@ -3676,6 +3690,7 @@ greenearth
 greenlantern
 greenstick
 greenstick_v2
+greentea_miko
 grenade
 greta
 greta_thunberg
@@ -4062,6 +4077,7 @@ hdnr_neptune
 hdnr_neptune-c2
 hdnr_neptune-c3
 hdnr_neptune-c3_big
+hdnr_neptune-c3_big_v2
 hdoorgnr
 headcrab
 headcrab_hat
@@ -4717,19 +4733,28 @@ kamikaze
 kanatekoman
 kanatekoman_v2
 kancolle_amatsukaze
+kancolle_amatsukaze_v2
 kancolle_atago
 kancolle_atago_n
+kancolle_atago_n_v2
+kancolle_atago_v2
 kancolle_bismarck
 kancolle_bismarck_n
+kancolle_bismarck_n_v2
+kancolle_bismarck_v2
 kancolle_harbour
 kancolle_harbour2
+kancolle_harbour2_v2
 kancolle_hibiki
 kancolle_hibiki_n
 kancolle_shimakaze
 kancolle_shimakaze_v2
+kancolle_shimakaze_v3
 kancolle_takao
 kancolle_takao_n
 kancolle_takao_n_v2
+kancolle_takao_n_v3
+kancolle_takao_v2
 kane
 kanibusklown
 kanimiso
@@ -4825,6 +4850,7 @@ kf_gorefast
 kf_greywolf
 kf_greywolf_kz
 kf_greywolf_kz_v2
+kf_greywolf_kz_v3
 kf_humboldt
 kf_husk
 kf_japwolf
@@ -5680,12 +5706,14 @@ mikofox_black
 mikofox_naked
 mikofox_suit
 mikofoxsuit
+mikoto
 miku
 miku2
 miku_alpha
 miku_cute2_arms
 miku_f
 miku_fabulous2
+miku_fabulous2_v2
 miku_kurumi
 miku_kurumi_v2
 miku_neko
@@ -5911,6 +5939,7 @@ mrvalve
 mrvalve2
 mrvalve3
 ms._pc_punisher
+ms_zaku-ii
 msc_male
 msc_male_v2
 msc_reference
@@ -6023,6 +6052,7 @@ nagato_xmas
 nagato_xmas_black
 nagato_xmas_blackn
 nagato_xmas_n
+nagato_xmas_nfb
 nagato_xmas_topless
 naked
 nakedkobold3
@@ -6045,6 +6075,7 @@ nameless
 namgrunt
 nana
 nanachi_tiger_long
+nanachi_tiger_short
 narkosha
 narkosha_v2
 naruto
@@ -8747,6 +8778,7 @@ sub-zero3
 subwaysurfer
 subzero
 succubus
+succubus_miko
 suika
 sunshine
 sunshine_v2
@@ -9521,6 +9553,7 @@ touhou_shizuha
 touhou_suikaabcedition
 touhou_suwakero
 touhou_suwako
+touhou_suwako_v2
 touhou_tenko
 touhou_tenshi
 touhou_tenshi_40k
@@ -9704,6 +9737,7 @@ ucatroop3
 ufocat
 ufocat_v2
 uganda
+uganda_girl
 ugandaknacle
 ugandan_knuckles
 ugandan_knuckles_voice
