@@ -16,6 +16,8 @@ hash_json_name = 'database/hashes.json'
 replacements_json_name = 'database/replacements.json'
 alias_json_name = 'database/alias.json'
 versions_json_name = 'database/versions.json'
+tags_json_name = 'database/tags.json'
+groups_json_name = 'database/groups.json'
 
 start_dir = os.getcwd()
 
@@ -726,10 +728,78 @@ def find_duplicate_models(work_path):
 		
 	return True
 
-def install_new_models():
+def get_latest_version_name(model_name, versions_json):
+	for vergroup in versions_json:
+		for veridx in range(0, len(vergroup)):
+			if vergroup[veridx] == model_name:
+				return vergroup[0]
+				
+	return model_name
+
+def fix_json():
+	global versions_json_name
+	global tags_json_name
+	global groups_json_name
+	
+	versions_json = None
+	tags_json = None
+	groups_json = None
+	
+	with open(versions_json_name) as f:
+		versions_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+	with open(tags_json_name) as f:
+		tags_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+	with open(groups_json_name) as f:
+		groups_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+	
+	num_updates = 0
+	
+	print("-- Checking tags")
+	for key, group in tags_json.items():
+		print("%s                    " % (key), end='\r')
+		
+		for idx in range(0, len(group)):
+			latest_name = get_latest_version_name(group[idx], versions_json)
+			
+			if latest_name != group[idx]:
+				print("%s -> %s                    " % (group[idx], latest_name))
+				group[idx] = latest_name
+				num_updates += 1
+				
+		tags_json[key] = sorted(tags_json[key])
+		
+	print("\n-- Checking groups")
+	for key, group in groups_json.items():
+		print("%s                    " % (key), end='\r')
+		
+		for idx in range(0, len(group)):
+			latest_name = get_latest_version_name(group[idx], versions_json)
+			
+			if latest_name != group[idx]:
+				print("%s -> %s                    " % (group[idx], latest_name))
+				group[idx] = latest_name
+				num_updates += 1
+				
+		groups_json[key] = sorted(groups_json[key])
+	
+	with open(tags_json_name, 'w') as outfile:
+		tags_json = dict(sorted(tags_json.items()))
+		json.dump(tags_json, outfile, indent=4)
+	print("Wrote %s " % tags_json_name)
+		
+	with open(groups_json_name, 'w') as outfile:
+		groups_json = dict(sorted(groups_json.items()))
+		json.dump(groups_json, outfile, indent=4)
+	print("Wrote %s " % groups_json_name)
+	
+	print("\nUpdated %d model references to the latest version" % num_updates)
+
+def install_new_models(new_versions_mode=False):
 	global models_path
 	global install_path
 	global alias_json_name
+	global versions_json_name
+	global start_dir
 	
 	new_dirs = get_sorted_dirs(install_path)
 	if len(new_dirs) == 0:
@@ -794,30 +864,41 @@ def install_new_models():
 	
 	for dir in new_dirs:
 		lowernew = dir.lower()
-		is_new_model = True
+		is_unique_name = False
 		
-		for idx, old in enumerate(old_dirs):
-			if lowernew == old.lower():
-				print("ERROR: %s already exists" % old)				
-				any_dups = True
-				is_new_model = False
-				#rename_model(old, old + "_v2", models_path)
+		if not new_versions_mode:
+			for idx, old in enumerate(old_dirs):
+				if lowernew == old.lower():
+					print("ERROR: %s already exists" % old)
+					any_dups = True
+					is_unique_name = False
+					#rename_model(old, old + "_v2", models_path)
 		
-		for key, val in alt_names.items():
-			for alt in val:
-				if alt.lower() == lowernew:
-					print("ERROR: %s is a known alias of %s" % (lowernew, key))
-					alt_name_risk = True
-			
+		if is_unique_name and new_versions_mode:
+			any_dups = True
+			print("ERROR: %s is not an update to any model. No model with that name exists.")
+		
+		if not new_versions_mode:
+			# not checking alias in new version mode because the models will be renamed
+			# altough technically there can be an alias problem still, but that should be really rare
+			for key, val in alt_names.items():
+				for alt in val:
+					if alt.lower() == lowernew:
+						print("WARNING: %s is a known alias of %s" % (lowernew, key))
+						alt_name_risk = True
+	
 	if any_dups:
-		print("No models were added due to duplicates.")
+		if new_versions_mode:
+			print("No models were added because some models have no known older version.")
+		else:
+			print("No models were added due to duplicates.")
 		return
 	
 	if alt_name_risk:
-		x = input("Continue adding models even though people probably have different versions of these installed? (y/n): ")
+		x = input("\nContinue adding models even though people probably have different versions of these installed? (y/n): ")
 		if x != 'y':
 			return
-	
+			
 	print("\n-- Lowercasing files")
 	for dir in new_dirs:
 		all_files = [file for file in os.listdir(os.path.join(install_path, dir))]
@@ -836,6 +917,85 @@ def install_new_models():
 			print("Rename: %s -> %s" % (dir, dir.lower()))
 			os.rename(os.path.join(install_path, dir), os.path.join(install_path, dir.lower()))
 	new_dirs = [dir.lower() for dir in new_dirs]
+	
+	if new_versions_mode:
+		print("\n-- Adding version suffixes")
+		renames = []
+		
+		versions_json = None
+		with open(versions_json_name) as f:
+			json_dat = f.read()
+			versions_json = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+		
+		for dir in new_dirs:
+			found_ver = ''
+			version_list_size = 1
+			group_idx = -1
+			for groupidx in range(0, len(versions_json)):
+				group = versions_json[groupidx]
+				for idx in range(0, len(group)):
+					if group[idx] == dir:
+						found_ver = group[0]
+						version_list_size = len(group)
+						group_idx = groupidx
+						break
+				if found_ver:
+					break
+			
+			new_name = dir + "_v2"
+			if found_ver:
+				fidx = found_ver.rfind("_v")
+				if fidx == -1 or not found_ver[fidx+2:].isnumeric():
+					print("ERROR: Failed to find version number in %s. Don't know what to do." % new_name)
+					sys.exit()
+				vernum = int(found_ver[fidx+2:])
+				while True:
+					new_name = found_ver[:fidx] + ("_v%d" % (vernum+1))
+					# TODO: this assumes all files in the database are lowercase, but shouldn't maybe
+					if new_name.lower() not in old_dirs:
+						break
+					vernum += 1
+			else:
+				fidx = dir.rfind("_v")
+				if fidx != -1 and dir[fidx+2:].isnumeric():
+					vernum = int(dir[fidx+2])
+					while True:
+						new_name = dir[:fidx] + ("_v%d" % (vernum+1))
+						# TODO: this assumes all files in the database are lowercase, but shouldn't maybe
+						if new_name.lower() not in old_dirs:
+							break
+						vernum += 1
+			
+			old_dirs.append(new_name.lower())
+			
+			print("INFO: %s will be renamed to %s" % (dir, new_name))
+			renames.append((dir, new_name.lower()))
+			
+			if group_idx != -1:
+				versions_json[group_idx] = [new_name] + versions_json[group_idx]
+				print("    %s" % versions_json[group_idx])
+			else:
+				versions_json.append([new_name.lower(), dir.lower()])
+				#print("    %s" % versions_json[-1])
+	
+		
+	
+		print("\nWARNING: Proceeding will rename the above models and overwrite versions.json!")
+		print("         If this process fails you will need to undo everything manually (versions.json + model names).")
+		x = input("Proceed? (y/n): ")
+		if x != 'y':
+			return
+	
+		for rename_op in renames:
+			rename_model(rename_op[0], rename_op[1], install_path)
+			
+		os.chdir(start_dir)
+		
+		with open(versions_json_name, 'w') as outfile:
+			json.dump(versions_json, outfile, indent=4)
+		print("Wrote %s" % versions_json_name)
+		
+		# TODO: auto-update groups and tags to use latest version names
 	
 	print("\n-- Generating thumbnails")
 	update_models(install_path, True, False, False, False, False)
@@ -919,6 +1079,10 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
+	print("add_version - add new models from the install folder, but treat them as updates to models that already exist")
+	print("              This will add/edit version suffixes and update versions.json.")
+	print("fix_json - Makes sure tags.json and groups.json are using the latest model names, and sorts jsons.")
+	print("           Run this after add_version.")
 	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
 	
 	sys.exit()
@@ -926,7 +1090,13 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 if len(args) > 0:
 	if args[0].lower() == 'add':
 		# For adding new models
-		install_new_models()
+		install_new_models(new_versions_mode=False)
+	elif args[0].lower() == 'add_version':
+		# For adding new models
+		install_new_models(new_versions_mode=True)
+	elif args[0].lower() == 'fix_json':
+		# For adding new models
+		fix_json()
 	elif args[0].lower() == 'update':
 		# For adding new models
 		update_models(models_path, skip_existing=True, skip_on_error=True, errors_only=False, info_only=False, update_master_json=True)
