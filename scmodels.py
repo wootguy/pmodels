@@ -1072,10 +1072,12 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("python3 scmodels.py [command]\n")
 	
 	print("Available commands:")
-	print("update - generate thumbnails and info jsons for any models.")
+	print("update - generate thumbnails and info jsons for any new models, and updates model lists.")
 	print("regen - regenerates info jsons for every model")
 	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
 	print("rename <a> <b> - rename model <a> to <b>")
+	print("rename_fast <a> <b> - skips the update so you can rename multiple models quickly.")
+	print("                      but you have to remember to run update afterwards.")
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
@@ -1132,6 +1134,14 @@ if len(args) > 0:
 		print("- update name in versions.json")
 		print("- python3 git_init.py update")
 		print("- push changes to main repo")
+	elif args[0].lower() == 'rename_fast':
+		print("TODO: Add to alias after rename")
+		rename_model(args[1], args[2], models_path)
+		os.chdir(start_dir)
+		list_file = open("updated.txt","a") 
+		list_file.write("%s\n" % args[1])
+		list_file.write("%s\n" % args[2])
+		list_file.close()
 	elif args[0].lower() == 'fixup':
 		pass
 	

@@ -9170,10 +9170,10 @@ ta_flanker
 ta_marine
 ta_operative
 ta_research
-ta_special_badcop2_v2
-ta_special_badcop_v2
-ta_special_clonecop2_v2
-ta_special_clonecop_v2
+ta_special_badcop
+ta_special_badcop2
+ta_special_clonecop
+ta_special_clonecop2
 ta_special_juggernaut
 ta_special_juggernaut2
 ta_special_pilot

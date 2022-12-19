@@ -341,6 +341,10 @@
         "arknights_exusiai",
         "arknights_exusiai-c2"
     ],
+	"Arknights - Lappland": [
+        "arknights_lappland",
+        "arknights_lappland_v2"
+    ],
     "Army": [
         "army_engineer",
         "army_general",
@@ -3493,18 +3497,18 @@
         "hgrunt2_v2",
         "hgrunt3",
         "hgrunt_hd_v2",
-        "hl_grunt",
+        "hl_grunt3",
         "hl_grunt",
         "hl_grunt2",
         "hl_grunt2f",
         "hl_gruntf",
         "hl_recon",
-        "hl_recon",
+        "hl_recon2",
         "hl_reconf",
         "hl_sarge",
-        "hl_sarge",
+        "hl_sarge2",
         "hl_sargef",
-        "hl_shotgun",
+        "hl_shotgun3",
         "hl_shotgun",
         "hl_shotgun2",
         "hl_shotgun2f",
@@ -7158,11 +7162,11 @@
     "Rindo / Filian": [
         "kz_rindo",
         "kz_rindo_sw",
-        "kz_rindo_swc",
+        "kz_rindo_swc_v2",
         "kz_rindo_v2",
         "kz_rindo_v3",
         "vt_filian",
-        "vtuber_filian_sw"
+        "vtuber_filian_sw_v2"
     ],
     "Rohani": [
         "rohani",
