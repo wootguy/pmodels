@@ -40,6 +40,10 @@ rat -> rat2
 shotgun -> weapon_shotgun
 puro -> puro2
 steve -> steve2
+hl_grunt -> hl_grunt3
+hl_recon -> hl_recon2
+hl_sarge -> hl_sarge2
+hl_shotgun -> hl_shotgun3
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
@@ -58,3 +62,5 @@ They overwrite the default player models otherwise.
 
 added "_up" to the upscaled texture they hunger pack
 https://www.moddb.com/mods/sven-co-op/addons/they-hunger-upscale-ld-quality
+
+added "rvi_" to BrussTrigger's Revitalization Playermodels

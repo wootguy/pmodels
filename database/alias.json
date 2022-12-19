@@ -5557,5 +5557,239 @@
     ],
     "ugg_goosec_v2": [
         "ugg_goosec"
+    ],
+    "bwtgs_sena_kashiwazaki_v2": [
+        "bwtgs_sana"
+    ],
+    "hdnr_neptune-c3_big_v2": [
+        "hdn_neptune_poritan"
+    ],
+    "kancolle_amatsukaze_v2": [
+        "kc_amatsukaze"
+    ],
+    "kancolle_atago_v2": [
+        "kc_atago"
+    ],
+    "kancolle_atago_n_v2": [
+        "kc_atago_n"
+    ],
+    "kancolle_bismarck_v2": [
+        "kc_bismarck"
+    ],
+    "kancolle_bismarck_n_v2": [
+        "kc_bismarck_n"
+    ],
+    "kancolle_harbour2_v2": [
+        "kc_harbour_v2"
+    ],
+    "kancolle_shimakaze_v3": [
+        "kc_shimakaze_v2"
+    ],
+    "kancolle_takao_v2": [
+        "kc_takao"
+    ],
+    "kancolle_takao_n_v3": [
+        "kc_takao_n"
+    ],
+    "kf_greywolf_kz_v3": [
+        "kf_greywolf_v2"
+    ],
+    "flandre4_v2": [
+        "touhou_flan_dress"
+    ],
+    "touhou_suwako_v2": [
+        "touhou_swako"
+    ],
+    "miku_fabulous2_v2": [
+        "vocaloid_miku_v2"
+    ],
+    "2d_sanic_v3": [
+        "2d_sanic"
+    ],
+    "2d_sanic_v4": [
+        "2d_sanic_v2"
+    ],
+    "chris_redfield_v2": [
+        "chris_redfield"
+    ],
+    "civilian_v2": [
+        "civilian"
+    ],
+    "darthvader_v2": [
+        "darthvader"
+    ],
+    "dm_colette_v2": [
+        "dm_colette"
+    ],
+    "dm_gordon_v2": [
+        "dm_gordon"
+    ],
+    "dm_helmet_white": [
+        "dm_helmet"
+    ],
+    "fnf_boyfriend_v2": [
+        "fnf_boyfriend"
+    ],
+    "fnv_riotranger_v2": [
+        "fnv_riotranger"
+    ],
+    "hunk_v4": [
+        "hunk_v2"
+    ],
+    "kkk_v3": [
+        "kkk"
+    ],
+    "metrocop_v2": [
+        "metrocop"
+    ],
+    "opfor_balaclava_v2": [
+        "opfor_balaclava"
+    ],
+    "opfor_grunt_v2": [
+        "opfor_grunt"
+    ],
+    "opfor_hgrunt_v2": [
+        "opfor_hgrunt"
+    ],
+    "opfor_medic_v2": [
+        "opfor_medic"
+    ],
+    "opfor_recon_v2": [
+        "opfor_recon"
+    ],
+    "opfor_saw_v2": [
+        "opfor_saw"
+    ],
+    "opfor_torch_v2": [
+        "opfor_torch"
+    ],
+    "opfor_tower_v2": [
+        "opfor_tower"
+    ],
+    "pokerface2": [
+        "pokerface"
+    ],
+    "poliisikoira_v2": [
+        "poliisikoira"
+    ],
+    "smid_v2": [
+        "smid"
+    ],
+    "smij_v2": [
+        "smij"
+    ],
+    "alice_v2": [
+        "touhou_alice"
+    ],
+    "touhou_hina_v2": [
+        "touhou_hina"
+    ],
+    "touhou_maribelhearn": [
+        "touhou_maribelhearnayaedition"
+    ],
+    "touhou_usamirenko": [
+        "touhou_usamirenkoayaedition"
+    ],
+    "touhou_utsuho_v2": [
+        "touhou_utsuho"
+    ],
+    "hl_grunt3": [
+        "hl_grunt"
+    ],
+    "hl_recon2": [
+        "hl_recon"
+    ],
+    "hl_sarge": [
+        "hl_sarge2"
+    ],
+    "hl_shotgun": [
+        "hl_shotgun3"
+    ],
+    "rvi_barney": [
+        "barney"
+    ],
+    "rvi_barney2": [
+        "barney2"
+    ],
+    "rvi_bs_unarmored_barney_1": [
+        "bs_unarmored_barney_1"
+    ],
+    "rvi_bs_unarmored_barney_2": [
+        "bs_unarmored_barney_2"
+    ],
+    "rvi_colette": [
+        "colette"
+    ],
+    "rvi_gina": [
+        "gina"
+    ],
+    "rvi_gman": [
+        "gman"
+    ],
+    "rvi_gordon": [
+        "gordon"
+    ],
+    "rvi_helmet": [
+        "helmet"
+    ],
+    "rvi_hevbarney": [
+        "hevbarney"
+    ],
+    "rvi_hevbarney2": [
+        "hevbarney2"
+    ],
+    "rvi_hevscientist": [
+        "hevscientist"
+    ],
+    "rvi_hevscientist2": [
+        "hevscientist2"
+    ],
+    "rvi_hevscientist3": [
+        "hevscientist3"
+    ],
+    "rvi_hevscientist4": [
+        "hevscientist4"
+    ],
+    "rvi_hevscientist5": [
+        "hevscientist5"
+    ],
+    "rvi_hgrunt": [
+        "hgrunt"
+    ],
+    "rvi_recon": [
+        "recon"
+    ],
+    "rvi_sci_wheelchair": [
+        "sci_wheelchair"
+    ],
+    "rvi_scientist": [
+        "scientist"
+    ],
+    "rvi_scientist2": [
+        "scientist2"
+    ],
+    "rvi_scientist3": [
+        "scientist3"
+    ],
+    "rvi_scientist4": [
+        "scientist4"
+    ],
+    "rvi_scientist5": [
+        "scientist5"
+    ],
+    "rvi_scientist6": [
+        "scientist6"
+    ],
+    "rvi_zombie": [
+        "zombie"
+    ],
+    "ta_c_badcop2": [
+        "ta_c_elite2"
+    ],
+    "ta_c_badcop_armor2": [
+        "ta_c_elite_armor2"
+    ],
+    "ta_special_pilot": [
+        "ta_special_pilot2"
     ]
 }
