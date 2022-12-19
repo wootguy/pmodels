@@ -1762,6 +1762,7 @@
 		"clans8n"
 	],
 	[
+		"xt-10_mkiv",
 		"xt-10_mkiii",
 		"xt-10_mkii",
 		"xt-10"
@@ -5692,5 +5693,41 @@
 	[
 		"kz_bowsette_v2",
 		"kz_bowsette"
+	],
+	[
+		"black_phoemix_v5",
+		"black_phoemix"
+	],
+	[
+		"ksa_susie_p2_v2",
+		"ksa_susie_p2"
+	],
+	[
+		"ksa_susie_p3_v2",
+		"ksa_susie_p3"
+	],
+	[
+		"ksa_susie_p4_v2",
+		"ksa_susie_p4"
+	],
+	[
+		"ksa_susie_v2",
+		"ksa_susie_p1"
+	],
+	[
+		"leon_umbrella_v2",
+		"leon_umbrella"
+	],
+	[
+		"ngnl_shiro_v2",
+		"ngnl_shiro"
+	],
+	[
+		"op4_recon2_v2",
+		"op4_recon2"
+	],
+	[
+		"pink_panther_v2",
+		"pink_panther"
 	]
-]
+]	

@@ -5532,5 +5532,23 @@
     ],
     "touhou_sanae_jky_v2": [
         "touhou_sanae_jky"
+    ],
+    "op4_recon": [
+        "op4_major"
+    ],
+    "op4_recon2": [
+        "op4_major2"
+    ],
+	"weapon_shotgun": [
+        "shotgun"
+    ],
+	"rat2": [
+        "rat"
+    ],
+	"puro2": [
+        "puro"
+    ],
+	"steve2": [
+        "steve"
     ]
 }

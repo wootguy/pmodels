@@ -36,6 +36,9 @@ wireframe -> wireframe2
 natasha -> q2_natasha
 pokerface -> pokerface2
 dm_helmet -> dm_helmet_white
+rat -> rat2
+shotgun -> weapon_shotgun
+puro -> puro2
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
