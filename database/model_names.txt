@@ -5171,7 +5171,7 @@ kz_op_uni
 kz_reimu
 kz_rindo
 kz_rindo_sw
-kz_rindo_swc
+kz_rindo_swc_v2
 kz_rindo_v2
 kz_rindo_v3
 kz_tda_etihw
@@ -10113,7 +10113,7 @@ vortigaunt_slave
 votoms
 votoms_v2
 vt_filian
-vtuber_filian_sw
+vtuber_filian_sw_v2
 vtuber_kizuna
 vtuber_kizuna_black
 vtuber_kizuna_ld
