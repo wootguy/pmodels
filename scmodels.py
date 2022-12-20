@@ -740,10 +740,12 @@ def fix_json():
 	global versions_json_name
 	global tags_json_name
 	global groups_json_name
+	global replacements_json_name
 	
 	versions_json = None
 	tags_json = None
 	groups_json = None
+	replacements_json = None
 	
 	with open(versions_json_name) as f:
 		versions_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
@@ -753,6 +755,30 @@ def fix_json():
 		groups_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
 	
 	num_updates = 0
+	
+	if os.path.exists(replacements_json_name):
+		print("-- Checking replacements")
+		new_replacement_json = {}
+		with open(replacements_json_name) as f:
+			replacements_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+		for key, replacements in replacements_json.items():
+			print("%s                    " % (key), end='\r')
+			
+			for idx in range(0, len(replacements)):
+				latest_name = get_latest_version_name(replacements[idx], versions_json)
+				if latest_name != replacements[idx]:
+					print("%s -> %s                    " % (replacements[idx], latest_name))
+					replacements[idx] = latest_name
+					num_updates += 1
+			
+			latest_name = get_latest_version_name(key, versions_json)
+			if latest_name != key:
+				new_replacement_json[latest_name] = replacements
+				print("%s -> %s                    " % (key, latest_name))
+				num_updates += 1
+			else:
+				new_replacement_json[key] = replacements
+		replacements_json = new_replacement_json
 	
 	print("-- Checking tags")
 	for key, group in tags_json.items():
@@ -792,6 +818,11 @@ def fix_json():
 		groups_json = dict(sorted(groups_json.items()))
 		json.dump(groups_json, outfile, indent=4)
 	print("Wrote %s " % groups_json_name)
+	
+	with open(replacements_json_name, 'w') as outfile:
+		groups_json = dict(sorted(groups_json.items()))
+		json.dump(replacements_json, outfile, indent=4)
+	print("Wrote %s " % replacements_json_name)
 	
 	print("\nUpdated %d model references to the latest version" % num_updates)
 
@@ -1028,11 +1059,17 @@ def install_new_models(new_versions_mode=False):
 def pack_models(all_models):
 	global models_path
 	
+	crash_models = set()
+	with open("database/crash_models.txt", "r") as update_list:
+		for line in update_list.readlines():
+			crash_models.add(line.lower())
+	
 	if all_models:
 		fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
 		cmd = 'zip -r %s models/player -x "*.png" -x "*.json"' % fname
 		print(cmd)
 		os.system(cmd)
+		# TODO: remove crash models from archive
 		return
 	
 	add_models = []
@@ -1040,7 +1077,7 @@ def pack_models(all_models):
 		json_dat = f.read()
 		versions = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 		
-		exclude = set()
+		exclude = crash_models
 		for group in versions:
 			for idx, name in enumerate(group):
 				if idx == 0:
