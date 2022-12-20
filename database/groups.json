@@ -2985,6 +2985,7 @@
         "ta_special_clonecop2"
     ],
     "Half Life - Gordon Freeman": [
+		"ld_gordon",
         "dm_gordon_v2",
         "fatgordon_v2",
         "rvi_gordon",
@@ -3036,7 +3037,6 @@
         "hl2-gordon",
         "hl2_gordon",
         "ioaf_gordon",
-        "ld_gordon",
         "new beta gordon",
         "new_beta_gordon",
         "npgordongopnik",
@@ -4962,8 +4962,13 @@
         "kancolle_amatsukaze",
         "lt_amatsukaze",
         "2d_kc_amatsukaze",
-		"kancolle_amatsukaze_v2"
+		"kancolle_amatsukaze_v2",
+		"kc_amatsukaze_n"
     ],
+	"Stalker - Skeleton": [
+		"stalker_skeleton",
+		"skeleton2"
+	],
 	"Koishi Scarlet": [
 		"koishiscarletv1",
 		"touhou_koishiscarletv1"
@@ -6080,7 +6085,8 @@
         "coconut",
         "nekopara_coconut",
         "nekopara_coconut_kz",
-        "2d_nekopara_coconut"
+        "2d_nekopara_coconut",
+		"nekopara_coconut2"
     ],
     "Nekopara - Ethanol": [
         "nekopara_ethanol_v5",
@@ -7193,7 +7199,8 @@
         "mcdonold_v2",
         "spp_mcdonold",
         "bigmac",
-        "ronny_v2"
+        "ronny_v2",
+		"mcdonold"
     ],
     "Rorschach": [
         "rorschach",
