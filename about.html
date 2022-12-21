@@ -21,11 +21,11 @@
 			h2 {
 				color: #f88;
 			}
-			.about-link {
-				display: block;
+			.header-links {
 				text-align: center;
-				margin: 0 auto;
-				width: max-content;
+			}
+			.about-link {
+				padding: 0 15px;
 			}
 			.about-text {
 				margin: 0 auto;
@@ -41,7 +41,11 @@
 	</head>
 	<body>
 		<h1>Sven Co-op Model Database</h1>
-		<a class="about-link" href="index.html">Home</a>
+		<div class="header-links">
+			<a class="about-link" href="index.html">Home</a>
+			<a class="about-link" href="about.html">About</a>
+			<a class="about-link" href="download.html">Model packs</a>
+		</div>
 		<hr>
 		
 		
@@ -64,7 +68,7 @@
 				<a href="https://github.com/wootguy/scmodels">Source code for this site</a>
 			</p>
 			
-			<h2>Model Names</h2>
+			<h2>Model names</h2>
 			<p>
 				People often copy-paste models and then rename them. These renamed models then get distributed in model packs.
 				Because of this, I don't know if any of the model names here are correct. <a href="https://github.com/wootguy/scmodels/issues/new">Let me know</a>
@@ -79,6 +83,18 @@
 				You can also see previous model names in the "Known Aliases" section of the model viewer.
 			</p>
 			
+			<p>
+				Version suffixes (e.g. "_v2") are added and necessary because servers can't overwrite existing models in your model
+				folder. If a server wants to automatically distribute an updated model, then that model has to have a
+				new name or else many players won't see it.
+			</p>
+			<p>
+				Model names are also lowercased so that they can easily be served on Linux FastDL
+				servers, and to simplify plugin/website logic. That isn't totally necessary and I regret doing it. Some
+				model names used capital letters to separate names and acronyms. Now it might be harder to figure out
+				where those models came from if you aren't familiar with every game/movie/anime/etc.
+			</p>
+			
 			<h2>Model sources</h2>
 			<p>
 				<ul>
@@ -88,7 +104,8 @@
 					<li><a href="https://drive.google.com/drive/folders/1ZsBwMEqTYDEsjDT1WcQUu-zTIEgBCNuY">Uber Pack Redux</a></li>
 					<li><a href="https://drive.google.com/drive/folders/1QEaqIxKET4_QUo7PurNI-z5DKj8vijqf">snrk's Playermodel pack</a></li>
 					<li><a href="http://wwww.letonguesc.com/svencoop/models/player/">LeTongue FastDL server</a></li>
-					<li>whatever I had in svencoop_downloads/models/player/</li>
+					<li>whatever I had in my downloads folder</li>
+					<li>whatever <i>you</i> had in your downloads folder (feel free to send your entire player models folder)</li>
 				</ul>
 			</p>
 		</div>

@@ -1062,7 +1062,7 @@ def pack_models(all_models):
 	crash_models = set()
 	with open("database/crash_models.txt", "r") as update_list:
 		for line in update_list.readlines():
-			crash_models.add(line.lower())
+			crash_models.add(line.lower().strip())
 	
 	if all_models:
 		fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
@@ -1092,7 +1092,8 @@ def pack_models(all_models):
 		for dir in all_dirs:
 			for file in os.listdir(os.path.join(models_path, dir)):
 				if file.endswith('.mdl') or file.endswith('.bmp'):
-					list_file.write("%s\n" % os.path.join(models_path, dir, file))
+					file_line = os.path.join(models_path, dir, file).replace('[', '\\[').replace(']', '\\]')
+					list_file.write("%s\n" % file_line)
 		list_file.close()
 		
 		fname = 'models/latest_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
