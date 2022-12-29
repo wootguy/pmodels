@@ -8856,10 +8856,10 @@
         "touhou_mokou"
     ],
     "Touhou - Momiji": [
-        "touhou_momiji_v2",
+		"touhou_momiji",
+        "kz_touhou_momiji_v2",
         "touhou_momiji_inuba",
         "momiji_inubashiri",
-        "kz_touhou_momiji",
         "2d_momiji_inubashiri"
     ],
     "Touhou - Patchouli": [

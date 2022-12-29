@@ -5176,6 +5176,7 @@ kz_rindo_v2
 kz_rindo_v3
 kz_tda_etihw
 kz_touhou_momiji
+kz_touhou_momiji_v2
 kz_yonaka
 kz_yosafire
 l4d2_coach
@@ -9709,7 +9710,6 @@ touhou_minoriko
 touhou_mokou
 touhou_momiji
 touhou_momiji_inuba
-touhou_momiji_v2
 touhou_nagae_iku
 touhou_nagae_iku_v2
 touhou_new_cirno
