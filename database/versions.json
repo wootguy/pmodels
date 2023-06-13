@@ -31,20 +31,20 @@
         "astolfo_mera_v2",
         "astolfo_mera_v1"
     ],
-	[
+    [
         "koneko_chan_beta_v3",
         "koneko_chan_beta_v2",
         "koneko_chan_beta"
     ],
-	[
+    [
         "kf_sandcatv",
         "kf_sandcat"
     ],
-	[
+    [
         "dr_k_v2",
         "dr_k"
     ],
-	[
+    [
         "bradlee_v3",
         "bradlee2",
         "bradlee"
@@ -63,6 +63,7 @@
         "km_ayakomichi"
     ],
     [
+        "marioodyssey_v4",
         "marioodyssey_v3",
         "marioodyssey_v2",
         "marioodyssey"
@@ -3863,7 +3864,7 @@
         "penguin_baby_v2",
         "penguin_baby"
     ],
-	[
+    [
         "vanjamiev2023",
         "vanjamie"
     ],
@@ -3871,7 +3872,7 @@
         "masked_ninja_v2",
         "masked_ninja"
     ],
-	[
+    [
         "ta_juggernaut_v8",
         "ta_juggernaut_v7",
         "ta_juggernaut_v5",
@@ -3879,7 +3880,7 @@
         "ta_juggernaut_v3",
         "ta_juggernaut_v2"
     ],
-	[
+    [
         "touhou_momiji_small_v2",
         "touhou_momiji_small"
     ],
@@ -5822,11 +5823,11 @@
         "machin_v2",
         "machin"
     ],
-	[
+    [
         "nagato_nudie_v2",
         "nagato_nudie"
     ],
-	[
+    [
         "orz_minirumia_v3",
         "orz_minirumia_v25",
         "orz_minirumia_v2",
@@ -6502,5 +6503,53 @@
     [
         "yunoa_v2",
         "yunoa"
+    ],
+    [
+        "ba_miyu_v2",
+        "ba_miyu"
+    ],
+    [
+        "hg_fox_girl_v2",
+        "hg_fox_girl"
+    ],
+    [
+        "luigiodyssey_v2",
+        "luigiodyssey"
+    ],
+    [
+        "mad_koishi_komeiji_v2",
+        "mad_koishi_komeiji"
+    ],
+    [
+        "mandril_v2",
+        "mandril"
+    ],
+    [
+        "sbbmario_v2",
+        "sbbmario"
+    ],
+    [
+        "sbbmarionohat_v2",
+        "sbbmarionohat"
+    ],
+    [
+        "sc_poincare2_v2",
+        "sc_poincare2"
+    ],
+    [
+        "vanmax_v2",
+        "vanmax"
+    ],
+    [
+        "vanmaxld_v2",
+        "vanmaxld"
+    ],
+    [
+        "vansam_v2",
+        "vansam"
+    ],
+    [
+        "vansamld_v2",
+        "vansamld"
     ]
 ]

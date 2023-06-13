@@ -1028,6 +1028,12 @@ def install_new_models(new_versions_mode=False):
 			json.dump(versions_json, outfile, indent=4)
 		print("Wrote %s" % versions_json_name)
 		
+		print()
+		print("Restarting add process with new model names...")
+		print()
+		install_new_models(False)
+		return
+		
 		# TODO: auto-update groups and tags to use latest version names
 	
 	print("\n-- Generating thumbnails")

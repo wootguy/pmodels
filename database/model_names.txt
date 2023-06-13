@@ -992,6 +992,7 @@ ba_izuna_bikini_ar
 ba_kuroko
 ba_kuroko_ar
 ba_miyu
+ba_miyu_v2
 ba_mutsuki
 ba_mutsuki_mg
 ba_saori
@@ -4331,6 +4332,7 @@ hf_student1
 hf_student2
 hg
 hg_fox_girl
+hg_fox_girl_v2
 hgrunt
 hgrunt2
 hgrunt2_v2
@@ -5594,6 +5596,7 @@ luigibwodyssey
 luigimansion
 luiginocapodyssey
 luigiodyssey
+luigiodyssey_v2
 lulu
 lulumuu
 lulumuu_nude
@@ -5634,6 +5637,7 @@ machin_v2
 machin_v3
 mad2
 mad_koishi_komeiji
+mad_koishi_komeiji_v2
 mad_lizard
 mad_satori_komeiji
 mad_venti
@@ -5688,6 +5692,7 @@ manaoscan
 mandalorian
 mandokuse
 mandril
+mandril_v2
 manga
 mangle
 manhunt_cash
@@ -5734,6 +5739,7 @@ marionocapodyssey
 marioodyssey
 marioodyssey_v2
 marioodyssey_v3
+marioodyssey_v4
 mariosmall
 mariossbu
 mariosunshines3c
@@ -8123,7 +8129,9 @@ sazabi
 sazabi_nagato_nobody
 sazabi_v2
 sbbmario
+sbbmario_v2
 sbbmarionohat
+sbbmarionohat_v2
 sbellona
 sbellonabm
 sbo_hunted
@@ -8198,6 +8206,7 @@ sc_muffler
 sc_player
 sc_poincare
 sc_poincare2
+sc_poincare2_v2
 sc_quieter
 sc_shadow
 sc_shadow_v2
@@ -10228,9 +10237,13 @@ vanity
 vanjamie
 vanjamiev2023
 vanmax
+vanmax_v2
 vanmaxld
+vanmaxld_v2
 vansam
+vansam_v2
 vansamld
+vansamld_v2
 vanska
 vash
 vash2

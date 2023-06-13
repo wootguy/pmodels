@@ -5567,7 +5567,7 @@
         "luigibwodyssey",
         "luigimansion",
         "luiginocapodyssey",
-        "luigiodyssey"
+        "luigiodyssey_v2"
     ],
     "Luka": [
         "bunny_luka_v2",
@@ -5711,11 +5711,11 @@
         "mario64naked",
         "mariokartwiimario",
         "mariosmall",
-        "sbbmario",
-        "sbbmarionohat",
+        "sbbmario_v2",
+        "sbbmarionohat_v2",
         "gusgusgus",
         "mario64odyssey",
-        "marioodyssey_v3",
+        "marioodyssey_v4",
         "mariohalloween",
         "mariomeleebrawl",
         "marionocapodyssey",
@@ -9024,7 +9024,7 @@
         "koishi",
         "touhou_koishi2",
         "touhou_koishi",
-        "mad_koishi_komeiji",
+        "mad_koishi_komeiji_v2",
         "2d_touhou_koishi2",
         "2d_touhou_koishi"
     ],
@@ -9401,12 +9401,12 @@
         "vamp"
     ],
     "Van Max": [
-        "vanmax",
-        "vanmaxld"
+        "vanmax_v2",
+        "vanmaxld_v2"
     ],
     "Van Sam": [
-        "vansam",
-        "vansamld",
+        "vansam_v2",
+        "vansamld_v2",
         "samvan"
     ],
     "Vanjamie": [
