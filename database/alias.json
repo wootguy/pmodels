@@ -4997,7 +4997,9 @@
         "gibman2"
     ],
     "gordonshit": [
-        "whitesuit"
+        "whitesuit",
+        "gordonshit_v2",
+        "whitesuit_v2"
     ],
     "marisa": [
         "touhou_kirisame_marisa"
@@ -5093,6 +5095,9 @@
     ],
     "arthur_pendragon": [
         "lt_santos"
+    ],
+    "dragon2": [
+        "dragon"
     ],
     "gi_hutao": [
         "lt_ultron"
@@ -5797,5 +5802,20 @@
     ],
     "vtuber_filian_sw_v2": [
         "vtuber_filian_sw"
+    ],
+    "achen": [
+        "arknights_chen"
+    ],
+    "nu_nagato_alphaq": [
+        "alz_nagato_alphaq"
+    ],
+    "sazabi_nagato_nobody": [
+        "alz_nagato_nobody"
+    ],
+    "axissoldier": [
+        "axissoldier_v2"
+    ],
+    "kz_touhou_momiji_v2": [
+        "touhou_momiji_v2"
     ]
 }

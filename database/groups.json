@@ -340,6 +340,12 @@
         "dle",
         "dli",
         "dls",
+        "davidblind",
+        "davidbloodmouth",
+        "daviddesat",
+        "davidmutilated",
+        "davidtwitched",
+        "davidvet",
         "david_monster",
         "david_monster_axe",
         "darkydude_v2",
@@ -454,7 +460,7 @@
         "nagato_xmas_n",
         "nu_nagato_alphaq",
         "sazabi_nagato_nobody",
-        "nagato_nudie",
+        "nagato_nudie_v2",
         "nagato_xmas_topless",
         "nagato_xmas_nfb"
     ],
@@ -784,7 +790,8 @@
         "not_precached_man_v2"
     ],
     "Bradlee": [
-        "bradlee",
+        "bradlee_v3",
+        "bradlee_c",
         "bradlee_small"
     ],
     "Bullet Casing": [
@@ -1233,6 +1240,18 @@
         "corona_chan_nopantsu",
         "corona_chan_xmas",
         "covid_nagato_meranian"
+    ],
+	"Gasmask Citizen": [
+        "gasmask_citizen",
+        "gasmask_citizen_fix"
+    ],
+	"Genshin Impact - Barbara": [
+        "gi_barbara",
+        "gi_barbara_dark"
+    ],
+	"Genshin Impact - Him": [
+        "him",
+        "him_ld"
     ],
     "Corpse": [
         "rotting",
@@ -1746,7 +1765,8 @@
     ],
     "DARLING in the FRANXX - Zero Two": [
         "zerotwo_v1",
-        "zerotwo_v2"
+        "zerotwo_v2",
+        "zerotwo_v3"
     ],
     "DGF Spetsnaz": [
         "dgf_p_spetsnaz",
@@ -2542,6 +2562,22 @@
         "gena",
         "gena2"
     ],
+	"Genshin Impact - Keqing": [
+        "gi_keqing_v2",
+        "gi_keqing_dark"
+    ],
+	"Genshin Impact - Hutao": [
+        "gi_hutao",
+        "gi_hutao_dark"
+    ],
+	"Genshin Impact - Sucrose": [
+        "gi_sucrose",
+        "gi_sucrose_new"
+    ],
+	"Genshin Impact - Yaemiko": [
+        "gi_yaemiko",
+        "gi_yae"
+    ],
     "Genshin Impact - Diona": [
         "gi_diona",
         "gi_diona_meranian"
@@ -2550,11 +2586,15 @@
         "gi_ganyu",
         "gi_ganyu_hz",
         "gi_ganyu_hz_alt",
+        "gi_ganyu_new",
+        "gi_ganyu_office",
         "gi_ganyu_dark"
     ],
     "Genshin Impact - Kuki Shinobu": [
         "gi_kukishinobu",
-        "gi_kukishinobu_nm"
+        "gi_kukishinobu_nm",
+        "gi_kukishinobu_dark",
+        "gi_kukishinobu_nm_dark"
     ],
     "Genshin Impact - Lumine": [
         "gi_lumine",
@@ -2599,6 +2639,7 @@
     "Girls' Frontline - HK416": [
         "gfl_hk416_v3",
         "gfl_hk416_hatless",
+        "hk416_nc",
         "gakusei_hk416"
     ],
     "Girls' Frontline - M14": [
@@ -2696,6 +2737,13 @@
     "Gorillaz": [
         "gorillaz_v2",
         "lt_gorillaz"
+    ],
+	"Grand Theft Auto - Hobo": [
+        "sa_bomj1",
+        "sa_bomj2",
+        "sa_bomj3",
+        "sa_bomj4",
+        "sa_bomj5"
     ],
     "Grand Theft Auto - Claude": [
         "claude",
@@ -2994,6 +3042,7 @@
         "oldgordon_deaged",
         "oldgordon_suitfixed",
         "dis_gordon",
+        "hl_gordon",
         "sahturbo_v3",
         "gordon_ld",
         "psycho-firth_v2",
@@ -3328,12 +3377,70 @@
         "catsun_v2",
         "assassin_v2",
         "ufocat_v2",
+        "mrvodka",
         "catwoman_v2",
         "one.1"
+    ],
+	"Call of Duty - Shadow company": [
+        "cod_shadow_1",
+        "cod_shadow_2",
+        "cod_shadow_3",
+        "cod_shadow_4",
+        "cod_shadow_5",
+        "cod_shadow_6"
+    ],
+	"Closers - Mirai": [
+        "closers_mirai",
+        "closers_mirai_bikini"
+    ],
+	"Grand Theft Auto - Claude": [
+        "claude",
+        "claudespeed",
+        "lc_claude"
+    ],
+	"Cookie Diyusi": [
+        "cookie_diyusi",
+        "cookie_diyusi_no_vest"
+    ],
+	"Blue Archive - Wakamo": [
+        "ba_wakamo",
+        "ba_wakamo_g",
+        "ba_wakamo_g_rf",
+        "ba_wakamo_rf"
+    ],
+	"Blue Archive - Shiroko": [
+        "ba_shiroko",
+        "ba_shiroko_ar"
+    ],
+	"Blue Archive - Mutsuki": [
+        "ba_mutsuki",
+        "ba_mutsuki_mg"
+    ],
+	"Blue Archive - Kuroko": [
+        "ba_kuroko",
+        "ba_kuroko_ar"
+    ],
+	"Blue Archive - Izuna": [
+        "ba_izuna_bikini",
+        "ba_izuna_bikini_ar"
+    ],
+	"Blue Archive - Hoshino": [
+        "ba_hoshino",
+        "ba_hoshino_sg"
+    ],
+	"Blue Archive - Azusa": [
+        "ba_azusa",
+        "ba_azusa_ar"
+    ],
+	"Pedobear": [
+        "pedobear",
+        "abababa"
     ],
     "Half-Life - G-Man": [
         "dm_gman",
         "dis_gman",
+        "3wave_blue",
+        "3wave_red",
         "bl_gman",
         "gman",
         "gman_ld",
@@ -3415,6 +3522,7 @@
         "alpha_grunt",
         "alpha_grunt2",
         "alpha_grunt3",
+        "ta_juggernaut_v8",
         "hl_grunt3",
         "hl_grunt2",
         "hl_grunt2f",
@@ -4021,6 +4129,7 @@
         "rvi_hevscientist3",
         "rvi_hevscientist4",
         "rvi_hevscientist5",
+        "g_scientist",
         "rvi_scientist",
         "rvi_scientist2",
         "rvi_scientist3",
@@ -4029,6 +4138,8 @@
         "rvi_scientist6",
         "heveinstein",
         "babynin",
+        "hl_luther",
+        "hl_einstein",
         "scientist_ld",
         "scientist2_ld",
         "scientist3_ld",
@@ -4054,6 +4165,9 @@
         "janitor",
         "cl_sci4",
         "resident sci-gman",
+        "hl_rosenberg",
+        "hl_slick",
+        "hl_walter",
         "rosenberg",
         "resident_sci-gman",
         "naked",
@@ -4225,6 +4339,15 @@
         "halloween_v2",
         "derpx0r"
     ],
+	"MEIKA - Hime": [
+        "meika_hime",
+        "hime_cat"
+    ],
+	"MEIKA - Mikoto": [
+        "meika_mikoto",
+        "mikoto_cat",
+        "mikoto"
+    ],
     "Halo - Elite": [
         "elite_blue",
         "elite_gold",
@@ -4252,6 +4375,7 @@
     ],
     "Halo - Spartan": [
         "masterchief",
+        "master_chief",
         "counterx0",
         "counterx1",
         "counterx2",
@@ -4464,7 +4588,22 @@
     ],
     "Helltaker - Modeus": [
         "helltaker_modeus_v2",
-        "2d_helltaker_modeus"
+        "2d_helltaker_modeus",
+        "ht_modeus"
+    ],
+	"Helltaker - Cerberus": [
+        "ht_cerberus",
+        "ht_cerberus_b"
+    ],
+	"Helltaker - Lucifer": [
+        "ht_lucifer",
+        "ht_lucifer_b"
+    ],
+	"Helltaker - Justice": [
+        "ht_justice",
+        "ht_justice_alt1",
+        "ht_justice_altb",
+        "ht_justice_b"
     ],
     "Helmet Girl": [
         "helmet_black",
@@ -4516,10 +4655,16 @@
         "hlgawrgura",
         "hlgawrgurabig",
         "hololive_gura-c1",
+        "hololive_gura-c1_black",
+        "hololive_gura-c1_red",
+        "hololive_gura-c2_black",
+        "hololive_gura-c2_red",
         "hololive_gura-c2"
     ],
     "Hololive - Houshou Marine": [
         "hololive_marine",
+        "h_hololive_marine",
+        "h_hololive_marine_v2",
         "hololive_marine_ld"
     ],
     "Hololive - Korone": [
@@ -4527,9 +4672,22 @@
         "hololive_korone-c2",
 		"holo_korone_lowpoly"
     ],
+	"Hololive - Polka": [
+        "holo_polka_lowpoly",
+        "sillyfun",
+        "nufyllis"
+    ],
+	"Hololive - Fubuki": [
+        "hololive_fubuki",
+        "hololive_fubuki_dark"
+    ],
     "Hololive - Takodachi": [
         "holo_takodachi_hsize",
         "holo_takodachi_psize"
+    ],
+	"Legacy of Lunatic Kingdom - Hecatia Lapislazuli": [
+        "hecatia_lp",
+        "hecatia_lp_s"
     ],
     "Homer Simpson": [
         "homer_simpson",
@@ -5005,6 +5163,8 @@
         "kancolle_hibiki",
         "kancolle_hibiki_n",
         "kc_hibiki_v3",
+        "kc_hibiki_big",
+        "kc_hibiki_v2_n",
         "2d_kancolle_hibiki_n",
         "2d_kc_hibiki_v2"
     ],
@@ -5158,6 +5318,7 @@
         "karenkujo",
         "2d_km_karenkujo_alt",
         "2d_km_karenkujo",
+        "km_karenkujo_xmas",
         "km_karenkujo_bel"
     ],
     "Kingom Hearts - Sora": [
@@ -5252,12 +5413,17 @@
     "Krotchy": [
         "krotchy_v2",
         "krotchy2",
+        "krotchy_wisewang",
         "hiney_weeny"
     ],
-    "Kurumi Tokisaki": [
+	"Kurumi Tokisaki": [
         "kurumi",
         "kurumi_tokisaki",
         "tokisaki_kurumi"
+    ],
+    "Maya - Cyberpunk Bunny": [
+        "kz_mayacyberpunk",
+        "kz_mayacyberpunk_alt"
     ],
     "LEGO Man": [
         "lego",
@@ -5395,6 +5561,12 @@
         "smb_fireluigi",
         "powerup_luigi_v2",
         "luigi",
+        "luigi_casinos3c",
+        "luigibrawl",
+        "luigibuilder",
+        "luigibwodyssey",
+        "luigimansion",
+        "luiginocapodyssey",
         "luigiodyssey"
     ],
     "Luka": [
@@ -5519,6 +5691,8 @@
         "sdm_diagonalmario",
         "smb_firemario",
         "smb_mario",
+        "smg4",
+        "mariocappyodyssey",
         "smb_metalmario",
         "supermario",
         "chinamario",
@@ -5542,6 +5716,12 @@
         "gusgusgus",
         "mario64odyssey",
         "marioodyssey_v3",
+        "mariohalloween",
+        "mariomeleebrawl",
+        "marionocapodyssey",
+        "mariossbu",
+        "mariosunshines3c",
+        "wtfmario",
         "bradlio"
     ],
     "Marionette": [
@@ -6112,6 +6292,7 @@
         "giko",
         "takedeppo",
         "dei",
+        "shii_xmas",
         "shii",
         "shii2",
         "shii3",
@@ -6391,9 +6572,9 @@
         "whata"
     ],
     "Penguin": [
-        "penguin_v3",
+        "penguin_v4",
         "penguin1",
-        "penguin_baby_v2",
+        "penguin_baby_v4",
         "spenguin",
         "spp_pinguino",
         "slayerkl",
@@ -7584,6 +7765,9 @@
         "supersonice",
         "supersonicsc",
         "ultrasonic_v2",
+        "sonic_uwii",
+        "sonicforces_modern",
+        "sonicsmash2",
         "mps",
         "red",
         "shadic",
@@ -7612,6 +7796,13 @@
         "sovarmy4_1970c",
         "comrade",
         "ivan",
+        "sovarmy_1970wpanama",
+        "sovarmy_am1panam60s",
+        "sovarmy_am2panam60s",
+        "sovarmy_am3panam60s",
+        "sovarmy_leafpanam60s",
+        "sovarmy_tsmkk2panam60s",
+        "sovarmy_ttsmkkpanam60s",
         "sovarmy4_1988cc",
         "sovarmy4_1988cc2",
         "sovarmy_1970p",
@@ -7649,6 +7840,11 @@
         "sovvdv_1970c",
         "sovvdv_1975cb",
         "sovvdv_1985c1"
+    ],
+	"Mickey Mouse": [
+        "mickeymouse",
+        "suicidemousev1",
+        "suicidemousev2"
     ],
     "Space Channel 5 - Ulala": [
         "ulala",
@@ -8062,7 +8258,14 @@
     ],
     "Super Mario Brothers - Peach": [
         "smbpeach",
-        "smbpeachf"
+		"smbpeachf",
+        "darkpeachbrawl",
+        "peachbrawl",
+        "peachfires3c",
+        "peachmelee",
+        "peachplumberbrawl",
+        "peachssbu",
+        "peachsunshinebrawl"
     ],
     "Super Mario Galaxy 4 - Meggy": [
         "smg4meggy",
@@ -8691,6 +8894,7 @@
         "nr_chen_bike",
         "nr_chen",
         "chen",
+        "touhou_chen_v2_xmas",
         "2d_touhou_chen",
         "touhou_cheeeeeeeeeen",
         "touhou_chen"
@@ -8755,6 +8959,7 @@
     ],
     "Touhou - Inaba Tewi": [
         "tewi",
+        "orz_minitewi_v1",
         "tewi2",
         "touhou_inaba_tewi_v2",
         "2d_touhou_inaba_tewi"
@@ -8819,6 +9024,7 @@
         "koishi",
         "touhou_koishi2",
         "touhou_koishi",
+        "mad_koishi_komeiji",
         "2d_touhou_koishi2",
         "2d_touhou_koishi"
     ],
@@ -8830,6 +9036,10 @@
         "touhou_youmukonpakuspe",
         "touhou_youmu_su",
         "touhou_youmu2what"
+    ],
+	"Touhou - Satori": [
+        "touhou_new_satori",
+        "mad_satori_komeiji"
     ],
     "Touhou - Letty": [
         "touhou_letty",
@@ -8860,6 +9070,7 @@
         "kz_touhou_momiji_v2",
         "touhou_momiji_inuba",
         "momiji_inubashiri",
+        "touhou_momiji_small_v2",
         "2d_momiji_inubashiri"
     ],
     "Touhou - Patchouli": [
@@ -8920,6 +9131,7 @@
         "rumia",
         "rumia2",
         "touhou_rumia_v2",
+        "orz_minirumia_v3",
         "2d_touhou_rumia",
         "touhou_rumia_y"
     ],
@@ -9118,6 +9330,8 @@
         "uboa10b",
 		"pitusas_hq",
         "pitusas_v3",
+        "pitusas_arg",
+        "pitusas_arg_hq",
 		"satur_salado"
     ],
     "Uboa2": [
@@ -9196,7 +9410,7 @@
         "samvan"
     ],
     "Vanjamie": [
-        "vanjamie",
+        "vanjamiev2023",
         "vanska"
     ],
     "Vash": [
@@ -9207,9 +9421,18 @@
         "fp_mikito2018",
         "mikito"
     ],
+	"Digimon - Veemon": [
+        "veemon",
+        "veemon_b",
+        "veemon_c"
+    ],
     "Vector": [
         "gs_vector",
         "2d_gs_vector"
+    ],
+	"Wario": [
+        "warioc",
+        "smb_wario"
     ],
     "Venom": [
         "venom",
@@ -9241,6 +9464,7 @@
     ],
     "Waluigi": [
         "waluigi",
+        "waluigic",
         "smb_waluigi"
     ],
     "Wanted - Annie": [
@@ -9346,6 +9570,7 @@
     ],
     "Yoshi": [
         "miniyoshi",
+        "yoshissb4",
         "minidog"
     ],
     "Yuri": [

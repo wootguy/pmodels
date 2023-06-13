@@ -44,6 +44,7 @@ hl_grunt -> hl_grunt3
 hl_recon -> hl_recon2
 hl_sarge -> hl_sarge2
 hl_shotgun -> hl_shotgun3
+dragon -> dragon2
 
 added _v2 to some models from snark. Once a model is distributed by a server,
 that name should never be used again, or else clients won't get the updated file.
