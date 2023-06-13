@@ -1768,6 +1768,7 @@ choijiyoon
 choijiyoon2_hev
 choijiyoon_hev
 choijiyoon_hev_alt
+choijiyoon_kuropantsu
 chouwitch
 chris
 chris redfield
@@ -2958,6 +2959,7 @@ doomslayer
 dora
 doraemon
 dorane
+doritos
 dorothy
 dorothy_mask
 dotso_erio
@@ -3575,6 +3577,7 @@ gfl_m4_sopmod
 gfl_m4_sopmod-c2
 gfl_m4_sopmod_c2
 gfl_m4_sopmod_dark
+gfl_m4_sopmod_white
 gfl_m4a1
 gfl_m4a1_dark
 gfl_negev
@@ -5128,6 +5131,7 @@ km_ayakomichi_v2
 km_karenkujo
 km_karenkujo_alt
 km_karenkujo_bel
+km_karenkujo_dark
 km_karenkujo_xmas
 kmd_kanna
 kmd_kanna_christmas_ld
@@ -6142,6 +6146,7 @@ motoko
 motoko_noequip
 motoko_visor
 motv_neet
+mountain_dew
 mouse
 mouse_love
 mp

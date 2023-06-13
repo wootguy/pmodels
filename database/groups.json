@@ -1133,6 +1133,8 @@
         "choijiyoon2_hev",
         "choijiyoon_hev",
         "choijiyoon_hev_alt",
+        "buff_choijiyoon",
+        "choijiyoon_kuropantsu",
         "nya_czy_v2",
         "zombie_girl3"
     ],
@@ -2649,6 +2651,7 @@
     "Girls' Frontline - M4": [
         "gfl_m4_sopmod",
         "gfl_m4_sopmod_c2",
+        "gfl_m4_sopmod_white",
         "chammy_xrs1",
         "gfl_m4_sopmod_dark"
     ],
@@ -5318,6 +5321,7 @@
         "karenkujo",
         "2d_km_karenkujo_alt",
         "2d_km_karenkujo",
+        "km_karenkujo_dark",
         "km_karenkujo_xmas",
         "km_karenkujo_bel"
     ],

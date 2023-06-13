@@ -927,6 +927,17 @@ def install_new_models(new_versions_mode=False):
 			print("No models were added due to duplicates.")
 		return
 	
+	too_long_model_names = False
+	for dir in new_dirs:
+		if len(dir) > 22:
+			too_long_model_names = True
+			print("Model name too long: %s" % dir)
+			
+	if too_long_model_names:
+		# the game refuses to load models with long names, and servers refuse to transfer them to clients
+		print("No models were added due to invalid model names.")
+		return
+	
 	if alt_name_risk:
 		x = input("\nContinue adding models even though people probably have different versions of these installed? (y/n): ")
 		if x != 'y':
