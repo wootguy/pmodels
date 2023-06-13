@@ -310,6 +310,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	if update_master_json:
 		list_file = open("database/model_names.txt","w") 
 	failed_models = []
+	longname_models = []
 	
 	hash_json = {}
 	
@@ -318,6 +319,9 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 		print("IDX: %s / %s: %s                  " % (idx, total_dirs-1, model_name), end='\r')
 		
 		#garg.mdl build/asdf 1000x1600 0 1 1
+		
+		if len(dir) > 22:
+			longname_models.append(dir)
 		
 		os.chdir(start_dir)
 		os.chdir(os.path.join(work_path, dir))
@@ -457,6 +461,11 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	if len(failed_models):
 		print("\nFailed to update these models:")
 		for fail in failed_models:
+			print(fail)
+			
+	if len(longname_models):
+		print("\nThe following models have names longer than 22 characters and should be renamed:")
+		for fail in longname_models:
 			print(fail)
 
 def write_updated_models_list():

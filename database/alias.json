@@ -1036,8 +1036,9 @@
     "carbon_v2": [
         "carbon"
     ],
-    "infected_businessman_v2": [
-        "infected_businessman"
+    "infected_bman_v2": [
+        "infected_businessman",
+        "infected_businessman_v2"
     ],
     "initiate": [
         "lt_initiate"
@@ -1098,8 +1099,9 @@
     "bush1_v2": [
         "bush1"
     ],
-    "cof_simon_psykskallar_v2": [
-        "cof_simon_psykskallar"
+    "cof_simon_p_v2": [
+        "cof_simon_psykskallar",
+        "cof_simon_psykskallar_v2"
     ],
     "badgirl_v2": [
         "bad_girl",
@@ -1226,8 +1228,9 @@
     "ff7aeris_v2": [
         "ff7aeris"
     ],
-    "re_succ_operator_unit_v2": [
-        "re_succ_operator_unit"
+    "res_operator_v2": [
+        "re_succ_operator_unit",
+        "re_succ_operator_unit_v2"
     ],
     "splintercell_blue": [
         "splintercell-nv-blue"
@@ -1287,9 +1290,10 @@
     "solidsnake_v2": [
         "snakeld"
     ],
-    "2d_kancolle_shimakaze_v2": [
+    "2d_kc_shimakaze_v2": [
         "2d_kc_shimakaze_v2",
-        "2d_lt_shimakaze"
+        "2d_lt_shimakaze",
+        "2d_kancolle_shimakaze_v2"
     ],
     "cleiner_v2": [
         "cleiner"
@@ -1325,8 +1329,9 @@
     "aeonflux_v2": [
         "aeonflux"
     ],
-    "re_succ_commander_merc_v2": [
-        "re_succ_commander_merc"
+    "res_commander_merc_v2": [
+        "re_succ_commander_merc",
+        "re_succ_commander_merc_v2"
     ],
     "t3_v2": [
         "t3"
@@ -1565,8 +1570,9 @@
     "empirialklingon_v2": [
         "empirialklingon"
     ],
-    "re_succ_citizen_unit_v2": [
-        "re_succ_citizen_unit"
+    "res_citizen_v2": [
+        "re_succ_citizen_unit",
+        "re_succ_citizen_unit_v2"
     ],
     "lavaurban_v2": [
         "lavaurban"
@@ -1782,8 +1788,9 @@
     "da_gohan_ssj2": [
         "lt_gohan_ssj2"
     ],
-    "stalker_monolithseva_v2": [
-        "stalker_monolithseva"
+    "stalker_monoseva_v2": [
+        "stalker_monolithseva",
+        "stalker_monolithseva_v2"
     ],
     "para_alpha5_v2": [
         "para_alpha5"
@@ -1833,9 +1840,10 @@
     "penguin_v1": [
         "penguin"
     ],
-    "re_succ_combat_response_unit": [
+    "res_combat_resp": [
         "re_succ_combat_respon",
-        "re_succ_combat_unit"
+        "re_succ_combat_unit",
+        "re_succ_combat_response_unit"
     ],
     "q2_howitzer_v2": [
         "q2_howitzer"
@@ -1977,8 +1985,9 @@
     "laracroft_v2": [
         "laracroft"
     ],
-    "stalker_freedomantigas_v2": [
-        "stalker_freedomantigas"
+    "stalker_freedomagas_v2": [
+        "stalker_freedomantigas",
+        "stalker_freedomantigas_v2"
     ],
     "monoko1_v2": [
         "monoko1"
@@ -2081,8 +2090,9 @@
     "anya_v2": [
         "anya"
     ],
-    "vinnie_gognitti_plain_clean": [
-        "vinnie_gognitti_plainc"
+    "vinnieg_plain_clean": [
+        "vinnie_gognitti_plainc",
+        "vinnie_gognitti_plain_clean"
     ],
     "kz_megumi_v2": [
         "kz_megumin",
@@ -2243,11 +2253,13 @@
     "larry_military_v2": [
         "larry_military"
     ],
-    "david_leatherhoff_female": [
-        "david_leatherhoff_fem"
+    "david_l_female": [
+        "david_leatherhoff_fem",
+        "david_leatherhoff_female"
     ],
-    "re_succ_marksman_unit_v2": [
-        "re_succ_marksman_unit"
+    "res_marksman_v2": [
+        "re_succ_marksman_unit",
+        "re_succ_marksman_unit_v2"
     ],
     "gw_pointman_white_2_v2": [
         "gw_pointman_white_2"
@@ -2339,8 +2351,9 @@
     "ns_specopsgry_v2": [
         "ns_specopsgry"
     ],
-    "re_succ_security_unit_v2": [
-        "re_succ_security_unit"
+    "res_security_v2": [
+        "re_succ_security_unit",
+        "re_succ_security_unit_v2"
     ],
     "re_ubcs_asian_v2": [
         "re_ubcs_asian"
@@ -2420,8 +2433,9 @@
     "nizj2_v2": [
         "nizj2"
     ],
-    "kfparamedicalfredanderson": [
-        "kfparaalfredandrsn"
+    "kfparamedic": [
+        "kfparaalfredandrsn",
+        "kfparamedicalfredanderson"
     ],
     "dante_v2": [
         "dante"
@@ -2773,8 +2787,9 @@
         "cscz2_vip",
         "vip"
     ],
-    "cof_simon_leatherhoff_v2": [
-        "cof_simon_leatherhoff"
+    "cof_simon_l_v2": [
+        "cof_simon_leatherhoff",
+        "cof_simon_leatherhoff_v2"
     ],
     "kgb_hair_v2": [
         "kgb_hair"
@@ -3053,8 +3068,9 @@
     "fassn2_v2": [
         "fassn2"
     ],
-    "stalker_lonerantigas_v2": [
-        "stalker_lonerantigas"
+    "stalker_loneragas_v2": [
+        "stalker_lonerantigas",
+        "stalker_lonerantigas_v2"
     ],
     "dc_arctic_v2": [
         "dc_arctic"
@@ -3507,8 +3523,9 @@
     "smith_v2": [
         "smith"
     ],
-    "vinnie_gognitti_alt_clean": [
-        "vinnie_gognitti_alt_c"
+    "vinnieg_alt_clean": [
+        "vinnie_gognitti_alt_c",
+        "vinnie_gognitti_alt_clean"
     ],
     "incredhulk_v2": [
         "incredhulk"
@@ -3778,8 +3795,9 @@
     "paper_mario": [
         "lt_mario"
     ],
-    "re_succ_security_unitb_v2": [
-        "re_succ_security_unitb"
+    "res_securityb_v2": [
+        "re_succ_security_unitb",
+        "re_succ_security_unitb_v2"
     ],
     "kazextreme2_v2": [
         "kazextreme2"
@@ -3947,8 +3965,9 @@
         "lt_jhonela1",
         "lt_catbike"
     ],
-    "re_succ_security_unitc_v2": [
-        "re_succ_security_unitc"
+    "res_securityc_v2": [
+        "re_succ_security_unitc",
+        "re_succ_security_unitc_v2"
     ],
     "solidsnake_v3": [
         "killintime",
@@ -3988,21 +4007,25 @@
     "pedobear": [
         "lt_pedobear"
     ],
-    "sister_mary_ellie_fant_v2": [
-        "sister_mary_ellie_fant"
+    "mary_ellie_fant_v2": [
+        "sister_mary_ellie_fant",
+        "sister_mary_ellie_fant_v2"
     ],
-    "cyborg_ninja_liquidheat": [
+    "cyborg_ninja_heat": [
         "cyborgninjaliquidheat",
-        "grey_fox_liquidheat"
+        "grey_fox_liquidheat",
+        "cyborg_ninja_liquidheat"
     ],
-    "2d_hdn_neppugia-cosplay": [
-        "2d_hdn_neppugya-cosplay"
+    "2d_hdn_neppugia-cos": [
+        "2d_hdn_neppugya-cosplay",
+        "2d_hdn_neppugia-cosplay"
     ],
     "neptune": [
         "lt_brenda2"
     ],
-    "re_succ_security_unita_v2": [
-        "re_succ_security_unita"
+    "res_securitya_v2": [
+        "re_succ_security_unita",
+        "re_succ_security_unita_v2"
     ],
     "blueteam_v2": [
         "blueteam"
@@ -4086,8 +4109,9 @@
     "femaleklingon_v2": [
         "femaleklingon"
     ],
-    "re_succ_major_lie_rick_v2": [
-        "re_succ_major_lie_rick"
+    "res_major_lie_rick_v2": [
+        "re_succ_major_lie_rick",
+        "re_succ_major_lie_rick_v2"
     ],
     "jason_v2": [
         "jason",
@@ -4399,8 +4423,9 @@
     "yuti_v2": [
         "yuti"
     ],
-    "re_succ_corporal_gote_v2": [
-        "re_succ_corporal_gote"
+    "res_corp_gote_v2": [
+        "re_succ_corporal_gote",
+        "re_succ_corporal_gote_v2"
     ],
     "predator2_v2": [
         "predator2"
@@ -4921,8 +4946,9 @@
     "hevscientist2": [
         "cap_hevscientist2"
     ],
-    "re_succ_combat_technician": [
-        "re_succ_combat_tech"
+    "res_combat_tech": [
+        "re_succ_combat_tech",
+        "re_succ_combat_technician"
     ],
     "da_zamasu": [
         "zamasu"
@@ -5022,8 +5048,9 @@
     "hevscientist3": [
         "cap_hevscientist3"
     ],
-    "vehicleshit_m1a1_abrams": [
-        "vehicleshit_m1a1"
+    "vehicleshit_abrams": [
+        "vehicleshit_m1a1",
+        "vehicleshit_m1a1_abrams"
     ],
     "shizuha_aki": [
         "touhou_shizuha_aki",
@@ -5050,9 +5077,10 @@
     "tw_mena": [
         "thewastes_mena2"
     ],
-    "tc_alternative-dr.kleiner": [
+    "tc_alt-dr.kleiner": [
         "tc_dr.kleiner2",
-        "tc_alternat-dr.kleiner"
+        "tc_alternat-dr.kleiner",
+        "tc_alternative-dr.kleiner"
     ],
     "boomer": [
         "l4d_boomer"
@@ -5189,9 +5217,10 @@
     "touhou_inaba_tewi_v2": [
         "touhou_inaba_tewi"
     ],
-    "touhou_yakumo_yukari_v2": [
+    "touhou_yukari_v2": [
         "touhou_yakumo_yukari",
-        "touhou_yukari"
+        "touhou_yukari",
+        "touhou_yakumo_yukari_v2"
     ],
     "touhou_daiyousei_v2": [
         "touhou_daiyousei"
@@ -5221,16 +5250,19 @@
     "touhou_cirno_v2": [
         "touhou_cirno"
     ],
-    "touhou_kochiya_sanae_v2": [
+    "touhou_k_sanae_v2": [
         "touhou_kochiya_sanae",
-        "touhou_sanae"
+        "touhou_sanae",
+        "touhou_kochiya_sanae_v2"
     ],
-    "azur_lane_enterprise_v2": [
-        "azur_lane_enterprise"
+    "al_enterprise2_v2": [
+        "azur_lane_enterprise",
+        "azur_lane_enterprise_v2"
     ],
-    "touhou_izayoi_sakuya_v2": [
+    "touhou_sakuya_v2": [
         "touhou_izayoi_sakuya",
-        "touhou_sakuya"
+        "touhou_sakuya",
+        "touhou_izayoi_sakuya_v2"
     ],
     "touhou_kotohime_v2": [
         "touhou_kotohime"
@@ -5563,8 +5595,9 @@
     "ugg_goosec_v2": [
         "ugg_goosec"
     ],
-    "bwtgs_sena_kashiwazaki_v2": [
-        "bwtgs_sana"
+    "bwtgs_sena_v2": [
+        "bwtgs_sana",
+        "bwtgs_sena_kashiwazaki_v2"
     ],
     "hdnr_neptune-c3_big_v2": [
         "hdn_neptune_poritan"
@@ -5716,11 +5749,13 @@
     "rvi_barney2": [
         "barney2"
     ],
-    "rvi_bs_unarmored_barney_1": [
-        "bs_unarmored_barney_1"
+    "rvi_bs_barney_1": [
+        "bs_unarmored_barney_1",
+        "rvi_bs_unarmored_barney_1"
     ],
-    "rvi_bs_unarmored_barney_2": [
-        "bs_unarmored_barney_2"
+    "rvi_bs_barney_2": [
+        "bs_unarmored_barney_2",
+        "rvi_bs_unarmored_barney_2"
     ],
     "rvi_colette": [
         "colette"
@@ -5817,5 +5852,113 @@
     ],
     "kz_touhou_momiji_v2": [
         "touhou_momiji_v2"
+    ],
+    "2d_hdn_neptune-miz-c2": [
+        "2d_hdn_neptune-mizugi-c2"
+    ],
+    "2d_mdn_tenno-mizugi": [
+        "2d_mdn_tenno_uzume-mizugi"
+    ],
+    "2d_mdn_tenno_uzume": [
+        "2d_mdn_tennouboshi_uzume"
+    ],
+    "2d_touhou_scarlet": [
+        "2d_touhou_flandre_scarlet"
+    ],
+    "2d_touhou_sakuya": [
+        "2d_touhou_izayoi_sakuya"
+    ],
+    "2d_touhou_yuuka_4": [
+        "2d_touhou_kazami_yuuka_4"
+    ],
+    "2d_touhou_youmu": [
+        "2d_touhou_konpaku_youmu"
+    ],
+    "2d_touhou_suikaabc": [
+        "2d_touhou_suikaabcedition"
+    ],
+    "bs_barney_1_ld": [
+        "bs_unarmored_barney_1_ld"
+    ],
+    "bs_barney_2_ld": [
+        "bs_unarmored_barney_2_ld"
+    ],
+    "furry_maid_black3": [
+        "furry_maid_black2_noglow"
+    ],
+    "hdn_neppugia-cos_v2": [
+        "hdn_neppugia-cosplay_v2"
+    ],
+    "hdn_neptune-miz-c2_v2": [
+        "hdn_neptune-mizugi-c2_v2"
+    ],
+    "hl2_prisonguard": [
+        "hl2_combine_soldier_prisonguard"
+    ],
+    "mg_hanekawa_0b_v2": [
+        "monogatari_hanekawa_0b_v2"
+    ],
+    "mghanekawa_1b_v2": [
+        "monogatari_hanekawa_1b_v2"
+    ],
+    "mghanekawa_b_v2": [
+        "monogatari_hanekawa_b_v2"
+    ],
+    "op4_sci_einstein_ld": [
+        "op4_scientist_einstein_ld"
+    ],
+    "op4_sci_luther_ld": [
+        "op4_scientist_luther_ld"
+    ],
+    "op4_sci_walter_ld": [
+        "op4_scientist_walter_ld"
+    ],
+    "multiplayer_model_st": [
+        "player_multiplayer_model_st"
+    ],
+    "sonicf_classic_c_v2": [
+        "sonic_forces_classic_c_v2"
+    ],
+    "sonicf_classic_c_v3": [
+        "sonic_forces_classic_c_v3"
+    ],
+    "sonicf_classic_v2": [
+        "sonic_forces_classic_v2"
+    ],
+    "sonicf_classic_v3": [
+        "sonic_forces_classic_v3"
+    ],
+    "spess_kagerou2_v2": [
+        "spess_kagerou_sweater_v2"
+    ],
+    "stalker_monoagas": [
+        "stalker_monolithantigas"
+    ],
+    "ta_c_elite_c_armor2": [
+        "ta_c_elite_color_armor2"
+    ],
+    "ta_c_s_advisor3_v2": [
+        "ta_c_s_advisor_armor2_v2"
+    ],
+    "ta_c_s_advisor4_v2": [
+        "ta_c_s_advisor_armor_v2"
+    ],
+    "ta_c_s_arctic3_v2": [
+        "ta_c_s_arctic_armor2_v2"
+    ],
+    "ta_c_s_arctic4_v2": [
+        "ta_c_s_arctic_armor_v2"
+    ],
+    "ta_c_shadow-3_a2_v2": [
+        "ta_c_shadow-3_armor2_v2"
+    ],
+    "touhou_kagerou2_v2": [
+        "touhou_kagerou_bikini_v2"
+    ],
+    "touhou_reisen2": [
+        "touhou_reisenudongeininaba"
+    ],
+    "vocaloid_yukari_v2": [
+        "vocaloid_yukari-yuzuki_v2"
     ]
 }

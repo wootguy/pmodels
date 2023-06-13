@@ -615,9 +615,9 @@
         "lt_shinobu"
     ],
     "Bakemonogatari - Tsubasa Hanekawa": [
-        "monogatari_hanekawa_b_v2",
-        "monogatari_hanekawa_1b_v2",
-        "monogatari_hanekawa_0b_v2",
+        "mghanekawa_b_v2",
+        "mghanekawa_1b_v2",
+        "mg_hanekawa_0b_v2",
         "2d_mc_astray"
     ],
     "Bambo": [
@@ -1675,10 +1675,10 @@
         "cofpolice2",
         "cofpolice3",
         "cofpolice4",
-        "re_succ_security_unit_v2",
-        "re_succ_security_unita_v2",
-        "re_succ_security_unitb_v2",
-        "re_succ_security_unitc_v2"
+        "res_security_v2",
+        "res_securitya_v2",
+        "res_securityb_v2",
+        "res_securityc_v2"
     ],
     "Cry of Fear - Simon": [
         "cof_simon_v3",
@@ -1699,10 +1699,10 @@
         "cof_simon_hkitty_v2",
         "cof_simon_hlc_v2",
         "cof_dottiska",
-        "cof_simon_leatherhoff_v2",
+        "cof_simon_l_v2",
         "cof_simon_metal_v2",
         "cof_simon_moddb_v2",
-        "cof_simon_psykskallar_v2",
+        "cof_simon_p_v2",
         "cof_simon_sick_v2",
         "cof_simon_twitcher_v2",
         "cof_simon_zooyork",
@@ -2421,7 +2421,7 @@
         "furry_maid_3_v2",
         "furry_maid_black",
         "furry_maid_black2",
-        "furry_maid_black2_noglow",
+        "furry_maid_black3",
         "furry_maid_blackv2",
         "furry_maid_kubo",
         "furry_maid_viny",
@@ -2627,7 +2627,7 @@
         "-girlygirl-heaven-",
         "femaleklingon_v2",
         "klingondurassfemale",
-        "sister_mary_ellie_fant_v2"
+        "mary_ellie_fant_v2"
     ],
     "Girls' Frontline - 9A-91": [
         "gf_9a-91_v2",
@@ -2908,7 +2908,7 @@
         "hl2_combine_elite_v2",
         "hl2_combine_marin",
         "hl2_combine_prison",
-        "hl2_combine_soldier_prisonguard",
+        "hl2_prisonguard",
         "hl2_combine_soldier_v2",
         "hl2combinecamo2",
         "hl2combinenova",
@@ -2932,7 +2932,7 @@
         "ta_c_elite_color",
         "ta_c_elite_color2",
         "ta_c_elite_color_armor",
-        "ta_c_elite_color_armor2",
+        "ta_c_elite_c_armor2",
         "ta_c_e_advisor",
         "ta_c_e_advisor2",
         "ta_c_e_advisor_armor",
@@ -2974,7 +2974,7 @@
         "ta_c_shadow-3_v2",
         "ta_c_shadow-32_v2",
         "ta_c_shadow-3_armor_v2",
-        "ta_c_shadow-3_armor2_v2",
+        "ta_c_shadow-3_a2_v2",
         "ta_c_shotgun_v2",
         "ta_c_shotgun2_v2",
         "ta_c_shotgun_alt_v2",
@@ -2997,12 +2997,12 @@
         "ta_c_super_armor2_v2",
         "ta_c_s_advisor_v2",
         "ta_c_s_advisor2_v2",
-        "ta_c_s_advisor_armor_v2",
-        "ta_c_s_advisor_armor2_v2",
+        "ta_c_s_advisor4_v2",
+        "ta_c_s_advisor3_v2",
         "ta_c_s_arctic_v2",
         "ta_c_s_arctic2_v2",
-        "ta_c_s_arctic_armor_v2",
-        "ta_c_s_arctic_armor2_v2",
+        "ta_c_s_arctic4_v2",
+        "ta_c_s_arctic3_v2",
         "ta_c_s_city",
         "ta_c_s_city2",
         "ta_c_s_city_armor",
@@ -3145,8 +3145,8 @@
         "dm_barney",
         "rvi_barney",
         "rvi_barney2",
-        "rvi_bs_unarmored_barney_1",
-        "rvi_bs_unarmored_barney_2",
+        "rvi_bs_barney_1",
+        "rvi_bs_barney_2",
         "rvi_hevbarney",
         "rvi_hevbarney2",
         "alpha_barney",
@@ -3156,8 +3156,8 @@
         "good_barnabus",
         "hevbarney_ld",
         "hevbarney2_ld",
-        "bs_unarmored_barney_1_ld",
-        "bs_unarmored_barney_2_ld",
+        "bs_barney_1_ld",
+        "bs_barney_2_ld",
         "rico",
         "sahadmin",
         "alphabarney",
@@ -3662,10 +3662,10 @@
         "op4_robot_ld",
         "op4_rocket_ld",
         "op4_rocket2_ld",
-        "op4_scientist_einstein_ld",
-        "op4_scientist_luther_ld",
+        "op4_sci_einstein_ld",
+        "op4_sci_luther_ld",
         "op4_scientist_slick_ld",
-        "op4_scientist_walter_ld",
+        "op4_sci_walter_ld",
         "op4_shephard_ld",
         "op4_shotgun_ld",
         "op4_shotgun2_ld",
@@ -4254,7 +4254,7 @@
         "op4_scientist_walter",
         "cap_op4_walter",
         "tc_dr.kleiner",
-        "tc_alternative-dr.kleiner",
+        "tc_alt-dr.kleiner",
         "adidas_v2",
         "boysoldier",
         "smileheadscientist"
@@ -4801,7 +4801,7 @@
         "hdn_neptunev_v2",
         "hdn_neptune_black_v2",
         "hdn_neptune-school_v2",
-        "hdn_neptune-mizugi-c2_v2",
+        "hdn_neptune-miz-c2_v2",
         "hdn_neptune-mizugi_v2",
         "hdn_neptune-idol_v2",
         "hdn_neptune_v2",
@@ -4812,7 +4812,7 @@
         "2d_hdn_neptune",
         "2d_hdn_neptune-idol",
         "2d_hdn_neptune-mizugi",
-        "2d_hdn_neptune-mizugi-c2",
+        "2d_hdn_neptune-miz-c2",
         "2d_hdn_neptune-school",
         "2d_hdn_neptune_black",
         "2d_hdn_neptune_poritan",
@@ -4837,7 +4837,7 @@
         "hdn_neppugia-mizugi_v2",
         "hdn_neppugia-maid_v2",
         "hdn_neppugia-idol_v2",
-        "hdn_neppugia-cosplay_v2",
+        "hdn_neppugia-cos_v2",
         "hdn_neppugia-c4_v2",
         "hdn_neppugia-c3",
         "hdn_neppugia-c2",
@@ -4848,7 +4848,7 @@
         "2d_hdn_neppugia-mizugi",
         "2d_hdn_neppugia-maid",
         "2d_hdn_neppugia-idol",
-        "2d_hdn_neppugia-cosplay",
+        "2d_hdn_neppugia-cos",
         "2d_hdn_neppugia-c4",
         "2d_hdn_neppugia-c3",
         "2d_hdn_neppugia-c2",
@@ -4907,8 +4907,8 @@
         "mdn_tenno_uzume-c3",
         "mdn_tenno_uzume-mizugi",
         "mdn_tennouboshi_uzume",
-        "2d_mdn_tennouboshi_uzume",
-        "2d_mdn_tenno_uzume-mizugi",
+        "2d_mdn_tenno_uzume",
+        "2d_mdn_tenno-mizugi",
         "2d_mdn_tenno_uzume-c3",
         "2d_mdn_tenno_uzume-c2",
         "mdn_ankokuboshi_kurome",
@@ -5198,7 +5198,7 @@
         "kancolle_shimakaze_v3",
         "2d_kc_shimakaze_v2_n",
         "2d_kc_shimakaze",
-        "2d_kancolle_shimakaze_v2",
+        "2d_kc_shimakaze_v2",
         "kancolle_shimakaze",
         "kc_shimakaze_v2_n"
     ],
@@ -5804,7 +5804,7 @@
         "cyborgninjarhub",
         "cyborgninjastealth",
         "cyborg_ninja_stealth",
-        "cyborg_ninja_liquidheat",
+        "cyborg_ninja_heat",
         "cyborg_ninja_red",
         "grey_fox_black_v2",
         "grey_fox_red_v2",
@@ -7184,7 +7184,7 @@
         "re_umbrella_hunk",
         "re_umbrella_hunk2",
         "re_succ_combat_tech_v2",
-        "re_succ_combat_technician",
+        "res_combat_tech",
         "hunk_re2r_v2"
     ],
     "Resident Evil - Jill Valentine": [
@@ -7277,13 +7277,13 @@
     ],
     "Resident Evil - SUCC Combat Unit": [
         "re_succ_combat_unit",
-        "re_succ_commander_merc_v2",
-        "re_succ_corporal_gote_v2",
+        "res_commander_merc_v2",
+        "res_corp_gote_v2",
         "re_succ_fresh_recruit",
-        "re_succ_operator_unit_v2",
-        "re_succ_major_lie_rick_v2",
-        "re_succ_marksman_unit_v2",
-        "re_succ_combat_response_unit",
+        "res_operator_v2",
+        "res_major_lie_rick_v2",
+        "res_marksman_v2",
+        "res_combat_resp",
         "re_succ_recruit_unit"
     ],
     "Resident Evil - SUCC Medic": [
@@ -7565,7 +7565,7 @@
         "selene_nocape_v2"
     ],
     "Sena Kashiwazaki": [
-        "bwtgs_sena_kashiwazaki_v2",
+        "bwtgs_sena_v2",
         "2d_bwtgs_sana"
     ],
     "Sence": [
@@ -7759,8 +7759,8 @@
         "metalsonic",
         "sonic_custom_s5",
         "sonic_dark_s5",
-        "sonic_forces_classic_v3",
-        "sonic_forces_classic_c_v3",
+        "sonicf_classic_v3",
+        "sonicf_classic_c_v3",
         "sonic_sc4",
         "sonicsc",
         "supersonic_custom_s5",
@@ -8014,7 +8014,7 @@
     "Stalker - EVA": [
         "stalker_freedomseva",
         "stalker_lonerseva",
-        "stalker_monolithseva_v2",
+        "stalker_monoseva_v2",
         "stalker_monoseva",
 		"stalker_dolgseva_v2",
         "stalker_dutyseva"
@@ -8037,13 +8037,13 @@
         "stalker_dutygas",
         "stalker_dutygas_2",
         "stalker_dutyantigas_v2",
-        "stalker_freedomantigas_v2",
+        "stalker_freedomagas_v2",
         "stalker_freedomgas",
         "stalker_freedomgas_2",
         "stalker_freedomgas_3",
         "stalker_freedomgas_4",
         "stalker_ecologistgas",
-        "stalker_lonerantigas_v2",
+        "stalker_loneragas_v2",
         "stalker_lonergas",
         "stalker_lonergas_2",
         "stalker_mercgas",
@@ -8055,7 +8055,7 @@
         "stalker_monogas_4",
         "stalker_monogas_6",
         "stalker_monolithags",
-        "stalker_monolithantigas",
+        "stalker_monoagas",
         "stalker_ecologistgas_2",
         "stalker_isggas",
         "stalker_sinnergas",
@@ -8500,7 +8500,7 @@
         "toon_spy_v2",
         "dark_spy_v2",
         "prisoner_bum_tickly",
-        "re_succ_citizen_unit_v2",
+        "res_citizen_v2",
         "jud@s",
         "east_v2"
     ],
@@ -8600,7 +8600,7 @@
         "laalaa_st",
         "laalaa_st2",
         "newborn_st2",
-        "player_multiplayer_model_st",
+        "multiplayer_model_st",
         "po_l4d2_1",
         "po_l4d2_2",
         "po_l4d2_3",
@@ -8941,7 +8941,7 @@
         "flandre_nude",
         "flunder",
         "flunder1",
-        "2d_touhou_flandre_scarlet",
+        "2d_touhou_scarlet",
         "touhou_flandre_v2",
         "police1s",
         "police2",
@@ -8970,8 +8970,8 @@
     ],
     "Touhou - Izayoi Sakuya": [
         "sakuya",
-        "touhou_izayoi_sakuya_v2",
-        "2d_touhou_izayoi_sakuya",
+        "touhou_sakuya_v2",
+        "2d_touhou_sakuya",
         "doggy_sakuya",
         "police3",
 		"touhou_sakuya2",
@@ -8987,16 +8987,16 @@
         "spess_kagerou_bikini",
         "spess_kagerou_ld",
         "spess_kagerou_woof",
-        "touhou_kagerou_bikini_v2",
+        "touhou_kagerou2_v2",
         "touhou_kagerou_v3",
-        "spess_kagerou_sweater_v2"
+        "spess_kagerou2_v2"
     ],
     "Touhou - Kazami Yuuka": [
         "touhou_kazami_yuuka_1",
         "touhou_kazami_yuuka_2",
         "touhou_kazami_yuuka_4",
         "touhou_kazami_yuuka_5",
-        "2d_touhou_kazami_yuuka_4",
+        "2d_touhou_yuuka_4",
         "gs_op_kazami",
         "yuuka1",
         "yuuka2",
@@ -9018,7 +9018,7 @@
     ],
     "Touhou - Kochiya Sanae": [
         "sanae",
-        "touhou_kochiya_sanae_v2",
+        "touhou_k_sanae_v2",
         "touhou_sanae",
         "touhou_sanae_jkc_v3",
         "touhou_sanae_jkg_v3",
@@ -9036,7 +9036,7 @@
         "youmu",
         "youmu_test",
         "touhou_youmu",
-        "2d_touhou_konpaku_youmu",
+        "2d_touhou_youmu",
         "touhou_youmukonpakuspe",
         "touhou_youmu_su",
         "touhou_youmu2what"
@@ -9111,7 +9111,7 @@
         "reisen3",
         "reisen_v2",
         "2d_reisen",
-        "touhou_reisenudongeininaba"
+        "touhou_reisen2"
     ],
     "Touhou - Remilia": [
         "remilia2",
@@ -9146,7 +9146,7 @@
     "Touhou - Suika": [
         "touhou_suikaabcedition",
         "suika",
-        "2d_touhou_suikaabcedition"
+        "2d_touhou_suikaabc"
     ],
     "Touhou - Suwako": [
         "suwako",
@@ -9194,7 +9194,7 @@
     ],
     "Touhou - Yukari Yakumo": [
         "yukari",
-        "touhou_yakumo_yukari_v2",
+        "touhou_yukari_v2",
         "yukari2"
     ],
     "Touhou - Yuyusama": [
@@ -9446,10 +9446,10 @@
     "Vinnie Gognitti": [
         "vinnie_gognitti",
         "vinnie_gognitti_alt",
-        "vinnie_gognitti_alt_clean",
+        "vinnieg_alt_clean",
         "vinnie_gognitti_clean",
         "vinnie_gognitti_plain",
-        "vinnie_gognitti_plain_clean"
+        "vinnieg_plain_clean"
     ],
     "Virii": [
         "virii",
@@ -9589,7 +9589,7 @@
     ],
     "Yuzuki Yukari": [
         "vocaloid_yukari_yuzuki",
-        "vocaloid_yukari-yuzuki_v2",
+        "vocaloid_yukari_v2",
         "vocaloid_yuzuki-yukari",
         "vocaloid_yuzuki_yukari",
         "bunny_yukari_v4"
