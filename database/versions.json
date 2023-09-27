@@ -3316,10 +3316,6 @@
         "touhou_nagae_iku"
     ],
     [
-        "touhou_rumia_v2",
-        "touhou_rumia"
-    ],
-    [
         "touhou_udongein_mmd_v2",
         "touhou_udongein_mmd"
     ],
@@ -3878,7 +3874,8 @@
         "ta_juggernaut_v5",
         "ta_juggernaut_v4",
         "ta_juggernaut_v3",
-        "ta_juggernaut_v2"
+        "ta_juggernaut_v2",
+        "ta_juggernaut"
     ],
     [
         "touhou_momiji_small_v2",
@@ -6503,10 +6500,6 @@
     [
         "yunoa_v2",
         "yunoa"
-    ],
-    [
-        "ba_miyu_v2",
-        "ba_miyu"
     ],
     [
         "hg_fox_girl_v2",
