@@ -10,28 +10,36 @@ from io import StringIO
 # - delete all thumbs.db and .ztmp
 # - add to alias when renaming
 
+game_id = ''
+if os.path.exists('gameid.txt'):
+	with open('gameid.txt', 'r') as file:
+		game_id = file.read().replace('\n', '')
+
+if not game_id:
+	print("Game ID is blank. Create a gameid.txt file and write your game ID there (e.g. hl or sc)")
+	sys.exit();
+
+database_dir = 'database_' + game_id 
+
 master_json = {}
-master_json_name = 'database/models.json'
-hash_json_name = 'database/hashes.json'
-replacements_json_name = 'database/replacements.json'
-alias_json_name = 'database/alias.json'
-versions_json_name = 'database/versions.json'
-tags_json_name = 'database/tags.json'
-groups_json_name = 'database/groups.json'
+master_json_name = database_dir + '/models.json'
+hash_json_name = database_dir + '/hashes.json'
+replacements_json_name = database_dir + '/replacements.json'
+alias_json_name = database_dir + '/alias.json'
+versions_json_name = database_dir + '/versions.json'
+tags_json_name = database_dir + '/tags.json'
+groups_json_name = database_dir + '/groups.json'
 
 start_dir = os.getcwd()
 
 models_path = 'models/player/'
 install_path = 'install/'
-hlms_path = os.path.join(start_dir, 'hlms')
 modelguy_path = os.path.join(start_dir, 'modelguy')
-posterizer_path = '/home/pi/mediancut-posterizer/posterize'
 pngcrush_path = 'pngcrush'
 magick_path = 'convert'
 debug_render = False
 
 FL_CRASH_MODEL = 1   # model that crashes the game or model viewer
-
 
 # assumes chdir'd to the model directory beforehand
 def fix_case_sensitivity_problems(model_dir, expected_model_path, expected_bmp_path, work_path):
@@ -228,7 +236,6 @@ def handle_renamed_model(model_dir, work_path):
 	return model_dir
 		
 def get_lowest_polycount():
-	global hlms_path
 	global models_path
 	global start_dir
 	
@@ -254,7 +261,6 @@ def get_lowest_polycount():
 					print(model_name)
 	
 def check_for_broken_models():
-	global hlms_path
 	global models_path
 	global start_dir
 	
@@ -269,12 +275,9 @@ def check_for_broken_models():
 		os.chdir(os.path.join(models_path, dir))
 	
 		if os.path.isfile(mdl_path):
-			try:
-				args = [hlms_path, './' + mdl_path]
-				output = subprocess.check_output(args)
-			except Exception as e:
-				output = e
-				print(e)
+			mdlguy_command = ['modelguy.exe', 'type', mdl_path]
+			return_code = subprocess.run(mdlguy_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).returncode
+			if return_code == 0:
 				print("Bad model: %s" % model_name)
 		else:
 			print("Missing model: %s" % model_name)
@@ -299,16 +302,18 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 	global hash_json_name
 	global magick_path
 	global pngcrush_path
-	global posterizer_path
-	global hlms_path
+	global modelguy_path
 	global start_dir
+	global models_path
+	
+	os.makedirs(models_path, exist_ok=True)
 	
 	all_dirs = get_sorted_dirs(work_path)
 	total_dirs = len(all_dirs)
 	
 	list_file = None
 	if update_master_json:
-		list_file = open("database/model_names.txt","w") 
+		list_file = open(database_dir + "/model_names.txt","w") 
 	failed_models = []
 	longname_models = []
 	
@@ -348,9 +353,6 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 		mdl_path = model_name + ".mdl"
 		bmp_path = model_name + ".bmp"
 		render_path = model_name + "000.png"
-		sequence = "0"
-		frames = "1"
-		loops = "1"
 		
 		info_json_path = model_name + ".json"
 		tiny_thumb = model_name + "_tiny.png"
@@ -375,18 +377,15 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 				anything_updated = True
 				
 				with open(os.devnull, 'w') as devnull:
-					args = [hlms_path, mdl_path, model_name, "1000x1600", sequence, frames, loops]
+					args = [modelguy_path, 'image', mdl_path, "1000x1600", render_path]
 					null_stdout=None if debug_render else devnull
 					subprocess.check_call(args, stdout=null_stdout)
 
 					def create_thumbnail(name, size, posterize_colors):
 						print("Creating %s thumbnail..." % name)
-						temp_path = "./%s_%s_temp.png" % (model_name, name)
 						final_path = "./%s_%s.png" % (model_name, name)
-						subprocess.check_call([magick_path, "./" + render_path, "-resize", size, temp_path], stdout=null_stdout)
-						subprocess.check_call([posterizer_path, posterize_colors, temp_path, final_path], stdout=null_stdout)
+						subprocess.check_call([magick_path, "./" + render_path, "-resize", size, "-posterize", posterize_colors, '-type', 'truecolormatte', final_path], stdout=null_stdout)
 						subprocess.check_call([pngcrush_path, "-ow", "-s", final_path], stdout=null_stdout)
-						os.remove(temp_path)
 
 					create_thumbnail("large", "500x800", "255")
 					create_thumbnail("small", "125x200", "16")
@@ -518,7 +517,6 @@ def validate_model_isolated():
 	output = output.decode('utf-8').replace("\n", '')
 	
 	boxPath = os.path.join(output, "box")
-	hlmsPath = os.path.join(boxPath, "hlms")
 	print("Isolate path: %s" % boxPath)
 	
 	print("Copying files")
@@ -551,7 +549,6 @@ def validate_model_isolated():
 	return success
 
 def create_list_file():
-	global hlms_path
 	global models_path
 	global start_dir
 	
@@ -841,6 +838,7 @@ def install_new_models(new_versions_mode=False):
 	global alias_json_name
 	global versions_json_name
 	global start_dir
+
 	
 	new_dirs = get_sorted_dirs(install_path)
 	if len(new_dirs) == 0:
@@ -1086,7 +1084,7 @@ def pack_models(all_models):
 	global models_path
 	
 	crash_models = set()
-	with open("database/crash_models.txt", "r") as update_list:
+	with open(database_dir + "/crash_models.txt", "r") as update_list:
 		for line in update_list.readlines():
 			crash_models.add(line.lower().strip())
 	

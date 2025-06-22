@@ -13,6 +13,17 @@ commit_email = 'w00tguy123@gmail.com'
 ssh_host_name = 'wootdata.github.com' # used to select an ssh key from ~/.ssh/config (this is an alias not a real host name)
 num_buckets = 32
 
+game_id = ''
+if os.path.exists('gameid.txt'):
+	with open('gameid.txt', 'r') as file:
+		game_id = file.read().replace('\n', '')
+
+if not game_id:
+	print("Game ID is blank. Create a gameid.txt file and write your game ID there (e.g. hl or sc)")
+	sys.exit();
+
+repo_prefix = game_id  + "models"
+
 access_token = ''
 with open('/home/pi/git_access_token.txt', 'r') as file:
     access_token = file.read().replace('\n', '')
@@ -80,7 +91,7 @@ def create_repos():
 	# Create repos, push to them, and enable github pages
 	for i in range(0, num_buckets):
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
-		repo_name = 'scmodels_data_%s' % i
+		repo_name = '%s_data_%s' % (repo_prefix, i)
 
 		try:
 			repo = github_user.get_repo(repo_name)
@@ -90,7 +101,7 @@ def create_repos():
 		except Exception as e:
 			print(e)
 			
-		repo = github_user.create_repo(repo_name, description='storage partition for scmodels')
+		repo = github_user.create_repo(repo_name, description='storage partition for %s' % repo_prefix)
 		print("Created %s" % repo.full_name)
 		
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'remote', 'add', 'origin', 'git@%s:%s.git' % (ssh_host_name, repo.full_name)]
@@ -148,7 +159,7 @@ def update(commit_message):
 		if i not in updated_buckets:
 			continue
 			
-		repo_name = 'scmodels_data_%s' % i
+		repo_name = '%s_data_%s' % (repo_prefix, i)
 		print("\nUpdating %s" % repo_name)
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', commit_message]
@@ -178,7 +189,7 @@ def update_simple(commit_message):
 	
 	# commit and push
 	for i in range(0, num_buckets):			
-		repo_name = 'scmodels_data_%s' % i
+		repo_name = '%s_data_%s' % (repo_prefix, i)
 		print("\nUpdating %s" % repo_name)
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', commit_message]
