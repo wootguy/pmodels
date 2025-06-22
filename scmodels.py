@@ -19,7 +19,7 @@ if not game_id:
 	print("Game ID is blank. Create a gameid.txt file and write your game ID there (e.g. hl or sc)")
 	sys.exit();
 
-database_dir = 'database_' + game_id 
+database_dir = 'database/' + game_id + '/'
 
 master_json = {}
 master_json_name = database_dir + '/models.json'
