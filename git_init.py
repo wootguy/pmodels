@@ -25,7 +25,7 @@ if not game_id:
 repo_prefix = game_id  + "models"
 
 access_token = ''
-with open('/home/pi/git_access_token.txt', 'r') as file:
+with open('/home/ubuntu/wootdata_access_token.txt', 'r') as file:
     access_token = file.read().replace('\n', '')
 
 github = Github(access_token)
@@ -44,7 +44,7 @@ def hash_string(str):
 
 def create_repos():
 	print("")
-	print("WARNING: This will delete all sc_models_* repos, locally and on GitHub.")
+	print("WARNING: This will delete all %s* repos, locally and on GitHub." % repo_prefix)
 	print("The repos will then be recreated which will take a long time.")
 	print("")
 
@@ -81,7 +81,7 @@ def create_repos():
 	# add common files and commit in all repos
 	for i in range(0, num_buckets):
 		git_path = os.path.join(git_asset_root, 'repo%s' % i)
-		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'add', '.nojekyll']
+		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'add', '.nojekyll', '-f']
 		subprocess.run(args)
 		args = ['git', '--git-dir=%s' % git_path, '--work-tree=.', 'commit', '-m', 'initial commit']
 		subprocess.run(args)
@@ -118,7 +118,7 @@ def create_repos():
 		payload = {
 			'source': {
 				'branch': 'master',
-				'path': ''
+				'path': '/'
 			}
 		}
 		resp = requests.post('https://api.github.com/repos/%s/%s/pages' % (username, repo_name), headers=headers, data=json.dumps(payload)).json()

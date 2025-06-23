@@ -24,7 +24,6 @@ var results_per_page = 40;
 //var result_offset = 0;
 var result_offset = 1201;
 var data_repo_domain = "https://wootdata.github.io/";
-var g_sound_repo_url = "https://wootdata.github.io/scmodels_data_snd/";
 var data_repo_count = 32;
 var renderWidth = 500;
 var renderHeight = 800;
@@ -35,6 +34,8 @@ var g_view_model_name = "";
 var g_groups_with_results = {};
 var g_model_path = "models/player/";
 var g_downloader_interval = null; // for model downloads
+
+var g_game_id = "sc";
 
 var g_debug_copy = "";
 
@@ -342,6 +343,7 @@ function download_model() {
 	var fileData = {};	
 	for (var i = 0; i < fileList.length; i++) {
 		(function(path) {
+			var g_sound_repo_url = data_repo_domain + g_game_id + "models_data_snd/";
 			var repo_url = path.indexOf("sound/") == 0 ? g_sound_repo_url : get_repo_url(g_view_model_name);
 			
 			fetchBinaryFile(repo_url + path, function(data) {
@@ -770,7 +772,7 @@ function copyStringWithNewLineToClipBoard(stringWithNewLines){
 function get_repo_url(model_name) {
 	var repoId = hash_code(model_name) % data_repo_count;
 	
-	return data_repo_domain + "scmodels_data_" + repoId + "/";
+	return data_repo_domain + g_game_id + "models_data_" + repoId + "/";
 }
 
 function hash_code(str) {
@@ -1012,7 +1014,10 @@ function wait_for_json_to_load() {
 }
 
 function load_database_files() {
-	fetchTextFile("database/model_names.txt", function(data) {
+	var g_database_path = "database/" + g_game_id + "/";
+	g_db_files_loaded = 0;
+	
+	fetchTextFile(g_database_path + "model_names.txt", function(data) {
 		g_model_names = data.split("\n");
 		g_model_names = g_model_names.filter(function (name) {
 			return name.length > 0;
@@ -1035,31 +1040,31 @@ function load_database_files() {
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("database/models.json", function(data) {
+	fetchJSONFile(g_database_path + "models.json", function(data) {
 		console.log("Global model data: ", data);
 		g_model_data = data;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("database/versions.json", function(versions) {
+	fetchJSONFile(g_database_path + "versions.json", function(versions) {
 		console.log("Version info: ", versions);
 		g_versions = versions;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("database/tags.json", function(tags) {
+	fetchJSONFile(g_database_path + "tags.json", function(tags) {
 		console.log("Tag info: ", tags);
 		g_tags = tags;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("database/groups.json", function(data) {
+	fetchJSONFile(g_database_path + "groups.json", function(data) {
 		console.log("Group data (from server): ", data);
 		g_groups = data;
 		g_db_files_loaded += 1;
 	});
 	
-	fetchJSONFile("database/alias.json", function(data) {
+	fetchJSONFile(g_database_path + "alias.json", function(data) {
 		console.log("Aliases: ", data);
 		g_aliases = data;
 		g_db_files_loaded += 1;
