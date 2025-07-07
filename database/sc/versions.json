@@ -63,6 +63,8 @@
         "km_ayakomichi"
     ],
     [
+        "marioodyssey_v6",
+        "marioodyssey_v5",
         "marioodyssey_v4",
         "marioodyssey_v3",
         "marioodyssey_v2",
@@ -381,10 +383,6 @@
         "cof_simon_moddb"
     ],
     [
-        "axis2_s5_v2",
-        "axis2_s5"
-    ],
-    [
         "sv_scottyfox_v2",
         "sv_scottyfox"
     ],
@@ -659,10 +657,6 @@
         "playerslayer"
     ],
     [
-        "hungerzork_v2",
-        "hungerzork"
-    ],
-    [
         "harleyquinn_v2",
         "harleyquinn"
     ],
@@ -792,6 +786,7 @@
         "kitsune_hev"
     ],
     [
+        "jthm_v4",
         "jthm_v3",
         "jthm_v2",
         "jthm"
@@ -1025,6 +1020,18 @@
         "kkk_v3",
         "kkk_v2",
         "kkk"
+    ],
+	[
+        "rnggmask_v2",
+        "rnggmask"
+    ],
+	[
+        "sc2_alarak_v2",
+        "sc2_alarak"
+    ],
+	[
+        "sc2_artanis_v2",
+        "sc2_artanis"
     ],
     [
         "opfor_balaclava_v3",
@@ -1587,10 +1594,6 @@
         "sky"
     ],
     [
-        "tomb_rider_v2",
-        "tomb_rider"
-    ],
-    [
         "ff7vincent_v2",
         "ff7vincent"
     ],
@@ -1716,13 +1719,163 @@
         "rb_ct_v2",
         "rb_ct"
     ],
+	[
+        "csneo_csf6_v2",
+        "csneo_csf6"
+    ],
+	[
+        "csneo_csf7_v2",
+        "csneo_csf7"
+    ],
+	[
+        "csneo_francs_v2",
+        "csneo_francs"
+    ],
+	[
+        "csneo_mummy_v2",
+        "csneo_mummy"
+    ],
+	[
+        "csneo_neo3_v2",
+        "csneo_neo3"
+    ],
+	[
+        "csneo_neo5_v2",
+        "csneo_neo5"
+    ],
+	[
+        "csneo_neo6_v2",
+        "csneo_neo6"
+    ],
+	[
+        "csneo_neo7_v2",
+        "csneo_neo7"
+    ],
+	[
+        "csneo_new_leet_v2",
+        "csneo_new_leet"
+    ],
+	[
+        "csneo_nightforce_f_v2",
+        "csneo_nightforce_f"
+    ],
+	[
+        "csneo_ranger_f_v2",
+        "csneo_ranger_f"
+    ],
+	[
+        "csx_gsg95_v2",
+        "csx_gsg95"
+    ],
+	[
+        "csx_sas2_v2",
+        "csx_sas2"
+    ],
+	[
+        "csneo_seeker_f_v2",
+        "csneo_seeker_f"
+    ],
+	[
+        "csneo_soldierace2_v2",
+        "csneo_soldierace2"
+    ],
+	[
+        "csneo_soldierace_v2",
+        "csneo_soldierace"
+    ],
+	[
+        "csneo_typezero_f2_v2",
+        "csneo_typezero_f2"
+    ],
+	[
+        "csneo_typezero_f_v2",
+        "csneo_typezero_f"
+    ],
+	[
+        "csneo_vip_v2",
+        "csneo_vip"
+    ],
+	[
+        "csneo_witch_v2",
+        "csneo_witch"
+    ],
+	[
+        "csneo_neo8_v2",
+        "csneo_neo8"
+    ],
+	[
+        "csneo_neo9_v2",
+        "csneo_neo9"
+    ],
+	[
+        "cookie_diyusi_v2",
+        "cookie_diyusi"
+    ],
+	[
+        "cookie_snnn_pol2_v2",
+        "cookie_snnn_pol2"
+    ],
+	[
+        "cookie_snnn_pol_v2",
+        "cookie_snnn_pol"
+    ],
+	[
+        "csneo_force24_f_v2",
+        "csneo_force24_f"
+    ],
+	[
+        "csneo_heavy_f_v2",
+        "csneo_heavy_f"
+    ],
+	[
+        "csneo_greyhound_f_v2",
+        "csneo_greyhound_f"
+    ],
+	[
+        "csneo_missing_v2",
+        "csneo_missing"
+    ],
+	[
+        "hdn_compa-c2_v2_vo",
+        "hdn_compa-c2_vo"
+    ],
     [
+        "cookie_snnn_rim_v2",
+        "cookie_snnn_rim"
+    ],
+	[
+        "cool_skeleton_v3",
+        "cool_skeleton_v2",
+        "cool_skeleton"
+    ],
+	[
+        "cool_skeleton2_v2",
+        "cool_skeleton2"
+    ],
+	[
         "helmetscientist_v2",
         "helmetscientist"
     ],
+	[
+        "cm3d2_ghost_v2",
+        "cm3d2_ghost"
+    ],
     [
-        "bikerbarney_v2",
-        "bikerbarney"
+        "chicafnia_v2",
+        "chicafnia"
+    ],
+	[
+        "chiyo_mihama_v2",
+        "chiyo_mihama"
+    ],
+	[
+        "chubby_v2",
+        "chubby"
+    ],
+	[
+        "bonniefnia_v3",
+        "bonniefnia_v2",
+        "bonniefnia"
     ],
     [
         "ginger_v2",
@@ -1869,10 +2022,6 @@
         "baktaria"
     ],
     [
-        "whitesuit_v2",
-        "whitesuit"
-    ],
-    [
         "hellzadmin2_v2",
         "hellzadmin2"
     ],
@@ -1903,10 +2052,6 @@
     [
         "q3redrazor_v2",
         "q3redrazor"
-    ],
-    [
-        "axissoldier_v2",
-        "axissoldier"
     ],
     [
         "russarctic_v2",
@@ -2200,10 +2345,6 @@
         "bullseye"
     ],
     [
-        "gordonshit_v2",
-        "gordonshit"
-    ],
-    [
         "general_v2",
         "general"
     ],
@@ -2258,6 +2399,10 @@
     [
         "bgman_v2",
         "bgman"
+    ],
+	[
+        "doomslayer_v2",
+        "doomslayer"
     ],
     [
         "billy_v2",
@@ -2701,10 +2846,6 @@
         "nytrog"
     ],
     [
-        "sc_argentina_v2",
-        "sc_argentina"
-    ],
-    [
         "dc_jungle_v2",
         "dc_jungle"
     ],
@@ -2757,12 +2898,64 @@
         "gw_pointman_latino"
     ],
     [
+        "smith_v3",
         "smith_v2",
         "smith"
     ],
+	[
+        "toybonnie_v3",
+        "toybonnie_v2"
+    ],
+	[
+        "toychica_v3",
+        "toychica_v2"
+    ],
+	[
+        "toyfoxy_v3",
+        "toyfoxy_v2"
+    ],
+	[
+        "toyfreddy_v3",
+        "toyfreddy_v2"
+    ],
+	[
+        "ugg_goosec_v2",
+        "ugg_goosec"
+    ],
+	[
+        "ugg_goosec_v2_vo",
+        "ugg_goosec_vo"
+    ],
+	[
+        "ugg_goosec_v2_vo",
+        "ugg_goosec_vo"
+    ],
     [
-        "soldier_saw2_v2",
-        "soldier_saw2"
+        "junctionpunch_v2",
+        "junctionpunch"
+    ],
+	[
+        "legends_rogue_v2",
+        "legends_rouge"
+    ],
+	[
+        "tmcm_v2",
+        "tmcm"
+    ],
+	[
+        "touhou_sanae_jkc_v3_vo",
+        "touhou_sanae_jkc_v2_vo",
+        "touhou_sanae_jkc_vo"
+    ],
+	[
+        "touhou_sanae_jkg_v3_vo",
+        "touhou_sanae_jkg_v2_vo",
+        "touhou_sanae_jkg_vo"
+    ],
+	[
+        "touhou_sanae_jky_v3_vo",
+        "touhou_sanae_jky_v2_vo",
+        "touhou_sanae_jky_vo"
     ],
     [
         "cof_simon_hlc_v2",
@@ -3479,7 +3672,28 @@
         "badday_v2",
         "badday"
     ],
+	[
+        "masterchief_v2",
+        "masterchief"
+    ],
+	[
+        "peam_v2",
+        "peam"
+    ],
+	[
+        "postal_redux_dude_v2",
+        "postal_redux_dude"
+    ],
+	[
+        "p4d_marie_v5",
+        "p4d_marie_v4",
+        "p4d_marie_v3",
+        "p4d_marie_v2",
+        "p4d_marie"
+    ],
     [
+        "marvin_v4",
+        "marvin_v3",
         "marvin_v2",
         "marvin"
     ],
@@ -3869,8 +4083,11 @@
         "masked_ninja"
     ],
     [
+        "ta_juggernaut_v10",
+        "ta_juggernaut_v9",
         "ta_juggernaut_v8",
         "ta_juggernaut_v7",
+        "ta_juggernaut_v6",
         "ta_juggernaut_v5",
         "ta_juggernaut_v4",
         "ta_juggernaut_v3",
@@ -4335,10 +4552,6 @@
         "coldburn_hhev"
     ],
     [
-        "bio_tfc_sniper_v2",
-        "bio_tfc_sniper"
-    ],
-    [
         "hito1_v2",
         "hito1"
     ],
@@ -4391,9 +4604,38 @@
         "soldier_sargef_v2",
         "soldier_sargef"
     ],
+	[
+        "fredina_v3",
+        "fredina_v2",
+        "fredina"
+    ],
     [
         "blackcat_v2",
         "blackcat"
+    ],
+	[
+        "gi_ayaka_v3_vo",
+        "gi_ayaka_v2_vo"
+    ],
+	[
+        "gi_ganyu_v2",
+        "gi_ganyu"
+    ],
+	[
+        "hdn_compa_v2_vo",
+        "hdn_compa_vo"
+    ],
+	[
+        "hdnr_compa_v2_vo",
+        "hdnr_compa_vo"
+    ],
+	[
+        "gi_keqing_v2_vo",
+        "gi_keqing_vo"
+    ],
+	[
+        "gi_klee_v2_vo",
+        "gi_klee_vo"
     ],
     [
         "german-grenadier_v2",
@@ -5108,6 +5350,15 @@
     [
         "bclinton_v2",
         "bclinton"
+    ],
+	[
+        "uguroza_v3",
+        "uguroza"
+    ],
+	[
+        "vtuber_kizuna_ld_v3_vo",
+        "vtuber_kizuna_ld_v2_vo",
+        "vtuber_kizuna_ld_vo"
     ],
     [
         "res_securitya_v2",
@@ -6165,6 +6416,18 @@
         "kmd_kanna_v2",
         "kmd_kanna"
     ],
+	[
+        "kmd_kanna_v2_vo",
+        "kmd_kanna_vo"
+    ],
+	[
+        "lowpoly_fox_v2",
+        "lowpoly_fox"
+    ],
+	[
+        "km_karenkujo_xmas_v2",
+        "km_karenkujo_xmas"
+    ],
     [
         "kmd_tooru_v2",
         "kmd_tooru"
@@ -6506,8 +6769,14 @@
         "hg_fox_girl"
     ],
     [
+        "luigiodyssey_v4",
+        "luigiodyssey_v3",
         "luigiodyssey_v2",
         "luigiodyssey"
+    ],
+	[
+        "mario64odyssey_v3",
+        "mario64odyssey_v2"
     ],
     [
         "mad_koishi_komeiji_v2",
@@ -6544,5 +6813,354 @@
     [
         "vansamld_v2",
         "vansamld"
-    ]
+    ],
+	[
+		"alice2_hev_alt_v2",
+		"alice2_hev_alt"
+	],
+	[
+		"alice2_hev_v2",
+		"alice2_hev"
+	],
+	[
+		"barniel2_v2",
+		"barniel2"
+	],
+	[
+		"barniel_v2",
+		"barniel"
+	],
+	[
+		"blair_hev_v2",
+		"blair_hev"
+	],
+	[
+		"cardboard_man_v3",
+		"cardboard_man_v2"
+	],
+	[
+		"choijiyoon2_hev_v2",
+		"choijiyoon2_hev"
+	],
+	[
+		"choijiyoon_hev_alt_v2",
+		"choijiyoon_hev_alt"
+	],
+	[
+		"choijiyoon_hev_v2",
+		"choijiyoon_hev"
+	],
+	[
+		"closers_tina_v2",
+		"closers_tina"
+	],
+	[
+		"criss_hev_v2",
+		"criss_hev"
+	],
+	[
+		"dod_american_aslt_v2",
+		"dod_american_assault"
+	],
+	[
+		"dod_american_mg_v2",
+		"dod_american_mg"
+	],
+	[
+		"dod_american_rifle_v2",
+		"dod_american_rifleman"
+	],
+	[
+		"dod_american_rocket_v2",
+		"dod_american_rocket"
+	],
+	[
+		"dod_american_sniper_v2",
+		"dod_american_sniper"
+	],
+	[
+		"dod_american_supp_v2",
+		"dod_american_support"
+	],
+	[
+		"dod_german_assault_v2",
+		"dod_german_assault"
+	],
+	[
+		"dod_german_mg_v2",
+		"dod_german_mg"
+	],
+	[
+		"dod_german_rifleman_v2",
+		"dod_german_rifleman"
+	],
+	[
+		"dod_german_rocket_v2",
+		"dod_german_rocket"
+	],
+	[
+		"dod_german_sniper_v2",
+		"dod_german_sniper"
+	],
+	[
+		"dod_german_support_v2",
+		"dod_german_support"
+	],
+	[
+		"dreggman_v2",
+		"dreggman"
+	],
+	[
+		"gunsmith_hev_v2",
+		"gunsmith_hev"
+	],
+	[
+		"raketten_v2",
+		"raketten"
+	],
+	[
+		"quake_v2_vo",
+		"quake_vo"
+	],
+	[
+		"hari_hev_v2",
+		"hari_hev"
+	],
+	[
+		"hari_hev_alt_v2",
+		"hari_hev_alt"
+	],
+	[
+		"ayumu_kasuga_v3",
+		"ayumu_kasuga_v2",
+		"ayumu_kasuga"
+	],
+	[
+		"heroine_hev_v2",
+		"heroine_hev"
+	],
+	[
+		"ba_azusa_v2",
+		"ba_azusa"
+	],
+	[
+		"ba_hoshino_v2",
+		"ba_hoshino"
+	],
+	[
+		"ba_iori_v2",
+		"ba_iori"
+	],
+	[
+		"ba_shiromi_iori_v2",
+		"ba_shiromi_iori"
+	],
+	[
+		"baldibasics_v3",
+		"baldibasics_v2",
+		"baldibasics"
+	],
+	[
+		"isabelle_hev_v2",
+		"isabelle_hev"
+	],
+	[
+		"isabellea_v2",
+		"isabellea"
+	],
+	[
+		"jack_v2",
+		"jack"
+	],
+	[
+		"jennifer_hev_v2",
+		"jennifer_hev"
+	],
+	[
+		"kate2_v2",
+		"kate2"
+	],
+	[
+		"kate_v2",
+		"kate"
+	],
+	[
+		"lingling_hev_v2",
+		"lingling_hev"
+	],
+	[
+		"marinegirl_hev_v2",
+		"marinegirl_hev"
+	],
+	[
+		"mariokartwiimario_v2",
+		"mariokartwiimario"
+	],
+	[
+		"natasha_hev_v2",
+		"natasha_hev"
+	],
+	[
+		"pilot_v2",
+		"pilot"
+	],
+	[
+		"pirategirl2_hev_v2",
+		"pirategirl2_hev"
+	],
+	[
+		"re_dead_brad_v3",
+		"re_dead_brad_v2",
+		"re_dead_brad"
+	],
+	[
+		"re_hcf_wesker_v3",
+		"re_hcf_wesker_v2",
+		"re_hcf_wesker"
+	],
+	[
+		"re_outbreak_david_v3",
+		"re_outbreak_david_v2",
+		"re_outbreak_david"
+	],
+	[
+		"re_rpd_leon_v3",
+		"re_rpd_leon_v2",
+		"re_rpd_leon"
+	],
+	[
+		"re_stars_brad_v3",
+		"re_stars_brad_v2",
+		"re_stars_brad"
+	],
+	[
+		"re_stars_enrico_v3",
+		"re_stars_enrico_v2",
+		"re_stars_enrico"
+	],
+	[
+		"re_stars_joseph_v4",
+		"re_stars_joseph_v3",
+		"re_stars_joseph_v2",
+		"re_stars_joseph"
+	],
+	[
+		"re_stars_kenneth_v3",
+		"re_stars_kenneth_v2",
+		"re_stars_kenneth"
+	],
+	[
+		"re_stars_richard_v3",
+		"re_stars_richard_v2",
+		"re_stars_richard"
+	],
+	[
+		"re_stars_wesker_v3",
+		"re_stars_wesker_v2",
+		"re_stars_wesker"
+	],
+	[
+		"re_ubcs_asian_v3",
+		"re_ubcs_asian_v2",
+		"re_ubcs_asian"
+	],
+	[
+		"re_ubcs_black_v3",
+		"re_ubcs_black_v2",
+		"re_ubcs_black"
+	],
+	[
+		"re_ubcs_hispanic_v3",
+		"re_ubcs_hispanic_v2",
+		"re_ubcs_hispanic"
+	],
+	[
+		"re_ubcs_mikhail_v3",
+		"re_ubcs_mikhail_v2",
+		"re_ubcs_mikhail"
+	],
+	[
+		"re_ubcs_militia_v4",
+		"re_ubcs_militia_v3",
+		"re_ubcs_militia_v2",
+		"re_ubcs_militia"
+	],
+	[
+		"re_ubcs_nicholai_v3",
+		"re_ubcs_nicholai_v2",
+		"re_ubcs_nicholai"
+	],
+	[
+		"re_ubcs_white_v3",
+		"re_ubcs_white_v2",
+		"re_ubcs_white"
+	],
+	[
+		"re_umbrella_hunk_v3",
+		"re_umbrella_hunk_v2",
+		"re_umbrella_hunk"
+	],
+	[
+		"re_umbrella_nemesis_v3",
+		"re_umbrella_nemesis_v2",
+		"re_umbrella_nemesis"
+	],
+	[
+		"rebecca_hev_alt_v2",
+		"rebecca_hev_alt"
+	],
+	[
+		"rebecca_hev_v2",
+		"rebecca_hev"
+	],
+	[
+		"ritsuka_hev_v2",
+		"ritsuka_hev"
+	],
+	[
+		"scream_v4",
+		"scream_v3",
+		"scream_v2",
+		"scream"
+	],
+	[
+		"sdm_diagonalmario_v2",
+		"sdm_diagonalmario"
+	],
+	[
+		"soi_hev_alt_v2",
+		"soi_hev_alt"
+	],
+	[
+		"soi_hev_v2",
+		"soi_hev"
+	],
+	[
+		"sonicforces_modern_v2",
+		"sonicforces_modern"
+	],
+	[
+		"spidey_v2",
+		"spidey"
+	],
+	[
+		"splintercell-nhs_v2",
+		"splintercell-nhs"
+	],
+	[
+		"splintercell-nv-b_v2",
+		"splintercell-nv-blue"
+	],
+	[
+		"splintercell-nv-red_v2",
+		"splintercell-nv-red"
+	],
+	[
+		"splintercell-nv_v2",
+		"splintercell-nv"
+	],
+	[
+		"yuri2_hev_v2",
+		"yuri2_hev"
+	]
 ]

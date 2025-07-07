@@ -6,6 +6,7 @@ var g_groups = {};
 var g_tags = {};
 var g_verions = [];
 var g_aliases = {};
+var g_sources = {};
 var g_group_filter = '';
 var g_model_names;
 var can_load_new_model = false;
@@ -118,7 +119,7 @@ function humanFileSize(size) {
 
 function update_model_details() {
 	var popup = document.getElementById("model-popup");
-	
+
 	var totalPolys = 0;
 	var hasLdModel = false;
 	for (var i = 0; i < g_view_model_data["bodies"].length; i++) {
@@ -159,7 +160,7 @@ function update_model_details() {
 		has_mouth = ctl.bone >= 0 && ctl.start != ctl.end;
 	}
 	
-	var ext_mdl = "No";
+	var ext_mdl = "❌";
 	var ext_tex = g_view_model_data["t_model"];
 	var ext_anim = g_view_model_data["seq_groups"] > 1;
 	if (ext_tex && ext_anim) {
@@ -175,6 +176,45 @@ function update_model_details() {
 		aliases = aliases.join("<br>")
 	}
 	
+	let modifyDate = new Date(g_view_model_data["date"]*1000);
+	let modifyDateText = modifyDate.toISOString().split('T')[0];
+	
+	modifyDateText = modifyDate.toLocaleString(undefined, {
+		year: 'numeric', 
+		month: 'short', 
+		day: 'numeric'
+	});
+	
+	let sauce = g_sources[g_view_model_data["md5"]];
+	let sauceLabel = "Unknown";
+	if (sauce) {
+		popup.getElementsByClassName("sauce")[0].innerHTML = "";
+		for (let x = 0; x < sauce.length; x++) {
+			let modid = sauce[x].split(":")[1];
+			let link = '<a href="https://gamebanana.com/mods/' + modid + '" target="_blank">GameBanana #' + modid + '</a>';
+			
+			if (x > 0) {
+				popup.getElementsByClassName("sauce")[0].innerHTML += "<br>";
+			}
+			popup.getElementsByClassName("sauce")[0].innerHTML += link;
+		}
+		
+		popup.getElementsByClassName("sauce")[0].removeAttribute("title");
+	} else {
+		popup.getElementsByClassName("sauce")[0].textContent = "Unknown";
+		popup.getElementsByClassName("sauce")[0].setAttribute("title", "The model wasn't posted on GameBanana when this database was last updated.");
+	}
+	
+	if (g_view_model_data["readme"]) {
+		let model_name = g_view_model_name;
+		let repo_url = get_repo_url(model_name);
+		let model_path = "models/player/" + model_name + "/";
+		popup.getElementsByClassName("readme")[0].innerHTML = '<a href="' + repo_url + model_path + model_name + ".txt" + '" target="_blank">' + model_name + ".txt</a>";
+		popup.getElementsByClassName("readme")[0].removeAttribute("title");
+	} else {
+		popup.getElementsByClassName("readme")[0].textContent = "Not included";
+	}
+	
 	popup.getElementsByClassName("polycount")[0].textContent = totalPolys.toLocaleString(undefined);
 	popup.getElementsByClassName("polycount")[0].setAttribute("title", totalPolys.toLocaleString(undefined));
 	popup.getElementsByClassName("filesize")[0].textContent = humanFileSize(g_view_model_data["size"]);
@@ -183,12 +223,15 @@ function update_model_details() {
 	popup.getElementsByClassName("compilename")[0].setAttribute("title", g_view_model_data["name"]);
 	popup.getElementsByClassName("aliases")[0].innerHTML = aliases ? aliases : "None";
 	popup.getElementsByClassName("aliases")[0].setAttribute("title", aliases ? aliases.replaceAll("<br>", "\n") : "This model has no known aliases.");
-	popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
-	popup.getElementsByClassName("ext_mdl")[0].setAttribute("title", ext_mdl);
+	//popup.getElementsByClassName("ext_mdl")[0].textContent = ext_mdl;
+	//popup.getElementsByClassName("ext_mdl")[0].setAttribute("title", ext_mdl);
 	popup.getElementsByClassName("sounds")[0].innerHTML = soundTable.length > 0 ? soundTable : "None";
 	popup.getElementsByClassName("md5")[0].textContent = g_view_model_data["md5"];
 	popup.getElementsByClassName("md5")[0].setAttribute("title", g_view_model_data["md5"]);
-	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "Yes" : "No";
+	popup.getElementsByClassName("has_mouth")[0].textContent = has_mouth ? "✅" : "❌";
+	popup.getElementsByClassName("colorable")[0].textContent = g_view_model_data["colorable"] ? "✅" : "❌";
+	popup.getElementsByClassName("filedate")[0].textContent = modifyDateText;
+	popup.getElementsByClassName("filedate")[0].setAttribute("title", modifyDateText);
 	
 	var polyColor = "";
 	if (totalPolys < 1000) {
@@ -245,14 +288,19 @@ function view_model(model_name) {
 	popup.getElementsByClassName("filesize")[0].removeAttribute("title");
 	popup.getElementsByClassName("compilename")[0].textContent = "???";
 	popup.getElementsByClassName("compilename")[0].removeAttribute("title");
-	popup.getElementsByClassName("ext_mdl")[0].textContent = "???";
-	popup.getElementsByClassName("ext_mdl")[0].removeAttribute("title");
+	//popup.getElementsByClassName("ext_mdl")[0].textContent = "???";
+	//popup.getElementsByClassName("ext_mdl")[0].removeAttribute("title");
 	popup.getElementsByClassName("sounds")[0].textContent = "???";
 	popup.getElementsByClassName("aliases")[0].textContent = "???";
 	popup.getElementsByClassName("aliases")[0].removeAttribute("title");
 	popup.getElementsByClassName("md5")[0].textContent = "???";
 	popup.getElementsByClassName("md5")[0].removeAttribute("title");
+	popup.getElementsByClassName("filedate")[0].textContent = "???";
+	popup.getElementsByClassName("filedate")[0].removeAttribute("title");
+	popup.getElementsByClassName("sauce")[0].textContent = "???";
+	popup.getElementsByClassName("sauce")[0].removeAttribute("title");
 	popup.getElementsByClassName("has_mouth")[0].textContent = "???";
+	popup.getElementsByClassName("colorable")[0].textContent = "???";
 	popup.getElementsByClassName("loader")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].style.visibility = "visible";
 	popup.getElementsByClassName("loader-text")[0].textContent = "Loading (0%)";
@@ -302,6 +350,10 @@ function view_model(model_name) {
 			select.appendChild(seq);
 		}
 	});
+	
+	var popup = document.getElementById("model-popup");
+	popup.getElementsByClassName("readme")[0].textContent = "???";
+	popup.getElementsByClassName("readme")[0].setAttribute("title", "This model does not come with a readme file.");
 }
 
 function download_model() {	
@@ -323,6 +375,10 @@ function download_model() {
 	
 	if (g_view_model_data["t_model"]) {
 		fileList.push(g_model_path + g_view_model_name + "/" + g_view_model_name + "t.mdl");
+	}
+	
+	if (g_view_model_data["readme"]) {
+		fileList.push(g_model_path + g_view_model_name + "/" + g_view_model_name + ".txt");
 	}
 	
 	for (var i = 0; i < g_view_model_data["events"].length; i++) {
@@ -629,6 +685,10 @@ function apply_filters(no_reload) {
 		} else if (sort_by == "size") {
 			model_results.sort(function(x, y) {
 				return g_model_data[y].size - g_model_data[x].size;
+			});
+		} else if (sort_by == "date") {
+			model_results.sort(function(x, y) {
+				return g_model_data[y].date - g_model_data[x].date;
 			});
 		}
 	}
@@ -1003,7 +1063,7 @@ function json_post_load() {
 }
 
 function wait_for_json_to_load() {
-	if (g_db_files_loaded < 6) {
+	if (g_db_files_loaded < 7) {
 		setTimeout(function() {
 			wait_for_json_to_load();
 		}, 10);
@@ -1067,6 +1127,12 @@ function load_database_files() {
 	fetchJSONFile(g_database_path + "alias.json", function(data) {
 		console.log("Aliases: ", data);
 		g_aliases = data;
+		g_db_files_loaded += 1;
+	});
+	
+	fetchJSONFile(g_database_path + "sources.json", function(data) {
+		console.log("Sources: ", data);
+		g_sources = data;
 		g_db_files_loaded += 1;
 	});
 	

@@ -178,7 +178,7 @@
     "dgf_p_spetsnaz": [
         "sobreviviente"
     ],
-    "bio_tfc_sniper": [
+    "bio_tfc_sniper_v2": [
         "tfc_sniper"
     ],
     "ngnl_shiro": [
@@ -873,9 +873,6 @@
     "neptunia_mth": [
         "neptunia_cfwmagic"
     ],
-    "glados barney": [
-        "glados_barney"
-    ],
     "flora2": [
         "flora"
     ],
@@ -955,10 +952,6 @@
     "putin": [
         "putin_v2",
         "sc_argentina"
-    ],
-    "krotchy2": [
-        "krotchy_v2",
-        "krotchy"
     ],
     "18stcrewleader": [
         "18stcrewleader_v2"
@@ -1194,9 +1187,6 @@
     ],
     "re_stars_rebecca_v2": [
         "re_stars_rebecca"
-    ],
-    "bio_tfc_sniper_v2": [
-        "tfc_sniper"
     ],
     "hl2_zombie_v2": [
         "hl2_zombie"
@@ -2387,9 +2377,6 @@
     ],
     "bunnygirl_casino1_v2": [
         "bunnygirl_casino1"
-    ],
-    "hungerzork_v2": [
-        "hungerzork"
     ],
     "gs_happy_beta_v2": [
         "gs_happy_beta"
@@ -5022,11 +5009,6 @@
     "fp_araterror": [
         "gibman2"
     ],
-    "gordonshit": [
-        "whitesuit",
-        "gordonshit_v2",
-        "whitesuit_v2"
-    ],
     "marisa": [
         "touhou_kirisame_marisa"
     ],
@@ -5391,8 +5373,8 @@
     "payne_2": [
         "payne"
     ],
-    "pickle_rick_sc": [
-        "pickle-rick_sc"
+    "pickle-rick_sc": [
+        "pickle_rick_sc"
     ],
     "pitusas_v3": [
         "pitusas"
@@ -5403,13 +5385,13 @@
     "re_stars_chris_v2": [
         "re_stars_chris"
     ],
-    "re_stars_joseph_v2_v2": [
+    "re_stars_joseph_v3": [
         "re_stars_joseph"
     ],
     "re_stars_richard_v2": [
         "re_stars_richard"
     ],
-    "re_ubcs_militia_v2_v2": [
+    "re_ubcs_militia_v3": [
         "re_ubcs_militia"
     ],
     "rouge_v3": [
@@ -5576,9 +5558,6 @@
     ],
     "op4_recon2": [
         "op4_major2"
-    ],
-    "weapon_shotgun": [
-        "shotgun"
     ],
     "rat2": [
         "rat"

@@ -432,6 +432,7 @@ def update_models(work_path, skip_existing=True, skip_on_error=False, errors_onl
 					filter_dat['polys'] = totalPolys
 					#filter_dat['polys_ld'] = totalPolysLd
 					filter_dat['size'] = infoJson["size"]
+					filter_dat['date'] = infoJson["date"]
 					
 					flags = 0
 					if broken_model:
@@ -1127,7 +1128,55 @@ def pack_models(all_models):
 		os.remove("zip_latest.txt")
 		
 		print("\nFinished!")
+		
+def remove_extras():
+	global models_path
+
+	dirs = os.listdir(models_path)
 	
+	bad_exts = ['.smd', '.qc', '.wc', '.ztmp', '.db', '.ini', '.wav', '.ms3d', '.pe5'] # safe to delete
+	img_exts = ['.bmp', '.jpg', '.tga', '.gif', '.png'] # safe to delete
+	
+	for dir in dirs:
+		root = os.path.join(models_path, dir)
+		for file in os.listdir(root):
+			fpath = os.path.join(root, file)
+			lowerfile = file.lower()
+			mdl_name = dir
+			ext = os.path.splitext(os.path.basename(file))[1].lower()
+			
+			if file.endswith(".mdl"):
+				if file != mdl_name + ".mdl" and file != mdl_name + "t.mdl" and file != mdl_name + "01.mdl":
+					print("Unexpected file: %s" % fpath)
+			elif file.endswith(".txt"):
+				if file != mdl_name + ".txt" and file != mdl_name + "_external.txt" and file != mdl_name + "_ragdoll.txt":
+					readme_path = os.path.join(root, mdl_name + ".txt")
+					if os.path.exists(readme_path):
+						print("Zomg readme conflict: %s" % fpath)
+					else:
+						shutil.move(fpath, os.path.join(root, mdl_name + ".txt"))
+						print("SET readme: %s" % fpath)
+			elif file.endswith(".png"):
+				if file != mdl_name + "_tiny.png" and file != mdl_name + "_small.png" and file != mdl_name + "_large.png":
+					print("Unexpected file: %s" % fpath)
+					#os.remove(fpath)
+			elif ext in img_exts:
+				if file != mdl_name + ".bmp":
+					preview_path = os.path.join(root, mdl_name + ".bmp")
+					if os.path.exists(preview_path):
+						os.remove(fpath)
+					else:
+						print("Possible preview: %s" % fpath)
+						#os.remove(fpath)
+			elif file.endswith(".json"):
+				if file != mdl_name + ".json":
+					print("Unexpected file: %s" % fpath)
+					#os.remove(fpath)
+			elif ext in bad_exts:
+				os.remove(fpath)
+			else:
+				print("Invalid file: %s" % fpath)
+				#os.remove(fpath)
 
 args = sys.argv[1:]
 
@@ -1150,6 +1199,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("fix_json - Makes sure tags.json and groups.json are using the latest model names, and sorts jsons.")
 	print("           Run this after add_version.")
 	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
+	print("clean - remove unused files")
 	
 	sys.exit()
 
@@ -1206,6 +1256,8 @@ if len(args) > 0:
 		list_file.write("%s\n" % args[1])
 		list_file.write("%s\n" % args[2])
 		list_file.close()
+	elif args[0].lower() == 'clean':
+		remove_extras()
 	elif args[0].lower() == 'fixup':
 		pass
 	
