@@ -858,6 +858,11 @@ function reset_zoom(idx) {
 window.onresize = handle_resize;
 
 function handle_resize(event) {	
+	if (document.getElementsByClassName("photo-container").length) {
+		group_photo_resize();
+		return;
+	}
+
 	var gridWidth = document.getElementById("model-grid").offsetWidth;
 	var pagingHeight = document.getElementsByClassName("page-num-container")[0].offsetHeight;
 	
@@ -1062,6 +1067,106 @@ function json_post_load() {
 	handle_resize();
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); // Pick a random index ≤ i
+    [array[i], array[j]] = [array[j], array[i]];   // Swap elements
+  }
+  return array;
+}
+
+var imgWidth = 0;
+var imgHeight = 0;
+var imgSuffix = "";
+var imgPerRow = 0;
+var shuffleIdx = [];
+var shuffleIdx2 = [];
+
+function place_image(img, k) {
+	let col = Math.floor(k % imgPerRow);
+	let row = Math.floor(k / imgPerRow);
+	let offset = (row % 2) == 1 ? (imgWidth*0.5) : 0;
+	img.style.left = col*imgWidth + offset + "px";
+	img.style.top = row*imgHeight + "px";
+	img.style.zIndex = row + 1;
+}
+
+function group_photo() {	
+	let datetext = document.getElementsByClassName("current-date")[0];
+	datetext.textContent = new Date().toLocaleString(undefined, {
+		year: 'numeric', 
+		month: 'long', 
+		day: 'numeric'
+	});
+	
+	let container = document.getElementsByClassName("photo-container")[0];
+	container.innerHTML = "";
+	
+	group_photo_resize();
+	
+	let indexes = [];
+	for (let i = 0; i < g_model_names.length; i++) {
+		indexes.push(i);
+	}
+	shuffleIdx = shuffleArray(indexes);
+	shuffleIdx2 = shuffleArray(indexes);
+	
+	let i = 0;
+	g_downloader_interval = setInterval(function() {
+		let friendcount = document.getElementsByClassName("friend-count")[0];
+		friendcount.innerText = g_model_names.length - i;
+		
+		for (let j = 0; j < 4; j++) {
+			if (i >= g_model_names.length || i == -1) {
+				i = -1;
+				let friendcount_container = document.getElementsByClassName("friend-count-container")[0];
+				friendcount_container.style.display = "none";
+				return;
+			}
+		
+			let model_name = g_model_names[shuffleIdx[i]];
+			let k = shuffleIdx2[shuffleIdx[i]]; // where to insert
+			let repo_url = get_repo_url(model_name);
+			let model_path = repo_url + "models/player/" + model_name + "/";
+			
+			let img = document.createElement("img");
+			img.setAttribute("src",  model_path + model_name + imgSuffix + '.png');
+			img.setAttribute("class", 'friend');
+			img.setAttribute("title", model_name);
+			place_image(img, k);
+			container.appendChild(img);
+			i++;
+		}		
+	}, 10);	
+}
+
+function group_photo_resize() {
+	let container = document.getElementsByClassName("photo-container")[0];
+	
+	let width = container.offsetWidth;
+	
+	let imgWidth_tiny = 5;
+	let imgHeight_tiny = 10;
+	let imgSuffix_tiny = "_tiny";
+	
+	let imgWidth_small = 40;
+	let imgHeight_small = 50;
+	let imgSuffix_small = "_small";
+	
+	let bigMode = false;
+	imgWidth = bigMode ? imgWidth_small : imgWidth_tiny;
+	imgHeight = bigMode ? imgHeight_small : imgHeight_tiny;
+	imgSuffix = bigMode ? imgSuffix_small : imgSuffix_tiny;
+	imgPerRow = Math.floor(width / imgWidth);
+	
+	let images = container.getElementsByTagName("img");
+	
+	for (let i = 0; i < images.length; i++) {
+		let k = shuffleIdx2[shuffleIdx[i]];
+		place_image(images[i], k);
+	}	
+}
+
 function wait_for_json_to_load() {
 	if (g_db_files_loaded < 7) {
 		setTimeout(function() {
@@ -1140,6 +1245,32 @@ function load_database_files() {
 }
 
 document.addEventListener("DOMContentLoaded",function() {
+	if (document.getElementsByClassName("photo-container").length) {
+		console.log("Entering group photo mode!");
+		
+		var g_database_path = "database/" + g_game_id + "/";
+	
+		fetchTextFile(g_database_path + "model_names.txt", function(data) {
+			g_model_names = data.split("\n");
+			g_model_names = g_model_names.filter(function (name) {
+				return name.length > 0;
+			});
+			
+			console.log("loaded " + g_model_names.length + " model names");
+			
+			g_model_names.sort(function(x, y) {
+				if (x.toLowerCase() < y.toLowerCase()) {
+					return -1;
+				}
+				return 1;
+			});
+
+			group_photo();
+		});
+		
+		return;
+	}
+	
 	load_database_files();
 	
 	document.getElementById("model-popup-bg").addEventListener("click", close_model_viewer);
@@ -1194,5 +1325,4 @@ document.addEventListener("DOMContentLoaded",function() {
 			console.log("CLEARED DEBUG COPY");
 		};
 	}
-	
 });
