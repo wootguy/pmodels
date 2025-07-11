@@ -5939,5 +5939,16 @@
     ],
     "vocaloid_yukari_v2": [
         "vocaloid_yukari-yuzuki_v2"
+    ],
+    "km_karenkujo_v2": [
+        "km_karenkujo",
+        "km_karenkujo_updr"
+    ],
+    "km_karenkujo_alt_updr": [
+        "km_karenkujo_alt"
+    ],
+    "km_karenkujo_xmas_v2": [
+        "km_karenkujo_xmas",
+        "km_karenkujo_xmas_upd"
     ]
 }

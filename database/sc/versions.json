@@ -114,6 +114,7 @@
         "touhou_sekibanki"
     ],
     [
+        "gi_ayaka_v4",
         "gi_ayaka_v3",
         "gi_ayaka_v2"
     ],
@@ -1835,10 +1836,6 @@
         "csneo_missing_v2",
         "csneo_missing"
     ],
-	[
-        "hdn_compa-c2_v2_vo",
-        "hdn_compa-c2_vo"
-    ],
     [
         "cookie_snnn_rim_v2",
         "cookie_snnn_rim"
@@ -2919,16 +2916,9 @@
         "toyfreddy_v2"
     ],
 	[
+		"ugg_goosec_v3",
         "ugg_goosec_v2",
         "ugg_goosec"
-    ],
-	[
-        "ugg_goosec_v2_vo",
-        "ugg_goosec_vo"
-    ],
-	[
-        "ugg_goosec_v2_vo",
-        "ugg_goosec_vo"
     ],
     [
         "junctionpunch_v2",
@@ -2941,21 +2931,6 @@
 	[
         "tmcm_v2",
         "tmcm"
-    ],
-	[
-        "touhou_sanae_jkc_v3_vo",
-        "touhou_sanae_jkc_v2_vo",
-        "touhou_sanae_jkc_vo"
-    ],
-	[
-        "touhou_sanae_jkg_v3_vo",
-        "touhou_sanae_jkg_v2_vo",
-        "touhou_sanae_jkg_vo"
-    ],
-	[
-        "touhou_sanae_jky_v3_vo",
-        "touhou_sanae_jky_v2_vo",
-        "touhou_sanae_jky_vo"
     ],
     [
         "cof_simon_hlc_v2",
@@ -4614,28 +4589,12 @@
         "blackcat"
     ],
 	[
-        "gi_ayaka_v3_vo",
-        "gi_ayaka_v2_vo"
-    ],
-	[
         "gi_ganyu_v2",
         "gi_ganyu"
     ],
 	[
-        "hdn_compa_v2_vo",
-        "hdn_compa_vo"
-    ],
-	[
-        "hdnr_compa_v2_vo",
-        "hdnr_compa_vo"
-    ],
-	[
-        "gi_keqing_v2_vo",
-        "gi_keqing_vo"
-    ],
-	[
-        "gi_klee_v2_vo",
-        "gi_klee_vo"
+        "hdn_compa_v3",
+        "hdn_compa_v2"
     ],
     [
         "german-grenadier_v2",
@@ -5355,11 +5314,6 @@
         "uguroza_v3",
         "uguroza"
     ],
-	[
-        "vtuber_kizuna_ld_v3_vo",
-        "vtuber_kizuna_ld_v2_vo",
-        "vtuber_kizuna_ld_vo"
-    ],
     [
         "res_securitya_v2",
         "re_succ_security_unita"
@@ -5970,6 +5924,7 @@
         "gf_9a-91_smol"
     ],
     [
+        "gi_klee_v3",
         "gi_klee_v2",
         "gi_klee"
     ],
@@ -6265,6 +6220,7 @@
         "hdn_compa"
     ],
     [
+        "hdn_compa-c2_v3",
         "hdn_compa-c2_v2",
         "hdn_compa-c2"
     ],
@@ -6337,7 +6293,7 @@
         "hdn_neptunev-c4"
     ],
     [
-        "hdnr_compa_v2",
+        "hdnr_compa_v3",
         "hdnr_compa"
     ],
     [
@@ -7162,5 +7118,481 @@
 	[
 		"yuri2_hev_v2",
 		"yuri2_hev"
+	],
+		[
+		"ba_wakamo_rf_v2",
+		"ba_wakamo_rf"
+	],
+	[
+		"ba_wakamo_g_rf_v2",
+		"ba_wakamo_g_rf"
+	],
+	[
+		"ba_wakamo_g_v2",
+		"ba_wakamo_g"
+	],
+	[
+		"ba_wakamo_v2",
+		"ba_wakamo"
+	],
+	[
+		"ba_shiroko_ar_v2",
+		"ba_shiroko_ar"
+	],
+	[
+		"ba_shiroko_v2",
+		"ba_shiroko"
+	],
+	[
+		"ab_sr_pelo_angry_v2",
+		"ab_sr_pelo_angry"
+	],
+	[
+		"ab_sr_pelo_smile_v2",
+		"ab_sr_pelo_smiling"
+	],
+	[
+		"aviator_crash_v2",
+		"aviator_crash"
+	],
+	[
+		"ba_asuna_bunny_v2",
+		"ba_asuna_bunny"
+	],
+	[
+		"ba_atsuko_v2",
+		"ba_atsuko"
+	],
+	[
+		"ba_azusa_v3",
+		"ba_azusa"
+	],
+	[
+		"ba_azusa_ar_v2",
+		"ba_azusa_ar"
+	],
+	[
+		"ba_hifumi_v2",
+		"ba_hifumi"
+	],
+	[
+		"ba_hoshino_v3",
+		"ba_hoshino"
+	],
+	[
+		"ba_hoshino_sg_v3",
+		"ba_hoshino_sg"
+	],
+	[
+		"ba_izuna_bikini_v2",
+		"ba_izuna_bikini"
+	],
+	[
+		"ba_izuna_bikini_ar_v2",
+		"ba_izuna_bikini_ar"
+	],
+	[
+		"ba_miyu_ld_v2",
+		"ba_miyu_ld"
+	],
+	[
+		"ba_miyu_ld",
+		"ba_miyu"
+	],
+	[
+		"ba_miyu_v3",
+		"ba_miyu"
+	],
+	[
+		"biker_crash_v2",
+		"biker_crash"
+	],
+	[
+		"blanc_chl_srs_v2",
+		"blanc_chl_srs"
+	],
+	[
+		"brs_digitrevx2_v3",
+		"brs_digitrevx2"
+	],
+	[
+		"crash_alt_v2",
+		"crash_alt"
+	],
+	[
+		"crash_bandicoot2_v2",
+		"crash_bandicoot2"
+	],
+	[
+		"cyber_kizuna_v2",
+		"cyber_kizuna"
+	],
+	[
+		"cyber_kizuna_dance_v2",
+		"cyber_kizuna_dance"
+	],
+	[
+		"fake_crash_v2",
+		"fake_crash"
+	],
+	[
+		"gf_g11_v2",
+		"gf_g11"
+	],
+	[
+		"gf_ump9_v2",
+		"gf_ump9"
+	],
+	[
+		"gf_ump40_v2",
+		"gf_ump40"
+	],
+	[
+		"gf_ump40_ld",
+		"gf_ump40"
+	],
+	[
+		"gf_ump45_v2",
+		"gf_ump45"
+	],
+	[
+		"gfl_ak12_v2",
+		"gfl_ak12"
+	],
+	[
+		"gfl_ak12_alt1_v2",
+		"gfl_ak12_alt1"
+	],
+	[
+		"gfl_ak12_alt2_v2",
+		"gfl_ak12_alt2"
+	],
+	[
+		"gfl_m4_sopmod_v2",
+		"gfl_m4_sopmod"
+	],
+	[
+		"gfl_m4_sopmod_c2_v2",
+		"gfl_m4_sopmod_c2"
+	],
+	[
+		"gfl_m4_sopmod_dark_v2",
+		"gfl_m4_sopmod_dark"
+	],
+	[
+		"gfl_m4_sopmod_white_v2",
+		"gfl_m4_sopmod_white"
+	],
+	[
+		"gfl_m4_sopmod-c2_v2",
+		"gfl_m4_sopmod-c2"
+	],
+	[
+		"gfl_negev_v2",
+		"gfl_negev"
+	],
+	[
+		"gfl_negev_shoeless_v2",
+		"gfl_negev_shoeless"
+	],
+	[
+		"gfl_negev_swim_v2",
+		"gfl_negev_swim"
+	],
+	[
+		"gfl_negev_swim2_v2",
+		"gfl_negev_swim2"
+	],
+	[
+		"gfl_ump9_v2",
+		"gfl_ump9"
+	],
+	[
+		"gfl_ump45_v2",
+		"gfl_ump45"
+	],
+	[
+		"gi_amber_v2",
+		"gi_amber"
+	],
+	[
+		"gi_barbara_v2",
+		"gi_barbara"
+	],
+	[
+		"gi_barbara_dark_v2",
+		"gi_barbara_dark"
+	],
+	[
+		"gi_diona_v2",
+		"gi_diona"
+	],
+	[
+		"gi_diona_meranian_v2",
+		"gi_diona_meranian"
+	],
+	[
+		"gi_dori_v2",
+		"gi_dori"
+	],
+	[
+		"gi_dori_alt_v2",
+		"gi_dori_alt"
+	],
+	[
+		"gi_hutao_v2",
+		"gi_hutao"
+	],
+	[
+		"gi_hutao_dark_v2",
+		"gi_hutao_dark"
+	],
+	[
+		"gi_klee_v3",
+		"gi_klee"
+	],
+	[
+		"gi_kukishinobu_v2",
+		"gi_kukishinobu"
+	],
+	[
+		"gi_kukishinobu_dark_v2",
+		"gi_kukishinobu_dark"
+	],
+	[
+		"gi_kukishinobu_nm_v2",
+		"gi_kukishinobu_nm"
+	],
+	[
+		"gi_kukishinobu_nmd_v2",
+		"gi_kukishinobu_nm_dark"
+	],
+	[
+		"gi_lumine_dark_v2",
+		"gi_lumine_dark"
+	],
+	[
+		"gi_lumine_abyss_ord_v2",
+		"gi_lumine_abyss_order"
+	],
+	[
+		"gi_lumine_ld",
+		"gi_lumine"
+	],
+	[
+		"gi_lumine_v2",
+		"gi_lumine"
+	],
+	[
+		"gi_nahida_v2",
+		"gi_nahida"
+	],
+	[
+		"gi_nahida_alt1_v2",
+		"gi_nahida_alt1"
+	],
+	[
+		"gi_qiqi_v2",
+		"gi_qiqi"
+	],
+	[
+		"gi_sayu_v2",
+		"gi_sayu"
+	],
+	[
+		"gi_sucrose_v2",
+		"gi_sucrose"
+	],
+	[
+		"gi_sucrose_new_v2",
+		"gi_sucrose_new"
+	],
+	[
+		"gi_yae_v2",
+		"gi_yae"
+	],
+	[
+		"gi_yanfei_v2",
+		"gi_yanfei"
+	],
+	[
+		"hdn_blanc_v2",
+		"hdn_blanc"
+	],
+	[
+		"hdn_blanc-mizugi_v2",
+		"hdn_blanc-mizugi"
+	],
+	[
+		"hdn_blanc-mizugi-c2_v2",
+		"hdn_blanc-mizugi-c2"
+	],
+	[
+		"hdn_blancv_v2",
+		"hdn_blancv"
+	],
+	[
+		"hdn_blanc-school_v2",
+		"hdn_blanc-school"
+	],
+	[
+		"hdn_compa_v3",
+		"hdn_compa"
+	],
+	[
+		"hev_goose_v2",
+		"hev_goose"
+	],
+	[
+		"holo_korone_lowpoly_v2",
+		"holo_korone_lowpoly"
+	],
+	[
+		"hololive_korone-c1_v2",
+		"hololive_korone-c1"
+	],
+	[
+		"hololive_korone-c2_v2",
+		"hololive_korone-c2"
+	],
+	[
+		"jetpack_crash_v2",
+		"jetpack_crash"
+	],
+	[
+		"kc_shimakaze_v3",
+		"kc_shimakaze_v2_n"
+	],
+	[
+		"ll_nico_yazawa_v2",
+		"ll_nico_yazawa"
+	],
+	[
+		"ll_nico_yazawa_ld",
+		"ll_nico_yazawa"
+	],
+	[
+		"mp_toad_v2",
+		"mp_toad"
+	],
+	[
+		"mp_toad_big_v2",
+		"mp_toad_big"
+	],
+	[
+		"mp_toadc_v2",
+		"mp_toadc"
+	],
+	[
+		"mp_toadc_big_v2",
+		"mp_toadc_big"
+	],
+	[
+		"hdn_nepgear_v2",
+		"hdn_nepgear"
+	],
+	[
+		"nepgear_mazz_v2",
+		"nepgear_mazz"
+	],
+	[
+		"op_goose_v2",
+		"op_goose"
+	],
+	[
+		"ov_entoma_v2",
+		"ov_entoma"
+	],
+	[
+		"pacman_v2",
+		"pacman"
+	],
+	[
+		"pac-man_sfxt_v2",
+		"pac-man_sfxt"
+	],
+	[
+		"pac-man_sfxt_clas_v2",
+		"pac-man_sfxt_clasico"
+	],
+	[
+		"scuba_crash_v2",
+		"scuba_crash"
+	],
+	[
+		"sence_night_v2",
+		"sence_night"
+	],
+	[
+		"smol_ump9_v2",
+		"smol_ump9"
+	],
+	[
+		"tails_ld_v2",
+		"tails_ld"
+	],
+	[
+		"tails_v4",
+		"tails"
+	],
+	[
+		"tails_sc4_v2",
+		"tails_sc4"
+	],
+	[
+		"tails_s5_v2",
+		"tails_s5"
+	],
+	[
+		"tails_dark_s5_v2",
+		"tails_dark_s5"
+	],
+	[
+		"tails_custom_s5_v2",
+		"tails_custom_s5"
+	],
+	[
+		"uganda_girl_v2",
+		"uganda_girl"
+	],
+	[
+		"ugg_goosec_v3",
+		"ugg_goosec"
+	],
+	[
+		"ugg_goose_v2",
+		"ugg_goose"
+	],
+	[
+		"gi_yaoyao_v2",
+		"gi_yaoyao"
+	],
+	[
+		"hdnr_blanc_v2",
+		"hdnr_blanc"
+	],
+	[
+		"gi_mona1_v2",
+		"gi_mona"
+	],
+	[
+		"gi_mona2_v2",
+		"gi_mona_v2"
+	],
+	[
+		"gi_mona3_v2",
+		"gi_mona_v3"
+	],
+	[
+		"gi_mona4_v2",
+		"gi_mona_v4"
+	],
+	[
+		"nepgear_v2",
+		"nepgear"
+	],
+	[
+		"hdnr_compa-c2_v2",
+		"hdnr_compa-c2"
 	]
 ]
