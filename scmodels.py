@@ -1098,8 +1098,8 @@ def pack_models(all_models):
 			crash_models.add(line.lower().strip())
 	
 	if all_models:
-		fname = 'all_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
-		cmd = 'zip -r %s models/player -x "*.png" -x "*.json"' % fname
+		fname = 'sc_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
+		cmd = 'zip -r %s models/player sound  -x "*.png" -x "*.json"' % fname
 		print(cmd)
 		os.system(cmd)
 		# TODO: remove crash models from archive
@@ -1124,9 +1124,18 @@ def pack_models(all_models):
 		list_file = open("zip_latest.txt","w")
 		for dir in all_dirs:
 			for file in os.listdir(os.path.join(models_path, dir)):
-				if file.endswith('.mdl') or file.endswith('.bmp'):
+				if file.endswith('.mdl') or file.endswith('.bmp') or file.endswith('.txt'):
 					file_line = os.path.join(models_path, dir, file).replace('[', '\\[').replace(']', '\\]')
 					list_file.write("%s\n" % file_line)
+		
+		sound_path = 'sound'
+		all_dirs = [dir for dir in os.listdir(sound_path) if os.path.isdir(os.path.join(sound_path,dir)) and dir.lower() not in exclude]
+		all_dirs = sorted(all_dirs, key=str.casefold)
+		for dir in all_dirs:
+			for file in os.listdir(os.path.join(sound_path, dir)):
+				file_line = os.path.join(sound_path, dir, file).replace('[', '\\[').replace(']', '\\]')
+				list_file.write("%s\n" % file_line)
+		
 		list_file.close()
 		
 		fname = 'models/latest_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
