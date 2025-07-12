@@ -852,6 +852,11 @@ def install_new_models(new_versions_mode=False):
 			json_dat = f.read()
 			alt_names = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 	
+	blacklisted = []
+	if os.path.exists("blacklist.txt"):
+		with open("blacklist.txt", "r") as f:
+			blacklisted = f.read().splitlines()
+	
 	# First generate info jsons, if needed
 	print("-- Generating info JSONs for new models")
 	update_models(install_path, True, True, False, True, False)
@@ -887,6 +892,9 @@ def install_new_models(new_versions_mode=False):
 					alt_names[primary_name] = []
 				if alt not in alt_names[primary_name]:
 					alt_names[primary_name].append(alt)
+		if hash in blacklisted:
+			print("ERROR: %s is a blacklisted model" % install_hashes[hash])
+			any_dups = True
 	
 	with open(alias_json_name, 'w') as outfile:
 		json.dump(alt_names, outfile, indent=4)
