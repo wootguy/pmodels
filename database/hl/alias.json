@@ -1900,5 +1900,41 @@
     ],
     "squad": [
         "silencer2"
+    ],
+    "bender_orig": [
+        "bender"
+    ],
+    "chris2": [
+        "chris"
+    ],
+    "clan_killer_v2": [
+        "clan_killer"
+    ],
+    "wanted_cowboy": [
+        "cowboy"
+    ],
+    "farseer2": [
+        "farseer"
+    ],
+    "homer_simpson": [
+        "homer"
+    ],
+    "iron-man_v2": [
+        "iron-man"
+    ],
+    "k9_b": [
+        "k9"
+    ],
+    "limp": [
+        "sc"
+    ],
+    "renegade_v2": [
+        "renegade"
+    ],
+    "stormtroop_agi": [
+        "stormtrooper"
+    ],
+    "sub-zero_c": [
+        "sub-zero"
     ]
 }
