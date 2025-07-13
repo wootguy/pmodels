@@ -1,9 +1,9 @@
-# scmodels
+# pmodels
 
 A faster way to find player models.
 
 Website:  
-https://wootguy.github.io/scmodels/
+https://wootguy.github.io/pmodels/
 
 Model repos:  
 https://github.com/wootdata?tab=repositories
