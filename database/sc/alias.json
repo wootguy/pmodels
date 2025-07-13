@@ -32,9 +32,6 @@
     "gs_gatiito_waffen": [
         "spp_gato"
     ],
-    "-starlight-": [
-        "starlight"
-    ],
     "kancolle_shimakaze": [
         "kc_shimakaze",
         "shimakaze"
@@ -47,12 +44,6 @@
     ],
     "tfc_pyro": [
         "bio_tfc_pyro"
-    ],
-    "pyro_hecu": [
-        "pyro"
-    ],
-    "nuku": [
-        "nuku-b"
     ],
     "subzero": [
         "sub-zero"
@@ -108,10 +99,6 @@
     ],
     "sd_sekai_saionji": [
         "sekai_saionji"
-    ],
-    "tfc_demoman": [
-        "bio_tfc_demo",
-        "tfc_demo"
     ],
     "touhou_remilia": [
         "touhou_remilia_scarlet"
@@ -296,9 +283,6 @@
         "spp_003knuckles",
         "spp_knuckles"
     ],
-    "-diamond-": [
-        "diamond"
-    ],
     "gs_spetsnaz12": [
         "gs_14"
     ],
@@ -359,9 +343,6 @@
     ],
     "fp_nox2018": [
         "fp_nox2017"
-    ],
-    "quisty": [
-        "quistis"
     ],
     "yurnero": [
         "spp_014yurnero",
@@ -489,9 +470,6 @@
         "aswat1",
         "supersonic_s5",
         "supersonic"
-    ],
-    "v&mgirl": [
-        "v_mgirl"
     ],
     "dotso_erio_touwa": [
         "fp_chupetin2018",
@@ -762,9 +740,6 @@
     "cop2": [
         "cop"
     ],
-    "w.w.a": [
-        "wwa"
-    ],
     "bunny_miku": [
         "bright2"
     ],
@@ -882,15 +857,9 @@
     "counterx": [
         "counterx_navidad"
     ],
-    "q3razor": [
-        "razor"
-    ],
     "momiji_inubashiri": [
         "spp_015momiji",
         "spp_momiji"
-    ],
-    "gitty": [
-        "git"
     ],
     "jill_grey": [
         "jill"
@@ -909,9 +878,6 @@
     "richard_aiken": [
         "richard_v2",
         "richard"
-    ],
-    "comradetiki": [
-        "comradetiki_v2"
     ],
     "8bitwarlock_hunk": [
         "8bitwarlock_hunk_v2"
@@ -2760,9 +2726,6 @@
     ],
     "austin_v2": [
         "austin"
-    ],
-    "starlight2": [
-        "--starlight--"
     ],
     "cof_police4_v2": [
         "cof_police4"
@@ -4787,9 +4750,6 @@
     "re_umbrella_hunk2": [
         "re_umbrella_hunk"
     ],
-    "aresaka": [
-        "cof_simon_zooyork"
-    ],
     "sofi_skinv1": [
         "brs2"
     ],
@@ -4828,9 +4788,6 @@
     ],
     "tenshi": [
         "touhou_tenshi2"
-    ],
-    "zbright": [
-        "z bright"
     ],
     "plaingray": [
         "panzergray"
@@ -4871,9 +4828,6 @@
     "kermit": [
         "kermit_v2",
         "lt_kermit"
-    ],
-    "mod": [
-        "~mod~"
     ],
     "smokerl4d": [
         "l4d_smoker"
@@ -4963,9 +4917,6 @@
     ],
     "suwako": [
         "touhou_suwako2"
-    ],
-    "furyouhin": [
-        "uboashocker"
     ],
     "msc_reference": [
         "msc_male"
@@ -5683,9 +5634,6 @@
     "opfor_tower_v2": [
         "opfor_tower"
     ],
-    "pokerface2": [
-        "pokerface"
-    ],
     "poliisikoira_v2": [
         "poliisikoira"
     ],
@@ -5870,9 +5818,6 @@
     ],
     "hdn_neptune-miz-c2_v2": [
         "hdn_neptune-mizugi-c2_v2"
-    ],
-    "hl2_prisonguard": [
-        "hl2_combine_soldier_prisonguard"
     ],
     "mg_hanekawa_0b_v2": [
         "monogatari_hanekawa_0b_v2"

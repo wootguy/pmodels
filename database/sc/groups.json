@@ -320,12 +320,6 @@
         "isabellea_v2",
         "aisabelle2"
     ],
-    "Anonymous": [
-        "anonymous_hacker",
-        "anon",
-        "v"
-    ],
-    "Anubis": [],
     "Apache": [
         "apacheshit",
         "apachef"
@@ -737,7 +731,6 @@
         "b2calebg",
         "b2calebr",
         "b2calebrev",
-        "caleb",
         "b2caleby",
         "nr_caleb_remake"
     ],
@@ -780,10 +773,6 @@
         "blue1_ber",
         "blue1_mets"
     ],
-    "Bob robot": [
-        "bob",
-        "nasa"
-    ],
     "Bolsonaro": [
         "bolsonaro",
         "bolsonaromicto"
@@ -816,11 +805,6 @@
         "bradlee_v3",
         "bradlee_c",
         "bradlee_small"
-    ],
-    "Bullet Casing": [
-        "2d_shotgunshell",
-        "2d_shell",
-        "2d_saw_shell"
     ],
     "Bunny Girl": [
         "bunnygirl_buruma_v2",
@@ -1103,8 +1087,7 @@
     "Cannibal": [
         "cannibal",
         "dm_cannibal",
-        "cannibal_ld",
-        "zz_melcochita"
+        "cannibal_ld"
     ],
     "Captain America": [
         "captainamerica",
@@ -1472,7 +1455,6 @@
         "cscz2_terror",
         "cscz_terror",
         "cso_terror",
-        "css_terror",
         "csterror",
         "csw_terror",
         "csx_terror",
@@ -1490,7 +1472,6 @@
         "stealth3",
         "css_phoenix",
         "css_t",
-        "css_terro",
         "exorcisor_v2",
         "phoenix",
         "ts_merc",
@@ -1759,7 +1740,6 @@
         "simon_v2",
         "jeffthekiller_v3",
         "simonvp",
-        "booksimon_monster",
         "booksimon_svc",
         "cof_simon_aom_v2",
         "cof_simon_awesome_v2",
@@ -2265,7 +2245,6 @@
     ],
     "Duke Nukem": [
         "duke nukem",
-        "duke",
         "duke2",
         "duke3",
         "duke_nukem",
@@ -2307,10 +2286,6 @@
     "Eightball": [
         "eightball",
         "bike_eightball"
-    ],
-    "Elephant tusk hair girl": [
-        "aeonflux_v2",
-        "godmother"
     ],
     "Elf Archer": [
         "elfarcherf",
@@ -2851,10 +2826,6 @@
         "thegibman",
         "fp_araterror"
     ],
-    "Giggles": [
-        "giggles_v2",
-        "payaso"
-    ],
     "Girl with Dress": [
         "-girlygirl-heaven-",
         "femaleklingon_v2",
@@ -2959,12 +2930,10 @@
         "siren",
         "vamp2",
         "starlight",
-        "-starlight-",
         "ladygarden_v2",
         "livingdeadgirl_v2",
         "scarlet",
         "mia",
-        "sexy_v2",
         "sexy2",
         "tigger2",
         "jena_bean",
@@ -3128,7 +3097,6 @@
     "Gunman Chronicles - Bandit": [
         "gcbandit_v2",
         "gmc_bandit",
-        "sn_bandit",
         "hlpc_billy_v2"
     ],
     "Gunman Chronicles - General": [
@@ -3214,7 +3182,6 @@
         "hl2_combine_elite_v2",
         "hl2_combine_marin",
         "hl2_combine_prison",
-        "hl2_prisonguard",
         "hl2_combine_soldier_v2",
         "hl2combinecamo2",
         "hl2combinenova",
@@ -3909,11 +3876,10 @@
         "evilman_v2"
     ],
     "Half-Life - Gargantua": [
-        "garg",
-        "friendlygarg",
+		"friendlygarg",
+        "garg_player",
         "egarg1",
         "garg1",
-        "garg_player",
         "gargantua"
     ],
     "Half-Life - Gina": [
@@ -3930,7 +3896,6 @@
         "dv_ginahc",
         "gina_ld",
         "gina2_v2",
-        "gina_helmet",
         "hl2_gina",
         "ld_gina",
         "lexi-gina",
@@ -4068,7 +4033,6 @@
         "opfor_major",
         "grunt_tfc_sniper",
         "mrdumbsbrother_v2",
-        "pyro_hecu",
         "green_flame",
         "grunt_tfc_engineer",
         "opfor_balaclava2",
@@ -4443,7 +4407,6 @@
         "wafuuhev2",
         "xmas_hev",
         "combat_hevhd",
-        "femhhev",
         "missing_hev",
         "missing_hevg",
         "wafuuhev1",
@@ -4463,7 +4426,6 @@
         "sc_player",
         "sc_poincare",
         "sc_quieter",
-        "sigilo",
         "spacegrunt",
         "startroop",
         "tony_freeman",
@@ -4487,8 +4449,7 @@
         "dc_helmet",
         "tenko_helmet",
         "retarded_helmet_alpha",
-        "bms_helmet",
-        "budcanman"
+        "bms_helmet"
     ],
     "Half-Life - Headcrab": [
         "headcrabshit",
@@ -4604,7 +4565,6 @@
         "whiterobo",
         "rgruntb",
         "4500robo_v2",
-        "skywatch",
         "afterlife_brobo_fix",
         "afterlife_robo_donor",
         "turr",
@@ -4624,7 +4584,6 @@
         "robof",
         "robo_patriot",
         "robo_orig",
-        "superrobo",
         "devilrobo",
         "kookos",
         "op_robo",
@@ -4837,7 +4796,6 @@
         "skeleton3",
         "skeleton_barney2",
         "bone_devil",
-        "demon",
         "lopan",
         "redbones_v2",
         "skeleton",
@@ -4877,7 +4835,6 @@
         "zombiehecu",
         "zombiescie1",
         "zombiescie2",
-        "zombie_soldier",
         "zombieb",
         "zombiebarney_v2",
         "zombieblk",
@@ -5792,7 +5749,6 @@
     ],
     "Jesus": [
         "jesus_v2",
-        "zz_hincha_israelita",
         "jesus2",
         "hinchaisraelita"
     ],
@@ -6380,8 +6336,7 @@
         "bigchungus",
         "bigchunguscb",
         "bigchungusce",
-        "bigchungusuganda",
-        "swabbit"
+        "bigchungusuganda"
     ],
     "Lopan Spawn": [
         "spawn2",
@@ -6548,7 +6503,6 @@
         "supermario",
         "chinamario",
         "mario2",
-        "mario_santa",
         "mario_v2",
         "mario64",
         "mario64b",
@@ -7296,11 +7250,6 @@
         "noita_witch",
         "noita_witch_c"
     ],
-    "Nuku": [
-        "nuku",
-        "nuku-b",
-        "zz_kinesiologa"
-    ],
     "OP Uni": [
         "kz_op_uni",
         "gs_op_uni",
@@ -7357,10 +7306,6 @@
 		"pacman_v2",
         "pac-man_sfxt_clas_v2",
         "pac-man_sfxt_v2"
-    ],
-    "Paltaemocionada": [
-        "palta",
-        "paltaemocionada"
     ],
     "Paranoia - Clone": [
         "para_clon1",
@@ -7470,8 +7415,7 @@
         "penguin_baby_v4",
         "spenguin",
         "spp_pinguino",
-        "slayerkl",
-        "xena_alien3"
+        "slayerkl"
     ],
     "Pepe": [
         "pepe",
@@ -7565,10 +7509,6 @@
         "pzangoosenf",
         "pzangooses",
         "pzangooses-nf"
-    ],
-    "Pokerface": [
-        "pokerface2",
-        "pokerface6"
     ],
     "Police Car": [
         "policecar",
@@ -7678,7 +7618,6 @@
         "freddy",
         "cardassian_v2",
         "countzero",
-        "zz_pizarro",
         "~modbattle~",
         "ethan_hunt_v2",
         "bruce_lee",
@@ -7863,10 +7802,6 @@
     "Qubeley": [
         "whitequbeley",
         "redqubeley"
-    ],
-    "Quisty": [
-        "quisty",
-        "quistis"
     ],
     "RNG - Ratty": [
         "dis_ratty",
@@ -8248,7 +8183,6 @@
         "revenant_doot"
     ],
     "Ribbon": [
-        "ribbon2",
         "ribbon1",
         "ribbon3",
         "ribbon3.0",
@@ -8411,8 +8345,7 @@
         "sonny_claws",
         "anti-claws_v2",
         "nomble",
-        "mrshoe",
-        "santa_mine"
+        "mrshoe"
     ],
     "Sarashi": [
         "sarashi",
@@ -8425,7 +8358,6 @@
     "Sariah Ninja": [
         "sariah_ninja_v2",
         "ninja-girl",
-        "ninja-asain",
         "[girlz]ninja_girl"
     ],
     "Savanna Street - Wildcat": [
@@ -8448,8 +8380,6 @@
         "screamkiller",
         "tongue_v2",
         "admin3_v3",
-        "rockarolla",
-        "jmal",
         "barneyscream",
         "f.b.i.supernatural",
         "f.b.i.supernatural2",
@@ -8570,7 +8500,6 @@
     ],
     "Shrek - Puss in Boots": [
         "puss_in_boots",
-        "scientist7",
         "gs_gatiito",
         "kotik"
     ],
@@ -8783,10 +8712,6 @@
         "spades_sied",
         "spades_tekker_final",
         "spades_tekker_v2"
-    ],
-    "Sperm": [
-        "spermgrey",
-        "spermslime"
     ],
     "Spet": [
         "spet",
@@ -9386,7 +9311,6 @@
         "trp_medic_hq"
     ],
     "TFC - Pyro": [
-        "pyro2",
         "pyro",
         "new_pyro",
         "pyro_noxx",
@@ -9513,15 +9437,6 @@
         "tango-afro",
         "tango-al",
         "tango-aziz"
-    ],
-    "Tapir": [
-        "tapir590_v2",
-        "tapir590_co"
-    ],
-    "Telecom": [
-        "telecom",
-        "telecom_old",
-        "sup_doc"
     ],
     "Teletubby": [
         "tinkywinky",
@@ -9754,10 +9669,6 @@
         "th_worker_up",
         "th_worker_sd",
         "worker"
-    ],
-    "They Hunger - Zork": [
-        "zork_v2",
-        "hungerzork"
     ],
     "Toad": [
         "mp_toad_v2",
@@ -10186,7 +10097,6 @@
         "nemesis_v2"
     ],
     "Transformers - Megatron": [
-        "megatron-slaughter",
         "megatron_v2",
         "owatarobo",
         "owatarobo_s"
@@ -10205,15 +10115,13 @@
         "bad_girlz",
         "bittersweet_v2",
         "carrianne_v2",
-        "crystal",
         "meadows",
         "op_rage",
         "punkgirlz_v2",
         "raquelinred_v2",
         "wildflower_v2",
         "bruvfemale_v2",
-        "heather_v2",
-        "trini"
+        "heather_v2"
     ],
     "Tron 2011": [
         "tron2011",
@@ -10303,7 +10211,6 @@
         "uboa_pizza_owner",
         "uboashocker",
         "uboap",
-        "furyouhin",
         "youkan",
         "bocha",
         "can_o_pop",
@@ -10569,7 +10476,6 @@
     "Yodan": [
         "yodan_v2",
         "wwa",
-        "w.w.a",
         "battleshrineyodan_v2",
         "_anarchy_",
         "baktaria_v2"
@@ -10760,11 +10666,9 @@
         "-agent_onna-_v2",
         "-babygirl-_v2",
         "-darkfairy-_v2",
-        "-diamond-",
         "pirate_tsugumi_v2",
         "starlight2_v2",
         "tgp_postlady_v2",
-        "v&mgirl",
         "v_mgirl",
         "diamond",
         "hibari_v2",
