@@ -853,8 +853,9 @@ def install_new_models(new_versions_mode=False):
 			alt_names = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
 	
 	blacklisted = []
-	if os.path.exists("blacklist.txt"):
-		with open("blacklist.txt", "r") as f:
+	blacklist_path = database_dir + "/blacklist.txt"
+	if os.path.exists(blacklist_path):
+		with open(blacklist_path, "r") as f:
 			blacklisted = f.read().splitlines()
 	
 	# First generate info jsons, if needed
