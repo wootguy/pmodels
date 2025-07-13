@@ -121,6 +121,7 @@ def rename_model(old_dir_name, new_name, work_path):
 	bmp_files = []
 	png_files = []
 	json_files = []
+	txt_files = []
 	for file in all_files:
 		if ".mdl" in file.lower():
 			mdl_files.append(file)
@@ -132,6 +133,8 @@ def rename_model(old_dir_name, new_name, work_path):
 			png_files.append(file)
 		if ".json" in file.lower():
 			json_files.append(file)
+		if ".txt" in file.lower():
+			txt_files.append(file)
 
 	if len(mdl_files) > 1:
 		print("Multiple mdl files to rename. Don't know what to do")
@@ -143,6 +146,10 @@ def rename_model(old_dir_name, new_name, work_path):
 		return False
 	if len(bmp_files) > 1:
 		print("Multiple bmp files to rename. Don't know what to do")
+		sys.exit()
+		return False
+	if len(txt_files) > 1:
+		print("Multiple txt files to rename. Don't know what to do")
 		sys.exit()
 		return False
 	if len(json_files) > 1:
@@ -167,6 +174,7 @@ def rename_model(old_dir_name, new_name, work_path):
 	rename_file(mdl_files, new_name, '.mdl')
 	rename_file(tmdl_files, new_name, 't.mdl')
 	rename_file(json_files, new_name, '.json')
+	rename_file(txt_files, new_name, '.txt')
 	
 	for png_file in png_files:
 		old_file_name = png_file
