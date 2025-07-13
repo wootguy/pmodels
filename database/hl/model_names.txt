@@ -28,6 +28,7 @@ $mile
 [w2h]_pc_punk
 [w2h]_pc_punk2
 aaa-war
+accent
 achen
 acrylamide
 adidas
@@ -39,6 +40,7 @@ adolfhitler4
 aeonflux
 aeris
 aerith
+afterlife_kork
 agent_insurgency
 ai_trooper
 ajmaineman
@@ -63,6 +65,7 @@ alyxvance
 amalice
 amalice2
 amalice3
+among_us
 amongus_crewmate
 ancienta
 ancienta_t
@@ -76,6 +79,8 @@ anubis
 anya
 anya_dead
 aodwhite
+apachef
+apacheshit
 apowers
 aqua
 aqua_v2
@@ -96,6 +101,7 @@ arctic_beta
 ardam
 argentina
 argentina2
+ark
 arm
 army_ant
 arnie
@@ -175,6 +181,22 @@ batmanbeyond
 battery
 bbbbarney
 bbbbarney_fix
+bc_barney
+bc_captain
+bc_gina
+bc_gman
+bc_goose
+bc_gordon
+bc_gus
+bc_hwg
+bc_ns
+bc_otis
+bc_recon
+bc_scientist
+bc_soldier
+bc_vinnie
+bc_vs
+bc_wizard
 bclinton
 bdroid
 bdroid_a
@@ -205,7 +227,10 @@ bigchungus
 bigchunguscb
 bigchungusce
 bigchungusuganda
+bigfatrat
 bigfoot
+bigp
+bigratshit
 bigsmoke_sd
 bigsmoke_tc
 bigsmoke_ud
@@ -248,6 +273,8 @@ bobafett
 bobbit_biped
 bobcaygeon
 bodyguard
+bodyguardshit
+boidshit
 boltie
 bona
 bond
@@ -302,6 +329,11 @@ carl
 carl_johnson
 carlosezeta
 carrianne
+carshit1
+carshit2
+carshit3
+carshit4
+carshit5
 carvino
 cat_black
 cat_gray
@@ -311,10 +343,12 @@ cat_white
 catherineweaver
 catwoman
 ccsakura
+chair
 cheaple
 chell
 chester
 chicafnia
+chicken
 chinamario
 chinanurse
 chinanursedm
@@ -324,9 +358,11 @@ chris
 chrome
 chromeman_black
 chromeman_white
+chubbyshit
 cigar7
 cigartrooper
 cine_scientist
+circle
 civil_protection
 civilian
 civilianhev
@@ -375,6 +411,8 @@ combine_soldier
 combine_soldier_alpha
 combine_soldier_beta
 combine_super_soldier
+comet
+commandershit
 commando
 commando2
 commandramon_goldsrc
@@ -393,6 +431,7 @@ construction_hev_hl2
 construction_hev_ps2
 constructionhev
 constructionhev2
+controller
 cooking_mama
 cool_barney
 cool_barney2
@@ -405,6 +444,7 @@ coreycg_masked
 coreycg_masked2
 coreycg_um
 coronavirus
+corvet
 covid-19
 cpr2
 cprbite
@@ -579,6 +619,7 @@ csczds_vip3
 csczds_vip4
 csczds_vip5
 csczds_worker-pilot
+csmodel
 cso2_707
 cso2_ara
 cso2_arctic
@@ -671,12 +712,20 @@ desertcamo
 deuce
 dfa
 dhd2
+dice1
+dice2
+dice3
+dice4
+dice5
+dice52
+dice6
 diepiify
 diepiify_v2
 dildo
 dina
 dionriversfather
 dipsy
+discoball
 discoman
 dk
 dm_aya1
@@ -810,6 +859,7 @@ eva
 evil_baby
 evilskeleton
 evlscud
+ex_strooper_mp
 exoskeleton
 exoskeleton_dolg
 exoskeleton_monolith
@@ -857,13 +907,16 @@ filthyanimals
 flametrooper
 flanders
 flatshade
+floatershit
 fmash
 fmordred
+fockewulftriebflugel
 football
 forcerecon
 forcerecon_v2
 forever
 forever_freeman
+forkliftshit
 forsyth
 fpsc1
 fpsc2
@@ -874,6 +927,8 @@ fredina
 freeman
 freeman3
 freeze
+friendlygarg
+friendlyshit
 frogger
 fscathach
 fscathach_v2
@@ -915,6 +970,7 @@ gigachad
 gigachad2
 gigachad2_color
 gigachad_color
+gigacirno_v2
 giggles
 gign
 gign3
@@ -1119,6 +1175,7 @@ gsg9_beta
 gstc
 gstealer
 gtguy
+gto
 guard_base_m_03_d
 guard_base_m_03_d_v2
 guard_base_m_04_d
@@ -1197,6 +1254,7 @@ hdpyro2
 hdscout
 hdsoldier
 hdspy
+headcrabshit
 headcrack
 headless_horseman
 headlessben
@@ -1320,6 +1378,7 @@ hikaru
 hinchaisraelita
 hitbox
 hitler_salute
+hitlerlimo
 hl2_barney
 hlalien
 hoe_sog3
@@ -1333,6 +1392,9 @@ holo_alice_hl_1
 holo_alice_hl_2
 holo_alice_hl_3
 holo_alice_hl_4
+holo_takodachi_hsize
+holo_takodachi_psize
+holoshit
 homer
 homer2
 homerwar
@@ -1474,6 +1536,7 @@ kevin_bw
 kevin_dark
 kevin_ij
 kikyou
+kingpinshit
 kiwi
 kkaoru
 kleiner
@@ -1519,6 +1582,7 @@ lion_codename_steam
 liptonicetea
 liquid
 lobo
+locust
 lolkatarina
 lolsoraka
 longded
@@ -1624,6 +1688,8 @@ masterchief
 mastrmnd
 matthewmurdock
 mattmurdock_ng
+mbt
+mbts
 mcgwire
 mdk
 medic
@@ -1632,6 +1698,7 @@ medic3
 medic4
 medic5
 medic6
+medicshit
 medmask_gordon
 medmask_scientist
 megatron
@@ -1724,6 +1791,7 @@ mrvalve3
 muerte
 mummy
 mummy2
+mutant
 mvc3_spider
 myself
 n1nj4
@@ -1790,6 +1858,7 @@ nuku-b
 nxs
 nympho
 nytrog
+obamium
 obi
 obi01
 obi02
@@ -1809,6 +1878,9 @@ oldpepsiman
 olive
 oneil
 onna
+onpu
+onpu2
+op4_toolbox
 optimus
 orange_panther
 orejaflores
@@ -1825,14 +1897,17 @@ p2dude
 p2theotherdude
 pablo
 pac_ghost
+pac_ghost_v2
 pacman
 pacman2
 paisanajacinta
+palm
 palpatine
 palpatine2
 paltaemocionada
 pantera
 panteradelcallao
+panthershit
 paper_cut
 para_diversant1
 para_gas
@@ -1911,6 +1986,9 @@ pitusa-san_robo3
 pitusa-san_simon
 pitusasbox
 pizza
+plantshit1
+plantshit2
+plantshit3
 player
 playerstart
 playerstart_c
@@ -1945,6 +2023,7 @@ quake3guy
 raf_soldier
 rainbow_dash
 raptor
+rat2
 rayman
 razer
 re2_leon
@@ -1991,6 +2070,7 @@ redopforengineer
 redrick
 regular
 regular_assault
+regularshit
 rei_plush
 rei_plushbig
 renegade
@@ -2046,6 +2126,7 @@ royal_guard_agi
 ruaridoll
 russia
 rustywalker
+ryors_sphere_v2
 sa_army
 sa_bigsmoke
 sa_cesar
@@ -2075,10 +2156,12 @@ sas3
 sas4
 sas_beta
 saw
+sawshit
 sbbmario
 sbbmario_v2
 sbbmarionohat
 sbbmarionohat_v2
+sc2player
 scarab
 scell
 schmoopy
@@ -2188,6 +2271,7 @@ shotgun_assault
 shotguntrooper
 shygal
 shyguy
+sil80
 silencer
 simon
 simon2
@@ -2228,8 +2312,10 @@ smoke_bms
 smoke_ld
 smokechief
 smurf
+snail
 snake
 snake_armysuit
+snapbugshit
 snark
 sneyes
 snickers
@@ -2281,6 +2367,8 @@ spike
 spk
 splendorman
 splintercell-nv
+sprt_tiefighter
+sprt_xwing
 spy
 squad
 srobo
@@ -2449,7 +2537,16 @@ tor
 torch
 torch2
 torch3
+torchshit
+torcolormastershit
+torfriendlyshit
+torhostileshit
 tormented
+torrustyshit
+torstaffcolorshit
+torstafffriendlyshit
+torstaffhostileshit
+torstaffrustyshit
 touhou_aya1
 touhou_aya2
 tower
@@ -2461,6 +2558,7 @@ toybonnie
 toychica
 toyfoxy
 toyfreddy
+treeshit
 trekker
 trinityrage
 trollskipper
@@ -2470,6 +2568,7 @@ tron2011g
 tron2011o
 tron2011r
 trooper
+truck
 trump
 ts_agent
 ts_castor
@@ -2494,6 +2593,7 @@ urban3
 urban4
 urban_beta
 urresti
+usada
 uscm
 v1
 v1g
@@ -2504,6 +2604,11 @@ vader
 vader1
 vc_tommy
 vegita
+vehicleshit_abrams
+vehicleshit_flak36_88
+vehicleshit_me262
+vehicleshit_submarine
+vehicleshit_tigerii
 venom
 viktor_a
 viktor_a2
@@ -2614,6 +2719,7 @@ zgrunt
 zgrunt1
 zgrunt2
 zgrunt_uncrab
+zicke_fun
 zombie
 zombie100
 zombie121
