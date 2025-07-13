@@ -8,7 +8,22 @@ body {
 h1 {
 	text-align: center;
 	margin-bottom: 5px;
+	margin-top: 0px;
 }
+.game-links {
+	font-size: 12px;
+}
+.game-links-header {
+	display: inline-block;
+}
+.game-link-sep {
+	display: inline-block;
+	padding: 0 2px;
+}
+.game-link {
+	display: inline-block;
+}
+
 .header-links {
 	text-align: center;
 }
@@ -25,7 +40,7 @@ h1 {
 	margin: 5px;
 	padding: 5px;
 	width: 125px;
-	background: #444;
+	/* background: #444; */
 	border-radius: 5px;
 	padding-bottom: 2px;
 	position: relative;
@@ -449,9 +464,6 @@ html {
 	visibility: visible;
 	opacity: 1;
 }
-.about-text h2 {
-	color: #f88;
-}
 
 
 
@@ -479,5 +491,4 @@ html {
 }
 .photo-header {
 	text-align: center;
-	color: #f88;
 }
