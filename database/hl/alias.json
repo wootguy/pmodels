@@ -481,7 +481,8 @@
         "robo"
     ],
     "cyber": [
-        "scientist"
+        "scientist",
+        "xeno"
     ],
     "gstealer": [
         "zombie"
@@ -502,7 +503,8 @@
         "gina"
     ],
     "zombie3": [
-        "gman"
+        "gman",
+        "cadaver"
     ],
     "ernie": [
         "helmet"
@@ -698,7 +700,8 @@
         "zombie"
     ],
     "biker2": [
-        "biker"
+        "biker",
+        "doctor"
     ],
     "hgrunt3": [
         "hgrunt"
@@ -864,7 +867,8 @@
         "recon"
     ],
     "wookie": [
-        "scientist"
+        "scientist",
+        "wookiee"
     ],
     "yoda": [
         "zombie"
@@ -1020,7 +1024,8 @@
         "helmet"
     ],
     "aerith": [
-        "barney"
+        "barney",
+        "aeris"
     ],
     "arche": [
         "gina"
@@ -1044,7 +1049,8 @@
         "robo"
     ],
     "ribbon8": [
-        "scientist"
+        "scientist",
+        "violet_pussy"
     ],
     "tsugumi2": [
         "zombie"
@@ -1849,5 +1855,50 @@
     ],
     "trinityrage": [
         "trini"
+    ],
+    "wanted_annie": [
+        "annie"
+    ],
+    "wanted_bear": [
+        "bear"
+    ],
+    "halloween": [
+        "creepoween"
+    ],
+    "snowman": [
+        "geoff"
+    ],
+    "bunny": [
+        "killer_bunny"
+    ],
+    "morphbeta": [
+        "morpheus"
+    ],
+    "obi02": [
+        "ninjaturtle"
+    ],
+    "nohead1": [
+        "nohead"
+    ],
+    "yourfriend": [
+        "potleaf"
+    ],
+    "psycho": [
+        "psychoace"
+    ],
+    "pumpkin": [
+        "pumpkin2"
+    ],
+    "q3razor": [
+        "razor"
+    ],
+    "recon2": [
+        "recon"
+    ],
+    "robocop": [
+        "robocop2"
+    ],
+    "squad": [
+        "silencer2"
     ]
 }
