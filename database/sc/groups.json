@@ -2244,11 +2244,10 @@
         "da_yamcha"
     ],
     "Duke Nukem": [
-        "duke nukem",
+		"dukenukem",
         "duke2",
         "duke3",
         "duke_nukem",
-        "dukenukem",
         "2d_duke_nukem"
     ],
     "EL Chivo": [
@@ -4685,7 +4684,6 @@
         "clerk_v2",
         "janitor",
         "cl_sci4",
-        "resident sci-gman",
         "hl_rosenberg",
         "hl_slick",
         "hl_walter",
@@ -4776,10 +4774,6 @@
         "adidas_v2",
         "boysoldier",
         "smileheadscientist"
-    ],
-    "Half-Life - Shock Trooper": [
-        "strooper_mp",
-        "ex_strooper_mp"
     ],
     "Half-Life - Skeleton": [
         "aou-skeleton_v2",
@@ -6075,18 +6069,16 @@
         "kf_stalker2"
     ],
     "Kin-iro Mosaic - Karen Kujo": [
-        "km_karenkujo",
-        "km_karenkujo_alt",
+        "km_karenkujo_v2",
+        "km_karenkujo_alt_updr",
         "karenkujo",
         "2d_km_karenkujo_alt",
         "2d_km_karenkujo",
         "km_karenkujo_dark",
         "km_karenkujo_xmas_v2",
-        "km_karenkujo_alt_updr",
         "km_karenkujo_altr1",
         "km_karenkujo_altr3",
         "km_karenkujo_dlc",
-        "km_karenkujo_v2",
         "km_karenkujo_bel"
     ],
     "Kingom Hearts - Sora": [
