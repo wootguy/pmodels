@@ -1179,7 +1179,7 @@ function wait_for_json_to_load() {
 }
 
 function load_database_files() {
-	var g_database_path = "database/" + g_game_id + "/";
+	var g_database_path = "../database/" + g_game_id + "/";
 	g_db_files_loaded = 0;
 	
 	fetchTextFile(g_database_path + "model_names.txt", function(data) {
@@ -1245,10 +1245,14 @@ function load_database_files() {
 }
 
 document.addEventListener("DOMContentLoaded",function() {
+	if (window.location.pathname.includes("/hl/")) {
+		g_game_id = "hl";
+	}
+	
 	if (document.getElementsByClassName("photo-container").length) {
 		console.log("Entering group photo mode!");
 		
-		var g_database_path = "database/" + g_game_id + "/";
+		var g_database_path = "../database/" + g_game_id + "/";
 	
 		fetchTextFile(g_database_path + "model_names.txt", function(data) {
 			g_model_names = data.split("\n");
