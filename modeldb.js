@@ -702,6 +702,27 @@ function apply_filters(no_reload) {
 
 var last_text = "";
 
+function getTextWidth(text, font) {
+  // re-use canvas object for better performance
+  const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+  const context = canvas.getContext("2d");
+  context.font = font;
+  const metrics = context.measureText(text);
+  return metrics.width;
+}
+
+function getCssStyle(element, prop) {
+    return window.getComputedStyle(element, null).getPropertyValue(prop);
+}
+
+function getCanvasFont(el = document.body) {
+  const fontWeight = getCssStyle(el, 'font-weight') || 'normal';
+  const fontSize = el.style.fontSize || '16px';
+  const fontFamily = getCssStyle(el, 'font-family') || 'Times New Roman';
+  
+  return `${fontWeight} ${fontSize} ${fontFamily}`;
+}
+
 function update_model_grid() {
 	var total_models = g_model_names.length;
 	var grid = document.getElementById("model-grid");
@@ -775,9 +796,17 @@ function update_model_grid() {
 				view_model(model_name);
 			}
 		});
-		name.innerHTML = model_name;
+		name.textContent = model_name;
 		name.setAttribute("title", model_name);
 		
+		let fontSize = 16;
+		name.style.fontSize = fontSize + "px";
+		
+		while (getTextWidth(model_name, getCanvasFont(name)) > 110 && fontSize > 0) {
+			console.log(model_name + " = " + getTextWidth(model_name, getCanvasFont(name)) + " at " + getCanvasFont(name));
+			fontSize--;
+			name.style.fontSize = fontSize + "px";
+		}
 		
 		name.addEventListener("mousedown", function(event) { 
 			
