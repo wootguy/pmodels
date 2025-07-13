@@ -803,7 +803,6 @@ function update_model_grid() {
 		name.style.fontSize = fontSize + "px";
 		
 		while (getTextWidth(model_name, getCanvasFont(name)) > 110 && fontSize > 0) {
-			console.log(model_name + " = " + getTextWidth(model_name, getCanvasFont(name)) + " at " + getCanvasFont(name));
 			fontSize--;
 			name.style.fontSize = fontSize + "px";
 		}
