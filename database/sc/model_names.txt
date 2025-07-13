@@ -5698,7 +5698,7 @@ km_karenkujo_altr3
 km_karenkujo_bel
 km_karenkujo_dark
 km_karenkujo_dlc
-km_karenkujo_v2
+km_karenkujo_updr
 km_karenkujo_xmas
 km_karenkujo_xmas_v2
 kmd_kanna
