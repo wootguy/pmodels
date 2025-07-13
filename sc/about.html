@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>Sven Co-op Model Database</title>
+		
+		<style>			
+			body {
+				max-width: 1450px;
+				margin: 0 auto;
+				background: #222;
+				color: #ddd;
+				font-family: sans-serif;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			h2 {
+				color: #f88;
+			}
+			.header-links {
+				text-align: center;
+			}
+			.about-link {
+				padding: 0 15px;
+			}
+			.about-text {
+				margin: 0 auto;
+				max-width: 600px;
+			}
+			a:link {
+				color: #6baff8;
+			}
+			a:visited {
+				color: #6d7bc6;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Sven Co-op Model Database</h1>
+		<div class="header-links">
+			<a class="about-link" href="index.html">Home</a>
+			<a class="about-link" href="about.html">About</a>
+			<a class="about-link" href="download.html">Model Pack</a>
+			<a class="about-link" href="photo.html">Group Photo</a>
+		</div>
+		<hr>
+		
+		
+		<div class="about-text">
+			<h2>About</h2>
+			<p>
+				The in-game model browser is buggy and hard to use.
+				Use this site instead to find a model, then use it in game
+				by typing a model command in console (example: "model betagordon").
+				You can click on a model's name to copy its name to the clipboard.
+			</p>
+			
+			<p>
+				This site is a combination of various packs and single releases. There are often conflicts where models
+				have the same names. I try to add version suffixes properly but might not always get that right.
+				If I can't compare modified dates, then I check the animations to see which version should be the latest.
+			</p>
+			
+			<p>
+				<a href="https://github.com/wootguy/scmodels">Source code for this site</a>
+			</p>
+			
+			<h2>Model names</h2>
+			<p>
+				People often copy-paste models and then rename them. These renamed models then get distributed in model packs.
+				Because of this, I don't know if any of the model names here are correct. <a href="https://github.com/wootguy/scmodels/issues/new">Let me know</a>
+				if a model name is wrong and I'll fix it (preferably with some proof like a GameBanana link).
+			</p>
+			
+			<p>
+				Some recently released models have names that conflict with older models. I renamed those models.
+				For instance, this <a href="https://gamebanana.com/mods/167133">Touhou Momiji</a> model overwrites
+				the low definition version of that model. So, I renamed the new one to "kz_touhou_momiji".
+				There are <a href="database/conflicts.txt">many other</a> cases like this.
+				You can also see previous model names in the "Known Aliases" section of the model viewer.
+			</p>
+			
+			<p>
+				Version suffixes (e.g. "_v2") are added and necessary because servers can't overwrite existing models in your model
+				folder. If a server wants to automatically distribute an updated model, then that model has to have a
+				new name or else many players won't see it. Part of the model name may be shortened to make room for this suffix. Model names can be 22 characters max before the game fails to load them.
+			</p>
+			<p>
+				Model names are also lowercased so that they can easily be served on Linux FastDL
+				servers, and to simplify plugin/website logic. That isn't totally necessary and I regret doing it. Some
+				model names used capital letters to separate names and acronyms. Now it might be harder to figure out
+				where those models came from if you aren't familiar with every game/movie/anime/etc.
+			</p>
+			
+			<h2>Model sources</h2>
+			<p>
+				<ul>
+					<li><a href="https://gamebanana.com/mods/cats/7276">GameBanana</a></li>
+					<li><a href="https://www.moddb.com/mods/sven-co-op/addons">ModDB</a></li>
+					<li><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">TWLZ player model pack</a></li>
+					<li><a href="https://drive.google.com/drive/folders/1ZsBwMEqTYDEsjDT1WcQUu-zTIEgBCNuY">Uber Pack Redux</a></li>
+					<li><a href="https://drive.google.com/drive/folders/1QEaqIxKET4_QUo7PurNI-z5DKj8vijqf">snrk's Playermodel pack</a></li>
+					<li><a href="http://wwww.letonguesc.com/svencoop/models/player/">LeTongue FastDL server</a></li>
+					<li>whatever I had in my downloads folder</li>
+					<li>whatever <i>you</i> had in your downloads folder (feel free to send your entire player models folder)</li>
+				</ul>
+			</p>
+		</div>
+	</body>
+	
+</html>

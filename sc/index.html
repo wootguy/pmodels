@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>Sven Co-op Model Database</title>
+		
+		<style>
+			body {
+				max-width: 1450px;
+				margin: 0 auto;
+				background: #222;
+				color: #eee;
+				font-family: sans-serif;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			.header-links {
+				text-align: center;
+			}
+			.about-link {
+				padding: 0 15px;
+			}
+			.last-update-time {
+				display: block;
+				text-align: center;
+				margin: 0 auto;
+			}
+			.model-cell {
+				float: left;
+				margin: 5px;
+				padding: 5px;
+				width: 125px;
+				background: #444;
+				border-radius: 5px;
+				padding-bottom: 2px;
+				position: relative;
+			}
+			.model-cell .name {
+				text-align: center;
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.model-cell img {
+				width: 125px;
+				height: 200px;
+				cursor: pointer;
+			}
+			.model-cell hr {
+				margin-top: -4px;
+				margin-bottom: 2px;
+			}
+			
+			#model-popup-bg {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.75;
+				z-index: 50;
+			}
+			#model-popup {
+				background: #444;
+				display: none;
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 100;
+				width: calc(100% - 100px);
+				max-width: 1400px;
+				min-width: 500px;
+				border: 10px solid rgb(48, 52, 54);
+				border-radius: 4px;
+			}
+			#model-popup img {
+				position: absolute;
+				width: 500px;
+				height: 800px;
+			}
+			
+			#model-popup canvas {
+				width: 500px;
+				height: 800px;
+			}
+			
+			#model-popup .render {
+				float: left;
+				line-height: 0;
+			}
+			
+			#model-popup .details {
+				float: left;
+				width: calc(100% - 500px);
+				box-sizing: border-box;
+				padding-left: 10px;
+				background: rgb(26, 28, 29);
+				border-left: 10px solid rgb(48, 52, 54);
+			}
+			
+			.details td {
+				padding-right: 20px;
+			}
+			
+			#model-popup .details-header {
+				text-align: center;
+			}
+			
+			#model-cell-template {
+				display: none;
+			}
+			
+			.page-num-container {
+				text-align: center;
+				color: #eee;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				user-select: none;
+				cursor: default;
+				position: relative;
+			}
+			.page-prev, .page-next, .page-first, .page-last {
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				width: 0; 
+				height: 0; 
+				vertical-align: middle;
+				display: inline-block;
+			}
+			.page-prev, .page-first {
+				border-right: 10px solid #eee;
+			}
+			.page-next, .page-last {
+				border-left: 10px solid #eee;
+			}
+			.page-close:hover > .page-prev , .page-far:hover > .page-first {
+				border-right: 10px solid #ccc;
+			}
+			.page-close:hover > .page-next, .page-far:hover > .page-last {
+				border-left: 10px solid #ccc;
+			}
+			.page-close:active > .page-prev, .page-far:active > .page-first {
+				border-right: 10px solid #fff;
+			}
+			.page-close:active > .page-next, .page-far:active > .page-last {
+				border-left: 10px solid #fff;
+			}
+			.page-far:hover  > .page-bar {
+				background: #ccc;
+			}
+			.page-far:active  > .page-bar {
+				background: #fff;
+			}
+			.page-far, .page-close {
+				cursor: pointer;
+				padding: 3px 10px;
+				cursor: pointer;
+			}
+			.page-bar {
+				background: #eee;
+				width: 3px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 3px;
+			}
+			.page-num-text {
+				vertical-align: middle;
+				display: inline-block;
+				width: 200px;
+			}
+			
+			.filter-search {
+				text-align: center;
+				width: 100%;
+			}
+			#name-filter {
+				font-size: 28px;
+			}
+			
+			.filter-types {
+				position: absolute;
+				z-index: 1;
+			}
+			.filter-types td:last-child {
+				padding-left: 20px;
+				padding-bottom: 5px;
+			}
+			
+			.model-controls {
+				position: absolute;
+				bottom: 10px;
+			}
+			input[type="checkbox"][disabled] + label {
+				color: #ccc;
+			}
+			
+			.details-table {
+				width: calc(100% - 10px);
+				border: 1px solid #333;
+				max-height: calc(100% - 150px);
+			}
+			.details-table > div {
+				white-space: nowrap;
+				display: block;
+				border-bottom: 1px solid #333;
+			}
+			.details-table > div > div {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 2px 0;
+			}
+			.details-table > div > div:first-child {
+				width: 150px;
+				padding-right: 20px;
+			}
+			.details-table > div > div:last-child {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				width: calc(100% - 200px);
+				border-left: 1px solid #333;
+				padding-left: 20px;
+			}
+			.soundTable td {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.details-table .soundTable {
+				max-height: 200px;
+				overflow-y: auto;
+			}
+			.details-table div.sound_table_row > div.sounds {
+				overflow: visible;
+				white-space: initial;
+			}
+			.sound_row > div {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				display: inline-block;
+			}
+			.sound_row > div:first-child {
+				width: 40%;
+				padding-right: 20px;
+				box-sizing: border-box;
+			}
+			.sound_row > div:last-child {
+				width: 60%;
+				text-align: left;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			
+			.poly-cell {
+				position: relative;
+			}
+			#model-popup img.polyflame {
+				position: absolute;
+				height: 20px;
+				width: 100%;
+				height: 100%;
+				margin-left: -20px;
+			}
+			#model-popup span.polycount {
+				position: relative;
+				z-index: 1;
+			}
+			#model-popup span.polycount.insane {
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: black;
+				font-weight: bold;
+				font-size: 50px;
+			}
+			
+			#group-banner {
+				position: relative;
+				background: #6af;
+				height: 35px;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+			}
+			#group-banner .group-back {
+				position: absolute;
+				left: 10px;
+				background: #333;
+				padding: 0 10px;
+				border-radius: 5px;
+				cursor: pointer;
+				user-select: none;
+			}
+			#group-banner .group-title {
+				color: black;
+			}
+			#group-banner .groupname {
+				color: white;
+			}
+			
+			.model-group-count {
+				background: #6af;
+				position: absolute;
+				padding: 0 5px;
+				color: black;
+				border: 1px solid black;
+				pointer-events: none;
+			}
+			
+			.hidden {
+				display: none !important;
+			}
+			
+			.site-loader, .site-loader.loader {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 20px;
+			}
+			
+			.download-but-container {
+				margin-top: 20px;
+				text-align: center;
+			}
+			.download-but {
+				background: #070;
+				display: inline-block;
+				padding: 10px 15px;
+				border: 2px solid #0f8;
+				border-radius: 12px;
+				cursor: pointer;
+				user-select: none;
+			}
+			.download-loader {
+				display: inline-block;
+				margin-left: 30px;
+				vertical-align: middle;
+			}			
+			.loader {
+			  color: #ffffff;
+			  font-size: 4px;
+			  width: 1em;
+			  height: 1em;
+			  border-radius: 50%;
+			  text-indent: -9999em;
+			  -webkit-animation: load4 0.5s infinite linear;
+			  animation: load4 0.5s infinite linear;
+			  -webkit-transform: translateZ(0);
+			  -ms-transform: translateZ(0);
+			  transform: translateZ(0);
+			}
+			.render .loader {
+				position: absolute;
+				top: 40px;
+				left: 55px;
+			}
+			.loader-text {
+				color: #eee;
+				text-align: center;
+				position: absolute;
+				top: -10px;
+				left: 10px;
+				font-size: 1em;
+				line-height: initial;
+			}
+			a:link {
+				color: #6baff8;
+			}
+			a:visited {
+				color: #6d7bc6;
+			}
+			@-webkit-keyframes load4 {
+			  0%,
+			  100% {
+				box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+			  }
+			  12.5% {
+				box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+			  }
+			  25% {
+				box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+			  }
+			  37.5% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+			  }
+			  50% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+			  }
+			  62.5% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+			  }
+			  75% {
+				box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+			  }
+			  87.5% {
+				box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+			  }
+			}
+			@keyframes load4 {
+			  0%,
+			  100% {
+				box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+			  }
+			  12.5% {
+				box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+			  }
+			  25% {
+				box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+			  }
+			  37.5% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+			  }
+			  50% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+			  }
+			  62.5% {
+				box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+			  }
+			  75% {
+				box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+			  }
+			  87.5% {
+				box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+			  }
+			}
+		</style>
+		
+		<script type="text/javascript" src="../modeldb.js"></script>
+		<script async type="text/javascript" src="../modelguy.js"></script>
+		<script async type="text/javascript" src="../jszip.min.js"></script>
+		<script async type="text/javascript" src="../FileSaver.js"></script>
+	</head>
+	<textarea class="debug hidden"></textarea>
+	
+	<body>
+		<h1>Sven Co-op Model Database</h1>
+		<div class="header-links">
+			<a class="about-link" href="index.html">Home</a>
+			<a class="about-link" href="about.html">About</a>
+			<a class="about-link" href="download.html">Model Pack</a>
+			<a class="about-link" href="photo.html">Group Photo</a>
+		</div>
+		<hr>
+		
+		<div class="loader site-loader"></div>
+		
+		<div class="content hidden">
+			<table class="filter-types">
+				<tr>
+					<td>Category:</td>
+					<td>
+						<select class="categories">
+							<option>All</option>
+						</select>
+					</td>
+					<td>
+						<input type="checkbox" id="filter_ver" checked>
+						<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Sort by:</td>
+					<td>
+						<select class="sort">
+							<option>Date</option>
+							<option>Name</option>
+							<option>Polys</option>
+							<option>Size</option>
+						</select>
+					</td>
+					<td>
+						<input type="checkbox" id="filter_group">
+						<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
+					</td>
+				</tr>
+			</table>
+			<div class="filter-search">
+				<span class="search-text"><input id="name-filter" type="text" placeholder="Search..."/></span>
+				<!-- <span class="search-text">Filter tags:<input id="tag-filter" type="text"/></span> -->
+			</div>
+			
+			<div class="page-num-container">
+				<span class="page-far page-first-container"><span class="page-bar"></span><span class="page-first"></span></span>
+				<span class="page-close page-prev-container"><span class="page-prev"></span></span>
+				<span class="page-num-text"><span class="page-start">1</span> - <span class="page-end">X</span> of <span class="result-total">Y</span></span>
+				<span class="page-close page-next-container"><span class="page-next"></span></span>
+				<span class="page-far page-last-container"><span class="page-last"></span><span class="page-bar"></span></span>
+			</div>
+			
+			<hr>
+			
+			<div id="group-banner" class="hidden">
+				<span class="group-back">Back</span>
+				<span class="group-title">Viewing group: <span class="groupname">???</span></span>
+			</div>
+			<div id="model-grid">
+			
+			</div>
+			
+			<div style="clear:both"></div>
+			<hr>
+		</div>
+		
+		<div id="model-cell-template">
+			<div class="model-group-count hidden"></div>
+			<img/>
+			<hr>
+			<div class="name"></div>
+		</div>
+		
+		<div id="model-popup-bg"></div>
+		<div id="model-popup">
+			<div class="render">
+				<img/>
+				<canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+				
+				<div class="loader"></div>
+				<h2 class="loader-text">Loading (<span class="load-percent">0</span>%)</h2>
+			</div>
+			<div class="details">
+				<h2 class="details-header">Header text</h2>
+				<div class="details-table">
+					<div><div title="More polys = worse in-game performance.">Polygons:</div><div class="poly-cell"><img class="polyflame" src="flamingline.gif"/><span class="polycount">???</span></div></div>
+					<div><div title="Size exluding the preview image size and animation sounds">Size:</div><div class="filesize">???</div></div>
+					<div><div title="File modified date.
+					
+This may not match the release date of the model. Whenever a model is downloaded in-game, the modified date is set to the current date. Models without a source will likely have one of those dates.">Date:</div><div class="filedate">???</div></div>
+					<div><div title="Where the model was released. Only GameBanana pages are scanned for now.">Source:</div><div class="sauce">???</div></div>
+					<div><div title="A link to the readme text file, if included.">Readme:</div><div class="readme">???</div></div>
+					<div><div title="Whether or not the model uses colorable textures. This does not guarantee that the color sliders will work.">Colorable:</div><div class="colorable">???</div></div>
+					<div><div title="Whether or not the mouth/head moves when using voice chat.">Animated Mouth:</div><div class="has_mouth">???</div></div>
+					<!-- <div><div title="Whether or not textures and animations are stored in separate model files.">External Models:</div><div class="ext_mdl">???</div></div> -->
+					<div><div title="Hash result after merging external models, if they exist.">MD5:</div><div class="md5">???</div></div>
+					<div><div title="The name this model had when it was compiled. This often has no relation to the model, but can sometimes be used to figure out which model was used as a base.">Internal Name:</div><div class="compilename">???</div></div>
+					<div><div title="Other names that this model has been distributed with. Server owners sometimes rename models. I'll also rename a newly released model if the creator's intended name is already in use.">Known Aliases:</div><div class="aliases">???</div></div>
+					<div class="sound_table_row"><div title="Sounds that play during animations.">Sounds:</div><div class="sounds">???</div></div>
+				</div>
+				<div class="download-but-container">
+					<div class="download-but"><span class="download-but-text">Download model</span><div class="download-loader loader hidden"></div></div>
+				</div>
+				
+				<div class="model-controls">
+					<input type="checkbox" id="3d_on">
+					<label for="3d_on" title="Enable the 3D model renderer">Render 3D</label>
+					<br>
+					<div class="hd_setting">
+						<input type="checkbox" id="cl_himodels" checked>
+						<label for="cl_himodels" title="Render the HD submodel">cl_himodels 1</label>
+					</div>
+					<input type="checkbox" id="wireframe">
+					<label for="wireframe" title="Outline polygon edges">Wireframe</label>
+					<br>
+					<span>Sequence: </span> <select class="animations"></select>					
+				</div>
+			</div>
+		</div>
+		
+		<small class="last-update-time" title="Last time I downloaded stuff from GameBanana and uploaded here">
+			Last updated: July 12, 2025
+		</small>
+		<br>
+		
+		<script type='text/javascript'>
+			var Module = {
+				preRun: [function() {
+				}],
+				postRun: [],
+				print: (function() {
+					return function(text) {
+						if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+						console.log(text);
+					};
+				})(),
+				printErr: function(text) {
+					if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+					if (0) { // XXX disabled for safety typeof dump == 'function') {
+						dump(text + '\n'); // fast, straight to the real console
+					} else {
+						console.error(text);
+					}
+				},
+				canvas: (function() {
+					var canvas = document.getElementById('canvas');
+
+					// As a default initial behavior, pop up an alert when webgl context is lost. To make your
+					// application robust, you may want to override this behavior before shipping!
+					// See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+					canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+
+					return canvas;
+				})(),
+				setStatus: function(text) {
+					if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+					if (text === Module.setStatus.last.text) return;
+					var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+					var now = Date.now();
+					if (m && now - Module.setStatus.last.time < 30) return; // if this is a progress update, skip it if too soon
+					Module.setStatus.last.time = now;
+					Module.setStatus.last.text = text;
+				},
+				totalDependencies: 0,
+				monitorRunDependencies: function(left) {
+					this.totalDependencies = Math.max(this.totalDependencies, left);
+					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+				}
+			};
+
+			Module.setStatus('Downloading...');
+			window.onerror = function() {
+				Module.setStatus('Exception thrown, see JavaScript console');
+				Module.setStatus = function(text) {
+					if (text) Module.printErr('[post-exception status] ' + text);
+				};
+			};
+		</script>
+	</body>
+</html>
