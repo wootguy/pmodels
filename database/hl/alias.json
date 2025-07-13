@@ -1,1 +1,1820 @@
-{}
+{
+    "aswat2": [
+        "aswat"
+    ],
+    "bananadancer_c": [
+        "bananadancer"
+    ],
+    "commando2": [
+        "commando"
+    ],
+    "crash2": [
+        "crash"
+    ],
+    "drill_hd": [
+        "drill"
+    ],
+    "batman_frost": [
+        "frostbatman",
+        "scientist"
+    ],
+    "helmet_white": [
+        "helmet_whte",
+        "helmet"
+    ],
+    "hev_barney2": [
+        "hev_barney"
+    ],
+    "helmet_alpha": [
+        "hhev",
+        "helmetbulk",
+        "helmet"
+    ],
+    "holo2": [
+        "holo"
+    ],
+    "alice": [
+        "holo_alice_hl"
+    ],
+    "homer": [
+        "homer1"
+    ],
+    "skeleton3": [
+        "hueteotl",
+        "gordon"
+    ],
+    "hunter2": [
+        "hunter"
+    ],
+    "blackgrunt": [
+        "massn"
+    ],
+    "medic2": [
+        "medic"
+    ],
+    "mummy2": [
+        "mummy"
+    ],
+    "pepsiman2": [
+        "pepsiman"
+    ],
+    "recruit_hd": [
+        "recruit"
+    ],
+    "robo_nocolor": [
+        "robo_def",
+        "robo"
+    ],
+    "samuri": [
+        "samurai"
+    ],
+    "scout_trooper": [
+        "scouttroop_agi",
+        "robo"
+    ],
+    "shephard2": [
+        "shephard",
+        "hgrunt"
+    ],
+    "skeleton2": [
+        "skeleton"
+    ],
+    "robo_ezeq": [
+        "the_batter_hl",
+        "robo"
+    ],
+    "sesshomaru": [
+        "xsesshomaru"
+    ],
+    "yodan": [
+        "~claneuv",
+        "barney"
+    ],
+    "cprbite": [
+        "cpr"
+    ],
+    "recon4": [
+        "recon"
+    ],
+    "snowman2": [
+        "snowman"
+    ],
+    "construction5": [
+        "construction"
+    ],
+    "wie_allies1": [
+        "wie_allies3"
+    ],
+    "wie_axis2": [
+        "wie_axis3",
+        "wie_axis4",
+        "wie_axis5"
+    ],
+    "neo_hd": [
+        "neo"
+    ],
+    "filthyanimals": [
+        "filthy animals"
+    ],
+    "forcerecon_v2": [
+        "forcerecon"
+    ],
+    "[kiss]ace": [
+        "[kiss]  ace"
+    ],
+    "[kiss]paul": [
+        "[kiss]  paul"
+    ],
+    "[kiss]blackdiamond": [
+        "[kiss] blackdiamond"
+    ],
+    "[kiss]cat": [
+        "[kiss] cat"
+    ],
+    "[kiss]gene": [
+        "[kiss] gene"
+    ],
+    "[kiss]girl": [
+        "[kiss] girl"
+    ],
+    "[kiss]peter": [
+        "[kiss] peter"
+    ],
+    "argentina2": [
+        "argentina"
+    ],
+    "smile": [
+        "smile\u062a"
+    ],
+    "spiderman4": [
+        "player"
+    ],
+    "csczds_jap_cop_sci": [
+        "csczds_jap_cop_scientist"
+    ],
+    "scorpion3": [
+        "scorpion"
+    ],
+    "gordon_bms2_v2": [
+        "player"
+    ],
+    "gordon_bms2": [
+        "player2"
+    ],
+    "gordon2": [
+        "player"
+    ],
+    "scorpion2": [
+        "scorpion"
+    ],
+    "sub-zero2": [
+        "sub-zero"
+    ],
+    "yui_v2": [
+        "yui"
+    ],
+    "grunt8": [
+        "grunt"
+    ],
+    "hgrunt6": [
+        "hgrunt"
+    ],
+    "hgruntb2": [
+        "hgruntb"
+    ],
+    "recon3": [
+        "recon"
+    ],
+    "barney_happy": [
+        "barney"
+    ],
+    "gina_happy": [
+        "gina"
+    ],
+    "gman_happy": [
+        "gman"
+    ],
+    "gordon_happy": [
+        "gordon"
+    ],
+    "recon_happy": [
+        "recon"
+    ],
+    "scientist_happy": [
+        "scientist"
+    ],
+    "blue3": [
+        "blue"
+    ],
+    "red2": [
+        "red"
+    ],
+    "medic4": [
+        "medic"
+    ],
+    "medic3": [
+        "medic2"
+    ],
+    "torch2": [
+        "torch"
+    ],
+    "swat2": [
+        "swat"
+    ],
+    "smoke_ld": [
+        "player"
+    ],
+    "arab3": [
+        "arab"
+    ],
+    "barney_ps2": [
+        "barney"
+    ],
+    "colette_ps2": [
+        "colette"
+    ],
+    "gina_ps2": [
+        "gina"
+    ],
+    "gordon_ps2_2": [
+        "gordon"
+    ],
+    "helmet_ps2": [
+        "helmet"
+    ],
+    "hgrunt_ps2": [
+        "hgrunt"
+    ],
+    "recon_ps2": [
+        "recon"
+    ],
+    "robo_ps2": [
+        "robo"
+    ],
+    "scientist_ps2": [
+        "scientist"
+    ],
+    "vortigaunt_ps2": [
+        "vortigaunt"
+    ],
+    "zombie_ps2": [
+        "zombie"
+    ],
+    "cj_ldsuit": [
+        "player"
+    ],
+    "einstein2": [
+        "einstein"
+    ],
+    "luther2": [
+        "luther"
+    ],
+    "walter2": [
+        "walter"
+    ],
+    "construction4": [
+        "construction"
+    ],
+    "pacman2": [
+        "pacman"
+    ],
+    "helmet_nocolor": [
+        "player",
+        "helmet"
+    ],
+    "dod_a68_allies": [
+        "dod_alpha6.8_allies"
+    ],
+    "dod_a68_axis": [
+        "dod_alpha6.8_axis"
+    ],
+    "dod_a68_axis-heavy": [
+        "dod_alpha6.8_axis-heavy"
+    ],
+    "dod_a68_axis-light": [
+        "dod_alpha6.8_axis-light"
+    ],
+    "dod_a68_axis-medium": [
+        "dod_alpha6.8_axis-medium"
+    ],
+    "dod_a68_axis-sniper": [
+        "dod_alpha6.8_axis-sniper"
+    ],
+    "dod_allie-heavy_v2": [
+        "dod_allie-heavy"
+    ],
+    "dod_allie-light_v2": [
+        "dod_allie-light"
+    ],
+    "dod_allie-medium_v2": [
+        "dod_allie-medium"
+    ],
+    "dod_allie-mg_v2": [
+        "dod_allie-mg"
+    ],
+    "dod_allie-para_v2": [
+        "dod_allie-para"
+    ],
+    "dod_allie-sniper_v2": [
+        "dod_allie-sniper"
+    ],
+    "dod_axis-heavy_v2": [
+        "dod_axis-heavy"
+    ],
+    "dod_axis-light_v2": [
+        "dod_axis-light"
+    ],
+    "dod_axis-medium_v2": [
+        "dod_axis-medium"
+    ],
+    "dod_axis-mg_v2": [
+        "dod_axis-mg"
+    ],
+    "dod_axis-para_v2": [
+        "dod_axis-para"
+    ],
+    "dod_axis-sniper_v2": [
+        "dod_axis-sniper"
+    ],
+    "beret2": [
+        "beret"
+    ],
+    "cl_suit_hd_c": [
+        "cl_suit"
+    ],
+    "construction6": [
+        "construction"
+    ],
+    "drill2": [
+        "drill"
+    ],
+    "fassn2": [
+        "fassn"
+    ],
+    "grunt6": [
+        "grunt"
+    ],
+    "gus2": [
+        "gus"
+    ],
+    "hgrunt5": [
+        "hgrunt"
+    ],
+    "keller2": [
+        "keller"
+    ],
+    "otis2": [
+        "otis"
+    ],
+    "pumpkin2": [
+        "pumpkin"
+    ],
+    "recon5": [
+        "recon"
+    ],
+    "recruit2": [
+        "recruit"
+    ],
+    "rosenberg3": [
+        "rosenberg"
+    ],
+    "santa2": [
+        "santa"
+    ],
+    "shephard3": [
+        "shephard"
+    ],
+    "arctic3": [
+        "arctic"
+    ],
+    "gign3": [
+        "gign"
+    ],
+    "gsg9_3": [
+        "gsg9"
+    ],
+    "guerilla_beta2": [
+        "guerilla"
+    ],
+    "leet2": [
+        "leet"
+    ],
+    "sas4": [
+        "sas"
+    ],
+    "terror5": [
+        "terror"
+    ],
+    "urban3": [
+        "urban"
+    ],
+    "vip2": [
+        "vip"
+    ],
+    "ivan_freeman": [
+        "player"
+    ],
+    "gordon_beta2": [
+        "player"
+    ],
+    "zombie_hd2": [
+        "zombie"
+    ],
+    "pimpman": [
+        "gman"
+    ],
+    "younggman": [
+        "young gman"
+    ],
+    "blue2": [
+        "blue"
+    ],
+    "daffy2": [
+        "daffy"
+    ],
+    "homer2": [
+        "homer"
+    ],
+    "red3": [
+        "red"
+    ],
+    "diepiify_v2": [
+        "diepiify"
+    ],
+    "elvis": [
+        "zombie"
+    ],
+    "mib2": [
+        "mib"
+    ],
+    "slayerc": [
+        "player"
+    ],
+    "gman_black2": [
+        "gman"
+    ],
+    "bender2": [
+        "bender"
+    ],
+    "wolverine2": [
+        "wolverine"
+    ],
+    "666": [
+        "gina"
+    ],
+    "xenomorph": [
+        "gman"
+    ],
+    "skrag": [
+        "gordon"
+    ],
+    "grith": [
+        "helmet"
+    ],
+    "alienslave": [
+        "hgrunt"
+    ],
+    "scream": [
+        "recon"
+    ],
+    "slave": [
+        "robo"
+    ],
+    "cyber": [
+        "scientist"
+    ],
+    "gstealer": [
+        "zombie"
+    ],
+    "gordon_hl2": [
+        "player"
+    ],
+    "gman_hl2": [
+        "gman"
+    ],
+    "holo4": [
+        "holo"
+    ],
+    "judgedeath": [
+        "barney"
+    ],
+    "bone_devil": [
+        "gina"
+    ],
+    "zombie3": [
+        "gman"
+    ],
+    "ernie": [
+        "helmet"
+    ],
+    "zombie4": [
+        "hgrunt"
+    ],
+    "recon_evil": [
+        "recon"
+    ],
+    "longded": [
+        "robo"
+    ],
+    "gibbed": [
+        "scientist"
+    ],
+    "dr_eastman": [
+        "zombie"
+    ],
+    "brutmi_c": [
+        "brutmi"
+    ],
+    "gordon_oldman": [
+        "player"
+    ],
+    "holo3": [
+        "holo"
+    ],
+    "robo2": [
+        "robo"
+    ],
+    "arab_beta2": [
+        "arab"
+    ],
+    "arab2": [
+        "arab"
+    ],
+    "bdroid_a": [
+        "zombie",
+        "barney"
+    ],
+    "spets_b": [
+        "spetsnaz"
+    ],
+    "csb_guerilla": [
+        "guerilla"
+    ],
+    "helmet_hd_blue": [
+        "player"
+    ],
+    "wolverine": [
+        "barney"
+    ],
+    "neo": [
+        "gina"
+    ],
+    "spiderman": [
+        "gman"
+    ],
+    "ironman": [
+        "gordon",
+        "iron man"
+    ],
+    "james": [
+        "helmet"
+    ],
+    "superman": [
+        "hgrunt",
+        "supermanrage"
+    ],
+    "spiderman2": [
+        "recon"
+    ],
+    "catwoman": [
+        "robo"
+    ],
+    "hunk": [
+        "hgrunt"
+    ],
+    "tails": [
+        "colitas"
+    ],
+    "peanut_c": [
+        "peanut"
+    ],
+    "barney_hev": [
+        "barney"
+    ],
+    "gina_hev": [
+        "gina"
+    ],
+    "colette_hev": [
+        "gman"
+    ],
+    "gordon_hev": [
+        "gordon"
+    ],
+    "einstein_hev": [
+        "hgrunt"
+    ],
+    "construction_hev": [
+        "recon"
+    ],
+    "walter_hev": [
+        "robo"
+    ],
+    "slick_hev": [
+        "scientist"
+    ],
+    "luther_hev": [
+        "zombie"
+    ],
+    "grunt4": [
+        "grunt1"
+    ],
+    "grunt5": [
+        "grunt2"
+    ],
+    "grunt": [
+        "grunt3"
+    ],
+    "grunt2": [
+        "grunt4"
+    ],
+    "grunt3": [
+        "grunt5"
+    ],
+    "hgrunt2": [
+        "hgrunt"
+    ],
+    "barney_hev_ps2": [
+        "barney"
+    ],
+    "gina_hev_ps2": [
+        "gina"
+    ],
+    "colette_hev_ps2": [
+        "gman"
+    ],
+    "gordon_hev_ps2": [
+        "gordon"
+    ],
+    "helmet_white_ps2": [
+        "helmet"
+    ],
+    "einstein_hev_ps2": [
+        "hgrunt"
+    ],
+    "construction_hev_ps2": [
+        "recon"
+    ],
+    "walter_hev_ps2": [
+        "robo"
+    ],
+    "slick_hev_ps2": [
+        "scientist"
+    ],
+    "luther_hev_ps2": [
+        "zombie"
+    ],
+    "gordon_bms_c": [
+        "player"
+    ],
+    "barney_bms_c": [
+        "barney"
+    ],
+    "gina_bms_c": [
+        "gina"
+    ],
+    "gman_bms_c": [
+        "gman"
+    ],
+    "gordon_bms_c2": [
+        "gordon"
+    ],
+    "helmet_bms_c": [
+        "helmet"
+    ],
+    "hgrunt_bms_c": [
+        "hgrunt"
+    ],
+    "recon_bms_c": [
+        "recon"
+    ],
+    "zombie2_bms_c": [
+        "robo"
+    ],
+    "scientist_bms_c": [
+        "scientist"
+    ],
+    "zombie_bms_c": [
+        "zombie"
+    ],
+    "biker2": [
+        "biker"
+    ],
+    "hgrunt3": [
+        "hgrunt"
+    ],
+    "barney_hev_hl2": [
+        "barney"
+    ],
+    "gina_hev_hl2": [
+        "gina"
+    ],
+    "colette_hev_hl2": [
+        "gman"
+    ],
+    "gordon_hev_hl2": [
+        "gordon"
+    ],
+    "helmet_white_hl2": [
+        "helmet"
+    ],
+    "einstein_hev_hl2": [
+        "hgrunt"
+    ],
+    "construction_hev_hl2": [
+        "recon"
+    ],
+    "walter_hev_hl2": [
+        "robo"
+    ],
+    "slick_hev_hl2": [
+        "scientist"
+    ],
+    "luther_hev_hl2": [
+        "zombie"
+    ],
+    "csb_arab": [
+        "arab"
+    ],
+    "csb_arctic": [
+        "arctic"
+    ],
+    "csb_gign": [
+        "gign"
+    ],
+    "csb_gsg9": [
+        "gsg9"
+    ],
+    "csb_sas": [
+        "sas"
+    ],
+    "csb_terror": [
+        "terror"
+    ],
+    "csb_urban": [
+        "urban"
+    ],
+    "hgrunt_spetsnaz": [
+        "hgrunt"
+    ],
+    "recon_spetsnaz": [
+        "recon"
+    ],
+    "kate": [
+        "kate "
+    ],
+    "barney_diamond": [
+        "barney"
+    ],
+    "gina_diamond": [
+        "gina"
+    ],
+    "gman_diamond": [
+        "gman"
+    ],
+    "gordon_diamond": [
+        "gordon"
+    ],
+    "helmet_diamond": [
+        "helmet"
+    ],
+    "hgrunt_diamond": [
+        "hgrunt"
+    ],
+    "recon_diamond": [
+        "recon"
+    ],
+    "colette_diamond": [
+        "robo"
+    ],
+    "scientist_diamond": [
+        "scientist"
+    ],
+    "zombie_diamond": [
+        "zombie"
+    ],
+    "invisible": [
+        "imbisible"
+    ],
+    "gordon_suit": [
+        "player"
+    ],
+    "gordon_suit3": [
+        "player"
+    ],
+    "gordon_suit2": [
+        "player"
+    ],
+    "gordon_glasses3": [
+        "player"
+    ],
+    "terror3": [
+        "terror"
+    ],
+    "gordon_chrome": [
+        "gordon"
+    ],
+    "lego": [
+        "barney"
+    ],
+    "lego2": [
+        "gordon"
+    ],
+    "lego3": [
+        "hgrunt"
+    ],
+    "lego4": [
+        "robo"
+    ],
+    "lego5": [
+        "zombie"
+    ],
+    "urban4": [
+        "urban"
+    ],
+    "gordon_buff": [
+        "gordon"
+    ],
+    "grunt_hev_buff": [
+        "grunt"
+    ],
+    "helmet_buff": [
+        "helmet"
+    ],
+    "santa_zombie": [
+        "zombie",
+        "anti-claws"
+    ],
+    "bdroid_b": [
+        "gina"
+    ],
+    "bdroid_c": [
+        "gman"
+    ],
+    "bobafett": [
+        "gordon"
+    ],
+    "darth-maul": [
+        "helmet"
+    ],
+    "obi": [
+        "hgrunt"
+    ],
+    "palpatine2": [
+        "recon"
+    ],
+    "wookie": [
+        "scientist"
+    ],
+    "yoda": [
+        "zombie"
+    ],
+    "sas3": [
+        "sas"
+    ],
+    "hgrunt_nv2": [
+        "copy of hgrunt"
+    ],
+    "desertcamo": [
+        "desert camo"
+    ],
+    "recon_hd": [
+        "desertberet",
+        "recon"
+    ],
+    "recon_beret": [
+        "recon"
+    ],
+    "woodlandcamo": [
+        "woodland camo"
+    ],
+    "hgrunt_nv": [
+        "hgrunt"
+    ],
+    "scientist_hd": [
+        "copy of scientist",
+        "walter",
+        "scientist"
+    ],
+    "grunt_desert": [
+        "scientist"
+    ],
+    "biohazard": [
+        "player"
+    ],
+    "barney_ezeq": [
+        "barney"
+    ],
+    "barniel_ezeq": [
+        "barniel"
+    ],
+    "colette_ezeq": [
+        "colette"
+    ],
+    "femsci_ezeq": [
+        "femsci"
+    ],
+    "gina_ezeq": [
+        "gina"
+    ],
+    "gman_ezeq": [
+        "gman"
+    ],
+    "gordon_ezeq": [
+        "gordon"
+    ],
+    "helmet_ezeq": [
+        "helmet"
+    ],
+    "hgrunt_ezeq": [
+        "hgrunt"
+    ],
+    "kate_ezeq": [
+        "kate"
+    ],
+    "recon_ezeq": [
+        "recon"
+    ],
+    "scientist_ezeq": [
+        "scientist"
+    ],
+    "zombie_ezeq": [
+        "zombie"
+    ],
+    "atlas2": [
+        "atlas"
+    ],
+    "santa": [
+        "gordon"
+    ],
+    "gina_frozen": [
+        "gina"
+    ],
+    "gordon_frozen": [
+        "gordon"
+    ],
+    "helmet_frozen": [
+        "helmet"
+    ],
+    "barney_bms": [
+        "barney"
+    ],
+    "gina_bms": [
+        "gina"
+    ],
+    "gman_bms": [
+        "gman"
+    ],
+    "gordon_bms": [
+        "gordon"
+    ],
+    "helmet_bms": [
+        "helmet"
+    ],
+    "hgrunt_bms": [
+        "hgrunt"
+    ],
+    "recon_bms": [
+        "recon"
+    ],
+    "zombie2_bms": [
+        "robo"
+    ],
+    "scientist_bms": [
+        "scientist"
+    ],
+    "zombie_bms": [
+        "zombie"
+    ],
+    "helmet_hl2": [
+        "helmet"
+    ],
+    "einstein3": [
+        "einstein"
+    ],
+    "heveinstein2": [
+        "heveinstein"
+    ],
+    "hevluther2": [
+        "hevluther"
+    ],
+    "hevslick2": [
+        "hevslick"
+    ],
+    "hevwalter2": [
+        "hevwalter"
+    ],
+    "luther3": [
+        "luther"
+    ],
+    "slick2": [
+        "slick"
+    ],
+    "hevgina": [
+        "gina"
+    ],
+    "hevgordon": [
+        "gordon"
+    ],
+    "hevhelmet": [
+        "helmet"
+    ],
+    "aerith": [
+        "barney"
+    ],
+    "arche": [
+        "gina"
+    ],
+    "cloud": [
+        "gman"
+    ],
+    "vegita": [
+        "gordon"
+    ],
+    "kkaoru": [
+        "helmet"
+    ],
+    "hikaru": [
+        "hgrunt"
+    ],
+    "ccsakura": [
+        "recon"
+    ],
+    "fuuko": [
+        "robo"
+    ],
+    "ribbon8": [
+        "scientist"
+    ],
+    "tsugumi2": [
+        "zombie"
+    ],
+    "vader": [
+        "player"
+    ],
+    "kroenen": [
+        "helmet"
+    ],
+    "exoskeleton": [
+        "player"
+    ],
+    "barney_sd": [
+        "barney"
+    ],
+    "dr_freeman_sd": [
+        "dr_freeman"
+    ],
+    "gina_sd": [
+        "gina"
+    ],
+    "gman_sd": [
+        "gman"
+    ],
+    "gordon_sd": [
+        "gordon"
+    ],
+    "helmet_sd": [
+        "helmet"
+    ],
+    "hgrunt_sd": [
+        "hgrunt"
+    ],
+    "recon_sd": [
+        "recon"
+    ],
+    "robo_sd": [
+        "robo"
+    ],
+    "scientist_sd": [
+        "scientist"
+    ],
+    "zombie_sd": [
+        "zombie"
+    ],
+    "evilskeleton": [
+        "evil skeleton"
+    ],
+    "barney_nocolor": [
+        "barney",
+        "ctf_barney"
+    ],
+    "scientist_nocolor": [
+        "ctf_scientist",
+        "scientist"
+    ],
+    "zombie_nocolor": [
+        "zombie"
+    ],
+    "ctf_gina": [
+        "gina"
+    ],
+    "ctf_gordon": [
+        "gordon"
+    ],
+    "hgrunt_nocolor": [
+        "hgrunt"
+    ],
+    "recon_nocolor": [
+        "recon"
+    ],
+    "gina_stealth": [
+        "gina"
+    ],
+    "gordon_stealth": [
+        "gordon"
+    ],
+    "helmet_stealth": [
+        "helmet"
+    ],
+    "re_leon": [
+        "player"
+    ],
+    "cl_suit_hd": [
+        "cl_suit"
+    ],
+    "fassn_hd": [
+        "fassn"
+    ],
+    "grunt_hd": [
+        "grunt"
+    ],
+    "massn_hd": [
+        "massn"
+    ],
+    "otis_hd": [
+        "otis"
+    ],
+    "shephard_hd": [
+        "shephard"
+    ],
+    "tower_hd": [
+        "tower"
+    ],
+    "zombie_hd": [
+        "zombie"
+    ],
+    "barney_hd": [
+        "barney"
+    ],
+    "gina_hd": [
+        "gina"
+    ],
+    "gman_hd": [
+        "gman"
+    ],
+    "gordon_hd": [
+        "gordon"
+    ],
+    "helmet_hd": [
+        "helmet"
+    ],
+    "hgrunt_hd": [
+        "hgrunt"
+    ],
+    "arctic2": [
+        "arctic"
+    ],
+    "gsg9_2": [
+        "gsg9"
+    ],
+    "guerilla2": [
+        "guerilla"
+    ],
+    "sas2": [
+        "sas"
+    ],
+    "terror2": [
+        "terror"
+    ],
+    "urban2": [
+        "urban"
+    ],
+    "fscathach_v2": [
+        "fscathach"
+    ],
+    "smg4melony_v2": [
+        "smg4melony"
+    ],
+    "hgrunt_kuro_c": [
+        "hgrunt"
+    ],
+    "hgrunt_kuro": [
+        "hgrunt"
+    ],
+    "dreggman_v2": [
+        "dreggman"
+    ],
+    "vtuber_kizuna_ld_v4": [
+        "vtuber_kizuna_ld_v3"
+    ],
+    "dawae_v2": [
+        "dawae"
+    ],
+    "sonicthehedgehog_v2": [
+        "sonicthehedgehog"
+    ],
+    "mario64_v2": [
+        "mario64"
+    ],
+    "aqua_v2": [
+        "aqua"
+    ],
+    "barney_bms2_c": [
+        "barney"
+    ],
+    "guard_base_m_03_d_v2": [
+        "guard_base_m_03_d",
+        "barney"
+    ],
+    "guard_base_m_04_d_v2": [
+        "guard_base_m_04_d",
+        "barney"
+    ],
+    "guard_base_m_05_d_v2": [
+        "guard_base_m_05_d",
+        "barney"
+    ],
+    "guard_base_m_06_d_v2": [
+        "guard_base_m_06_d",
+        "barney"
+    ],
+    "guard_base_m_07_d_v2": [
+        "guard_base_m_07_d",
+        "barney"
+    ],
+    "guard_base_m_08_d_v2": [
+        "guard_base_m_08_d",
+        "barney"
+    ],
+    "guard_base_m_09_d_v2": [
+        "guard_base_m_09_d",
+        "barney"
+    ],
+    "guard_base_m_10_d_v2": [
+        "guard_base_m_10_d",
+        "barney"
+    ],
+    "guard_base_m_11_d_v2": [
+        "guard_base_m_11_d",
+        "barney"
+    ],
+    "guard_base_m_12_d_v2": [
+        "guard_base_m_12_d",
+        "barney"
+    ],
+    "guard_base_m_13_d_v2": [
+        "guard_base_m_13_d",
+        "barney"
+    ],
+    "guard_base_m_14_d_v2": [
+        "guard_base_m_14_d",
+        "barney"
+    ],
+    "guard_base_m_15_d_v2": [
+        "guard_base_m_15_d",
+        "barney"
+    ],
+    "guard_base_m_d_v2": [
+        "guard_base_m_d",
+        "barney"
+    ],
+    "guard_base_m_d2_v2": [
+        "guard_base_m_d2",
+        "barney"
+    ],
+    "barney_bms2": [
+        "barney"
+    ],
+    "guard_base_m_03_d": [
+        "barney"
+    ],
+    "guard_base_m_04_d": [
+        "barney"
+    ],
+    "guard_base_m_05_d": [
+        "barney"
+    ],
+    "guard_base_m_06_d": [
+        "barney"
+    ],
+    "guard_base_m_07_d": [
+        "barney"
+    ],
+    "guard_base_m_08_d": [
+        "barney"
+    ],
+    "guard_base_m_09_d": [
+        "barney"
+    ],
+    "guard_base_m_10_d": [
+        "barney"
+    ],
+    "guard_base_m_11_d": [
+        "barney"
+    ],
+    "guard_base_m_12_d": [
+        "barney"
+    ],
+    "guard_base_m_13_d": [
+        "barney"
+    ],
+    "guard_base_m_14_d": [
+        "barney"
+    ],
+    "guard_base_m_15_d": [
+        "barney"
+    ],
+    "guard_base_m_d": [
+        "barney"
+    ],
+    "guard_base_m_d2": [
+        "barney"
+    ],
+    "zombie_revamp": [
+        "zombie"
+    ],
+    "mha_uraraka_s5_v2": [
+        "mha_uraraka_s5"
+    ],
+    "spidermanstarksuit_v2": [
+        "spidermanstarksuit"
+    ],
+    "urarakagym_v2": [
+        "urarakagym"
+    ],
+    "mariokartwiimario_v2": [
+        "mariokartwiimario"
+    ],
+    "gordon_hd2": [
+        "player"
+    ],
+    "gordon_hd3": [
+        "player"
+    ],
+    "colette_rusty": [
+        "ginacol"
+    ],
+    "sbbmario_v2": [
+        "sbbmario"
+    ],
+    "sbbmarionohat_v2": [
+        "sbbmarionohat"
+    ],
+    "marioodyssey_v2": [
+        "marioodyssey"
+    ],
+    "marioodyssey_v3": [
+        "marioodyssey"
+    ],
+    "luigiodyssey_v2": [
+        "luigiodyssey"
+    ],
+    "aqua_v3": [
+        "aqua"
+    ],
+    "pedrocastillo2": [
+        "pedrocastillo"
+    ],
+    "robo_cbg": [
+        "robo"
+    ],
+    "irontail_v2": [
+        "irontail"
+    ],
+    "einstein_beta_c": [
+        "scientist"
+    ],
+    "einstein_beta": [
+        "scientist"
+    ],
+    "gign4": [
+        "gign"
+    ],
+    "golden_barney2": [
+        "golden_barney"
+    ],
+    "cool_barney2": [
+        "cool_barney"
+    ],
+    "mr_prefab": [
+        "gman"
+    ],
+    "dragon2": [
+        "dragon"
+    ],
+    "mario64_v3": [
+        "mario64"
+    ],
+    "mario64derpy_v2": [
+        "mario64derpy"
+    ],
+    "smg4_v2": [
+        "smg4"
+    ],
+    "wtfmario_v2": [
+        "wtfmario"
+    ],
+    "sonicforces_modern_v2": [
+        "sonicforces_modern"
+    ],
+    "barney_bms_09": [
+        "barney"
+    ],
+    "barney_bms_09_c": [
+        "barney"
+    ],
+    "luigiodyssey2": [
+        "luigiodyssey"
+    ],
+    "marioodyssey2": [
+        "marioodyssey"
+    ],
+    "gordon_happy3": [
+        "player"
+    ],
+    "gordon_abzero": [
+        "player"
+    ],
+    "manny2": [
+        "manny"
+    ],
+    "playerstart_c": [
+        "playerstart"
+    ],
+    "gordon_furry": [
+        "player"
+    ],
+    "gordon_furry2": [
+        "player"
+    ],
+    "barney_kuro": [
+        "barney"
+    ],
+    "gina_kuro": [
+        "gina"
+    ],
+    "gman_kuro": [
+        "gman"
+    ],
+    "gordon_kuro": [
+        "gordon"
+    ],
+    "helmet_kuro": [
+        "helmet"
+    ],
+    "hgrunt_kuro2": [
+        "hgrunt"
+    ],
+    "recon_kuro": [
+        "recon"
+    ],
+    "robo_kuro": [
+        "robo"
+    ],
+    "scientist_kuro": [
+        "scientist"
+    ],
+    "zombie_kuro": [
+        "zombie"
+    ],
+    "kemo-lp_gs_v2": [
+        "kemo-lp_gs"
+    ],
+    "kemo2-lp_gs_v2": [
+        "kemo2-lp_gs"
+    ],
+    "tommy1": [
+        "tommy_vercetti",
+        "tommy"
+    ],
+    "mario_hl1": [
+        "mario"
+    ],
+    "mario_hl1_v2": [
+        "mario"
+    ],
+    "gordon_promo": [
+        "player"
+    ],
+    "gordon_promo2": [
+        "player"
+    ],
+    "bond2": [
+        "player",
+        "bond"
+    ],
+    "scientist_noglass": [
+        "scientist"
+    ],
+    "luigi_mp2": [
+        "luigi"
+    ],
+    "mario_mp2": [
+        "mario"
+    ],
+    "scientist_tc": [
+        "scientist"
+    ],
+    "beret3": [
+        "beret"
+    ],
+    "beret4": [
+        "beret2"
+    ],
+    "grunt9": [
+        "grunt"
+    ],
+    "grunt10": [
+        "grunt2"
+    ],
+    "medic5": [
+        "medic"
+    ],
+    "medic6": [
+        "medic2"
+    ],
+    "shephard4": [
+        "shephard2"
+    ],
+    "torch3": [
+        "torch"
+    ],
+    "tower3": [
+        "tower"
+    ],
+    "shephard5": [
+        "shephard"
+    ],
+    "shephard6": [
+        "shephard2"
+    ],
+    "ivan_helmet": [
+        "ivan"
+    ],
+    "luther_beta_c": [
+        "scientist"
+    ],
+    "luther_beta": [
+        "scientist"
+    ],
+    "slick_beta_c": [
+        "scientist"
+    ],
+    "slick_beta": [
+        "scientist"
+    ],
+    "hev2_org_hd": [
+        "player"
+    ],
+    "hev2_red_chrome_hd": [
+        "player"
+    ],
+    "hev2_red_hd": [
+        "player"
+    ],
+    "hev2": [
+        "player"
+    ],
+    "hev2_red_chrome": [
+        "player"
+    ],
+    "hev2_red": [
+        "player"
+    ],
+    "spiderman3": [
+        "spiderman"
+    ],
+    "t-800_2": [
+        "t-800"
+    ],
+    "t-800_3": [
+        "t-800_2"
+    ],
+    "kratos2": [
+        "kratos"
+    ],
+    "mario2": [
+        "mario"
+    ],
+    "otisphere_v2": [
+        "otisphere"
+    ],
+    "bbbbarney_fix": [
+        "bbbbarney"
+    ],
+    "ivan_fix": [
+        "ivan"
+    ],
+    "pepsiman3": [
+        "pepsiman"
+    ],
+    "viktor_a2": [
+        "gordon"
+    ],
+    "viktor_a": [
+        "player"
+    ],
+    "mimi_hd": [
+        "player"
+    ],
+    "simon2": [
+        "simon"
+    ],
+    "x22miku": [
+        "player"
+    ],
+    "ivan_helmet2": [
+        "player"
+    ],
+    "ivan_skull": [
+        "player"
+    ],
+    "@ss@ssin2": [
+        "@ss@ssin"
+    ],
+    "construction3": [
+        "construction"
+    ],
+    "bdroid_b_c": [
+        "bdroid_b"
+    ],
+    "bdroid_c_c": [
+        "bdroid_c"
+    ],
+    "gordon_beta": [
+        "player"
+    ],
+    "hgrunt_blkops": [
+        "hgrunt"
+    ],
+    "hgrunt_blkops2": [
+        "hgrunt"
+    ],
+    "hgrunt_bloody": [
+        "hgrunt"
+    ],
+    "hgrunt_desert": [
+        "hgrunt"
+    ],
+    "hgrunt_desert2": [
+        "hgrunt"
+    ],
+    "hgrunt_green": [
+        "hgrunt"
+    ],
+    "hgrunt_shep": [
+        "shephard"
+    ],
+    "hgrunt_medic": [
+        "shephard"
+    ],
+    "hgrunt_reg": [
+        "hgrunt"
+    ],
+    "hgrunt_specops": [
+        "hgrunt"
+    ],
+    "hgrunt_winter": [
+        "hgrunt"
+    ],
+    "hgrunt_zombie": [
+        "shephard"
+    ],
+    "gordon_bday": [
+        "player"
+    ],
+    "construction2": [
+        "construction"
+    ],
+    "gordon_happy2": [
+        "player"
+    ],
+    "gordon_glasses2": [
+        "player"
+    ],
+    "hgrunt_opfor": [
+        "hgrunt"
+    ],
+    "gordon_hev_red": [
+        "player"
+    ],
+    "helmet_red": [
+        "player"
+    ],
+    "giant": [
+        "irongiant"
+    ],
+    "jack_skellington": [
+        "jack"
+    ],
+    "hgrunt_nftop": [
+        "hgrunt"
+    ],
+    "recon": [
+        "beret"
+    ],
+    "fassn3": [
+        "fassn"
+    ],
+    "grunt7": [
+        "grunt"
+    ],
+    "tower2": [
+        "tower"
+    ],
+    "gordon_blonde": [
+        "player"
+    ],
+    "barney_npc": [
+        "barney"
+    ],
+    "gina_npc": [
+        "gina"
+    ],
+    "gman_npc": [
+        "gman"
+    ],
+    "gordon_npc": [
+        "gordon"
+    ],
+    "helmet_npc": [
+        "helmet"
+    ],
+    "hgrunt_npc": [
+        "hgrunt"
+    ],
+    "recon_npc": [
+        "recon"
+    ],
+    "robo_npc": [
+        "robo"
+    ],
+    "scientist_npc": [
+        "scientist"
+    ],
+    "zombie_npc": [
+        "zombie"
+    ],
+    "gordon_ps2": [
+        "gordon"
+    ],
+    "hgrunt_ps2_2": [
+        "hgrunt"
+    ],
+    "scientist_ps2_2": [
+        "scientist"
+    ],
+    "pumpkinb": [
+        "pumpkin"
+    ],
+    "survivor_dayz": [
+        "survivor"
+    ],
+    "ronny": [
+        "ronald"
+    ],
+    "terror4": [
+        "terror"
+    ],
+    "barney_trusty": [
+        "barney"
+    ],
+    "gina_trusty2": [
+        "gina"
+    ],
+    "gman_trusty": [
+        "gman"
+    ],
+    "gordon_trusty": [
+        "gordon"
+    ],
+    "helmet_trusty": [
+        "helmet"
+    ],
+    "hgrunt_trusty": [
+        "hgrunt"
+    ],
+    "recon_trusty": [
+        "recon"
+    ],
+    "robo_trusty": [
+        "robo"
+    ],
+    "scientist_trusty": [
+        "scientist"
+    ],
+    "zombie_trusty2": [
+        "zombie"
+    ],
+    "cl_suit_trusty": [
+        "cl_suit"
+    ],
+    "gina_trusty": [
+        "gina"
+    ],
+    "recruit_trusty": [
+        "recruit"
+    ],
+    "zombie_trusty": [
+        "zombie"
+    ]
+}
