@@ -560,7 +560,8 @@
         "gina"
     ],
     "spiderman": [
-        "gman"
+        "gman",
+        "spiderma"
     ],
     "ironman": [
         "gordon",
@@ -1052,7 +1053,8 @@
         "player"
     ],
     "kroenen": [
-        "helmet"
+        "helmet",
+        "kroenen2"
     ],
     "exoskeleton": [
         "player"
@@ -1123,7 +1125,8 @@
         "gordon"
     ],
     "helmet_stealth": [
-        "helmet"
+        "helmet",
+        "sigilo"
     ],
     "re_leon": [
         "player"
@@ -1816,5 +1819,35 @@
     ],
     "zombie_trusty": [
         "zombie"
+    ],
+    "anonymous": [
+        "anon"
+    ],
+    "biker": [
+        "biker_v2"
+    ],
+    "cyberbunny": [
+        "killer_cyber_bunny"
+    ],
+    "megatron": [
+        "megatron-slaughter"
+    ],
+    "nuku-b": [
+        "nuku"
+    ],
+    "giggles": [
+        "payaso"
+    ],
+    "penguin": [
+        "penguin_v2"
+    ],
+    "ribbon": [
+        "ribbon2"
+    ],
+    "exoskeleton_svoboda": [
+        "stalker_svoboda"
+    ],
+    "trinityrage": [
+        "trini"
     ]
 }
