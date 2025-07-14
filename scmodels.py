@@ -1102,9 +1102,10 @@ def pack_models(all_models):
 	global models_path
 	
 	crash_models = set()
-	with open(database_dir + "/crash_models.txt", "r") as update_list:
-		for line in update_list.readlines():
-			crash_models.add(line.lower().strip())
+	if os.path.exists('crash_models.txt'):
+		with open(database_dir + "/crash_models.txt", "r") as update_list:
+			for line in update_list.readlines():
+				crash_models.add(line.lower().strip())
 	
 	if all_models:
 		fname = 'sc_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
