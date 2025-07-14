@@ -42,6 +42,7 @@ $mile
 [sos]
 [w2h]_pc_punk
 [w2h]_pc_punk2
+_przt noir
 aaa-war
 accent
 achen
@@ -87,6 +88,7 @@ alpha_sci2
 alpha_sci3
 alpha_sci4
 alyx
+alyx2
 alyx_nude
 alyxvance
 amalice
@@ -94,10 +96,13 @@ amalice2
 amalice3
 among_us
 amongus_crewmate
+amy_sc4
 anarki
+anbuc
 ancienta
 ancienta_t
 andilizer
+angelina
 angelsmoke
 anonymous
 anonymous2020
@@ -136,6 +141,7 @@ aresaka
 argentina
 argentina2
 ark
+arktik
 arm
 arm_c
 arma
@@ -182,6 +188,7 @@ azusa
 b1
 babewire
 baboon
+babykitkat
 babynin
 bad
 bad_girl
@@ -197,16 +204,20 @@ balaclavab11
 balaclavab2
 baldi
 baldibasics
+ballerina
 balls
 bambo_goldsrc
 banana
 bananadancer
 bananadancer_c
 bandit
+banjo
+bardock
 barneil_hevsuit
 barnes
 barney
 barney133
+barney2
 barney_bad
 barney_blue
 barney_bms
@@ -222,6 +233,7 @@ barney_hd
 barney_hev
 barney_hev_hl2
 barney_hev_ps2
+barney_hl2
 barney_kuro
 barney_nocolor
 barney_npc
@@ -233,6 +245,7 @@ barneysmall
 barniel
 barniel4
 barniel_ezeq
+barniel_v2
 baroness
 basalisk
 basketball
@@ -240,6 +253,7 @@ bathus_rgrunt1
 bathus_rgrunt2
 batman
 batman_frost
+batmananime
 batmanbeyond
 battery
 battleshrineyodan
@@ -269,6 +283,7 @@ bdroid_b_c
 bdroid_c
 bdroid_c_c
 bear_smokemen
+bearman
 before1.1_hostseller
 before1.1_hostseller2
 bender
@@ -320,15 +335,19 @@ blackbeard
 blackcat
 blackgrunt
 blacknaruto
+blackninja
 blackop
 blackops
 blackops2
+blackstickman
+blackwiz
 blade
 blade2
 blaster
 blastoise
 blindeye
 bloodangel
+bloodroke
 bloodthirst
 bloody
 blossom
@@ -343,6 +362,7 @@ bluerick
 blues
 bluesteel
 blueteam
+bluewiz
 blur
 bman
 bms
@@ -355,6 +375,7 @@ bobcaygeon
 bodyguard
 bodyguardshit
 boidshit
+bolsonaro
 boltie
 bomberman
 bomberman_v2
@@ -383,12 +404,14 @@ braixen
 brazil
 breach
 breen
+breen_hl2
 britbabe
 britbloke
 britishbitch
 britneyspears
 britvip
 brown_panther
+brownwiz
 bruce_lee
 bruno
 brutmi
@@ -401,6 +424,7 @@ bt_assault_01
 bt_assault_01x
 bt_leader_01x
 btb
+bu-n
 bubba_gump
 bubbles
 bubby
@@ -418,19 +442,23 @@ bunny
 burn
 burned_gordon
 buttercup
+buu
 bw_robo
 bwsniper
 byakuya
+cactuar
 cadianshocktroop
 caitsith
 cake
 caleb
+caleb_v2
 calhoun_brute
 calisto
 callidus
 camo
 camo2
 camopanther
+campeonavediblanca
 can
 candysuxxx
 cannibal
@@ -438,6 +466,7 @@ cannon_guy
 canteen_boy
 capt-hornet
 captain_assault
+caradegilipollas
 cardassian
 carl
 carl_johnson
@@ -463,6 +492,8 @@ catsun
 catwoman
 cavemen
 ccsakura
+cdc
+cell
 cf
 chair
 char-sold
@@ -493,6 +524,7 @@ cigar7
 cigartrooper
 cine_scientist
 circle
+civie
 civil_protection
 civilian
 civilian_v3
@@ -542,6 +574,7 @@ coca-cola
 cocacola
 cocacola2
 cockroach
+cockroachgreen
 cod
 cokeman
 colette
@@ -561,14 +594,30 @@ combat_hevhd
 combine1
 combine2
 combine3
+combine_alt
+combine_assassin
+combine_camoc
+combine_elite_head
 combine_elite_true
+combine_female_blue
+combine_fodder
+combine_infant
+combine_leak_e3
+combine_opad
+combine_pilot
+combine_prisguard_dead
 combine_pro
+combine_ranger
+combine_red_eye
 combine_shotgunner
 combine_soldier
 combine_soldier_alpha
 combine_soldier_beta
 combine_soldier_elite
 combine_super_soldier
+combine_swamp
+combine_urban
+combine_urban02
 comet
 commandershit
 commando
@@ -577,6 +626,7 @@ commandramon_goldsrc
 comrade
 comradetiki
 comtrooper
+conan
 conquest
 construc
 construction
@@ -621,6 +671,7 @@ crash
 crash2
 crasher2
 crayon
+cream_sc4
 cream_v2
 crest
 crimsonrage
@@ -839,6 +890,7 @@ cyber
 cyber2
 cyber_cop
 cyberbunny
+cyborg
 cyclogon
 cyrax
 dads-team
@@ -850,17 +902,22 @@ daffy
 daffy2
 daffy_v2
 daisys3c
+daji
 dalek_black
 damien
 dante
+dantemvc
 daredevil
 daredevil_black
 daredevil_um
 dark-knight
 darkbot
+darkgir
 darkman
 darkpeachbrawl
 darkscout
+darksonic_sc4
+darktails_sc4
 darkydude
 darth-maul
 darthmaul
@@ -872,6 +929,7 @@ david3
 dawae
 dawae_v2
 dawn
+dawn_v2
 dbztrunks
 dc_player
 dccan
@@ -882,6 +940,7 @@ dcdante
 dcgrapeape
 deadbrad
 deadfish
+deadgrunt
 deadleus
 deadmau5
 death
@@ -898,11 +957,13 @@ deldar
 demasturbot
 demo2
 demon
+demon_dante
 demonica
 derfuhrer
 desertcamo
 destro
 deuce
+deviant
 devil
 dfa
 dhd
@@ -982,12 +1043,15 @@ donny_color
 dooku
 doom
 doom1
+doom2
 doom_marine
 doomer3
 doomer6
 dora
+doraemon
 dorane
 dp
+dr.stanley.rosenberg
 dr_awdteam
 dr_eastman
 dr_eli_vance
@@ -1000,6 +1064,7 @@ dr_isaac_kleiner
 dragon
 dragon2
 drake
+dreadmen
 dreadstar
 dreggman
 dreggman_v2
@@ -1022,8 +1087,11 @@ dukenukem
 dukowski
 dunbine
 dural
+dust
+dust1
 dutch
 earth
+earthworm_jim
 earving
 east
 edf_marine
@@ -1037,12 +1105,14 @@ einstein_beta_c
 einstein_hev
 einstein_hev_hl2
 einstein_hev_ps2
+el_diablo
 el_flojo_yervin
 el_flojo_yervin_color
 el_tuche
 eldar
 electricgetup
 elf
+elf2
 elfarcherfa
 eli
 eli_bms
@@ -1071,6 +1141,8 @@ engineer3
 engineer4
 engineer58
 ensignhazard
+ep1 oldsoldier
+ep2 durty combine
 eric
 eric-e
 ericnewlon
@@ -1096,6 +1168,7 @@ exoskeleton_monolith
 exoskeleton_specnaz
 exoskeleton_svoboda
 expert_medic
+ezio
 f1_cdo_usa_go
 f1_demo2_usa_go
 f1_demo3_usa_go
@@ -1138,7 +1211,9 @@ feylock
 ffchocobo
 fgo_astolfo-sf2
 filthyanimals
+firedrake
 firemonkey
+fisherman
 flametrooper
 flanders
 flatshade
@@ -1168,6 +1243,7 @@ freddy
 fredina
 freeman
 freeman3
+freeman_red
 freeze
 friendlygarg
 friendlyshit
@@ -1239,6 +1315,7 @@ gign
 gign3
 gign4
 gign_beta
+gign_v2
 gigncsgo
 gimp
 gina
@@ -1260,6 +1337,7 @@ gina_helmet
 gina_hev
 gina_hev_hl2
 gina_hev_ps2
+gina_hl2
 gina_holo
 gina_kuro
 gina_npc
@@ -1291,11 +1369,13 @@ gman_calhoun
 gman_crabbed
 gman_diamond
 gman_ezeq
+gman_gangsta
 gman_green
 gman_happy
 gman_hd
 gman_hitman
 gman_hl2
+gman_hl2_v2
 gman_kuro
 gman_madmask
 gman_npc
@@ -1312,14 +1392,18 @@ gmas
 godmother
 godspell
 gohan
+gohan2
 goku
+goku2
 goku_ssj4
+gokussj
 goldar
 golden_barney
 golden_barney2
 goldenman
 goldie
 golem
+gonome
 goomba
 gordi
 gordon
@@ -1331,6 +1415,7 @@ gordon_barcelona
 gordon_bday
 gordon_beta
 gordon_beta2
+gordon_beta_c
 gordon_blackmesa
 gordon_blonde
 gordon_bms
@@ -1362,6 +1447,7 @@ gordon_happy3
 gordon_hd
 gordon_hd2
 gordon_hd3
+gordon_hd4
 gordon_hev
 gordon_hev_hl2
 gordon_hev_ps2
@@ -1408,6 +1494,7 @@ green_panther
 greenhornet2000
 greenlantern
 greenrick
+greenwiz
 gregorclegane
 gregorclegane10
 gregorclegane2
@@ -1499,6 +1586,7 @@ guerilla_beta2
 gumby
 gumby!
 gundam
+gunner1
 gus
 gus2
 gustavofring
@@ -1513,6 +1601,7 @@ h.d.k.clan
 h@rd$tyl3
 h_commando
 hai!
+haku
 halloween
 halloween2
 halo
@@ -1583,6 +1672,7 @@ helmet_white_hl2
 helmet_white_ps2
 helmtrooper
 henry_stackman
+henryst
 hev2
 hev2_org_hd
 hev2_red
@@ -1670,6 +1760,8 @@ hgruntb
 hgruntb2
 hibari
 hikaru
+hinanai_v2
+hinata
 hinchaisraelita
 hipscientist
 his_royal_guardian
@@ -1678,6 +1770,7 @@ hitler
 hitler_salute
 hitlerlimo
 hitman
+hitokage
 hk
 hl2_barney
 hl2_combine_elite
@@ -1712,7 +1805,12 @@ homerwar
 homerzombie
 homme-model-1
 hooters_hoodlum
+hostage1
+hostage2
+hostage3
+hostage4
 hostage_beta
+house
 hr
 hsarge
 huacoerotico
@@ -1729,6 +1827,7 @@ hvyweapon2
 hwgrunt
 i
 ice
+ichigo
 ignited_zombie
 illemonati
 imam
@@ -1737,7 +1836,10 @@ impmercspecular
 incredhulk
 indian_warrior
 industrialx
+indy
 infected_businessman
+infected_cop
+infected_woman
 intruders
 inuyasha
 invisible
@@ -1783,6 +1885,7 @@ ironmanmk6
 irontail
 irontail_v2
 islave_baby
+itachi
 ivan
 ivan2
 ivan_fix
@@ -1797,6 +1900,7 @@ iw_raptor_01
 j_gordon
 jacinta
 jack
+jack2
 jack_skellington
 jackcarver
 jacque
@@ -1820,6 +1924,7 @@ jbemodel_yellow
 jcdenton
 jeena
 jeff
+jeff_killer
 jess_hero
 jess_princess
 jess_warrior
@@ -1838,6 +1943,7 @@ johngillman2
 joker
 joker_dk
 joker_dk_2
+joker_hd
 jokerldr
 jokerrage
 jra
@@ -1847,13 +1953,16 @@ judgedeath
 julie
 jupiter
 k-9
+k4zuko
 k9
 k9_b
 ka-87
 kabuto
 kagome
 kagura
+kai
 kain-9
+kakashi
 kamikaze
 kamikaze_v2
 kandykat
@@ -1865,8 +1974,10 @@ kate
 kate3
 kate_ezeq
 kate_hevsuit
+kate_v2
 kato2000
 kattmat
+kawaiimiku
 kazextreme2
 keen
 kegor
@@ -1896,8 +2007,11 @@ killer
 killerbeast
 killerrabbits
 kingpinshit
+kisame
 kitkat
 kitkat_mia
+kitkatbar
+kiwami
 kiwi
 kkaoru
 kkk
@@ -1908,19 +2022,24 @@ klown
 klui
 km_karenkujo
 knight
+knuckles_v2
 knute_and_bolte
 knux_boom
 kolle
+konata
 konichiwa
+kool
 koopatroopaodyssey
 koyomi_mizuhara
 kratos
 kratos2
 kreeves
+krillin
 kroenen
 ksk
 ksk2
 kueller
+kyky_new1
 kyo
 la-female
 la-male
@@ -1944,10 +2063,12 @@ lego3
 lego4
 lego5
 lego6
+leilei
 lemmysuit
 leon
 leonelsalamanca
 leonrpd
+leonrpd_v2
 lexi_soldier
 limp
 limpja
@@ -1968,6 +2089,11 @@ lornemalvo3
 love-cow
 lovedoll
 loz_link
+ltf_black
+ltf_blue
+ltf_green
+ltf_red
+ltf_yellow
 ltk
 luckyluciano
 luffy
@@ -1987,6 +2113,7 @@ luigiodyssey2
 luigiodyssey_v2
 lukas
 lum2
+lunatik
 luther
 luther2
 luther3
@@ -2002,6 +2129,7 @@ madness
 madsci
 maelstrom
 magnusson_bms
+maincraft
 majima
 major
 majork
@@ -2068,6 +2196,7 @@ markgrayson3
 markgrayson_um
 markham
 marshall
+martian
 marvin
 mascaly
 mask
@@ -2077,6 +2206,7 @@ massn
 massn10
 massn11
 massn12
+massn2
 massn_hd
 masterchief
 mastrmnd
@@ -2084,6 +2214,7 @@ matthewmurdock
 mattmurdock_ng
 max
 mayimbu
+mazingerz
 mbi
 mbt
 mbts
@@ -2106,6 +2237,7 @@ mel
 mel_color
 melf
 melissa
+ment
 merca
 mercb
 mercc
@@ -2113,6 +2245,9 @@ mercd
 merino
 metal
 metrocop
+metrocop_e3
+metrocop_elite
+mewtwo
 mgs_snake
 mha_uraraka_s5
 mha_uraraka_s5_v2
@@ -2145,6 +2280,7 @@ mickeymouse
 midnightkiller
 midnightred
 midoriyagym
+mierdosadelderbi
 mikeforce
 mikofox
 miku
@@ -2153,12 +2289,14 @@ militia
 milktray
 mimi
 mimi_hd
+miniyoshi
 mio
 misfit
 misswong
 mistymod
 mjodnir
 mk8mario
+mk_frost
 mlaw
 mlaw_suicidia
 mm_ij_ho2_h09
@@ -2207,8 +2345,10 @@ mp3
 mp_old_hl
 mr_gay
 mr_prefab
+mr_valve
 mr_valve1
 mr_valve2
+mrcool
 mrrogers
 mrsk
 mrt
@@ -2220,6 +2360,7 @@ mummy2
 musclebase
 mushroomboy
 mutant
+mutant2
 mvc3_spider
 mynx
 myself
@@ -2231,6 +2372,7 @@ nagato_xmas
 naked
 naluri
 narkosha
+naruto
 nasa
 nat
 necoarc
@@ -2239,6 +2381,8 @@ necoarcchaos
 necoarcdestiny
 nef
 neg
+neil
+neji
 neo
 neo_hd
 neo_matrix
@@ -2275,9 +2419,11 @@ ninja-asain
 ninja-girl
 nizje
 no-face
+nobita
 noelle
 nohead
 nohead1
+noire
 nolangrayson
 nolangrayson2
 nolangs2_bloody
@@ -2293,6 +2439,7 @@ normanns5
 normanns_ho2
 normanns_hoodie
 notbad_freeman
+nova prospect 2
 npgordongopnik
 nr_ranger
 nuclear
@@ -2309,6 +2456,7 @@ nxs
 nympho
 nypdcop
 nytrog
+o'neil
 oap
 obamium
 obi
@@ -2326,6 +2474,7 @@ obi11
 octal_impulse
 okay_freeman
 old_delta1
+old_hwgrunt
 oldpepsiman
 oldskool
 olive
@@ -2338,6 +2487,7 @@ op_cow
 optimus
 orange_panther
 orbb
+orbb2
 orderly
 orejaflores
 osmangazi
@@ -2373,6 +2523,7 @@ panthershit
 paper_cut
 para_diversant1
 para_gas
+paranoid
 parappa
 partybear
 patrickbateman
@@ -2439,6 +2590,7 @@ pfjules
 pfvincent
 pheonix
 picard
+piccolo
 pickle-rick
 pikachu
 pimpman
@@ -2452,6 +2604,7 @@ pitusa-san_robo3
 pitusa-san_simon
 pitusasbox
 pizza
+pl_headcrab1
 plantshit1
 plantshit2
 plantshit3
@@ -2464,6 +2617,7 @@ plumber_garlic
 plumber_ghost
 plumber_shroom
 pmers
+pokehermosa
 poker_freeman
 pokerface2
 pokerface6
@@ -2491,6 +2645,7 @@ projectx
 psp2icolonelsanders
 psycho
 psycho-firth
+pubgguy
 pumpk1n
 pumpkin
 pumpkin2
@@ -2501,6 +2656,8 @@ punk
 punk2
 punkgirlz
 purple_panther
+purplewiz
+puss_in_boots
 putin
 pyramidhead
 pyro2
@@ -2523,7 +2680,9 @@ quisty
 r.a.w.clan
 r@ts
 r@ts2
+ra
 raf_soldier
+rahumanappearance
 rainbow_dash
 raptor
 raquelinred
@@ -2534,6 +2693,7 @@ rb_ct
 rbpixie
 re2_leon
 re_leon
+rebel
 rebelpilot
 recca
 receperdogan
@@ -2577,6 +2737,7 @@ redcat
 rednaruto
 redopforengineer
 redrick
+redwiz
 regular
 regular_assault
 regularshit
@@ -2584,9 +2745,11 @@ rei_plush
 rei_plushbig
 renegade
 renegade_v2
+renegirl
 reptile
 reptyle
 resident sci-gman
+resistor_hl
 rett
 rev-9
 rev-9_2
@@ -2606,6 +2769,7 @@ riotgrrrl
 ritsu
 rizelu
 rk800_connor
+rng_raven2
 rob
 robo
 robo2
@@ -2628,7 +2792,9 @@ robocop
 robocop3
 robot1
 robot_inv
+rock_lee
 rockarolla
+rocker
 roenick
 rohani
 rokivulovic
@@ -2639,13 +2805,17 @@ rorschach
 rosenberg
 rosenberg2
 rosenberg3
+rouge_v2
 roxanne
 royal_guard_agi
+rs_soul
 ruaridoll
 russia
 russian
 rustywalker
+rx78_2
 ryors_sphere_v2
+ryuhayabusa
 s-uk
 s_tgrunt
 sa_army
@@ -2660,6 +2830,7 @@ sade
 saf
 sahris
 sakaki_san
+sakura
 sakuya
 salma
 samuri
@@ -2681,6 +2852,8 @@ sas2
 sas3
 sas4
 sas_beta
+sasuke
+sasuke2
 saucer
 saw
 sawshit
@@ -2690,6 +2863,7 @@ sbbmarionohat
 sbbmarionohat_v2
 sc2player
 scarab
+scarecrow
 scarymovie
 scarymovie2
 scell
@@ -2774,6 +2948,8 @@ security_evil
 seer
 sekibanki
 sekitep
+selene
+sensei_guy
 sentinel
 sephiroth
 sergeant_assault
@@ -2793,6 +2969,7 @@ shc_st0ner
 shclanmodel
 shcskin
 shd_shard
+shedevil
 sheeit
 shephard
 shephard2
@@ -2801,7 +2978,10 @@ shephard4
 shephard5
 shephard6
 shephard_hd
+sheriff
+shikamaru
 shinobi
+shippudden_gaara
 shodan
 shoot_me
 shotgun
@@ -2815,6 +2995,8 @@ sil80
 silencer
 simon
 simon2
+simon3
+simon_beta
 sir_daniel_pirate
 sister_mary_ellie_fant
 skater
@@ -2824,6 +3006,7 @@ skcclan
 skeleton
 skeleton2
 skeleton3
+skeleton_red
 skrag
 skrag2
 skragtc
@@ -2841,6 +3024,7 @@ slick_hev
 slick_hev_hl2
 slick_hev_ps2
 slipknot4
+sm
 sman
 smash
 smb
@@ -2862,6 +3046,7 @@ smokechief
 smurf
 snail
 snake
+snake plissken
 snake_armysuit
 snapbugshit
 snapon
@@ -2876,6 +3061,8 @@ snow_helmet
 snowman
 snowman2
 soldier
+soldier orange
+soldier2
 soldier2_gtavc
 soldier_gtavc
 sonic_forces_classic
@@ -2918,7 +3105,9 @@ spidey
 spike
 spk
 splendorman
+splintercell-nhs
 splintercell-nv
+spongebob
 spooty
 sprt_tiefighter
 sprt_xwing
@@ -2935,6 +3124,9 @@ stalin2
 stalker
 starlight2
 startroop
+starwars
+starwars blue
+starwars red
 stealth
 stealth2
 stealth3
@@ -2946,15 +3138,18 @@ steve_freemanhev
 steve_mc
 stickman
 stilleto
+stix
 storm
 stormt
 stormtroop_agi
 strangeman
+strelok
 strooper_mp
 sub-zero
 sub-zero2
 sub-zero_c
 subtech
+subwaysurfer
 subzero
 suicidemousev1
 suicidemousev2
@@ -2966,6 +3161,7 @@ superman
 supermanrage
 supermario64mario
 superseverian
+supersonic_v2
 surpstalker2
 survivor
 survivor(v1)
@@ -3002,14 +3198,23 @@ t-850
 t-850_damaged
 t-850_noglasses
 t-850_nude
+t2
 t2deftrooper
 t3
 t800
 t801
+t_blue
+t_bordo
+t_quake
+t_red
+t_sam
+t_serebro
+t_unreal
 ta_assault
 ta_operative
 tag
 tails
+tails_sc4
 tango
 tankgirl
 tapir590
@@ -3075,8 +3280,10 @@ theshape
 theshape2
 thetick
 thomas
+thor
 thorofasgard
 thrust
+tiger_woods
 tigger
 timoteo
 tmcm
@@ -3099,6 +3306,7 @@ tommy_vercetti
 tommyvc_cop
 tommyvc_cop2
 tommyvc_soldier
+tommyvercetti
 tongue
 tonyblades
 toon_arctic
@@ -3154,6 +3362,7 @@ treeshit
 trekker
 trinity
 trinityboard
+trinitycloe
 trinitydawn
 trinityrage
 trollskipper
@@ -3166,6 +3375,7 @@ tron2011r
 trooper
 truck
 trump
+trunks
 ts_agent
 ts_castor
 ts_gordon
@@ -3185,9 +3395,11 @@ udechile
 ufocat
 ugandatc
 unm_barney
+unm_barney2
 urarakagym
 urarakagym_v2
 urban
+urban1
 urban2
 urban3
 urban4
@@ -3196,6 +3408,7 @@ urresti
 usada
 uscm
 ussas
+v
 v&mgirl
 v1
 v1g
@@ -3225,12 +3438,14 @@ vip2
 vip_beta
 vixen
 vizcarra
+vladimirputin
 vlk
 vortigaunt_ps2
 votoms
 vtuber_kizuna_ld_v3
 vtuber_kizuna_ld_v4
 w.w.a
+waffle
 walkingdead
 wall
 wally_zipo
@@ -3269,6 +3484,7 @@ weegee
 werewolf
 white_helmet
 white_panther
+whitewiz
 whitty
 wie_allies1
 wie_allies2
@@ -3288,6 +3504,7 @@ wie_b2.0_axmedic
 wie_b2.0_hitler
 wildflower
 wileecoyote
+will
 winter
 wireframe
 wizz
@@ -3347,8 +3564,10 @@ xnohead
 yellow
 yellow_panther
 yellowrick
+yellowwiz
 yoda
 yodan
+yoh_asakura
 yorha_2b
 yoshissb4
 younggman
@@ -3357,6 +3576,8 @@ yuck
 yui
 yui_v2
 yuuri_glt
+yvader
+zabuza2
 zbright
 zcommanderalpha
 zcommanderbeta
@@ -3377,6 +3598,7 @@ zombie100
 zombie121
 zombie124
 zombie133
+zombie2
 zombie2_bms
 zombie2_bms_c
 zombie3
@@ -3403,6 +3625,8 @@ zombie_claws
 zombie_construction
 zombie_diamond
 zombie_ezeq
+zombie_fast
+zombie_fast_uncrab
 zombie_grunt_hd
 zombie_hd
 zombie_hd2
@@ -3419,6 +3643,7 @@ zombie_sd
 zombie_soldier
 zombie_soldier1
 zombie_source
+zombie_source_uncrab
 zombie_test
 zombie_trusty
 zombie_trusty2
@@ -3435,6 +3660,7 @@ zombiegr
 zombierec
 zombiesci
 zombine2
+zombine_prisonguard
 zombine_soldier
 zps_male_survivor
 zshotgunner
