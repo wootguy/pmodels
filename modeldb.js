@@ -580,6 +580,7 @@ function apply_filters(no_reload) {
 	var hide_old_ver = document.getElementById("filter_ver").checked;
 	var use_groups = document.getElementById("filter_group").checked;
 	var sort_by = document.getElementsByClassName("sort")[0].value.toLowerCase();
+	var polylimit = parseInt(document.getElementById("polylimit").value);
 	
 	console.log("Applying filters");
 	
@@ -609,6 +610,10 @@ function apply_filters(no_reload) {
 			if (!(g_model_data[modelName]["tags"]) || !g_model_data[modelName]["tags"].has(tag_filter)) {
 				shouldExclude = true;
 			}
+		}
+		
+		if (polylimit > 0 && g_model_data[modelName]["polys"] > polylimit) {
+			shouldExclude = true;
 		}
 		
 		if (!shouldExclude && hide_old_ver) {
@@ -1363,6 +1368,9 @@ document.addEventListener("DOMContentLoaded",function() {
 	document.getElementById("filter_nsfw").onchange = function() {
 		update_model_grid();
 	};
+	document.getElementById("polylimit").addEventListener("input", function() {
+		apply_filters();
+	});
 	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
 		g_group_filter = "";
 		document.getElementById("group-banner").classList.add("hidden");
