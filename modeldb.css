@@ -171,6 +171,12 @@ h1 {
 	padding: 3px 10px;
 	cursor: pointer;
 }
+.nsfw {
+	filter: blur(10px);
+}
+.nsfw_big {
+	filter: blur(20px);
+}
 .page-bar {
 	background: #eee;
 	width: 3px;
@@ -184,7 +190,9 @@ h1 {
 	display: inline-block;
 	width: 200px;
 }
-
+.content {
+	position: relative;
+}
 .filter-search {
 	text-align: center;
 	width: 100%;
@@ -198,6 +206,11 @@ h1 {
 .filter-types {
 	position: absolute;
 	z-index: 1;
+}
+.filter-types2 {
+	position: absolute;
+	z-index: 1;
+	right: 10px;
 }
 .filter-types td:last-child {
 	padding-left: 20px;
