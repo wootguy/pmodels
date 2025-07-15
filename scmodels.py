@@ -1098,7 +1098,7 @@ def install_new_models(new_versions_mode=False):
 	print("- commit and push")
 	print("")
 
-def pack_models(all_models):
+def pack_models(all_models, lowpoly_only):
 	global models_path
 	
 	crash_models = set()
@@ -1126,6 +1126,16 @@ def pack_models(all_models):
 				if idx == 0:
 					continue
 				exclude.add(name.lower())
+		
+		if lowpoly_only:
+			master_json = {}
+			with open(master_json_name) as f:
+				json_dat = f.read()
+				master_json = json.loads(json_dat, object_pairs_hook=collections.OrderedDict)
+				
+			for model in master_json:
+				if master_json[model]["polys"] > 1500:
+					exclude.add(model.lower())
 		
 		old_dirs = get_sorted_dirs(models_path)
 		all_dirs = [dir for dir in os.listdir(models_path) if os.path.isdir(os.path.join(models_path,dir)) and dir.lower() not in exclude]
@@ -1225,7 +1235,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("              This will add/edit version suffixes and update versions.json.")
 	print("fix_json - Makes sure tags.json and groups.json are using the latest model names, and sorts jsons.")
 	print("           Run this after add_version.")
-	print("pack [latest] - pack all models into a zip file (default), or only the latest versions")
+	print("pack [latest] [lowpoly] - pack all models into a zip file (default), or only the latest versions, or only low poly models")
 	print("clean - remove unused files")
 	
 	sys.exit()
@@ -1257,10 +1267,13 @@ if len(args) > 0:
 		validate_model_isolated()
 	elif args[0].lower() == 'pack':
 		all_models = True
+		lowpoly_only = False
 		if len(args) > 1 and args[1].lower() == "latest":
 			all_models = False
+		if len(args) > 2 and args[2].lower() == "lowpoly":
+			lowpoly_only = True
 			
-		pack_models(all_models)
+		pack_models(all_models, lowpoly_only)
 	elif args[0].lower() == 'rename':
 		print("TODO: Add to alias after rename")
 		rename_model(args[1], args[2], models_path)

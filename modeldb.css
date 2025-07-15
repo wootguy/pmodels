@@ -206,6 +206,7 @@ h1 {
 .filter-types {
 	position: absolute;
 	z-index: 1;
+	top: -5px;
 }
 .filter-types2 {
 	position: absolute;
@@ -214,7 +215,12 @@ h1 {
 }
 .filter-types td:last-child {
 	padding-left: 20px;
-	padding-bottom: 5px;
+}
+.filter-types select {
+	width: 80px;
+}
+.filter-types input {
+	width: 74px;
 }
 
 .model-controls {
