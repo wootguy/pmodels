@@ -42,10 +42,6 @@
 							<option>All</option>
 						</select>
 					</td>
-					<td>
-						<input type="checkbox" id="filter_ver" checked>
-						<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
-					</td>
 				</tr>
 				<tr>
 					<td>Sort by:</td>
@@ -57,9 +53,25 @@
 							<option>Size</option>
 						</select>
 					</td>
+				</tr>
+			</table>
+			<table class="filter-types2">
+				<tr>
+					<td>
+						<input type="checkbox" id="filter_ver" checked>
+						<label for="filter_ver" title="Hides previous/broken versions of models. Model versions that look significantly different are not hidden (e.g. touhou_clownpiece -> touhou_clownpiece_v2).">Hide old versions</label>
+					</td>
+				</tr>
+				<tr>
 					<td>
 						<input type="checkbox" id="filter_group">
 						<label for="filter_group" title="Groups models that are of the same character, or that look very similar. Reskins and minor edits to the same model are also grouped.">Group alternate versions</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" id="filter_nsfw">
+						<label for="filter_nsfw" title="Blur models not suitable for work.">NSFW filter</label>
 					</td>
 				</tr>
 			</table>

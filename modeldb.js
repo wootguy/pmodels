@@ -308,6 +308,15 @@ function view_model(model_name) {
 	popup.getElementsByClassName("polycount")[0].classList.remove("insane");
 	popup.getElementsByClassName("polyflame")[0].style.visibility = "hidden";
 	
+	var nsfw_filter = document.getElementById("filter_nsfw").checked;
+	if (nsfw_filter && g_model_data[model_name].tags && g_model_data[model_name].tags.has("nsfw")) {
+		popup.getElementsByTagName("img")[0].classList.add("nsfw_big");
+		popup.getElementsByTagName("canvas")[0].classList.add("nsfw_big");
+	} else {
+		popup.getElementsByTagName("img")[0].classList.remove("nsfw_big");
+		popup.getElementsByTagName("canvas")[0].classList.remove("nsfw_big");
+	}
+	
 	let select = popup.getElementsByClassName("animations")[0];
 	select.textContent = "";
 
@@ -729,6 +738,7 @@ function update_model_grid() {
 	var cell_template = document.getElementById("model-cell-template");
 	var hide_old_ver = document.getElementById("filter_ver").checked && Object.keys(g_model_data).length > 0;
 	var group_mode = document.getElementById("filter_group").checked;
+	var nsfw_filter = document.getElementById("filter_nsfw").checked;
 	var is_searching = Object.keys(g_groups_with_results).length > 0;
 	
 	grid.innerHTML = "";
@@ -782,6 +792,12 @@ function update_model_grid() {
 			}
 			
 			group_count.classList.remove("hidden");
+		}
+		
+		if (nsfw_filter && g_model_data[model_name].tags && g_model_data[model_name].tags.has("nsfw")) {
+			img.classList.add("nsfw");
+		} else {
+			img.classList.remove("nsfw");
 		}
 		
 		img.addEventListener("click", function() {
@@ -1002,6 +1018,10 @@ function json_post_load() {
 		let opt = document.createElement("option");
 		opt.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 		categories.appendChild(opt);
+		
+		if (tag == "nsfw") {
+			opt.textContent = "NSFW";
+		}
 		
 		for (var i = 0; i < g_tags[tag].length; i++) {
 			var model = g_tags[tag][i];
@@ -1339,6 +1359,9 @@ document.addEventListener("DOMContentLoaded",function() {
 	};
 	document.getElementById("filter_group").onchange = function() {
 		apply_filters();
+	};
+	document.getElementById("filter_nsfw").onchange = function() {
+		update_model_grid();
 	};
 	document.getElementsByClassName("group-back")[0].addEventListener("click", function() {
 		g_group_filter = "";
