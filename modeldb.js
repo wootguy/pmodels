@@ -1302,6 +1302,12 @@ document.addEventListener("DOMContentLoaded",function() {
 		g_game_id = "hl";
 	}
 	
+	const params = new URLSearchParams(window.location.search);
+	const polymax = params.get('pl');
+	if (polymax) {
+		document.getElementById("polylimit").value = polymax;	
+	}
+	
 	if (document.getElementsByClassName("photo-container").length) {
 		console.log("Entering group photo mode!");
 		
