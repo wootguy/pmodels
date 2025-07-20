@@ -6099,6 +6099,8 @@
     ],
     "Kizuna AI": [
         "vtuber_kizuna",
+        "kizuna_ai_lp",
+        "kizuna_ai_lp_b",
         "vtuber_kizuna_black",
         "vtuber_kizuna_ld_v3",
         "kizuna_yin_v2",
@@ -10183,6 +10185,8 @@
     "UTAU - Teto Kasane": [
         "kasane_teto_v2",
         "gs_kasaneteto",
+        "hl1teto_personal",
+        "hl1teto",
         "kasane_teto_sv",
         "lowpoly_teto",
         "bunny_teto_v2",
@@ -10365,7 +10369,12 @@
     "Vocaloid - Nerutda": [
         "kz_nerutda_v2",
         "2d_kz_neruu",
+        "hl1neru",
         "vocaloid_akita"
+    ],
+	"Traditional Bunny Girl": [
+        "tbunnygirl_sc_v1",
+        "tbunnygirl_sc_v2"
     ],
     "Waluigi": [
         "waluigi",

@@ -3789,6 +3789,7 @@ funk
 funnygordonremix
 fur1
 fur1_v2
+fureeman
 furry_maid_1
 furry_maid_1_v2
 furry_maid_2
@@ -4096,7 +4097,6 @@ giacomo
 giacomo_2
 giacomo_2_v2
 giacomo_v2
-giant
 giant-b_v2
 giant-g_v2
 gibbed
@@ -4924,6 +4924,9 @@ hkate
 hl1_headcrab
 hl1_headcrab_v2
 hl1_vortigaunt
+hl1neru
+hl1teto
+hl1teto_personal
 hl2-gordon
 hl2_alyx
 hl2_alyx_v2
@@ -5353,6 +5356,7 @@ jeffrey_dahmer
 jeffthekiller_v3
 jeice
 jena_bean
+jenin-lion
 jennifer_hev
 jennifer_hev_v2
 jere
@@ -5672,6 +5676,8 @@ kitsune_hev_v2
 kittyman
 kiwami
 kiwi
+kizuna_ai_lp
+kizuna_ai_lp_b
 kizuna_halloween
 kizuna_winter
 kizuna_xmas
@@ -8817,6 +8823,7 @@ saito
 saito2
 saito2_v2
 sakaki_san
+sakuri_kunikai
 sakuya
 sam
 sam1
@@ -10294,6 +10301,8 @@ tboi_isaac
 tboi_judas
 tboi_lazarus
 tboi_samson
+tbunnygirl_sc_v1
+tbunnygirl_sc_v2
 tc_alt-dr.kleiner
 tc_alternat-dr.kleiner
 tc_beret
@@ -10578,6 +10587,7 @@ thorn
 thrall
 thrust
 tidus
+tien
 tifa
 tiger_woods
 tiger_woods_v2
