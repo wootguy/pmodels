@@ -880,7 +880,6 @@ function copyStringWithNewLineToClipBoard(stringWithNewLines){
 
 function get_repo_url(model_name) {
 	var repoId = hash_code(model_name) % data_repo_count;
-	
 	return data_repo_domain + g_game_id + "models_data_" + repoId + "/";
 }
 

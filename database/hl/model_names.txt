@@ -546,6 +546,7 @@ agent_4_v1sc
 agent_hunk
 agent_hunk_v2sc
 agent_insurgency
+agent_insurgency_v2
 agent_russian_v2sc
 agent_sbo_v1sc
 agent_v2sc
@@ -3222,6 +3223,7 @@ cultist3_v1sc
 cures
 curmudgeon
 cursed_yoda_v1sc
+cursedhev
 cutman_v1sc
 cv-albert wesker_v1sc
 cv-albert_wesker_v1sc
@@ -4095,6 +4097,7 @@ engineer3
 engineer4
 engineer58
 engineer_toon_v1sc
+engineer_v2
 engineer_v3sc
 enigma_v1sc
 enrico marini_v1sc
@@ -4196,6 +4199,8 @@ exoskeleton_specnaz
 exoskeleton_svoboda
 exoskeleton_v1sc
 expert_medic
+expert_medic_v2
+expert_zipo
 explosivebarrel_v1sc
 extrude_v1sc
 ezio
@@ -4502,6 +4507,7 @@ funk_v1sc
 funnygordonremix_v1sc
 fur1_v2sc
 fureeman
+fureeman_v1sc
 furry_maid_1_v2sc
 furry_maid_2_v2sc
 furry_maid_3_v2sc
@@ -4971,6 +4977,7 @@ good_barnabus_v1sc
 goodman3_v1sc
 goomba
 goomba_v1sc
+gooseman
 gordi
 gordon
 gordon-freeman
@@ -5620,6 +5627,7 @@ heavyzom_v1sc
 hecatia_lp_s_v1sc
 hecatia_lp_v1sc
 hecu_extermination
+hecu_extermination_v2
 hecu_trench_dropper
 heisenberg_v1sc
 hell_recon_v1sc
@@ -5931,6 +5939,9 @@ hk416_nc_v1sc
 hkate_v1sc
 hl1_headcrab_v2sc
 hl1_vortigaunt_v1sc
+hl1neru_v1sc
+hl1teto_personal_v1sc
+hl1teto_v1sc
 hl2-gordon_v1sc
 hl2_alyx_v2sc
 hl2_barney
@@ -6469,6 +6480,7 @@ jeffrey_dahmer_v1sc
 jeffthekiller_v3sc
 jeice_v1sc
 jena_bean_v1sc
+jenin-lion_v1sc
 jennifer_hev_v2sc
 jere_v1sc
 jerevro_v1sc
@@ -6802,6 +6814,8 @@ kiwami
 kiwami_v1sc
 kiwi
 kiwi_v1sc
+kizuna_ai_lp_b_v1sc
+kizuna_ai_lp_v1sc
 kizuna_halloween_v1sc
 kizuna_winter_v1sc
 kizuna_xmas_v1sc
@@ -8609,6 +8623,7 @@ nono_v1sc
 nonon_regalia_v1sc
 nononjakuzure_v1sc
 nononjakuzurehat_v1sc
+nopo
 nordicwarrior
 normalmap
 normalmap_v1sc
@@ -10243,6 +10258,7 @@ saito_v1sc
 sakaki_san
 sakaki_san_v1sc
 sakura
+sakuri_kunikai_v1sc
 sakuya
 sakuya_v1sc
 salma
@@ -11532,6 +11548,7 @@ suntza_v1sc
 sup_doc
 super_hero
 super_hero_v2sc
+super_hev
 superalphashadow_v1sc
 superamy_v1sc
 superbigote_v1sc
@@ -11851,6 +11868,10 @@ tboi_judas_v1sc
 tboi_lazarus_v1sc
 tboi_samson_v1sc
 tbot
+tbunnygirl_v1
+tbunnygirl_v1sc
+tbunnygirl_v2
+tbunnygirl_v2sc
 tc_alt-dr.kleiner_v1sc
 tc_beret_v1sc
 tc_dr.kleiner2_v1sc
@@ -12164,6 +12185,7 @@ thrall_v1sc
 thrust
 thrust_v1sc
 tidus_v1sc
+tien_v1sc
 tifa_v1sc
 tiger_woods
 tiger_woods_v2sc
@@ -12759,6 +12781,7 @@ vansamld_v2sc
 vanska_v1sc
 vash2_v1sc
 vash_v1sc
+vasiliy
 vasiliy_v2sc
 vato
 vatoslocos_v1sc
@@ -13251,6 +13274,7 @@ zed_infiltrator_v1sc
 zelda2_v2sc
 zelda_twilight_v2sc
 zeldris_v1sc
+zelensky
 zell
 zell_c
 zell_v1sc
