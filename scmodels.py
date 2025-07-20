@@ -1215,6 +1215,84 @@ def remove_extras():
 				print("Invalid file: %s" % fpath)
 				#os.remove(fpath)
 
+def remove_model(model_name):
+	global models_path
+	
+	print("Removing %s" % models_path)
+	
+	model_path = os.path.join(models_path, model_name)
+	
+	if os.path.exists(model_path):
+		shutil.rmtree(model_path)
+		print("Deleted path: %s" % model_name)		
+	
+	new_versions_json = []
+	with open(versions_json_name) as f:
+		versions_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+		for arr in versions_json:
+			new_arr = []
+			for item in arr:
+				if item != model_name:
+					new_arr.append(item)
+				else:
+					print("Deleted %s from %s" % (model_name, versions_json_name))
+			if len(new_arr):
+				new_versions_json.append(new_arr)
+	with open(versions_json_name, 'w') as outfile:
+		json.dump(new_versions_json, outfile, indent='\t')
+	
+	with open(tags_json_name) as f:
+		tags_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+		new_tags_json = {}
+		for key in tags_json:
+			new_tags_json[key] = []
+			for item in tags_json[key]:
+				if item != model_name:
+					new_tags_json[key].append(item)
+				else:
+					print("Deleted %s from %s" % (model_name, tags_json_name))
+			if len(new_tags_json[key]) == 0:
+				del new_tags_json[key]
+	with open(tags_json_name, 'w') as outfile:
+		json.dump(new_tags_json, outfile, indent='\t')
+		
+	with open(groups_json_name) as f:
+		groups_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+		new_groups_json = {}
+		for key in groups_json:
+			new_groups_json[key] = []
+			for item in groups_json[key]:
+				if item != model_name:
+					new_groups_json[key].append(item)
+				else:
+					print("Deleted %s from %s" % (model_name, groups_json_name))
+			if len(new_groups_json[key]) == 0:
+				del new_groups_json[key]
+	with open(groups_json_name, 'w') as outfile:
+		json.dump(new_groups_json, outfile, indent='\t')
+		
+	with open(alias_json_name) as f:
+		alias_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
+		new_alias_json = {}
+		for key in alias_json:
+			new_alias_json[key] = []
+			for item in alias_json[key]:
+				if item != model_name:
+					new_alias_json[key].append(item)
+				else:
+					print("Deleted %s from %s" % (model_name, alias_json_name))
+			if len(new_alias_json[key]) == 0:
+				del new_alias_json[key]
+	with open(alias_json_name, 'w') as outfile:
+		json.dump(new_alias_json, outfile, indent='\t')
+			
+	with open("updated.txt", 'a') as outfile:
+		outfile.write("%s\n" % model_name)
+	
+	update_models(models_path, skip_existing=True, skip_on_error=True, errors_only=False, info_only=False, update_master_json=True)
+	
+	print("\nDone! Next run 'python3 git_init.py update'")
+
 args = sys.argv[1:]
 
 if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
@@ -1227,7 +1305,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
 	print("rename <a> <b> - rename model <a> to <b>")
 	print("rename_fast <a> <b> - skips the update so you can rename multiple models quickly.")
-	print("                      but you have to remember to run update afterwards.")
+	print("remove <name> - remove a model from the database")
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
 	print("add - add new models from the install folder")
@@ -1296,6 +1374,8 @@ if len(args) > 0:
 		list_file.write("%s\n" % args[1])
 		list_file.write("%s\n" % args[2])
 		list_file.close()
+	elif args[0].lower() == 'remove':
+		remove_model(args[1])
 	elif args[0].lower() == 'clean':
 		remove_extras()
 	elif args[0].lower() == 'fixup':

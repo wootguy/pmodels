@@ -5940,7 +5940,6 @@ hkate_v1sc
 hl1_headcrab_v2sc
 hl1_vortigaunt_v1sc
 hl1neru_v1sc
-hl1teto_personal_v1sc
 hl1teto_v1sc
 hl2-gordon_v1sc
 hl2_alyx_v2sc

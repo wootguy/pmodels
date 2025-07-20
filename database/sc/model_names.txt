@@ -4926,7 +4926,6 @@ hl1_headcrab_v2
 hl1_vortigaunt
 hl1neru
 hl1teto
-hl1teto_personal
 hl2-gordon
 hl2_alyx
 hl2_alyx_v2
