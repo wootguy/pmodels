@@ -996,6 +996,7 @@ art2
 arthur_pendragon_v1sc
 artic_terrorist_v2sc
 artoria_pendragon_v1sc
+arue_teto_v1sc
 arukoitan_v1sc
 as_jiaren_alpha_v1sc
 ascii_bandit_v1sc
@@ -1823,6 +1824,7 @@ britneyspears
 britneyspears_v2sc
 britvip
 brock_v1sc
+broly_lssj_hd_v1sc
 broly_v1sc
 brony-ninjablack_v1sc
 brony_ninjablack_v1sc
@@ -10246,6 +10248,8 @@ sade
 sade_v2sc
 saf
 saf_v2sc
+sagas_trunks_ssj_v1sc
+sagas_trunks_v1sc
 sahadmin_v1sc
 sahchandler_v2sc
 sahris
