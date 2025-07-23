@@ -1255,10 +1255,10 @@ def remove_model(model_name):
 				del new_tags_json[key]
 	with open(tags_json_name, 'w') as outfile:
 		json.dump(new_tags_json, outfile, indent='\t')
-		
+	
+	new_groups_json = {}
 	with open(groups_json_name) as f:
 		groups_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
-		new_groups_json = {}
 		for key in groups_json:
 			new_groups_json[key] = []
 			for item in groups_json[key]:
@@ -1271,9 +1271,9 @@ def remove_model(model_name):
 	with open(groups_json_name, 'w') as outfile:
 		json.dump(new_groups_json, outfile, indent='\t')
 		
+	new_alias_json = {}
 	with open(alias_json_name) as f:
 		alias_json = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
-		new_alias_json = {}
 		for key in alias_json:
 			new_alias_json[key] = []
 			for item in alias_json[key]:
@@ -1305,6 +1305,7 @@ if len(args) == 0 or (len(args) == 1 and args[0].lower() == 'help'):
 	print("regen_full - regenerates info jsons AND thumbnails for all models (will take hours)")
 	print("rename <a> <b> - rename model <a> to <b>")
 	print("rename_fast <a> <b> - skips the update so you can rename multiple models quickly.")
+	print("                      but you have to remember to run update afterwards.")
 	print("remove <name> - remove a model from the database")
 	print("list - creates a txt file which lists every model and its poly count")
 	print("dup - find duplicate files (people sometimes rename models)")
