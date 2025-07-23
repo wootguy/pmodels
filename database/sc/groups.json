@@ -2107,6 +2107,7 @@
     "Dragon Ball Z - Broly": [
         "da_broly",
         "broly",
+        "broly_lssj_hd",
         "dmz_brolly"
     ],
     "Dragon Ball Z - Buu": [
@@ -2218,6 +2219,8 @@
         "esf_trunks",
         "esf_trunksssj",
         "trunks",
+        "sagas_trunks",
+        "sagas_trunks_ssj",
         "trunks_ssj"
     ],
     "Dragon Ball Z - Vegeta": [
@@ -10186,6 +10189,7 @@
         "kasane_teto_v2",
         "gs_kasaneteto",
         "hl1teto",
+        "arue_teto",
         "kasane_teto_sv",
         "lowpoly_teto",
         "bunny_teto_v2",

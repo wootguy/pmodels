@@ -927,6 +927,7 @@ arthur_pendragon
 artic_terrorist
 artic_terrorist_v2
 artoria_pendragon
+arue_teto
 arukoitan
 as_jiaren_alpha
 ascii_bandit
@@ -1649,6 +1650,7 @@ britney
 britneyspears_v2
 brock
 broly
+broly_lssj_hd
 brony-ninjablack
 brony_ninjablack_beta
 brownbear
@@ -8810,6 +8812,8 @@ sabre_helmet
 sade
 sade_v2
 saf_v2
+sagas_trunks
+sagas_trunks_ssj
 sahadmin
 sahchandler
 sahchandler_v2
