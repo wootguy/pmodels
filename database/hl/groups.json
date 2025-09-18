@@ -2762,7 +2762,7 @@
 	],
 	"Genshin Impact - Furina": [
 		"gi_furina_v1sc",
-		"gi_furina2_v1sc",
+		"gi_furina2_v2sc",
 		"gi_furina_a_v1sc",
 		"gi_furina_alt1_v1sc",
 		"gi_furina_alt1_v2sc",
@@ -2835,7 +2835,7 @@
 	],
 	"Girls' Frontline - M4A1": [
 		"gf_m4a1_v1sc",
-		"gf_m4a1_bikini_v1sc",
+		"gf_m4a1_bikini_v2sc",
 		"gf_m4a1_dark_v1sc",
 		"gfl_m4a1_dark_v1sc"
 	],
@@ -2989,9 +2989,9 @@
 		"sp_nikke-alice_cu_v1sc"
 	],
 	"Battle Angel Alita - Saya": [
-		"sns_saya2_v1sc",
+		"sns_saya2_v2sc",
 		"sns_saya_v2sc",
-		"sns_saya_bikini_v1sc"
+		"sns_saya_bikini_v2sc"
 	],
 	"Grand Theft Auto - Hobo": [
 		"sa_bomj1_v1sc",
@@ -3704,14 +3704,14 @@
 		"fede_p_color_v1sc"
 	],
 	"Fox Otis": [
-		"fox_otis_1_v1sc",
-		"fox_otis_2_v1sc",
-		"fox_otis_3_v1sc",
-		"fox_otis_4_v1sc",
-		"fox_otis_5_v1sc",
-		"fox_otis_6_v1sc",
-		"fox_otis_7_v1sc",
-		"fox_otis_8_v1sc"
+		"fox_otis_1_v2sc",
+		"fox_otis_2_v2sc",
+		"fox_otis_3_v2sc",
+		"fox_otis_4_v2sc",
+		"fox_otis_5_v2sc",
+		"fox_otis_6_v2sc",
+		"fox_otis_7_v2sc",
+		"fox_otis_8_v2sc"
 	],
 	"Closers - Mirai": [
 		"closers_mirai_v1sc",
@@ -9700,7 +9700,7 @@
 		"touhou_cirno_fumo_v1sc",
 		"touhou_cirno_v2sc",
 		"touhou_new_cirno_v1sc",
-		"gigacirno_v2"
+		"gigacirno_v2sc"
 	],
 	"Touhou - Clownpiece": [
 		"touhou_clownpiece_v1sc",
@@ -10091,8 +10091,8 @@
 		"succubus_miko_v1sc"
 	],
 	"Green Cat Girl": [
-		"greentea_lingerie_v1sc",
-		"greentea_strip_v1sc"
+		"greentea_lingerie_v2sc",
+		"greentea_strip_v2sc"
 	],
 	"LP": [
 		"lp_blue_v1sc",
