@@ -2752,6 +2752,7 @@ crash_v1sc
 crasher2
 crasher2_v2sc
 crayon
+crazyfucker
 cream_custom_s5_v1sc
 cream_dark_s5_v1sc
 cream_sc4
@@ -4031,6 +4032,9 @@ dust1
 dust1_v2sc
 dust2_v1sc
 dust_v1sc
+duster
+dusterv2
+dusterv3
 dutch
 dv_barney_v1sc
 dv_barneyciv_v1sc
@@ -4712,6 +4716,7 @@ genv_v1sc
 genx
 geoff_v2sc
 george_bush
+german
 german-grenadier_v2sc
 germansoccerplayer
 germinator6
@@ -4960,6 +4965,13 @@ gitty_v2sc
 glados_wip_v1sc
 glitch_rgrunt
 glitchenco_v1sc
+glitchpm
+glitchpm_v2
+glitchpm_v3
+glitchpm_v4
+glitchpm_v5
+glitchpm_v6
+glitchpm_v7
 glub
 gm_ilulu_v1sc
 gman
@@ -5143,6 +5155,7 @@ gordon_scientist1
 gordon_scientist_v2sc
 gordon_sd
 gordon_security
+gordon_sl
 gordon_stalker
 gordon_stalker_v2sc
 gordon_stealth
@@ -5155,6 +5168,7 @@ gordon_v1sc
 gordon_zombie
 gordonchief
 gordongrunt_v1sc
+gordonmiii
 gordonrasta
 gordonrasta_v1sc
 gordonsci_v1sc
@@ -5428,6 +5442,7 @@ guard_base_m_d2
 guard_base_m_d2_v2
 guard_base_m_d_v2
 guardian
+guardian2
 guardian_v2sc
 guerilla16_v1sc
 guerilla2
@@ -9314,6 +9329,7 @@ patrickbm_nude
 patrickbm_ps2
 patrickbm_psuit
 paul_v1sc
+paulblart
 paydayth_wolf_v1sc
 payne
 payne_2_v1sc
@@ -9619,6 +9635,7 @@ profdoom_v1sc
 profoak_v1sc
 projectx
 projectx_v1sc
+prospera
 prowler_v1sc
 ps2gio_v1sc
 ps2mista_v1sc
@@ -9817,6 +9834,7 @@ ram_sexy_v1sc
 ram_v1sc
 ran_v1sc
 randomgerbil_v1sc
+ranger
 ranger1_v2sc
 ranger2_v2sc
 ranger3_v2sc
@@ -10729,6 +10747,7 @@ sealarctic_v2sc
 sealdesert_v2sc
 sealgray_v2sc
 sealgreen_v2sc
+sealman
 sebastian
 section8_v1sc
 security1_v1sc
@@ -11200,6 +11219,7 @@ sonny_claws_v1sc
 sonya_v1sc
 sora_v1sc
 sora_valor_v1sc
+soretro
 soulcalibur_taki_v1sc
 southern_belle2_v1sc
 southern_belle_v2sc
@@ -11587,6 +11607,7 @@ starcraft_red_v1sc
 starcraft_unknown_v1sc
 starcraft_v1sc
 starhgrunt_v1sc
+staringcat
 starlight2
 starlight2_v2sc
 starlight_v1sc
@@ -11678,6 +11699,7 @@ sub-zero2_v2sc
 sub-zero2test_v1sc
 sub-zero3_v1sc
 sub-zero_c
+subject106
 subtech
 subwaysurfer
 subwaysurfer_v1sc
@@ -12022,6 +12044,8 @@ tbunnygirl_v2
 tbunnygirl_v2sc
 tbunnygirlcc_sc_v1sc
 tbunnygirlcc_sc_v2sc
+tbunnygirlcc_v1
+tbunnygirlcc_v2
 tc_alt-dr.kleiner_v1sc
 tc_beret_v1sc
 tc_dr.kleiner2_v1sc
@@ -13408,6 +13432,7 @@ z_tadc_zooble_v1sc
 z_zaku_v1sc
 zabuza2
 zabuza_v1sc
+zadverjeva
 zaku_v1sc
 zakuii_v1sc
 zamn_guy_v1sc
