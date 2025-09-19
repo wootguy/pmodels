@@ -1107,9 +1107,12 @@ def pack_models(all_models, lowpoly_only):
 			for line in update_list.readlines():
 				crash_models.add(line.lower().strip())
 	
+	_7zip_opts = '-t7z -m0=lzma -mfb=273 -md=512m -ms=on -mx=9'
+	
 	if all_models:
-		fname = 'sc_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
-		cmd = 'zip -r %s models/player sound  -x "*.png" -x "*.json"' % fname
+		fname = 'sc_models_%s' % datetime.today().strftime('%Y-%m-%d')
+		#cmd = 'zip -r %s.zip models/player sound  -x "*.png" -x "*.json"' % fname
+		cmd = '7zz a  %s.7z %s models/player sound -x!*.png -x!*.json' % (fname, _7zip_opts)
 		print(cmd)
 		os.system(cmd)
 		# TODO: remove crash models from archive
@@ -1158,8 +1161,9 @@ def pack_models(all_models, lowpoly_only):
 		
 		list_file.close()
 		
-		fname = 'models/latest_models_%s.zip' % datetime.today().strftime('%Y-%m-%d')
-		cmd = 'zip %s -r . -i@zip_latest.txt' % fname
+		fname = 'models/latest_models_%s' % datetime.today().strftime('%Y-%m-%d')
+		#cmd = 'zip %s.zip -r . -i@zip_latest.txt' % fname
+		cmd = '7zz a %s.7z %s @zip_latest.txt' % (fname, _7zip_opts)
 		print(cmd)
 		os.system(cmd)
 		os.remove("zip_latest.txt")
