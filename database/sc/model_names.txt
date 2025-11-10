@@ -246,6 +246,8 @@ $iren
 2d_yoda2
 2d_yorha_2b
 2d_ys_yandere_insane
+2hu_momiji_lp
+2hu_momiji_sm_lp
 2pic
 2pic_v2
 31minutos_juan
@@ -1156,6 +1158,7 @@ ba_kuroko
 ba_kuroko_ar
 ba_midori_maid
 ba_mika
+ba_misono_mika_hd
 ba_miyu
 ba_miyu_ld
 ba_miyu_ld_v2
@@ -2101,6 +2104,7 @@ cl_suit_purple
 cl_suit_red
 cl_suit_yelow
 claire
+claire_elford_2d
 claireredfieldhd
 clan_killer
 clan_killer_v2
@@ -2409,6 +2413,7 @@ corona_chan_nopantsu
 corona_chan_xmas
 coronavirus
 corporation
+corpse1
 corrupted_metrocop
 corvet
 costa
@@ -2456,6 +2461,9 @@ crow
 crtbot
 cryodark1a
 cryodenton
+cryoffear_doctor
+cryoffear_doctor2
+cryoffear_doctor3
 cryohev
 cryohev_v2
 cryokeen
@@ -3652,6 +3660,10 @@ fatgordon_v2
 father
 fatherd
 fathere
+fathergarcia
+fathergarcia_b
+fathergarcia_c
+fathergarcia_c_b
 fd-eliza2
 fdrx7
 fear2_nailgunner
@@ -4963,6 +4975,7 @@ hgrunt4
 hgrunt5
 hgrunt_hd
 hgrunt_hd_v2
+hgrunt_torch
 hhev
 hhev2
 hhev_v2
@@ -5184,6 +5197,8 @@ holo_okayu_lowpoly
 holo_ollie_lowpoly
 holo_pekora_lowpoly
 holo_polka_lowpoly
+holo_r
+holo_rc
 holo_rushia_lowpoly
 holo_sana_lowpoly
 holo_subaru_ff7
@@ -5512,6 +5527,10 @@ johannkraus
 john
 johnny_bravo
 johnnybravo
+johnward
+johnward_b
+johnward_c
+johnward_c_b
 jojo_sheppard
 jokebot
 joker
@@ -6808,6 +6827,7 @@ miside_kind_mita
 miside_mila
 miside_mita
 miside_mita_sh
+miside_player1
 misopack
 missing_hev
 missing_hevg
@@ -7983,6 +8003,9 @@ pd_dallas
 pd_elvis
 pd_hoxton
 pd_wolf
+pe_wachi01
+pe_wachi02
+pe_wachiman
 peachbrawl
 peachfires3c
 peachmelee
@@ -8692,6 +8715,7 @@ remake_kate
 remake_ratty
 remilia
 remilia2
+remorse-qassam_v2
 remus
 rena
 renamon

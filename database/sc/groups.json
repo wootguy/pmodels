@@ -3966,6 +3966,7 @@
 		"burton_commando_v2",
 		"wrecruit",
 		"recon4",
+		"hgrunt_torch",
 		"bd_provident",
 		"bd_religious",
 		"bd_rushing",
@@ -9505,6 +9506,28 @@
 		"kz_elin_04_v5",
 		"tera_popori"
 	],
+	"FAITH: The Unholy Trinity - Johnward": [
+		"johnward",
+		"johnward_c",
+		"johnward_b",
+		"johnward_c_b"
+	],
+	"FAITH: The Unholy Trinity - Father Garcia": [
+		"fathergarcia",
+		"fathergarcia_c",
+		"fathergarcia_b",
+		"fathergarcia_c_b"
+	],
+	"Cry of Fear - Doctor": [
+		"cryoffear_doctor",
+		"cryoffear_doctor2",
+		"cryoffear_doctor3"
+	],
+	"Spice & Wolf - Holo": [
+		"horo_saw",
+		"holo_rc",
+		"holo_r"
+	],
 	"Terrant": [
 		"terrant_v2",
 		"ted2"
@@ -9975,6 +9998,8 @@
 		"touhou_momiji_inuba",
 		"momiji_inubashiri",
 		"touhou_momiji_small_v2",
+		"2hu_momiji_sm_lp",
+		"2hu_momiji_lp",
 		"2d_momiji_inubashiri"
 	],
 	"Touhou - Patchouli": [
