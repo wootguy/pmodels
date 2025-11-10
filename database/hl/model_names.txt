@@ -296,6 +296,8 @@ $mile
 2hu_koishiscarlet_v1sc
 2hu_maribelhearn_v1sc
 2hu_momiji_inuba_v1sc
+2hu_momiji_lp_v1sc
+2hu_momiji_sm_lp_v1sc
 2hu_momiji_small_v2sc
 2hu_new_remilia_v1sc
 2hu_rem_bikini2_v1sc
@@ -1406,6 +1408,7 @@ ba_kuroko_ar_v1sc
 ba_kuroko_v1sc
 ba_midori_maid_v1sc
 ba_mika_v1sc
+ba_misono_mika_hd_v1sc
 ba_miyu_ld_v2sc
 ba_miyu_v2sc
 ba_miyu_v3sc
@@ -2723,6 +2726,7 @@ cl_suit_red_v1sc
 cl_suit_trusty
 cl_suit_v1sc
 cl_suit_yelow_v1sc
+claire_elford_2d_v1sc
 claire_re2
 claire_v1sc
 claireredfieldhd_v1sc
@@ -3138,6 +3142,7 @@ corona_chan_v1sc
 corona_chan_xmas_v1sc
 coronavirus
 corporation_v1sc
+corpse1_v1sc
 corrupt_metrocop_v1sc
 corvet
 costa_v1sc
@@ -3243,6 +3248,9 @@ crusher
 crv
 cryodark1a_v1sc
 cryodenton_v1sc
+cryoffear_doctor2_v1sc
+cryoffear_doctor3_v1sc
+cryoffear_doctor_v1sc
 cryohev_v2sc
 cryokeen
 cryokeen_hd_v2sc
@@ -4976,6 +4984,10 @@ father
 father_v1sc
 fatherd_v1sc
 fathere_v1sc
+fathergarcia_b_v1sc
+fathergarcia_c_b_v1sc
+fathergarcia_c_v1sc
+fathergarcia_v1sc
 favre
 fbi
 fbi_2ndgen
@@ -6794,6 +6806,7 @@ hgrunt_sd
 hgrunt_shep
 hgrunt_specops
 hgrunt_spetsnaz
+hgrunt_torch_v1sc
 hgrunt_trusty
 hgrunt_v1sc
 hgrunt_winter
@@ -7081,6 +7094,8 @@ holo_okayu_lp_v1sc
 holo_ollie_lp_v1sc
 holo_pekora_lp_v1sc
 holo_polka_lp_v1sc
+holo_r_v1sc
+holo_rc_v1sc
 holo_rushia_lp_v1sc
 holo_sana_lowpoly_v1sc
 holo_subaru_ff7_v1sc
@@ -7567,6 +7582,10 @@ johnny_bravo
 johnny_bravo_v1sc
 johnnybravo
 johnnybravo_v1sc
+johnward_b_v1sc
+johnward_c_b_v1sc
+johnward_c_v1sc
+johnward_v1sc
 jojo_sheppard_v1sc
 jokebot
 jokebot_v1sc
@@ -9150,6 +9169,7 @@ miside_kind_mita_v1sc
 miside_mila_v1sc
 miside_mita_sh_v1sc
 miside_mita_v1sc
+miside_player1_v1sc
 misopack_v1sc
 missing_hev_v1sc
 missing_hevg_v1sc
@@ -10538,6 +10558,9 @@ pd_dallas_v1sc
 pd_elvis_v1sc
 pd_hoxton_v1sc
 pd_wolf_v1sc
+pe_wachi01_v1sc
+pe_wachi02_v1sc
+pe_wachiman_v1sc
 peachbrawl
 peachbrawl_v1sc
 peachfires3c
@@ -11344,6 +11367,7 @@ remake_kate_v1sc
 remake_ratty_v1sc
 remilia2_v1sc
 remilia_v1sc
+remorse-qassam_v2sc
 remus_v1sc
 rena_v1sc
 renamon2_v1sc

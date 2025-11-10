@@ -1948,7 +1948,7 @@
 		"hime_cat_9_v1sc",
 		"hime_cat_9a_v1sc",
 		"hime_cat_9b_v1sc",
-		"holo_korone_lp_v2sc",
+		"holo_korone_lp_v3sc",
 		"holo_fubuki_c1_v1sc",
 		"holo_korone-c1_v2sc",
 		"holo_korone-c2_v2sc",
@@ -2218,7 +2218,13 @@
 		"zzz_corin_wickes_v1sc",
 		"zzz_corin_wickes2_v1sc",
 		"tbunnygirlcc_v1",
-		"tbunnygirlcc_v2"
+		"claire_elford_2d_v1sc",
+		"ba_misono_mika_hd_v1sc",
+		"2hu_momiji_sm_lp_v1sc",
+		"2hu_momiji_lp_v1sc",
+		"holo_rc_v1sc",
+		"holo_r_v1sc",
+		"miside_player1_v1sc"
 	],
 	"vehicle": [
 		"accent",
