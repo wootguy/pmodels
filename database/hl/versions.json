@@ -339,6 +339,11 @@
 		"ex-andre_v1sc"
 	],
 	[
+		"glitchpm_v12",
+		"glitchpm_v11",
+		"glitchpm_v10",
+		"glitchpm_v9",
+		"glitchpm_v8",
 		"glitchpm_v7",
 		"glitchpm_v6",
 		"glitchpm_v5",
@@ -348,6 +353,8 @@
 		"glitchpm"
 	],
 	[
+		"dusterv5",
+		"dusterv4",
 		"dusterv3",
 		"dusterv2",
 		"duster"

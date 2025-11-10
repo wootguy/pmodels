@@ -1598,6 +1598,7 @@ barney_hev_hl2
 barney_hev_ps2
 barney_hev_v1sc
 barney_hl2
+barney_hle
 barney_kuro
 barney_ld_v1sc
 barney_nocolor
@@ -2516,6 +2517,7 @@ checkers_man_v1sc
 checkmate
 checkmate_v1sc
 cheems_v1sc
+cheerleader_ghost
 cheetah_v1sc
 cheezbuff
 cheezbuff2
@@ -2640,6 +2642,7 @@ civ_male1_v1sc
 civ_male2_v1sc
 civ_male3_v1sc
 civ_male4_v1sc
+civ_ryder
 civ_survivor2_v1sc
 civ_survivor3_v1sc
 civ_survivor_v1sc
@@ -4603,6 +4606,8 @@ dust_v1sc
 duster
 dusterv2
 dusterv3
+dusterv4
+dusterv5
 dutch
 dv_barney_v1sc
 dv_barneyciv_v1sc
@@ -5121,6 +5126,7 @@ forcerecon_v2
 forever
 forever_freeman
 foreveraloneface_v1sc
+forklift_wolf
 forklifter
 forkliftshit
 forrest speyer_v1sc
@@ -5491,6 +5497,7 @@ gfl_ump45-c2_v1sc
 gfl_ump45_v2sc
 gfl_ump9-c2_v1sc
 gfl_ump9_v2sc
+gfox
 ghandi
 ghetpimp
 ghetpimp_v2sc
@@ -5645,6 +5652,7 @@ gina_hev
 gina_hev_hl2
 gina_hev_ps2
 gina_hl2
+gina_hle
 gina_holo
 gina_kuro
 gina_ld_v1sc
@@ -5685,12 +5693,17 @@ glados_wip_v1sc
 glitch_rgrunt
 glitchenco_v1sc
 glitchpm
+glitchpm_v10
+glitchpm_v11
+glitchpm_v12
 glitchpm_v2
 glitchpm_v3
 glitchpm_v4
 glitchpm_v5
 glitchpm_v6
 glitchpm_v7
+glitchpm_v8
+glitchpm_v9
 glub
 gm_ilulu_v1sc
 gman
@@ -5716,6 +5729,7 @@ gman_hd_v1sc
 gman_hitman
 gman_hl2
 gman_hl2_v2
+gman_hle
 gman_kuro
 gman_ld_v1sc
 gman_madmask
@@ -5821,6 +5835,7 @@ gordon_bms2_v2
 gordon_bms_c
 gordon_bms_c2
 gordon_buff
+gordon_calico
 gordon_chromants_v1sc
 gordon_chrome
 gordon_clean
@@ -5851,6 +5866,7 @@ gordon_gusta
 gordon_happy
 gordon_happy2
 gordon_happy3
+gordon_happy4
 gordon_hd
 gordon_hd2
 gordon_hd3
@@ -5863,6 +5879,7 @@ gordon_hev_red
 gordon_hi
 gordon_hi2
 gordon_hl2
+gordon_hle
 gordon_juventus
 gordon_kidding
 gordon_kuro
@@ -6375,6 +6392,8 @@ hans_v1sc
 hansolo_v1sc
 hanz_v1sc
 happy
+happy_sheppy
+happycat
 hara-ate_v1sc
 hardcor
 hardcor2
@@ -6404,6 +6423,7 @@ haruhi_mio_v1sc
 haruhi_ritu_v1sc
 haruhi_v1sc
 haruhi_yui_v1sc
+hassassin_wolf
 hassault
 hatebreed
 hatsune-mikuver2_v1sc
@@ -6571,6 +6591,7 @@ helmet_hd
 helmet_hd_blue
 helmet_hi2
 helmet_hl2
+helmet_hle
 helmet_kuro
 helmet_ld2_v1sc
 helmet_ld_v1sc
@@ -6633,6 +6654,7 @@ hev_rosenberg
 hev_scientist3
 hev_slick1
 hev_walter1
+hev_wolf
 hev_zard_v1sc
 hev_zombie
 hevbarnabus
@@ -6740,6 +6762,7 @@ hgrunt78
 hgrunt79
 hgrunt90
 hgrunt_ai
+hgrunt_alistair
 hgrunt_assault
 hgrunt_blkops
 hgrunt_blkops2
@@ -6753,6 +6776,7 @@ hgrunt_ezeq
 hgrunt_green
 hgrunt_hd
 hgrunt_hd_v2sc
+hgrunt_hle
 hgrunt_kuro
 hgrunt_kuro2
 hgrunt_kuro_c
@@ -6773,6 +6797,7 @@ hgrunt_spetsnaz
 hgrunt_trusty
 hgrunt_v1sc
 hgrunt_winter
+hgrunt_wolf
 hgrunt_zombie
 hgruntb
 hgruntb2
@@ -7061,6 +7086,7 @@ holo_sana_lowpoly_v1sc
 holo_subaru_ff7_v1sc
 holo_takodachi_hsize
 holo_takodachi_psize
+holo_tiger
 holo_towa_lowpoly_v1sc
 holo_v2sc
 holo_watame_lp_v1sc
@@ -7815,6 +7841,7 @@ kia4
 kia5
 kia6
 kidd
+kidlat
 kikyou
 kikyou_v2sc
 kilik
@@ -8337,6 +8364,7 @@ longded_v1sc
 longjump_v1sc
 look
 look_v1sc
+loona_helluvaboss
 loony_v1sc
 lopan_v1sc
 lopansd2_v1sc
@@ -10464,6 +10492,7 @@ patrickbm_ps2
 patrickbm_psuit
 paul_v1sc
 paulblart
+pawpsicle
 paydayth_wolf_v1sc
 payne
 payne_2_v1sc
@@ -11237,6 +11266,7 @@ recon_hd
 recon_kuro
 recon_nocolor
 recon_npc
+recon_panchi
 recon_ps2
 recon_sd
 recon_spetsnaz
@@ -11467,6 +11497,7 @@ robo_cbg
 robo_drill
 robo_ezeq
 robo_grunt
+robo_hle
 robo_hqa_v1sc
 robo_kuro
 robo_ld_v1sc
@@ -11978,6 +12009,7 @@ scientist84
 scientist_barniel
 scientist_bms
 scientist_bms_c
+scientist_cheetah
 scientist_colette
 scientist_czds_v1sc
 scientist_dcp2_v1sc
@@ -11989,6 +12021,7 @@ scientist_gina
 scientist_gus_v1sc
 scientist_happy
 scientist_hd
+scientist_hle
 scientist_katja
 scientist_kuro
 scientist_ld_v1sc
@@ -12076,6 +12109,8 @@ security911
 security_babe
 security_cmdr_v2sc
 security_evil
+security_ghost
+security_gshepard
 security_topside_v2sc
 security_v1sc
 security_wheelc_v1sc
@@ -12484,6 +12519,7 @@ snowgiant
 snowgrunt_v3sc
 snowman
 snowman2
+snowpaw
 sns_saya2_v1sc
 sns_saya2_v2sc
 sns_saya_1_v1sc
@@ -14706,6 +14742,7 @@ w2hpcpundtec2_v1sc
 w2hpcpunisher1
 wabbit
 waffle
+waffle_meme2
 waffle_v1sc
 wafuuhev1_v1sc
 wafuuhev2_v1sc
@@ -14804,6 +14841,7 @@ wendy_v1sc
 weregarurumon2_v1sc
 weregarurumon_v1sc
 werewolf
+werewolf2
 werewolf2_v1sc
 werewolf_fix_v1sc
 werewolfhans_v1sc
@@ -15252,6 +15290,7 @@ zombie_hd_v1sc
 zombie_hev_bms
 zombie_hev_v1sc
 zombie_hl_v1sc
+zombie_hle
 zombie_kuro
 zombie_ld_v1sc
 zombie_miner

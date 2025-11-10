@@ -1833,7 +1833,8 @@
         "biker_v2"
     ],
     "cyberbunny": [
-        "killer_cyber_bunny"
+        "killer_cyber_bunny",
+        "bunny_black"
     ],
     "megatron": [
         "megatron-slaughter"
@@ -1936,5 +1937,8 @@
     ],
     "sub-zero_c": [
         "sub-zero"
+    ],
+    "kain-9": [
+        "kain9"
     ]
 }
