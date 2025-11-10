@@ -4951,6 +4951,7 @@ fassn2
 fassn2_v2sc
 fassn3
 fassn3_v1sc
+fassn4
 fassn4_v1sc
 fassn5_v1sc
 fassn6_v1sc
@@ -5414,6 +5415,7 @@ george_bush
 german
 german-grenadier_v2sc
 german_soldier
+german_v2
 germania
 germansoccerplayer
 germinator6
@@ -14781,6 +14783,7 @@ watanabeyou_v1sc
 watching
 water
 watercamo
+watercooler
 waterman
 wayne_v1sc
 wc3arthas_v1sc
