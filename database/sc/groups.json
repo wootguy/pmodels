@@ -2063,6 +2063,10 @@
 		"renamon_cs",
 		"renamon2",
 		"renamon",
+		"renamon_te_r",
+		"renamon_te",
+		"renamon_cc_r",
+		"renamon_cc",
 		"rena",
 		"fp_dark2018",
 		"fp_sofiadark2018",
@@ -2406,6 +2410,13 @@
 	],
 	"Final Fantasy - Chocobo": [
 		"ffchocobo",
+		"ffchocobo_cc_black",
+		"ffchocobo_cc",
+		"ffchocobo_cc2_black",
+		"ffchocobo_cc2",
+		"ff7chocobo_cc_black2",
+		"ff7chocobo_cc_black",
+		"ff7chocobo_cc",
 		"chocobo_v2"
 	],
 	"Final Fantasy - Cloud Strife": [
@@ -2419,10 +2430,18 @@
 		"cloud_strife_v3",
 		"hardcor3"
 	],
+	"Samekosaba": [
+		"vtuber_samekosaba",
+		"vtuber_samekosaba_alt"
+	],
 	"Zombie Girl": [
 		"zombie_girl",
 		"zombie_girl2",
 		"zombie_girl4"
+	],
+	"Zenless Zone Hero - Aria robot": [
+		"zzz_aria_robot",
+		"zzz_aria_robot_alt"
 	],
 	"Zenless Zone Hero - Ellen Joe": [
 		"zzz_ellen_joe",
@@ -3035,7 +3054,7 @@
 		"sa_bomj5"
 	],
 	"Grand Theft Auto - Claude": [
-		"claude",
+		"claude_v2",
 		"claudespeed",
 		"lc_claude"
 	],
@@ -3444,10 +3463,16 @@
 		"ena",
 		"bbqena"
 	],
+	"El Condor Pasa - Uma Musume": [
+		"uma_elcondorpasa",
+		"uma_elcondorpasa2"
+	],
 	"Half-Life - Barney": [
 		"dm_barney",
 		"rvi_barney",
+		"barnabus_ld",
 		"rvi_barney2",
+		"bman2",
 		"op4_barney",
 		"latealphabarney",
 		"alphabarney2",
@@ -3710,6 +3735,8 @@
 		"fassn",
 		"fassn2_v2",
 		"fassn_dcp2",
+		"fassnzombie",
+		"fassnzombiev2",
 		"fassn3",
 		"fassn4",
 		"fassn5",
@@ -3957,6 +3984,7 @@
 		"alpha_grunt",
 		"alpha_grunt2",
 		"alpha_grunt3",
+		"shotghecu",
 		"killer_grunt",
 		"spec_ops_elite",
 		"spec_ops_elite_v2",
@@ -4355,6 +4383,8 @@
 	"Half-Life - HEV Suit": [
 		"dm_helmet",
 		"rvi_helmet",
+		"andre_hevld",
+		"andre_hev",
 		"player",
 		"whelmet_cs",
 		"sven_coop_snow_helmet",
@@ -4495,6 +4525,7 @@
 		"massn",
 		"massn_ld",
 		"massn1",
+		"urban_massn",
 		"massn_dcp2",
 		"massn_grey",
 		"massn_black_v2",
@@ -5975,6 +6006,28 @@
 		"kao2",
 		"kao3"
 	],
+	"AEAR Jihad": [
+		"aear_pflp",
+		"aearhamas",
+		"aear_jihad"
+	],
+	"Andre": [
+		"andre_hevnohelmld",
+		"andre_painhider",
+		"andre_hevnohelm"
+	],
+	"Digimon - ExVeemon": [
+		"xvmon_te_r",
+		"xvmon_cc",
+		"xvmon_cc_r",
+		"xvmon_te"
+	],
+	"Digimon - Guilmon": [
+		"guilmon_te",
+		"guilmon_cc",
+		"guilmon_cc_r",
+		"guilmon_te_r"
+	],
 	"Shinkr": [
 		"shinkamenrider",
 		"shinkr_ichimonji",
@@ -6119,6 +6172,10 @@
 		"ksa_susie_p5",
 		"ksa_susieparallel",
 		"ksa_susiepresparallel"
+	],
+	"Kirby": [
+		"kirbyssbb",
+		"controller"
 	],
 	"Kizuna AI": [
 		"vtuber_kizuna",
@@ -6380,6 +6437,9 @@
 	"Luigi": [
 		"smb_luigi",
 		"smb_fireluigi",
+		"luigihev",
+		"ssbbluigi",
+		"mk8luigi",
 		"powerup_luigi_v2",
 		"luigi",
 		"luigi_mp",
@@ -6509,6 +6569,10 @@
 		"n64_mario",
 		"mario64odyssey_v3",
 		"mario_mp",
+		"mylmario",
+		"smobuildmar",
+		"mariosb3ds",
+		"lm3mario",
 		"n64_mario_map",
 		"n64_metalmario",
 		"paper_mario_v2",
@@ -6547,6 +6611,21 @@
 		"mariosunshines3c",
 		"wtfmario",
 		"bradlio"
+	],
+	"KartRider: Drift - Airi": [
+		"krd_airi",
+		"krd_airi_fear",
+		"krd_airi_western",
+		"krd_airi_school"
+	],
+	"KartRider: Drift - Diz": [
+		"krd_diz",
+		"krd_diz_alt",
+		"krd_diz_universe",
+		"krd_diz_school",
+		"krd_diz_scientist",
+		"krd_diz_angel",
+		"krd_diz_marine"
 	],
 	"Marionette": [
 		"marionette",
@@ -6877,7 +6956,8 @@
 	],
 	"NGE Asuka": [
 		"nge_asuka",
-		"nge_auska"
+		"nge_auska",
+		"asuka"
 	],
 	"NS Specops": [
 		"ns_specopsgrn_v2",
@@ -8033,6 +8113,7 @@
 		"8bitwarlock_hunk2",
 		"8bitwarlock_hunk_fix",
 		"8bitwarlock_hunk_v2",
+		"hunk_anim_reworked_v1",
 		"agent_hunk_v2",
 		"cocyx_hunk",
 		"hunk1",
@@ -8520,6 +8601,7 @@
 	],
 	"Shygal": [
 		"shygal",
+		"shygalcv",
 		"shygal2",
 		"shygal2_outlined",
 		"shygal2_shiny",
@@ -8594,6 +8676,30 @@
 	"Softon": [
 		"softon",
 		"softon_choco"
+	],
+	"Bulleta": [
+		"bulleta",
+		"bulleta_c"
+	],
+	"HECU Girl": [
+		"hecu_sniper2",
+		"hecu_sniper",
+		"hecu_shotgun2",
+		"hecu_shotgun",
+		"hecu_recon2",
+		"hecu_recon",
+		"hecu_radio2",
+		"hecu_radio",
+		"hecu_point2",
+		"hecu_point",
+		"hecu_heavy2",
+		"hecu_girl2",
+		"hecu_girl",
+		"hecu_heavy",
+		"hecu_commander2",
+		"hecu_commander",
+		"hecu_assault2",
+		"hecu_assault"
 	],
 	"Soi": [
 		"soi_hev_v2",
@@ -9836,6 +9942,10 @@
 		"zzz_corin_wickes",
 		"zzz_corin_wickes_alt"
 	],
+	"Zenless Zone Zero - Rokudo": [
+		"zzz_rokudo",
+		"zzz_rokudo_alt"
+	],
 	"Touhou - Daiyousei": [
 		"touhou_new_dai",
 		"daiyousei",
@@ -10295,6 +10405,7 @@
 		"krd_marid_luxury",
 		"krd_marid_racing",
 		"krd_marid_school",
+		"krd_marid_magical",
 		"krd_marid_steampunk"
 	],
 	"Dragon Ball Z - Meta-Cooler": [
@@ -10323,6 +10434,7 @@
 		"uboa_v2",
 		"uboab_s5",
 		"uboab_v2",
+		"uboa_chori",
 		"uboac",
 		"uboac_rampage2_p1_v2",
 		"uboac_rampage2_p2_v2",
@@ -10454,10 +10566,25 @@
 		"fp_mikito2018",
 		"mikito"
 	],
+	"Gameoverse - Kit": [
+		"gameoverse_kit",
+		"gameoverse_kit_alt",
+		"gameoverse_kit_alt2"
+	],
+	"Digimon - Flamedramon": [
+		"flamedramon_cc",
+		"flamedramon_cc_r",
+		"flamedramon_te_r",
+		"flamedramon_te"
+	],
 	"Digimon - Veemon": [
 		"veemon",
 		"veemon_b",
 		"veemon_c"
+	],
+	"Digimon - Terriermon": [
+		"terriermon_cc_r",
+		"terriermon_cc"
 	],
 	"Vector": [
 		"gs_vector",
@@ -10508,6 +10635,7 @@
 	"Waluigi": [
 		"waluigi",
 		"waluigic",
+		"waluigissbb",
 		"smb_waluigi"
 	],
 	"Wanted - Annie": [
@@ -10613,6 +10741,7 @@
 	"Yoshi": [
 		"miniyoshi",
 		"yoshissb4",
+		"smoyoshi",
 		"minidog"
 	],
 	"Yuri": [
@@ -10723,11 +10852,16 @@
 	"Alien - Xenomorph": [
 		"alien",
 		"potalien",
+		"hlalien",
 		"alanamp"
 	],
 	"butch": [
 		"butch_v2",
 		"rocko"
+	],
+	"Uncanny cat": [
+		"uncanny_cat",
+		"canny_cat"
 	],
 	"cptrod": [
 		"cptrod",
