@@ -1112,7 +1112,7 @@ def pack_models(all_models, lowpoly_only):
 	if all_models:
 		fname = 'sc_models_%s' % datetime.today().strftime('%Y-%m-%d')
 		#cmd = 'zip -r %s.zip models/player sound  -x "*.png" -x "*.json"' % fname
-		cmd = '7zz a  %s.7z %s models/player sound -x!*.png -x!*.json' % (fname, _7zip_opts)
+		cmd = '7zz a  %s.7z %s models/player sound -xr!*.png -xr!*.json' % (fname, _7zip_opts)
 		print(cmd)
 		os.system(cmd)
 		# TODO: remove crash models from archive

@@ -14,6 +14,7 @@
 		"40k_br_dv",
 		"40k_br_tc",
 		"40k_heavy_marine_1",
+		"40k_heavy_marine_1",
 		"40k_heavy_marine_2",
 		"40k_if_at",
 		"40k_if_dv",
@@ -5412,6 +5413,18 @@
 	"Hololive - Polka": [
 		"holo_polka_lowpoly",
 		"sillyfun"
+	],
+	"Hololive - Gigi": [
+		"holo_gigi_ng_lowpoly",
+		"holo_gigi_lowpoly"
+	],
+	"Hololive - Mococo": [
+		"holo_mococo_ng_lp",
+		"holo_mococo_lowpoly"
+	],
+	"Hololive - Fuwawa": [
+		"holo_fuwawa_ng_lp",
+		"holo_fuwawa_lowpoly"
 	],
 	"Hololive - Nenechi": [
 		"holo_nenechi_lowpoly",
