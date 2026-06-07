@@ -2338,6 +2338,7 @@ buratino_v1sc
 burn
 burn_v1sc
 burned_gordon
+burnice_aislop
 burnicewhite
 burnicewhite_v1sc
 burninggrunt_v2sc
@@ -2652,6 +2653,7 @@ chromium
 chubby_v2sc
 chubbyshit
 chucky_v1sc
+chud
 chupa
 chupetin
 chupetin_truj_v1sc
@@ -5772,6 +5774,12 @@ glitchpm
 glitchpm_v10
 glitchpm_v11
 glitchpm_v12
+glitchpm_v13
+glitchpm_v14
+glitchpm_v16
+glitchpm_v17
+glitchpm_v18
+glitchpm_v19
 glitchpm_v2
 glitchpm_v3
 glitchpm_v4
@@ -6474,6 +6482,8 @@ hans_v1sc
 hansolo_v1sc
 hanz_v1sc
 happy
+happy_cat_paper_v1sc
+happy_cat_paper_v2sc
 happy_sheppy
 happycat
 hara-ate_v1sc
@@ -9117,6 +9127,7 @@ mgs4_pmc5_v1sc
 mgs4_pmc6_v1sc
 mgs4_pmc7_v1sc
 mgs4_pmc_v1sc
+mgs_otacon
 mgs_snake
 mgs_snake_v1sc
 mh_cash_v1sc
@@ -9530,6 +9541,7 @@ mr_valve2
 mr_x_v1sc
 mr_zombo2_v2sc
 mr_zombo_v2sc
+mrbean
 mrblonde_v1sc
 mrbored_v2sc
 mrbubbles_v2sc
@@ -9920,6 +9932,8 @@ nepnep2_mazz_v1sc
 nepnep3_mazz_v1sc
 nepnep_mazz_v1sc
 neptune
+neptune64
+neptune64_c
 neptune_v1sc
 neptuneman_v1sc
 neptunia_mth_v1sc
@@ -11222,6 +11236,7 @@ raidenmask_v1sc
 raidenn_v1sc
 rainbow6_v1sc
 rainbow_dash
+rainbowv1
 raind
 raketten_v2sc
 ram_sexy_v1sc
@@ -11313,6 +11328,7 @@ re1_zombie2_v1sc
 re1_zombie_v1sc
 re2_claire_r_v2sc
 re2_claire_v1sc
+re2_hunk
 re2_kendo_v1sc
 re2_leon
 re2_leon_v1sc
@@ -11515,6 +11531,7 @@ remilia_v1sc
 remorse-qassam_v2sc
 remus_v1sc
 rena_v1sc
+rena_v2sc
 renamon2_v1sc
 renamon_cc_r_v1sc
 renamon_cc_v1sc
@@ -14061,6 +14078,7 @@ thegibman_v1sc
 theguest
 thehorror
 thehorror_v1sc
+thehunted
 thej_v1sc
 therock
 theshape
@@ -14143,6 +14161,7 @@ tkf_fu
 tkf_jeena
 tkf_spike
 tkk
+tkkn2_king2
 tma2_v1sc
 tmcm
 tmcm_v2sc
@@ -15373,6 +15392,7 @@ yuji_itadori
 yuji_itadori_v1sc
 yukari2_v1sc
 yukari_v1sc
+yuki_muumuyu_c_v1sc
 yuki_muumuyu_v1sc
 yumi_v1sc
 yunoa_v2sc
@@ -15392,6 +15412,7 @@ yuuri_glt
 yuuri_glt_v1sc
 yvader
 yvan_v1sc
+z_tadc_zooble_ld_v1sc
 z_tadc_zooble_v1sc
 z_zaku_v1sc
 zabuza2
