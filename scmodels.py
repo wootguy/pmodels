@@ -1353,8 +1353,9 @@ if len(args) > 0:
 		lowpoly_only = False
 		if len(args) > 1 and args[1].lower() == "latest":
 			all_models = False
-		if len(args) > 2 and args[2].lower() == "lowpoly":
+		if len(args) > 1 and args[1].lower() == "lowpoly":
 			lowpoly_only = True
+			all_models = False
 			
 		pack_models(all_models, lowpoly_only)
 	elif args[0].lower() == 'rename':
