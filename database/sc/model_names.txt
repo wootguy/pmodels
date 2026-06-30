@@ -6428,8 +6428,6 @@ lt_spongebob
 lt_swako
 lt_thyakumo
 lt_uganda_vo
-lt_ugandamiku
-lt_ugandamiku_vo
 lt_ugandatrump
 lt_ugandatrump_vo
 ltc

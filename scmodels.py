@@ -865,6 +865,12 @@ def install_new_models(new_versions_mode=False):
 	if os.path.exists(blacklist_path):
 		with open(blacklist_path, "r") as f:
 			blacklisted = f.read().splitlines()
+			
+	crash_models = set()
+	if os.path.exists('crash_models.txt'):
+		with open(database_dir + "/crash_models.txt", "r") as update_list:
+			for line in update_list.readlines():
+				crash_models.add(line.lower().strip())
 	
 	# First generate info jsons, if needed
 	print("-- Generating info JSONs for new models")
@@ -893,6 +899,10 @@ def install_new_models(new_versions_mode=False):
 			any_dups = True
 			
 			primary_name = model_hashes[hash][0].lower()
+			if primary_name in crash_models:
+				print("ERROR: %s is a crash model" % install_hashes[hash])
+				any_dups = True
+			
 			for alt in install_hashes[hash]:
 				alt = alt.lower()
 				if alt == primary_name:
