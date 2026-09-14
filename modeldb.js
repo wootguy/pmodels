@@ -190,8 +190,16 @@ function update_model_details() {
 	if (sauce) {
 		popup.getElementsByClassName("sauce")[0].innerHTML = "";
 		for (let x = 0; x < sauce.length; x++) {
+			let siteid = sauce[x].split(":")[0];
 			let modid = sauce[x].split(":")[1];
-			let link = '<a href="https://gamebanana.com/mods/' + modid + '" target="_blank">GameBanana #' + modid + '</a>';
+			
+			let link = sauce;
+			if (siteid == "gb") {
+				link = '<a href="https://gamebanana.com/mods/' + modid + '" target="_blank">GameBanana #' + modid + '</a>';
+			}
+			else if (siteid == "twhl") {
+				link = '<a href="https://twhl.info/vault/view/' + modid + '" target="_blank">TWHL #' + modid + '</a>';
+			}
 			
 			if (x > 0) {
 				popup.getElementsByClassName("sauce")[0].innerHTML += "<br>";
